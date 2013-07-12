@@ -1,7 +1,7 @@
 ---
 layout: page
 title: jannypie github bloggo
-tagline: emerging web developer with web designer origin story
+tagline: look ma, no hands
 ---
 
 ## Sample Posts
