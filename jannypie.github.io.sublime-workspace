@@ -1,0 +1,414 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"sh",
+				"shop-now"
+			],
+			[
+				"compa",
+				"compare-section"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"right",
+				"right-column"
+			],
+			[
+				"shop",
+				"shop-collection-link"
+			],
+			[
+				"backgr",
+				"background-size"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"jg",
+				"jg-womens"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"collection",
+				"collection-description"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"quick",
+				"quick-shop-link"
+			],
+			[
+				"down",
+				"down-arrow"
+			],
+			[
+				"close",
+				"close-button-large"
+			],
+			[
+				"border",
+				"border-box"
+			],
+			[
+				"data",
+				"data-wash"
+			],
+			[
+				"tooltip",
+				"tooltip-trigger"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"small",
+				"small-arrow"
+			],
+			[
+				"hol",
+				"hol_jeans_sprite"
+			],
+			[
+				"jeans-",
+				"jeans-sprite-2"
+			],
+			[
+				"back-to",
+				"back-to-fit"
+			],
+			[
+				"jeans",
+				"jeans-sprite-2"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"hide",
+				"hideRollover"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"padding",
+				"padding-left"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jandennison/Documents/ecomlocal/jean-guide-sandbox.js",
+		"/Users/jandennison/Documents/ecomlocal/JeansGuide-backup.jsp",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/anf/css/include/jean-guide.css",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/base/content/js/include/jean-guide.js",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/base/js/include/jean-guide.js",
+		"/Users/jandennison/Documents/ecomlocal/Stores/WebContent/basedir/views/catalog/JeansGuide.jsp",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/anf/content/css/include/jean-guide.css",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/hol/content/css/include/jean-guide.css",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/hol/css/include/jean-guide.css",
+		"/Users/jandennison/Desktop/jeans js backup",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/anf/css/global/global.css",
+		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/base/content/css/include/jean-guide.css",
+		"/Users/jandennison/Documents/ecomlocal/Stores/WebContent/apollo/views/catalog/JeansGuide.jsp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".arrow-image",
+			".close",
+			".arro",
+			"-42px",
+			"back-to-fit",
+			"default-gradient",
+			"gradient",
+			" 50px",
+			"50px",
+			".shop-now",
+			".compare-section-list li",
+			".compare-section-list li:hover .shop-now",
+			"video",
+			"product-v",
+			"quick-shop",
+			"jean-guide.css",
+			"bettys",
+			".fit",
+			"quick",
+			"quickshopbtn",
+			"anf",
+			"quickshopbtn",
+			"quick-shop",
+			"swatch",
+			"shop-now",
+			"compare-section-list-info-main-container",
+			".compare-section-container-list.compare-section",
+			"close-button",
+			"960",
+			"220",
+			"quick-",
+			"960",
+			"shadow",
+			"jspdrag",
+			"h2",
+			".fit span",
+			"fits",
+			"background-image",
+			".close",
+			"close-button-",
+			" \n",
+			"close-button-large",
+			"trade",
+			"text",
+			"trade",
+			"gothic",
+			".quick-shop-link",
+			"shop",
+			"#entrance",
+			"min-width",
+			"$tooltip",
+			"jan",
+			"map",
+			"wash-content",
+			"tooltip ",
+			".close",
+			"hol_jeans",
+			"hol_jeans_sprite.png",
+			"hol_jeans_sprite.png\"",
+			"tooltip",
+			"#wash .wash-description .wash-direction.wash-up .arrow",
+			".wash-dir",
+			"small-arr",
+			".close",
+			"small",
+			"jeans-sprite",
+			"small-arrow",
+			"jean_sprite",
+			"jean-sprite",
+			"jean-sprit",
+			"<span>Shop Now</span>",
+			".shop-now",
+			"quick-shop-link",
+			"shop-now",
+			"shop now",
+			".shop-now",
+			"shop-now",
+			"quick-shop-link",
+			"generic",
+			"generic-bu",
+			"shop-now",
+			"quick",
+			"quick-shop",
+			"pick-gender",
+			"close-button-large",
+			"8px",
+			"sticky",
+			"small-arrow",
+			"-left",
+			"small-",
+			"view-all-fits",
+			"global-close",
+			"jean-sprite",
+			"sprite",
+			"sprite-2",
+			"sprite.png",
+			".close",
+			"<span>Back",
+			"small-arrow-",
+			"right",
+			"small-arrow",
+			"footer",
+			"small-arrow-",
+			"small-arrow",
+			"white-s",
+			"small-arrow",
+			"back-to",
+			"back-",
+			"back",
+			"shop-now",
+			"shop",
+			"compare",
+			"compate",
+			"shop-now",
+			"compare-area",
+			"compare",
+			"inactive",
+			"default",
+			"view-entire-col",
+			"sprite",
+			"rel",
+			"sprite",
+			"class=\"collection\"",
+			";\n",
+			"displayed",
+			"250px",
+			"100",
+			"wash"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.318546443791,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 207.0,
+	"status_bar_visible": true
+}
