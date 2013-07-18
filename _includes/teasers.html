@@ -1,0 +1,12 @@
+{% for post in teasers offset:teasers_skip limit:teasers_take %}
+<h4> <a href="/" rel="bookmark" title="Permanent link to ">{{ post.title }}</a> </h4>
+
+<span> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
+<p> {{ post.excerpt }} </p>
+
+{% if forloop.last %}
+{% else %}
+	{% cycle '', '<div class=teaser-separator></div>' %}
+{% endif %}
+
+{% endfor %}

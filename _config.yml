@@ -1,4 +1,8 @@
 url: http://jannypie.github.io
-permalink: pretty
-pygments: true
-exclude: ['Rakefile.rb', 'CNAME', 'README.markdown']
+auto: false 
+server: false 
+lsi: false 
+pygments: true 
+permalink: /:title 
+paginate: 10  
+exclude: ["lib", "blog.rb", "Capfile", "config", "log", "Rakefile", "tmp"] 

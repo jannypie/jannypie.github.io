@@ -1,16 +1,15 @@
+--- 
+layout: "post" 
+title: "Title" 
+excerpt: "This is my third attempt at structuring a blog post." 
+meta-description: "Practice setting up a Jekyll blog on GitHub"
+image: "jekyll.png"
+tags: "hello"
+- slug: "wordpress"
+  title: "Wordpress"
+  autoslug: "wordpress"
 ---
-title: Blog Post 1
-layout: post
-category: post
-tags: [how-to, jekyll]
----
-
-<h1>Blog Post 1</h1>
-<h3>HTML format</h3>
-
-<p>Here is a testing blog post.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<p> Woop woop woop. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse

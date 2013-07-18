@@ -1,15 +1,18 @@
 ---
-layout: default
-title: jannypie github bloggo
-tagline: look ma, no hands
+layout: "default"
+title: "Jan Dennison Web Dev Blog"
+meta-description: "Web development blog by Jan Dennison"
+meta-robots: "noodp, noydir"
 ---
+<h1> Latest entries </h1>
+{% include featured-posts.html %}			
 
+<h3> Entries before the latests entries </h3> 
+{% assign teasers = site.posts %} 
+{% assign teasers_skip = 4 %} 
+{% assign teasers_take = 6 %} 
+<!--{% include post-teasers.html %} -->
 
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
+<div id="view-all-entries">
+  <a href="/sitemap/">View all the entries</a>
+</div>
