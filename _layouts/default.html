@@ -2,8 +2,16 @@
 <html lang="en">
 	{% include head.html %}
 		<body>
-			{% include header.html %}
-			{{ content }}
-			{% include footer.html %}
+			<div class="fancy-container">
+			<div class="content-container">
+				<div class="page-wrap">
+					{% include header.html %}
+					<div class="content-wrap">
+						{{ content }}
+					</div>
+					{% include footer.html %}
+				</div> <!-- /content-wrap -->
+			</div><!--/content-->
+			</div><!-- /fancy-container -->
 		</body>
 </html>
