@@ -17,7 +17,7 @@ meta-robots: "noodp, noydir"
 			{% assign teasers = site.posts %} 
 			{% assign teasers_skip = 4 %} 
 			{% assign teasers_take = 6 %} 
-			<!--{% include post-teasers.html %} -->
+			{% include teasers.html %}
 	</div>
 </div>
 <div id="view-all-entries">

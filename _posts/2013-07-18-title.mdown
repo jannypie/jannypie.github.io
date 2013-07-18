@@ -5,9 +5,6 @@ excerpt: "This is my third attempt at structuring a blog post."
 meta-description: "Practice setting up a Jekyll blog on GitHub"
 image: "jekyll.png"
 tags: "hello"
-- slug: "wordpress"
-  title: "Wordpress"
-  autoslug: "wordpress"
 ---
 <p> Woop woop woop. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

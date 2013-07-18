@@ -1,0 +1,8 @@
+---
+layout: "post" 
+title: "Beginning Jekyll + GitHub: A Newbie Use Case" 
+meta-description: "A few notes on my experience setting up a Jekyll blog on GitHub as a newbie NaP (Not a Programmer), along with some tips on getting started."
+image: "jekyll-setup.png"
+tags: "hello"
+category:
+---

@@ -155,11 +155,34 @@ body {
 	        box-sizing: border-box;
   font-family: 'Numans', sans-serif;
 }
+
+a, a:visited {
+  color: #00AAA4;
+  text-decoration: none;
+}
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+
 h1,h2,h3,h4,h5,h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: 'Scada', sans-serif;
   font-weight: 700;
 }
+  h1, h1 a, h1 a:visited {
+    color: #FF0051;
+  }
+  h2, h2 a, h2 a:visited {
+    color: #FF4D00;
+  }
+  h3, h3 a, h3 a:visited {
+    color: #FFBF00;
+  }
+  h4, h5, h6,
+  h4 a, h5 a, h6 a {
+    color: #75AB00;
+  }
+
 .fancy-container {
   background: rgb(246,245,238); /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%, rgba(246,245,238,1) 63%, rgba(234,223,194,1) 100%); /* FF3.6+ */
