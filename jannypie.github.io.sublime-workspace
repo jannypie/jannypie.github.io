@@ -5,7 +5,19 @@
 		[
 			[
 				"font",
-				"font-size"
+				"font-weight"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"backgro",
+				"background-color"
 			],
 			[
 				"sh",
@@ -42,10 +54,6 @@
 			[
 				"remove",
 				"removeClass"
-			],
-			[
-				"margin",
-				"margin-top"
 			],
 			[
 				"jg",
@@ -112,10 +120,6 @@
 				"jeans-sprite-2"
 			],
 			[
-				"mar",
-				"margin-left"
-			],
-			[
 				"ba",
 				"background-position"
 			],
@@ -139,43 +143,42 @@
 			"file": "_posts/2013-07-15-blog-post-1.html",
 			"settings":
 			{
-				"buffer_size": 159,
-				"line_ending": "Unix",
-				"name": "---"
+				"buffer_size": 566,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/2013-07-19-beginning-jekyll-and-github-newbie-use-case.mdown",
+			"settings":
+			{
+				"buffer_size": 290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "---\nlayout: \"default\"\ntitle: \"Jan Dennison Web Dev Blog\"\nmeta-description: \"Web development blog by Jan Dennison\"\nmeta-robots: \"noodp, noydir\"\n---\n<div class=\"row\">\n	<div class=\"span12\">\n		  <p>In the year 2004, I graduated college with a degree in biology and spent six years researching biodefense at a worldwide institute.</p>\n\n		  <p>I've spent the time since then moving my career path into web design and development. </p>\n\n		  Here I share my experiences.		\n	</div>\n</div>\n<hr>\n<div class=\"row\">\n	<div class=\"span12\">\n		  <h1> Latest entries </h1>\n			{% include featured-posts.html %}			\n	</div>\n</div>\n<hr>\n<div class=\"row\">\n	<div class=\"span12\">\n			<h3> Entries before the latest entries </h3> \n			{% assign teasers = site.posts %} \n			{% assign teasers_skip = 4 %} \n			{% assign teasers_take = 6 %} \n			{% include teasers.html %}\n	</div>\n</div>\n<div id=\"view-all-entries\">\n  <a href=\"/sitemap/\">View all the entries</a>\n</div>",
+			"file": "index.md",
+			"file_size": 923,
+			"file_write_time": 1374257017000000,
+			"settings":
+			{
+				"buffer_size": 936,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "_posts/2013-07-18-title.mdown",
 			"settings":
 			{
-				"buffer_size": 261,
+				"buffer_size": 674,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_config.yml",
+			"file": "_includes/featured-posts.html",
 			"settings":
 			{
-				"buffer_size": 197,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n	{% include head.html %}\n		<body>\n			<h1>Latest entries</h1>\n			{% for post in site.posts limit:4 %}\n			{{ post.title }}\n\n			{{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }}\n			{{ post.excerpt }}\n\n			{% endfor %} \n		</body>\n</html>\n--- layout: default ---\n",
-			"file": "index.md",
-			"file_size": 101,
-			"file_write_time": 1374161120000000,
-			"settings":
-			{
-				"buffer_size": 328,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_includes/head.html",
-			"settings":
-			{
-				"buffer_size": 531,
+				"buffer_size": 298,
 				"line_ending": "Unix"
 			}
 		},
@@ -183,7 +186,7 @@
 			"file": "_layouts/default.html",
 			"settings":
 			{
-				"buffer_size": 76,
+				"buffer_size": 400,
 				"line_ending": "Unix"
 			}
 		},
@@ -191,7 +194,7 @@
 			"file": "_layouts/page.html",
 			"settings":
 			{
-				"buffer_size": 64,
+				"buffer_size": 461,
 				"line_ending": "Unix"
 			}
 		},
@@ -199,7 +202,7 @@
 			"file": "_layouts/post.html",
 			"settings":
 			{
-				"buffer_size": 64,
+				"buffer_size": 1686,
 				"line_ending": "Unix"
 			}
 		},
@@ -215,11 +218,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 67.0,
+		"height": 267.0,
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			]
 		],
-		"width": 392.0
+		"width": 522.0
 	},
 	"console":
 	{
@@ -236,6 +243,17 @@
 	},
 	"file_history":
 	[
+		"/Users/jandennison/jannypie.github.io/css/main.css",
+		"/Users/jandennison/jannypie.github.io/_includes/head.html",
+		"/Users/jandennison/jannypie.github.io/_includes/header.html",
+		"/Users/jandennison/jannypie.github.io/index.md",
+		"/Users/jandennison/jannypie.github.io/_includes/teasers.html",
+		"/Users/jandennison/jannypie.github.io/_config.yml",
+		"/Users/jandennison/jannypie.github.io/footer.html",
+		"/Users/jandennison/jannypie.github.io/header.html",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-18-title.mdown",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-15-blog-post-1.html",
+		"/Users/jandennison/jannypie.github.io/assets/themes/jannypie/css/main.css",
 		"/Users/jandennison/Documents/ecomlocal/jean-guide-sandbox.js",
 		"/Users/jandennison/Documents/ecomlocal/JeansGuide-backup.jsp",
 		"/Users/jandennison/Documents/ecomlocal/StaticWeb/WebContent/anf/css/include/jean-guide.css",
@@ -267,6 +285,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h1",
+			"background-colo",
 			".arrow-image",
 			".close",
 			".arro",
@@ -392,9 +412,7 @@
 			"class=\"collection\"",
 			";\n",
 			"displayed",
-			"250px",
-			"100",
-			"wash"
+			"250px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -412,7 +430,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -420,20 +438,19 @@
 					"file": "_posts/2013-07-15-blog-post-1.html",
 					"settings":
 					{
-						"buffer_size": 159,
+						"buffer_size": 566,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								159,
-								159
+								75,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_name": "---",
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -444,23 +461,22 @@
 				},
 				{
 					"buffer": 1,
-					"file": "_posts/2013-07-18-title.mdown",
+					"file": "_posts/2013-07-19-beginning-jekyll-and-github-newbie-use-case.mdown",
 					"settings":
 					{
-						"buffer_size": 261,
+						"buffer_size": 290,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								290,
+								290
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -471,23 +487,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "_config.yml",
+					"file": "index.md",
 					"settings":
 					{
-						"buffer_size": 197,
+						"buffer_size": 936,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								197,
-								197
+								434,
+								462
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/YAML/YAML.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -497,50 +514,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "index.md",
+					"file": "_posts/2013-07-18-title.mdown",
 					"settings":
 					{
-						"buffer_size": 328,
+						"buffer_size": 674,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								153
+								199,
+								5
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 2
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "_includes/head.html",
-					"settings":
-					{
-						"buffer_size": 531,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -555,18 +545,44 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
-					"file": "_layouts/default.html",
+					"buffer": 4,
+					"file": "_includes/featured-posts.html",
 					"settings":
 					{
-						"buffer_size": 76,
+						"buffer_size": 298,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
+								51,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_layouts/default.html",
+					"settings":
+					{
+						"buffer_size": 400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
 								0
 							]
 						],
@@ -585,15 +601,15 @@
 					"file": "_layouts/page.html",
 					"settings":
 					{
-						"buffer_size": 64,
+						"buffer_size": 461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								453,
+								453
 							]
 						],
 						"settings":
@@ -611,15 +627,15 @@
 					"file": "_layouts/post.html",
 					"settings":
 					{
-						"buffer_size": 64,
+						"buffer_size": 1686,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								382,
+								382
 							]
 						],
 						"settings":
@@ -644,8 +660,8 @@
 						"selection":
 						[
 							[
-								42,
-								1337
+								2651,
+								2655
 							]
 						],
 						"settings":
@@ -655,7 +671,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 394.0,
+						"translation.y": 1192.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -691,7 +707,7 @@
 		"cols":
 		[
 			0.0,
-			0.539933400533,
+			0.476627399314,
 			1.0
 		],
 		"rows":
