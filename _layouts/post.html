@@ -12,7 +12,7 @@
 							<span> {{ page.date | date: '%B' }} {{ page.date | date: '%e' }}, {{ page.date | date: '%Y' }} </span>
 							<span> {{ page.tags }} </span>
 
-							{{ page.content }}
+							{{ page.content | unindent | markdownify }}
 
 							<div class="prev_next post_nav">
 								{% if page.previous.url %}
