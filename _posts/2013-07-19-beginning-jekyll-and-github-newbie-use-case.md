@@ -8,12 +8,6 @@ tags:
 category:
 ---
 
-## Introduction
-
-As my first genuine post, I thought I'd share my experience setting up this blog site. I decided to start a blog chronicling my experiences moving into web development, so using web development tools to do so seemed apt. At the end of it all, I became comfortable with using the Terminal to preview my [Jekyll][1] blog on my local computer and also to build the blog to send online, began learning [Liquid][2] templating, and started picking up the [Markdown][3] and [YAML][4] markup language basics.
-
-Here I must tell you: I am NaP. That is, I am Not a Programmer. I am also Not a Number (NaN), which I am referencing to also identify that I am, indeed, NaP. So much of the resources available online for anything GitHub-related is (understandably so) written by programmers for other programmers. This calls in a whole host of assumptions that authors make when communicating to their audiences, such as familiarity with using the Command Terminal to enter information, commands and shortcuts, and so on. This is **without question** the biggest challenge I have faced in learning web development. Yes, some of these things are hard, and learning something new on your own is hard, but deciphering usable instructions from instructions written for someone else has undeniably been the greatest time commitment and mental challenge.
-
 <div class="toc">
 	<strong>Contents:</strong>
 	<h2>Introduction</h2>
@@ -25,6 +19,12 @@ Here I must tell you: I am NaP. That is, I am Not a Programmer. I am also Not a 
 	<h3>Flow</h3>
 	<h2>Conclusion</h2>
 </div>
+
+## Introduction
+
+As my first genuine post, I thought I'd share my experience setting up this blog site. I decided to start a blog chronicling my experiences moving into web development, so using web development tools to do so seemed apt. At the end of it all, I became comfortable with using the Terminal to preview my [Jekyll][1] blog on my local computer and also to build the blog to send online, began learning [Liquid][2] templating, and started picking up the [Markdown][3] and [YAML][4] markup language basics.
+
+Here I must tell you: I am NaP. That is, I am Not a Programmer. I am also Not a Number (NaN), which I am referencing to also identify that I am, indeed, NaP. So much of the resources available online for anything GitHub-related is (understandably so) written by programmers for other programmers. This calls in a whole host of assumptions that authors make when communicating to their audiences, such as familiarity with using the Command Terminal to enter information, commands and shortcuts, and so on. This is **without question** the biggest challenge I have faced in learning web development. Yes, some of these things are hard, and learning something new on your own is hard, but deciphering usable instructions from instructions written for someone else has undeniably been the greatest time commitment and mental challenge.
 
 ### What are GitHub Pages and Jekyll?
 

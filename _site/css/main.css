@@ -267,11 +267,11 @@ ul.nav {
 
 .toc {
   display: block;
-  position: absolute;
-    left: 40px;
-    top: 294px;
+  float: right;
+  margin-top: 50px;
+  padding-bottom: 20px;
   text-align: right;
-  width: 190px;
+  width: 30%;
 }
 
 .toc h1, .toc h2, .toc h3, .toc h4, .toc h5, .toc h6 {
