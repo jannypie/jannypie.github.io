@@ -177,7 +177,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
       position: relative;
       font-size: 3.0em;
     }
-    header h1:after {
+    header h1:before {
       position: absolute;
       background: url(/images/white-grunge.png) repeat-x;
       width: 515px;
@@ -186,6 +186,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
       left: -10px;
       display: block;
       content: '';
+    }
+    header a:hover {
+      text-transform: none;
     }
   h2, h2 a, h2 a:visited {
     color: #FF4D00;

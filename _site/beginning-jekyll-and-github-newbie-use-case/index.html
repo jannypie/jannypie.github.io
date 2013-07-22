@@ -23,7 +23,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
 	</nav>-->
-	<h1>Jan Dennison : Blog</h1>
+	<a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison : WebDev</h1></a>
 </header>
 					<div class="content-wrap">
 						<h1> GitHub Pages with Jekyll : A Newbie Use Case </h1>
@@ -44,20 +44,20 @@
 </div>
 <h2 id='introduction'>Introduction</h2>
 
-<p>As my first genuine post, I thought I&#8217;d share my experience setting up this blog site. I decided to start a blog chronicling my experiences moving into web development, so using web development tools to do so seemed apt. At the end of it all, I became comfortable with using the Terminal to preview my <a href='http://jekyllrb.com/' title='Jekyll Static Blogging'>Jekyll</a> blog on my local computer and also to build the blog to send online, began learning <a href='http://wiki.shopify.com/Liquid' title='Liquid Templating for Designers'>Liquid</a> templating, and started picking up the <a href='http://daringfireball.net/projects/markdown/' title='Markdown'>Markdown</a> and <a href='http://jekyllrb.com/docs/frontmatter/' title='YAML Front End Matter'>YAML</a> markup language basics.</p>
+<p>As my first genuine post, I thought I&#8217;d share my experience setting up this blog site. I decided to start a blog chronicling my experiences moving into web development, so using web development tools to do so seemed apt. At the end of it all, I became comfortable with using the Terminal to preview my <a title='Jekyll Static Blogging' href='http://jekyllrb.com/'>Jekyll</a> blog on my local computer and also to build the blog to send online, began learning <a title='Liquid Templating for Designers' href='http://wiki.shopify.com/Liquid'>Liquid</a> templating, and started picking up the <a title='Markdown' href='http://daringfireball.net/projects/markdown/'>Markdown</a> and <a title='YAML Front End Matter' href='http://jekyllrb.com/docs/frontmatter/'>YAML</a> markup language basics.</p>
 
 <p>Here I must tell you: I am NaP. That is, I am Not a Programmer. I am also Not a Number (NaN), which I am referencing to also identify that I am, indeed, NaP. So much of the resources available online for anything GitHub-related is (understandably so) written by programmers for other programmers. This calls in a whole host of assumptions that authors make when communicating to their audiences, such as familiarity with using the Command Terminal to enter information, commands and shortcuts, and so on. This is <strong>without question</strong> the biggest challenge I have faced in learning web development. Yes, some of these things are hard, and learning something new on your own is hard, but deciphering usable instructions from instructions written for someone else has undeniably been the greatest time commitment and mental challenge.</p>
 
 <h3 id='what_are_github_pages_and_jekyll'>What are GitHub Pages and Jekyll?</h3>
 
-<p>In the effort to not make the mistake myself that I find so frustrating in the development world (namely, assuming everyone has the same level of knowledge I do), let me explain. <a href='http://github.com' title='GitHub'>GitHub</a> is a company that provides a version control system. Like a much, much better version of track changes, but for all of the files and folders associated with your website or software project. GitHub offers free hosting for web pages for yourself or any of your projects, via <a href='http://pages.github.com/' title='GitHub Pages'>GitHub Pages</a>. If you want to use GitHub Pages for yourself to make a blog, you have to use <a href='http://jekyllrb.com/' title='Jekyll Static Blogging'>Jekyll</a>, which basically takes all the files associated with your blog (home page, style page, posts, images, etc etc.) and builds it into a blog site - every time you write a post. So you get your base files together, write a post and save it as a file, tell Jekyll to &#8220;build&#8221;, and then upload the whole package to GitHub. Every time you write a post.</p>
+<p>In the effort to not make the mistake myself that I find so frustrating in the development world (namely, assuming everyone has the same level of knowledge I do), let me explain. <a title='GitHub' href='http://github.com'>GitHub</a> is a company that provides a version control system. Like a much, much better version of track changes, but for all of the files and folders associated with your website or software project. GitHub offers free hosting for web pages for yourself or any of your projects, via <a title='GitHub Pages' href='http://pages.github.com/'>GitHub Pages</a>. If you want to use GitHub Pages for yourself to make a blog, you have to use <a title='Jekyll Static Blogging' href='http://jekyllrb.com/'>Jekyll</a>, which basically takes all the files associated with your blog (home page, style page, posts, images, etc etc.) and builds it into a blog site - every time you write a post. So you get your base files together, write a post and save it as a file, tell Jekyll to &#8220;build&#8221;, and then upload the whole package to GitHub. Every time you write a post.</p>
 <div class='newbie'>
 <h3>Newbie Note:</h3>
-<p><a href='http://www.ruby-lang.org/en/' title='Ruby'>Ruby</a> is a programming language. It does stuff. If you own a Mac, it comes installed already. Ruby takes plugins, called Gems, that can be written to do a bunch of stuff. Jekyll is a Ruby gem that lets your computer build a blog site.</p>
+<p><a title='Ruby' href='http://www.ruby-lang.org/en/'>Ruby</a> is a programming language. It does stuff. If you own a Mac, it comes installed already. Ruby takes plugins, called Gems, that can be written to do a bunch of stuff. Jekyll is a Ruby gem that lets your computer build a blog site.</p>
 </div>
 <h4 id='why_jekyll_and_github_pages'>Why Jekyll and GitHub Pages?</h4>
 
-<p>Well, along my path to web development, I encountered <a href='http://github.com' title='GitHub'>GitHub</a> as a place which all my programmer friends use not just for version control, but to also host projects they&#8217;ve built, connect with other developers, and participate in pirate levels of drinking at GitHub drinkups. I decided to learn how to use it, and began to practice creating repos (repositories of files associated with a project; basically, their name for a master file folder), using the GitHub app for Mac to commit changes and sync branches, and using GitHub Pages to publish web pages with the results. For examples, check out my <a href='http://jandennison.com/' title='Jan Dennison Portfolio'>portfolio</a>. When I learned that you can set up a blog using GitHub Pages (mainly via <a href='http://jenmyers.net/' title='Jen Myers Web Developer'>Jen&#8217;s blog</a>), I set about doing just that. But then, I got to the step where you select a template, and the designer in my head went &#8220;Well naturally I want my <em>own</em> design.&#8221; So <em>of course</em> I had to back up and learn how to publish the blog on my own so that I could have my own template. Aaannd, here we are.</p>
+<p>Well, along my path to web development, I encountered <a title='GitHub' href='http://github.com'>GitHub</a> as a place which all my programmer friends use not just for version control, but to also host projects they&#8217;ve built, connect with other developers, and participate in pirate levels of drinking at GitHub drinkups. I decided to learn how to use it, and began to practice creating repos (repositories of files associated with a project; basically, their name for a master file folder), using the GitHub app for Mac to commit changes and sync branches, and using GitHub Pages to publish web pages with the results. For examples, check out my <a title='Jan Dennison Portfolio' href='http://jandennison.com/'>portfolio</a>. When I learned that you can set up a blog using GitHub Pages (mainly via <a title='Jen Myers Web Developer' href='http://jenmyers.net/'>Jen&#8217;s blog</a>), I set about doing just that. But then, I got to the step where you select a template, and the designer in my head went &#8220;Well naturally I want my <em>own</em> design.&#8221; So <em>of course</em> I had to back up and learn how to publish the blog on my own so that I could have my own template. Aaannd, here we are.</p>
 
 <h4 id='why_not_wordpress'>Why not WordPress?</h4>
 
@@ -72,7 +72,7 @@
 
 <li><strong>Command Terminal</strong> : Beginner. I know how to change directories (cd) and what sudo means, and that&#8217;s it.</li>
 
-<li><strong>GitHub Repos/Committing Changes</strong> : Novice. I had help installing the <a href='http://mac.github.com/' title='GitHub for Mac App'>GitHub for Mac</a> app, and I use that rather than the command line to interact in any way between my computer and GitHub.</li>
+<li><strong>GitHub Repos/Committing Changes</strong> : Novice. I had help installing the <a title='GitHub for Mac App' href='http://mac.github.com/'>GitHub for Mac</a> app, and I use that rather than the command line to interact in any way between my computer and GitHub.</li>
 
 <li><strong>Ruby Gems</strong> : Beginner. I encountered this while setting up GitHub for my computer, but only in a minor tangential way, and ended up getting help.</li>
 
@@ -87,7 +87,7 @@
 </li>
 
 <li>
-<p>First hit: <a href='http://jekyllbootstrap.com/' title='Jekyll Bootstrap'>Jekyll Bootstrap</a> (JB)</p>
+<p>First hit: <a title='Jekyll Bootstrap' href='http://jekyllbootstrap.com/'>Jekyll Bootstrap</a> (JB)</p>
 </li>
 
 <li>
@@ -109,7 +109,7 @@
 </li>
 
 <li>
-<p>Moved on to <a href='http://jekyllbootstrap.com/usage/jekyll-quick-start.html' title='Jekyll Bootstrap Quick Start'>JB Quick Start</a>, where we install Jekyll</p>
+<p>Moved on to <a title='Jekyll Bootstrap Quick Start' href='http://jekyllbootstrap.com/usage/jekyll-quick-start.html'>JB Quick Start</a>, where we install Jekyll</p>
 
 <p>I had several errors showing up in my command line trying to follow these directions. I didn&#8217;t record all of them, but Google searches of them led me to various solutions.</p>
 
@@ -123,15 +123,15 @@
 </li>
 
 <li>
-<p>At some point during my Google searching for help, I came across the official <a href='http://jekyllrb.com/' title='Jekyll Static Blogging'>Jekyll home page</a> which I have linked a few times now already. I started going through their instructions, but just wasn&#8217;t having any luck.</p>
+<p>At some point during my Google searching for help, I came across the official <a title='Jekyll Static Blogging' href='http://jekyllrb.com/'>Jekyll home page</a> which I have linked a few times now already. I started going through their instructions, but just wasn&#8217;t having any luck.</p>
 </li>
 
 <li>
-<p>About this point, I figured out the repo name issue from Step 3, and I also came across a helpful <a href='http://www.zlu.me/blog/2012/02/21/install-native-ruby-gem-in-mountain-lion-preview/' title='Native Ruby Gem StackOverflow'>StackOverflow</a> post on the same issue as mine, installing the Jekyll gem. Installing the Command Line tools in Xcode did <em>finally</em> allow the jekyll gem to install on my computer. WHEW.</p>
+<p>About this point, I figured out the repo name issue from Step 3, and I also came across a helpful <a title='Native Ruby Gem StackOverflow' href='http://www.zlu.me/blog/2012/02/21/install-native-ruby-gem-in-mountain-lion-preview/'>StackOverflow</a> post on the same issue as mine, installing the Jekyll gem. Installing the Command Line tools in Xcode did <em>finally</em> allow the jekyll gem to install on my computer. WHEW.</p>
 </li>
 
 <li>
-<p>I did contact the GitHub Jekyll team about the Xcode issue, and they were extremely responsive and even suggested I submit the solution to the online documentation, which I did by creating my first forked repo and pull request, which was approved and you can see it on <a href='http://jekyllrb.com/docs/troubleshooting/' title='Jekyll Troubleshooting'>Jekyll Troubleshooting</a>.</p>
+<p>I did contact the GitHub Jekyll team about the Xcode issue, and they were extremely responsive and even suggested I submit the solution to the online documentation, which I did by creating my first forked repo and pull request, which was approved and you can see it on <a title='Jekyll Troubleshooting' href='http://jekyllrb.com/docs/troubleshooting/'>Jekyll Troubleshooting</a>.</p>
 </li>
 </ul>
 </li>
@@ -141,13 +141,13 @@
 </li>
 
 <li>
-<p>I decided to Google search a bit more, and came across this <a href='http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/' title='Migrating from WordPress to Jekyll'>very helpful guide</a> on vittobotta.com about migrating from <a href='http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/' title='Migrating from WordPress to Jekyll'>WordPress to Jekyll</a>. Yes, I did just link it twice. Perhaps because it&#8217;s written for people used to working with WordPress, or perhaps it&#8217;s because he writes at a general level I can understand, or perhaps it&#8217;s because he includes more detailed explanations and real-life examples - I truly don&#8217;t know - but I found this guide to be really helpful in finally putting together the pieces that make my blog actually <em>work</em>.</p>
+<p>I decided to Google search a bit more, and came across this <a title='Migrating from WordPress to Jekyll' href='http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/'>very helpful guide</a> on vittobotta.com about migrating from <a title='Migrating from WordPress to Jekyll' href='http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/'>WordPress to Jekyll</a>. Yes, I did just link it twice. Perhaps because it&#8217;s written for people used to working with WordPress, or perhaps it&#8217;s because he writes at a general level I can understand, or perhaps it&#8217;s because he includes more detailed explanations and real-life examples - I truly don&#8217;t know - but I found this guide to be really helpful in finally putting together the pieces that make my blog actually <em>work</em>.</p>
 
 <p>Even this guide, however, includes instructions for creating folders only using the command line. My programmer friends say it&#8217;s just natural for them because they are so used to it, and I imagine that is true for them. However, to make it more approachable for those of us who aren&#8217;t programmers, but are used to using the folders and files on our desktops, you CAN do it that way. Just navigate to whatever folder you cloned your repo to, and start creating folders and files, following the structure outlined in the Jekyll guides. JBootstrap did come in handy for this part of it, and for copying some files over as a starting base. My files no longer have any of the remaining Bootstrap content in them, but it was very helpful as a start.</p>
 </li>
 
 <li>
-<p>The final part of the puzzle, for me, was understanding how to use jekyll to make the blog. The <a href='http://jekyllrb.com/docs/usage/' title='Using Jekyll'>instructions are there</a>, really, but it still took a mental leap from seeing that and interpreting it into actual steps. For anyone like me, it actually goes something like:</p>
+<p>The final part of the puzzle, for me, was understanding how to use jekyll to make the blog. The <a title='Using Jekyll' href='http://jekyllrb.com/docs/usage/'>instructions are there</a>, really, but it still took a mental leap from seeing that and interpreting it into actual steps. For anyone like me, it actually goes something like:</p>
 
 <ul>
 <li>Type up a sample post and save the file in your <em>posts</em> folder. Don&#8217;t forget your YAML Front Matter and to declare a template type, and save it as either Markdown or Textile (which I didn&#8217;t even try getting into)</li>
@@ -175,7 +175,7 @@
 
 <h2 id='conclusion'>Conclusion</h2>
 
-<p>I am now at the point where I am able to write a post and have it show up, and have some sort of design to the site as well, by using the Liquid template tags that were laid out on <a href='http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/' title='Migrating from WordPress to Jekyll'>vittobotta.com</a>. I have written this entire post in Markdown in order to learn and practice that language. Technically there is some YAML Front Matter around here, so I think that counts as using it.</p>
+<p>I am now at the point where I am able to write a post and have it show up, and have some sort of design to the site as well, by using the Liquid template tags that were laid out on <a title='Migrating from WordPress to Jekyll' href='http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/'>vittobotta.com</a>. I have written this entire post in Markdown in order to learn and practice that language. Technically there is some YAML Front Matter around here, so I think that counts as using it.</p>
 
 <p>There are still things I need to work out:</p>
 
