@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<meta charset="utf-8">
+	<!-- Meta meta -->
+<meta charset="utf-8">
 <title>Title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Jan Dennison">
 <meta name="robots" content="" />
 <meta name="description" content="Practice setting up a Jekyll blog on GitHub" />
 
+<!-- The Links -->
+<link rel="canonical" href="/title" />
 <link href="/css/main.css" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="canonical" href="/title" />
 <link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
+
+<!-- FancyBox Images -->
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<!-- End FancyBox -->
 		<body>
 			<div class="fancy-container">
 			<div class="content-container">
@@ -28,8 +44,10 @@
 					<div class="content-wrap">
 						<h1> Title </h1>
 
-							<span> July 18, 2013 </span>
+							<span class="meta"> July 18, 2013 </span>
 							<span> hello </span>
+
+							<img class="fancybox post-main-img" src="jekyll.png">
 
 							<p> Woop woop woop. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -79,7 +97,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 							  
 							    <div class="related-post">
 							      <div class="image">
-							        <img src="/images/posts/thumbnails/">
+							        <img src="/images/posts/thumbnails//assets/post-images/github-pages-templates.png">
 							      </div>
 							      <div class="title">
 							        <a href="/beginning-jekyll-and-github-newbie-use-case/" target="_top">
@@ -94,6 +112,29 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					      <div class="footer">
         <p>&copy; Jan Dennison</p>
       </div>
+
+<!-- Site Scripts -->
+<!-- FancyBox -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+		$(".fancybox-thumb").fancybox({
+			prevEffect	: 'none',
+			nextEffect	: 'none',
+			helpers	: {
+				title	: {
+					type: 'outside'
+				},
+				thumbs	: {
+					width	: 50,
+					height	: 50
+				}
+			}
+		});
+	});
+
+</script>
+
 				</div> <!-- /page-wrap -->
 			</div><!--/content-->
 			</div><!-- /fancy-container -->

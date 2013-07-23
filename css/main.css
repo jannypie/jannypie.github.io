@@ -1,164 +1,99 @@
 ---
 ---
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+/* ==========================================================================
+   HTML5 Boilerplate Minified
+   ========================================================================== */
+html,button,input,select,textarea{color:#000}body{font-size:1em;line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}.ir:before{content:"";display:block;width:0;height:150%}.hidden{display:none!important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}
 
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Twitter Bootstrap Responsive Grid
    ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
+.row-fluid {
+    width: 100%;
+    *zoom: 1;
 }
-
-body {
-    font-size: 1em;
-    line-height: 1.4;
+.row-fluid:before, .row-fluid:after {
+    display: table;
+    line-height: 0;
+    content: ""}
+.row-fluid:after {
+    clear: both;
 }
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
+.row-fluid [class*="span"] {
     display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    margin-left: 2.564102564102564%;
+    *margin-left: 2.5109110747408616%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
 }
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Thumbnails
-   ========================================================================== */
-.nailthumb-container {
-  width: auto;
-  height: auto;
-  margin: 0 0 11px;
-  padding: 0px;
-  overflow: hidden;
-  position: relative;
-  text-align: left;
-}
-.nailthumb-container img.nailthumb-image {
-  margin: 0px;
-  padding: 0px;
-  max-width: none;
-  text-align: left;
-  float: left;
-}
-.nailthumb-container span.nailthumb-title {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-  bottom: 0;
-  color: White;
-  display: block;
-  font-size: 9px;
-  height: 20px;
-  left: 0;
-  margin-top: 2px;
-  line-height: 20px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  overflow: hidden;
-  float: left;
-}
-.nailthumb-container span.nailthumb-title .nailthumb-title-scroller {
-  padding-left: 2px;
-}
-.nailthumb-container img {
-  max-width: none;
-  text-align: left;
-}
-
-.square {
-   width: 220px;
-   height: 220px;
-}
-
-.nailthumb-image-titles-bigger span.nailthumb-title {
-    background: none repeat scroll 0 0 rgba(0, 125, 0, 0.5);
-    font-size: 15px;
-    height: 30px;
-}
+.row-fluid .controls-row [class*="span"]+[class*="span"] {
+    margin-left: 2.564102564102564%}
+.row-fluid .span12 {
+    width: 100%;
+    *width: 99.94680851063829%}
+.row-fluid .span11 {
+    width: 91.45299145299145%;
+    *width: 91.39979996362975%}
+.row-fluid .span10 {
+    width: 82.90598290598291%;
+    *width: 82.8527914166212%}
+.row-fluid .span9 {
+    width: 74.35897435897436%;
+    *width: 74.30578286961266%}
+.row-fluid .span8 {
+    width: 65.81196581196582%;
+    *width: 65.75877432260411%}
+.row-fluid .span7 {
+    width: 57.26495726495726%;
+    *width: 57.21176577559556%}
+.row-fluid .span6 {
+    width: 48.717948717948715%;
+    *width: 48.664757228587014%}
+.row-fluid .span5 {
+    width: 40.17094017094017%;
+    *width: 40.11774868157847%}
+.row-fluid .span4 {
+    width: 31.623931623931625%;
+    *width: 31.570740134569924%}
+.row-fluid .span3 {
+    width: 23.076923076923077%;
+    *width: 23.023731587561375%}
+.row-fluid .span2 {
+    width: 14.52991452991453%;
+    *width: 14.476723040552828%}
+.row-fluid .span1 {
+    width: 5.982905982905983%;
+    *width: 5.929714493544281%}
 
 
 /* ==========================================================================
-   Author's custom styles
+   Grunge Stylesheet
+   Author: Jan Dennison
+   Created: July 2013
    ========================================================================== */
 
+/*  Basics 
+    ============================ */
 body {
 	background: #494640 url(/images/grunge-sprite.png) -400px 0px repeat;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+  color: #222;
   font-family: 'Numans', sans-serif;
   letter-spacing: -1px;
 }
 
+/*  Typography 
+    ============================ */
 a, a:visited {
   color: #00AAA4;
   text-decoration: none;
@@ -166,7 +101,6 @@ a, a:visited {
   a:hover, a:active {
     text-decoration: underline;
   }
-
 h1,h2,h3,h4,h5,h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: 'Scada', sans-serif;
@@ -202,14 +136,26 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   h4 a, h5 a, h6 a {
     color: #75AB00;
   }
-
     .post-wrap h3, .post-wrap h3 + p {
       margin-left: 1em;
     }
     .post-wrap h4, .post-wrap h4 + p {
       margin-left: 2em;
     }
+.teasers h4 {
+  margin: 0.5em 0 0 0;
+}
+  .teasers p {
+    margin: 0;
+  }
 
+span.meta {
+  font-size: 0.8em;
+  color: gray;
+}
+
+/*  Containers 
+    ============================ */
 .fancy-container {
   background: rgb(246,245,238); /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%, rgba(246,245,238,1) 63%, rgba(234,223,194,1) 100%); /* FF3.6+ */
@@ -233,34 +179,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   width: 100%;
   height: 100%;
 }
-
-
-/* Custom container */
-.page-wrap, .post-wrap {
-margin: 0px auto;
-max-width: 800px;
-}
-.page-wrap > hr, .post-wrap > hr {
-margin: 30px 0;
-}
 .content-wrap {
   margin-left: 3em;
 }
 
-.row-fluid .thumb-row {
-  width: 31.623931623931625%;
-  *width: 31.570740134569924%;
-  margin-left: 2.564102564102564%;
+.page-wrap, .post-wrap {
+margin: 0px auto;
+max-width: 800px;
 }
-
-.thumb-row:first-child {
-  margin-left: 0;
-}
+  .page-wrap > hr, .post-wrap > hr {
+  margin: 30px 0;
+  }
 
 ul.nav {
   float: right;
 }
-
 
 .newbie {
   display: block;
@@ -277,116 +210,25 @@ ul.nav {
   text-align: right;
   width: 30%;
 }
+  .toc h1, .toc h2, .toc h3, .toc h4, .toc h5, .toc h6 {
+    font-size: 0.8em;
+  }
 
-.toc h1, .toc h2, .toc h3, .toc h4, .toc h5, .toc h6 {
-  font-size: 0.8em;
+.post-main-img {
+  margin: 2em 1em;
+  max-width: 100%;
 }
+.post-thumb-img {
+  max-width: 100%;
+}
+  .teasers .post-thumb-img {
+    max-height: 100px;
+  }
+
+
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {

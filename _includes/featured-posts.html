@@ -1,7 +1,14 @@
 {% for post in site.posts limit:4 %}
-<h2> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">{{ post.title }}</a> </h2>
-
-<span> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
-<p> {{ post.excerpt }} </p>
-
+<div class="row-fluid">
+	<h2> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">{{ post.title }}</a> </h2>
+	<span class="meta"> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
+	<div class="row-fluid">
+		<div class="post-info row-fluid span7">
+		<p> {{ post.excerpt }} </p>
+		</div>
+		<div class="post-img row-fluid span5">
+			<a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}"><img class="post-thumb-img" alt="Image for {{ post.title }}" src="{{ post.image }}"></a>
+		</div>
+	</div>
+</div><!-- end row -->
 {% endfor %} 

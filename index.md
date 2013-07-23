@@ -14,22 +14,18 @@ meta-robots: "noodp, noydir"
 	</div>
 </div>
 <hr>
-<div class="row">
-	<div class="span12">
+<div class="row-fluid">
 		  <h1> Latest entries </h1>
 			{% include featured-posts.html %}			
-	</div>
 </div>
 <hr>
-<div class="row">
-	<div class="span12">
+<div class="row-fluid">
 			<h3> Entries before the latest entries </h3> 
 			{% assign teasers = site.posts %} 
 			{% assign teasers_skip = 4 %} 
-			{% assign teasers_take = 6 %} 
+			{% assign teasers_take = 4 %} 
 			{% include teasers.html %}
-	</div>
 </div>
-<div id="view-all-entries">
+<div class="row-fluid" id="view-all-entries">
   <a href="/sitemap/">View all the entries</a>
 </div>

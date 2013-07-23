@@ -3,7 +3,7 @@ layout: "post"
 excerpt: "As my first genuine post, I thought I'd share my experience setting up this blog site. At the end of it all, I became comfortable with using the Terminal to preview my Jekyll blog on my local computer and also to build the blog to send online, began learning Liquid templating, and started picking up the Markdown and YAML markup language basics."
 title: "GitHub Pages with Jekyll : A Newbie Use Case" 
 meta-description: "A few notes on my experience setting up a Jekyll blog on GitHub as a newbie NaP (Not a Programmer), along with some tips on getting started."
-thumbnail: "jekyll-setup.png"
+image: "/assets/post-images/github-pages-templates.png"
 tags: 
 category:
 ---
