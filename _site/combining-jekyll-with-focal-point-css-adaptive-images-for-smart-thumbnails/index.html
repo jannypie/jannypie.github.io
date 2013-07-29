@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Meta meta -->
+<meta charset="utf-8">
+<title>Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="" />
+<meta name="description" content="How I used Focal Point with Jekyll to create pure CSS Adaptive Post Thumbnails" />
+
+<!-- The Links -->
+<link rel="canonical" href="/combining-jekyll-with-focal-point-css-adaptive-images-for-smart-thumbnails" />
+<link href="/css/main.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
+
+<!-- FancyBox Images -->
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/jquery.fancybox.pack.js"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+<!-- End FancyBox -->
+		<body>
+			<div class="dkgrunge-container">
+			<div class="ltgrunge-container">
+				<div class="content-wrap">
+					<header>
+	<nav>
+		<ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>Portfolio</a>
+          	<ul class="portfolio-nav">
+          		<li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+          	</ul></li>
+        </ul>
+	</nav>
+	<a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison : WebDev</h1></a>
+</header>
+					<div class="post-wrap">
+						<h1> Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images </h1>
+
+							<span class="meta"> July 29, 2013 </span>
+							<span> css,adaptive,jekyll </span>
+
+							<img class="fancybox post-main-img" src="/assets/post-images/focal-point-image.png">
+
+							<h2 id='introduction'>Introduction</h2>
+
+<p><a href='http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/' title='Focal Point: Intelligent Cropping of Responsive Images'>Focal Point: Intelligent Cropping of Responsive Images</a> is an excellent article on <a href='http://designshack.net' title='design shack'>design shack</a> introducing <a href='http://www.cdnconnect.com/docs/focal-point-css/pure-html-css-responsive-high-resolution-images-solution' title='Focal Point Documentation'>Focal Point CSS</a>, a project on GitHub by <a href='https://github.com/adamdbradley/focal-point#readme' title='Adam Bradley Focal Point'>Adam Bradley</a> that sets up a small collection of CSS classes designed to crop images while keeping a focal area in view. This is a great solution to simple resizing of images to create smaller thumbnails without losing the important part of the picture.</p>
+
+<p>Take for example my doodle here of some flowers. The basic setup for CSSing a thumbnail would be to wrap the image in a div with a fixed size and overflow set to hidden:</p>
+
+<pre><code>&lt;div class=&quot;post-thumbnail&quot;&gt;&lt;img alt=&quot;Image for {{ post.title }}&quot; src=&quot;{{ post.image }}&quot;&gt;&lt;/div&gt;
+
+.post-thumbnail {
+  height: 12em;
+  overflow: hidden;
+}
+
+.post-thumbnail img {
+  width: 100%;
+}</code></pre>
+
+<p>However, this top-aligns my image with the div, and the flowers below get cut off. Not so pretty.</p>
+
+<p><img alt='Basic Flower Thumbnail' src='/assets/post-images/focal-point-before.png' /></p>
+
+<p>I had come across some online posts about cropping image thumbnails using CSS, and wanted to go back to those and find a more advanced solution. Thus, I came across Focal Point. I&#8217;ll let you read the details if you wish, but the basic concept is that Focal Point defines classes that apply negative margins to your image based on where you want the focus to be. For each image, simply add one of the Focal Point classes for horizontal offset and another for vertical, and it will not only use negative margins to make that area you define as the focus, but because they are all based on percentages, it&#8217;s also responsive.</p>
+
+<p>The basic structure for using Focal Point is an image wrapped in two divs. To use the example from <a href='http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/' title='Focal Point: Intelligent Cropping of Responsive Images'>the design shack post</a>:</p>
+
+<pre><code>&lt;div class=&quot;focal-point right-3 up-3&quot;&gt;
+  &lt;div&gt;&lt;img src=&quot;guy.jpg&quot; alt=&quot;guy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Here you can see that the container div has three important classes: .focal-point center the image, .right-3 (horizontal), and .up-3 (vertical). Super straightforward. These are all you need for landscape oriented images. For portraits, you also need to add a .portrait class to your image.</p>
+
+<h2 id='the_challenge'>The Challenge</h2>
+
+<p>My question was: could I still use Focal Point on my Jekyll-based blog, which generates a static page of blog posts using a loop? Because it&#8217;s using a loop to generate the post content couched in HTML, I would have to <strong>build</strong> the site after each post, and then go in and add the correct classes by hand to the markup - every time, for every image - and the classes would be different for every image. And nobody got time for that. Here is my loop:</p>
+
+<pre><code>{% for post in site.posts limit:4 %}
+    &lt;div class=&quot;row-fluid featured-post&quot;&gt;
+        &lt;h2&gt; &lt;a href=&quot;{{ post.url }}&quot; rel=&quot;bookmark&quot; title=&quot;Permanent link to {{ post.title }}&quot;&gt;{{ post.title }}&lt;/a&gt; &lt;/h2&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;&lt;!-- post content --&gt;
+            &lt;div class=&quot;post-info row-fluid span5&quot;&gt;
+                &lt;span class=&quot;meta&quot;&gt; {{ post.date | date: &#39;%B&#39; }} {{ post.date | date: &#39;%e&#39; }}, {{ post.date | date: &#39;%Y&#39; }} &lt;/span&gt;
+                &lt;p&gt; {{ post.excerpt }} &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;row-fluid span6&quot;&gt;
+                &lt;div class=&quot;post-thumbnail&quot;&gt;
+                    &lt;a href=&quot;{{ post.url }}&quot; rel=&quot;bookmark&quot; title=&quot;Permanent link to {{ post.title }}&quot;&gt;
+                        &lt;img alt=&quot;Image for {{ post.title }}&quot; src=&quot;{{ post.image }}&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- end content --&gt;
+    &lt;/div&gt;&lt;!-- end row --&gt;
+{% endfor %} </code></pre>
+
+<p>The basic structure of which is:</p>
+
+<pre><code>loop through the posts, and for each post
+    div
+        title
+        left column
+        	date
+        	excerpt
+        right column
+        	image
+    /div
+end loop</code></pre>
+
+<p>I wondered if there was a way to define the necessary classes beforehand in the body of the post and then pass those to the loop to be included in the markup.</p>
+
+<h2 id='the_solution'>The Solution</h2>
+
+<p>The answer to the question was actually very simple - using <a href='http://blog.omgmog.net/post/adding-more-post-metadata-to-jekyll-with-yaml/' title='Adding More Post Metadata to Jekyll With YAML'>custom YAML key:value pairs</a> in the head of each post to define the focal point of the image, and then applying Liquid output structure to pass them to the markup. I defined three custom variables (horizontal, vertical, and orientation) in the YAML front matter of each post:</p>
+
+<pre><code>---
+layout: &quot;post&quot; 
+title: &quot;Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails&quot; 
+image: &quot;/assets/post-images/IMG_0746.jpg&quot;
+focal-vert: down-6
+focal-horz: right-3
+orientation: portrait
+---</code></pre>
+
+<p>Then, using our Liquid templating variables, I set the value of each pair as a class in the loop markup:</p>
+
+<pre><code>&lt;div class=&quot;post-thumbnail focal-point {{ post.orientation }} {{ post.focal-horz }} {{ post.focal-vert }}&quot;&gt;
+        &lt;div&gt;&lt;img alt=&quot;Image for {{ post.title }}&quot; src=&quot;{{ post.image }}&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Which results in markup for this image:</p>
+
+<pre><code>&lt;div class=&#39;post-thumbnail focal-point portrait left-1 down-6&#39;&gt;
+    &lt;div&gt;&lt;img alt=&#39;Image for Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails&#39; src=&#39;/assets/post-images/IMG_0746.jpg&#39; /&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>And here is the side-by-side image again for comparison:</p>
+
+<p><img alt='Focal Point comparison' src='/assets/post-images/focal-point-image.png' /></p>
+
+<p>I do again highly recommend the design shack post for further reading, because the author Joshua Johnson does a great job of explaining how the whole grid works for selecting focus areas.</p>
+
+							<div class="prev_next post_nav">
+								
+									<p class="previous">
+										«&nbsp;<a href="/dummy-post-6/" rel="previous" title="Dummy Post 6">Dummy Post 6</a>
+									</p>
+								 
+								
+							</div>
+
+							<div id="related-posts">
+							  <h3>You might also like</h3>
+							  <div>
+							  
+							    <div class="related-post">
+							      <div class="image">
+							        <img src="/images/posts/thumbnails/">
+							      </div>
+							      <div class="title">
+							        <a href="/jekyll-introduction/" target="_top">
+							          postie post post
+							        </a>
+							      </div>
+							    </div>
+							  
+							    <div class="related-post">
+							      <div class="image">
+							        <img src="/images/posts/thumbnails/">
+							      </div>
+							      <div class="title">
+							        <a href="/blog-post-1/" target="_top">
+							          Blog Post 1
+							        </a>
+							      </div>
+							    </div>
+							  
+							    <div class="related-post">
+							      <div class="image">
+							        <img src="/images/posts/thumbnails/jekyll.png">
+							      </div>
+							      <div class="title">
+							        <a href="/title/" target="_top">
+							          Title
+							        </a>
+							      </div>
+							    </div>
+							  
+							  </div>
+							</div>
+					</div><!-- /content-wrap -->
+					      <div class="footer">
+        <p>&copy; Jan Dennison</p>
+      </div>
+
+<!-- Site Scripts -->
+<!-- FancyBox -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+		$(".fancybox-thumb").fancybox({
+			prevEffect	: 'none',
+			nextEffect	: 'none',
+			helpers	: {
+				title	: {
+					type: 'outside'
+				},
+				thumbs	: {
+					width	: 50,
+					height	: 50
+				}
+			}
+		});
+	});
+
+</script>
+
+				</div> <!-- /page-wrap -->
+			</div><!--/content-->
+			</div><!-- /fancy-container -->
+		</body>
+</html>

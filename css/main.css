@@ -20,7 +20,7 @@ body,div,ul,li,span,a {box-sizing: border-box;}
 .row-fluid:after {
     clear: both;
 }
-.row-fluid [class*="span"] {
+[class*="span"] {
     display: block;
     float: left;
     width: 100%;
@@ -31,48 +31,290 @@ body,div,ul,li,span,a {box-sizing: border-box;}
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.row-fluid [class*="span"]:first-child {
-    margin-left: 0;
-}
-.row-fluid .controls-row [class*="span"]+[class*="span"] {
-    margin-left: 2.564102564102564%}
-.row-fluid .span12 {
+.span12 {
     width: 100%;
     *width: 99.94680851063829%}
-.row-fluid .span11 {
+.span11 {
     width: 91.45299145299145%;
     *width: 91.39979996362975%}
-.row-fluid .span10 {
+.span10 {
     width: 82.90598290598291%;
     *width: 82.8527914166212%}
-.row-fluid .span9 {
+.span9 {
     width: 74.35897435897436%;
     *width: 74.30578286961266%}
-.row-fluid .span8 {
+.span8 {
     width: 65.81196581196582%;
     *width: 65.75877432260411%}
-.row-fluid .span7 {
+.span7 {
     width: 57.26495726495726%;
     *width: 57.21176577559556%}
-.row-fluid .span6 {
+.span6 {
     width: 48.717948717948715%;
     *width: 48.664757228587014%}
-.row-fluid .span5 {
+.span5 {
     width: 40.17094017094017%;
     *width: 40.11774868157847%}
-.row-fluid .span4 {
+.span4 {
     width: 31.623931623931625%;
     *width: 31.570740134569924%}
-.row-fluid .span3 {
+.span3 {
     width: 23.076923076923077%;
     *width: 23.023731587561375%}
-.row-fluid .span2 {
+.span2 {
     width: 14.52991452991453%;
     *width: 14.476723040552828%}
-.row-fluid .span1 {
+.span1 {
     width: 5.982905982905983%;
     *width: 5.929714493544281%}
+/* ==========================================================================
+   Focal Point: Pure HTML/CSS Adaptive Images Framework
+   ========================================================================== */
+/*! *  Focal Point: Pure HTML/CSS Adaptive Images Framework*  Author: Adam Bradley, 2012*  License: MIT/GPLv2*  https://github.com/adamdbradley/focal-point*  http://www.cdnconnect.com/*/
 
+.focal-point {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.focal-point img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+.focal-point div {
+    position: relative; 
+    max-width: none; 
+    height: auto;
+}
+
+/* 4x3 Landscape Shape (Default) */
+    .focal-point div {
+        margin: -3em -4em;
+    }
+
+    /* Landscape down (Total 6em) */
+    .down-1 div {
+        margin-top:    -3.5em;
+        margin-bottom: -2.5em;
+    }
+    .down-2 div {
+        margin-top:    -4em;
+        margin-bottom: -2em;
+    }
+    .down-3 div {
+        margin-top:    -4.5em;
+        margin-bottom: -1.5em;
+    }
+    .down-4 div {
+        margin-top:    -5em;
+        margin-bottom: -1em;
+    }
+    .down-5 div {
+        margin-top:    -5.5em;
+        margin-bottom: -0.5em;
+    }
+    .down-6 div {
+        margin-top:    -6em;
+        margin-bottom: 0;
+    }
+
+    /* Landscape up (Total 6em) */
+    .up-1 div {
+        margin-top:    -2.5em;
+        margin-bottom: -3.5em;
+    }
+    .up-2 div {
+        margin-top:    -2em;
+        margin-bottom: -4em;
+    }
+    .up-3 div {
+        margin-top:    -1.5em;
+        margin-bottom: -4.5em;
+    }
+    .up-4 div {
+        margin-top:    -1em;
+        margin-bottom: -5em;
+    }
+    .up-5 div {
+        margin-top:    -0.5em;
+        margin-bottom: -5.5em;
+    }
+    .up-6 div {
+        margin-top:    0;
+        margin-bottom: -6em;
+    }
+
+    /* Landscape right (Total 8em) */
+    .right-1 div {
+        margin-left:  -4.66em;
+        margin-right: -3.34em;
+    }
+    .right-2 div {
+        margin-left:  -5.33em;
+        margin-right: -2.67em;
+    }
+    .right-3 div {
+        margin-left:  -6em;
+        margin-right: -2em;
+    }
+    .right-4 div {
+        margin-left:  -6.66em;
+        margin-right: -1.34em;
+    }
+    .right-5 div {
+        margin-left:  -7.33em;
+        margin-right: -0.67em;
+    }
+    .right-6 div {
+        margin-left:  -8em;
+        margin-right: 0;
+    }
+
+    /* Landscape left (Total 8em) */
+    .left-1 div {
+        margin-left:  -3.34em;
+        margin-right: -4.66em;
+    }
+    .left-2 div {
+        margin-left:  -2.67em;
+        margin-right: -5.33em;
+    }
+    .left-3 div {
+        margin-left:  -2em;
+        margin-right: -6em;
+    }
+    .left-4 div {
+        margin-left:  -1.34em;
+        margin-right: -6.66em;
+    }
+    .left-5 div {
+        margin-left:  -0.67em;
+        margin-right: -7.33em;
+    }
+    .left-6 div {
+        margin-left:  0;
+        margin-right: -8em;
+    }
+
+
+    /* 3x4 Portrait Shape */
+    .focal-point.portrait div {
+        margin: -4em -3em;
+    }
+
+    /* Portrait down (Total 8em) */
+    .portrait.down-1 div {
+        margin-top:    -4.66em;
+        margin-bottom: -3.34em;
+    }
+    .portrait.down-2 div {
+        margin-top:    -5.33em;
+        margin-bottom: -2.67em;
+    }
+    .portrait.down-3 div {
+        margin-top:    -6em;
+        margin-bottom: -2em;
+    }
+    .portrait.down-4 div {
+        margin-top:    -6.66em;
+        margin-bottom: -1.34em;
+    }
+    .portrait.down-5 div {
+        margin-top:    -7.33em;
+        margin-bottom: -0.67em;
+    }
+    .portrait.down-6 div {
+        margin-top:    -8em;
+        margin-bottom: 0;
+    }
+
+    /* Portrait right (Total 6em) */
+    .portrait.right-1 div {
+        margin-left:  -3.5em;
+        margin-right: -2.5em;
+    }
+    .portrait.right-2 div {
+        margin-left:  -4em;
+        margin-right: -2em;
+    }
+    .portrait.right-3 div {
+        margin-left:  -4.5em;
+        margin-right: -1.5em;
+    }
+    .portrait.right-4 div {
+        margin-left:  -5em;
+        margin-right: -1em;
+    }
+    .portrait.right-5 div {
+        margin-left:  -5.5em;
+        margin-right: -0.5em;
+    }
+    .portrait.right-6 div {
+        margin-left:  -6em;
+        margin-right: 0;
+    }
+
+    /* Portrait up (Total 8em) */
+    .portrait.up-1 div {
+        margin-top:    -3.34em;
+        margin-bottom: -4.66em;
+    }
+    .portrait.up-2 div {
+        margin-top:    -2.67em;
+        margin-bottom: -5.33em;
+    }
+    .portrait.up-3 div {
+        margin-top:    -2em;
+        margin-bottom: -6em;
+    }
+    .portrait.up-4 div {
+        margin-top:    -1.34em;
+        margin-bottom: -6.66em;
+    }
+    .portrait.up-5 div {
+        margin-top:    -0.67em;
+        margin-bottom: -7.33em;
+    }
+    .portrait.up-6 div {
+        margin-top:    0;
+        margin-bottom: -8em;
+    }
+
+    /* Portrait left (Total 6em) */
+    .portrait.left-1 div {
+        margin-left:  -2.5em;
+        margin-right: -3.5em;
+    }
+    .portrait.left-2 div {
+        margin-left:  -2em;
+        margin-right: -4em;
+    }
+    .portrait.left-3 div {
+        margin-left:  -1.5em;
+        margin-right: -4.5em;
+    }
+    .portrait.left-4 div {
+        margin-left:  -1em;
+        margin-right: -5em;
+    }
+    .portrait.left-5 div {
+        margin-left:  -0.5em;
+        margin-right: -5.5em;
+    }
+    .portrait.left-6 div {
+        margin-left:  0;
+        margin-right: -6em;
+    }
+
+@media all and (max-width: 767px) {
+
+    
+
+}
 
 /* ==========================================================================
    Grunge Stylesheet
@@ -105,6 +347,7 @@ h1,h2,h3,h4,h5,h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: 'Scada', sans-serif;
   font-weight: 700;
+  margin: 0 0 0.5em 0;
 }
   h1, h1 a, h1 a:visited {
     color: #FF0051;
@@ -197,8 +440,42 @@ span.meta {
 
 ul.nav {
   float: right;
+  list-style: none;
+}
+  ul.nav li {
+    float: left;
+  }
+.sidebar {
+  float: right;
 }
 
+.featured-post {
+  margin-bottom: 2em;
+}
+
+.post-info, .post-thumbnail {
+  height: 12em;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.post-main-img {
+  max-width: 100%;
+  width: 100%;
+}
+.teasers .post-thumb-img {
+    max-height: 100px;
+  }
+
+pre {
+  background: gray;
+  color: white;
+  padding: 1em;
+}
+/* Post styles */
 .newbie {
   display: block;
   width: 100%;
@@ -216,17 +493,6 @@ ul.nav {
 }
   .toc h1, .toc h2, .toc h3, .toc h4, .toc h5, .toc h6 {
     font-size: 0.8em;
-  }
-
-.post-main-img {
-  margin: 2em 1em;
-  max-width: 100%;
-}
-.post-thumb-img {
-  max-width: 100%;
-}
-  .teasers .post-thumb-img {
-    max-height: 100px;
   }
 
 /* Portfolio */
