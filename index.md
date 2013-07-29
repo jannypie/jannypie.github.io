@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Jan Dennison : WebDev"
+title: "Jan Dennison : WebDev Blog"
 meta-description: "Web development blog by Jan Dennison"
 meta-robots: "noodp, noydir"
 ---

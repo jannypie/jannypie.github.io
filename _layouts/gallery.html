@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+		<body>
+			<div class="dkgrunge-container">
+			<div class="ltgrunge-container">
+				<div class="content-wrap">
+					{% include header.html %}
+					<div class='gallery-wrap'>	
+						<h1> {{ page.title }} </h1>
+						{{ content }}
+					</div>
+					{% include footer.html %}
+				</div> <!-- /content-wrap -->
+			</div><!--/content-->
+			</div><!-- /fancy-container -->
+		</body>
+</html>
