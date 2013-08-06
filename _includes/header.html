@@ -1,14 +1,17 @@
 <header>
-	<nav>
-		<ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li>Portfolio</a>
-          	<ul class="portfolio-nav">
-          		<li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
-          	</ul></li>
+	<a href="{{ site.url }}" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison :WebDev Blog</h1></a>
+  <nav>
+    <ul id="menu" class="ui-menu">
+          <li class="ui-menu-item"><a href="#">Home</a></li>
+          <li class="ui-menu-item"><a href="#">About</a></li>
+          <li class="ui-menu-item"><a href="#">Contact</a></li>
+          <li class="ui-menu-item"><a href="http://jandennison.com">Web Portfolio</a></li>
+          <li class="ui-menu-item"><a href="">Art Portfolio</a>
+            <ul class="ui-menu">
+              <li class="ui-menu-item"><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+              <li class="ui-menu-item"><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+            </ul>
+          </li>
         </ul>
-	</nav>
-	<a href="{{ site.url }}" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison : WebDev</h1></a>
+  </nav>
 </header>

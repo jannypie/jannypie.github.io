@@ -6,6 +6,7 @@ meta-description: "A few notes on my experience setting up a Jekyll blog on GitH
 image: "/assets/post-images/github-pages-templates.png"
 tags: 
 category:
+focal-vert: down-6
 ---
 
 <div class="toc">

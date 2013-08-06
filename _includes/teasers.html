@@ -1,7 +1,11 @@
 <div class="row-fluid teasers">
 	{% for post in teasers offset:teasers_skip limit:teasers_take %}
-		<div class="row-fluid">
-			<a href="{{ post.url }}" class="fancybox-thumb" rel="fancybox-thumb" title="{{ post.title }}"><img class="post-thumb-img" alt="{{ post.title }}" src="{{ post.image }}"></a>
+		<div class="row-fluid teaser">
+			<div class="teaserthumb focal-point {{ post.orientation }} {{ post.focal-horz }} {{ post.focal-vert }}">
+				<a href="{{ post.url }}" class="fancybox-thumb" rel="fancybox-thumb" title="{{ post.title }}">
+					<div><img alt="{{ post.title }}" src="{{ post.image }}"></div>
+				</a>
+			</div>
 
 			<h4> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.url }}">{{ post.title }}</a> </h4>
 

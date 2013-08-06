@@ -14,10 +14,10 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
 
-<!-- FancyBox Images -->
 <!-- Add jQuery library -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!-- Add fancyBox -->
+
+<!-- FancyBox Images -->
 <link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 <script type="text/javascript" src="/js/fancybox/source/jquery.fancybox.pack.js"></script>
 <!-- Optionally add helpers - button, thumbnail and/or media -->
@@ -27,42 +27,51 @@
 <link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
 <script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
 <!-- End FancyBox -->
+
+
 		<body>
-			<div class="dkgrunge-container">
-			<div class="ltgrunge-container">
-				<div class="content-wrap">
 					<header>
-	<nav>
-		<ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li>Portfolio</a>
-          	<ul class="portfolio-nav">
-          		<li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
-          	</ul></li>
+	<a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison :WebDev Blog</h1></a>
+  <nav>
+    <ul id="menu" class="ui-menu">
+          <li class="ui-menu-item"><a href="#">Home</a></li>
+          <li class="ui-menu-item"><a href="#">About</a></li>
+          <li class="ui-menu-item"><a href="#">Contact</a></li>
+          <li class="ui-menu-item"><a href="http://jandennison.com">Web Portfolio</a></li>
+          <li class="ui-menu-item"><a href="">Art Portfolio</a>
+            <ul class="ui-menu">
+              <li class="ui-menu-item"><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+              <li class="ui-menu-item"><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+            </ul>
+          </li>
         </ul>
-	</nav>
-	<a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison : WebDev</h1></a>
+  </nav>
 </header>
+			<div class="grunge-container">
+			<div class="grunge-container-overlay">
+				<div class="content-wrap">
 					<div class='gallery-wrap'>	
 						<h1> Artistic Portfolio : Verisimilitude Sylva </h1>
-						<div id='sylva' class='portfolio'>
+						<div class='portfolio' id='sylva'>
 	<ul class='clearfix'>
-		<li class='frame'><a href='img/anthemion.jpg' rel='sylva' class='fancybox'><img alt='Anthemion' src='img/anthemion.jpg' title='Anthemion' /></a></li>
-		<li class='frame'><a href='img/daedal.jpg' rel='sylva' class='fancybox'><img src='img/daedal.jpg' title='Daedal' /></a></li>
-		<li class='frame'><a href='img/feathers.jpg' rel='sylva' class='fancybox'><img src='img/feathers.jpg' title='Feathers' /></a></li>
-		<li class='frame'><a href='img/incarnadine.jpg' rel='sylva' class='fancybox'><img src='img/incarnadine.jpg' title='Incarnadine' /></a></li>
-		<li class='frame'><a href='img/incondite.jpg' rel='sylva' class='fancybox'><img src='img/incondite.jpg' title='Incondite' /></a></li>
-		<li class='frame'><a href='img/irenic.jpg' rel='sylva' class='fancybox'><img src='img/irenic.jpg' title='Irenic' /></a></li>
-		<li class='frame'><a href='img/mistigris.jpg' rel='sylva' class='fancybox'><img src='img/mistigris.jpg' title='Mistigris' /></a></li>
-		<li class='frame'><a href='img/numen.jpg' rel='sylva' class='fancybox'><img src='img/numen.jpg' title='Numen' /></a></li>
-		<li class='frame'><a href='img/oneiric.jpg' rel='sylva' class='fancybox'><img src='img/oneiric.jpg' title='Oneiric' /></a></li>
-		<li class='frame'><a href='img/subversive.jpg' rel='sylva' class='fancybox'><img src='img/subversive.jpg' title='subversive' /></a></li>
-		<li class='frame'><a href='img/vitiate.jpg' rel='sylva' class='fancybox'><img src='img/vitiate.jpg' title='Vitiate' /></a></li>
-		<li class='frame'><a href='img/volacious.jpg' rel='sylva' class='fancybox'><img src='img/volacious.jpg' title='Volacious' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/anthemion.jpg'><img src='img/anthemion.jpg' title='Anthemion' class='noborder' alt='Anthemion' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/daedal.jpg'><img src='img/daedal.jpg' title='Daedal' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/feathers.jpg'><img src='img/feathers.jpg' title='Feathers' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/incarnadine.jpg'><img src='img/incarnadine.jpg' title='Incarnadine' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/incondite.jpg'><img src='img/incondite.jpg' title='Incondite' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/irenic.jpg'><img src='img/irenic.jpg' title='Irenic' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/mistigris.jpg'><img src='img/mistigris.jpg' title='Mistigris' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/numen.jpg'><img src='img/numen.jpg' title='Numen' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/oneiric.jpg'><img src='img/oneiric.jpg' title='Oneiric' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/subversive.jpg'><img src='img/subversive.jpg' title='subversive' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/vitiate.jpg'><img src='img/vitiate.jpg' title='Vitiate' class='noborder' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/volacious.jpg'><img src='img/volacious.jpg' title='Volacious' class='noborder' /></a></li>
 	</ul>
-</div>
+</div><script type='text/javascript'>
+$(document).ready(function(){	
+	$('.frame').fadeIn(1000);
+});
+</script>
 					</div>
 					      <div class="footer">
         <p>&copy; Jan Dennison</p>
@@ -73,21 +82,13 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(".fancybox").fancybox();
-		$(".fancybox-thumb").fancybox({
-			prevEffect	: 'none',
-			nextEffect	: 'none',
-			helpers	: {
-				title	: {
-					type: 'outside'
-				},
-				thumbs	: {
-					width	: 50,
-					height	: 50
-				}
-			}
-		});
 	});
-
+</script>
+<!-- jQuery UI menu -->
+<script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
 </script>
 
 				</div> <!-- /content-wrap -->

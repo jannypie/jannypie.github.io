@@ -310,12 +310,6 @@ body,div,ul,li,span,a {box-sizing: border-box;}
         margin-right: -6em;
     }
 
-@media all and (max-width: 767px) {
-
-    
-
-}
-
 /* ==========================================================================
    Grunge Stylesheet
    Author: Jan Dennison
@@ -325,14 +319,18 @@ body,div,ul,li,span,a {box-sizing: border-box;}
 /*  Basics 
     ============================ */
 body {
-	background: #494640 url(/images/grunge-sprite.png) -400px 0px repeat;
+	background: url(/images/gears.png) no-repeat top right,
+              url(/images/butterfly.png) no-repeat 110% 45px,
+              #494640 url(/images/grunge-sprite.png);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
   color: #222;
   font-family: 'Numans', sans-serif;
   letter-spacing: -1px;
+  margin: 0;
 }
+
 
 /*  Typography 
     ============================ */
@@ -353,21 +351,18 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #FF0051;
   }
     header h1 {
+      color: #ebe3cc;
+      text-align: center;
+      font-size: 5.0em;
+      margin: 1em 0;
+      opacity: 0.5;
       position: relative;
-      font-size: 3.0em;
     }
-    header h1:before {
-      position: absolute;
-      background: url(/images/white-grunge.png) repeat-x;
-      width: 515px;
-      height: 50px;
-      top:11px;
-      left: -10px;
-      display: block;
-      content: '';
-    }
-    header a:hover {
-      text-transform: none;
+      .home header h1 {
+        margin: 1em 0;
+      }
+    header a:hover, header a:active {
+      text-decoration: none;
     }
   h2, h2 a, h2 a:visited {
     color: #FF4D00;
@@ -397,10 +392,14 @@ span.meta {
   color: gray;
 }
 
+.ui-menu a {
+  color: #494640;
+}
+
 /*  Containers 
     ============================ */
 /* Dark grunge background */
-.dkgrunge-container {
+.grunge-container {
   background: rgb(246,245,238); /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%, rgba(246,245,238,1) 63%, rgba(234,223,194,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(21%,rgba(246,245,238,1)), color-stop(63%,rgba(246,245,238,1)), color-stop(100%,rgba(234,223,194,1))); /* Chrome,Safari4+ */
@@ -409,20 +408,48 @@ span.meta {
   background: -ms-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%,rgba(246,245,238,1) 63%,rgba(234,223,194,1) 100%); /* IE10+ */
   background: radial-gradient(ellipse at center,  rgba(246,245,238,1) 21%,rgba(246,245,238,1) 63%,rgba(234,223,194,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f5ee', endColorstr='#eadfc2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  margin: 2em auto;
-  max-width: 1170px;
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.95);
-  -moz-box-shadow:    0px 0px 50px rgba(0, 0, 0, 0.95);
-  box-shadow:         0px 0px 50px rgba(0, 0, 0, 0.95);
+  margin: 2em 0;
+  width: 100%;
+  -webkit-box-shadow: inset 0px 0px 50px rgba(128, 101, 23, 0.95);
+  -moz-box-shadow:    inset 0px 0px 50px rgba(128, 101, 23, 0.95);
+  box-shadow:         inset 0px 0px 50px rgba(128, 101, 23, 0.95);
 }
 /* Light grunge background */
-.ltgrunge-container {
-  background: url(/images/white-grunge.png) repeat;
+.grunge-container-overlay {
+  background:   url(/images/gears3.png) no-repeat bottom right,
+                url(/images/gears2.png) no-repeat top left,
+                url(/images/postcard.png) no-repeat top left,
+                url(/images/white-grunge.png) repeat;
   margin: 0;
 	padding-top: 4em;
 	padding-bottom: 4em;
   width: 100%;
   height: 100%;
+}
+
+.ui-menu { 
+  display: block;
+  float: left;
+  z-index: 10;
+  width: 150px; 
+  padding: 0;
+}
+  .ui-menu .ui-menu {
+    display: none;
+  }
+    .ui-menu li {
+      background: rgba(73,70,64,0.3);
+      padding: 0.25em 1em;
+    }
+
+    .ui-menu li:hover .ui-menu {
+      display: block;
+    }
+
+.ui-menu-item {
+  display: block;
+  padding: 4px;
+
 }
 
 .content-wrap {
@@ -438,13 +465,6 @@ span.meta {
     margin: 0 auto;
   }
 
-ul.nav {
-  float: right;
-  list-style: none;
-}
-  ul.nav li {
-    float: left;
-  }
 .sidebar {
   float: right;
 }
@@ -453,29 +473,62 @@ ul.nav {
   margin-bottom: 2em;
 }
 
-.post-info, .post-thumbnail {
-  height: 12em;
-  overflow: hidden;
+.teaser {
+  margin-bottom: 2em;
 }
 
+/**
+  Images
+**/
 img {
   max-width: 100%;
+  padding: 10px;
+  border: 1px solid #c7c2b3;
 }
+img.noborder {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.featuredthumb, .teaserthumb {
+  border: 1px solid #c7c2b3;
+  -webkit-box-shadow:  0px 0px 5px rgba(128, 101, 23, 0.15);
+  -moz-box-shadow:     0px 0px 5px rgba(128, 101, 23, 0.15);
+  box-shadow:          0px 0px 5px rgba(128, 101, 23, 0.15);
+  max-height: 200px;
+}
+  .featuredthumb img, .teaserthumb img {
+    padding: 0;
+    margin: 0;
+  }
 
 .post-main-img {
   max-width: 100%;
-  width: 100%;
+  width: 99%;
 }
-.teasers .post-thumb-img {
-    max-height: 100px;
+
+.teasers {
+  margin-bottom: 1em;
+}
+  .teaser .focal-point {
+
+    overflow: hidden;
   }
+  .teasers .post-thumb-img {
+      width: 99%;
+    }
 
 pre {
   background: gray;
   color: white;
   padding: 1em;
 }
-/* Post styles */
+
+/**
+  Post Styles
+**/
+
 .newbie {
   display: block;
   width: 100%;
@@ -495,25 +548,46 @@ pre {
     font-size: 0.8em;
   }
 
-/* Portfolio */
+/**
+  Portfolio
+**/
+
 .portfolio ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .portfolio li.frame {
-  background: transparent url(../portfolio/verisimilitude-sylva/img/bg.png) no-repeat;
   width: 228px;
   height: 296px;
   padding: 11px 14px;
   float: left;
   margin: 0;
+  display: none;
 }
-#sylva ul li a img {
+  .portfolio li a:after {
+    display: block;
+    content: "";
+    background: url(../portfolio/verisimilitude-sylva/img/frame.png) no-repeat;
+    width: 228px;
+    height: 296px;
+    position: relative;
+    top: -290px;
+    left: -14px;
+  }
+#sylva img {
   width: 197px;
   height: 275px;
 } 
 
+#wanderlust .focal-point {
+  height: 200px;
+  width: 200px;
+}
+#wanderlust li {
+  float: left;
+  margin: 10px;
+}
 
 /* ==========================================================================
    Media Queries

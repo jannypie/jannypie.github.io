@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-		<body>
-			<div class="dkgrunge-container">
-			<div class="ltgrunge-container">
+		<body class="home body-grunge">	
+				
+			{% include header.html %}
+			<div class="grunge-container">
+			<div class="grunge-container-overlay">
 				<div class="content-wrap">
-					{% include header.html %}
 					<div class="home-wrap clearfix">
 						{{ content }}
 					</div>
@@ -13,5 +14,6 @@
 				</div> <!-- /content-wrap -->
 			</div><!--/content-->
 			</div><!-- /fancy-container -->
+
 		</body>
 </html>
