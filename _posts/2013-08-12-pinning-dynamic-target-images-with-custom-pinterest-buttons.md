@@ -1,10 +1,10 @@
 ---
 layout: "post" 
 title: "Pinning Dynamic Target Images With Custom Pinterest Buttons" 
-excerpt: ""
-meta-description: ""
+excerpt: "How to use a custom Pinterest bookmarklet to build dynamic pins"
+meta-description: "How to use a custom Pinterest bookmarklet to build dynamic pins"
 image: "/assets/post-images/pinterest.jpg"
-tags: javascript,pinterest
+tags: javascript,pinterest,jquery
 category: 
 focal-vert: 
 focal-horz: 
