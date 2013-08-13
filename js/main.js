@@ -16,7 +16,7 @@ $(document).ready(function(){
 	function buildPinterest() {
       var $currentImage = $('img.fullsize');
       var bookmarkletURL = 'http://pinterest.com/pin/create/bookmarklet/',
-        mediaURL = window.location.hostname + $currentImage.attr('src'),
+        mediaURL = "http://jannypie.github.io" + $currentImage.attr('src'),
         mediaURLenc = encodeURIComponent(mediaURL),
         shareURL = window.location,
         shareURLenc = encodeURIComponent(shareURL),
@@ -24,7 +24,6 @@ $(document).ready(function(){
         descriptionenc = encodeURIComponent(description),
         pinterestURL = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc + '&is_video=false';
     $('a.social.pinterest').click(function(e){
-    	alert(mediaURL);
       window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
       e.preventDefault();
     });

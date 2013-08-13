@@ -91,9 +91,9 @@
 <p>Use Pinterest&#8217;s pinit.js code which will pin a specific image - but forces you to use their Pin button, and often forces you to hardcode each and every image you want to pin</p>
 
 <ul>
-<li><a href='http://business.pinterest.com/widget-builder/#do_pin_it_button' title='Pinterest.com Widget Builder'>Widget Builder</a> hardcodes each Pinterest button per image, which is not useful for dynamic images</li>
+<li><a title='Pinterest.com Widget Builder' href='http://business.pinterest.com/widget-builder/#do_pin_it_button'>Widget Builder</a> hardcodes each Pinterest button per image, which is not useful for dynamic images</li>
 
-<li><a href='http://developers.pinterest.com/rich_pins/' title='Pinterest.com Rich Pins'>Rich Pins</a> use oEmbed or Semantic Markup to build pins with extra meta-data, which then requires Pinterest-side validation (which is poorly documented. Why does it require validation? What are they looking for?) of a static URL, which is of course not useful in pre-production/draft development or for many pages/sitewide</li>
+<li><a title='Pinterest.com Rich Pins' href='http://developers.pinterest.com/rich_pins/'>Rich Pins</a> use oEmbed or Semantic Markup to build pins with extra meta-data, which then requires Pinterest-side validation (which is poorly documented. Why does it require validation? What are they looking for?) of a static URL, which is of course not useful in pre-production/draft development or for many pages/sitewide</li>
 </ul>
 </li>
 
@@ -101,14 +101,14 @@
 <p>Use the bookmarklet code to pull up all images on a page and have the user select the one they want - allows you to use any button, but doesn&#8217;t pin a specific image</p>
 
 <ul>
-<li><a href='http://ryleeblake.blogspot.com/2013/07/how-to-create-custom-pinterest-pin-it.html' title='how to: create custom pinterest '>how to: create custom pinterest &#8220;pin-it&#8221; button on images</a> is a helpful post that comes with third-party script for showing a &#8220;pin it&#8221; button on hover-over of an image, which then launches the bookmarklet</li>
+<li><a title='how to: create custom pinterest ' href='http://ryleeblake.blogspot.com/2013/07/how-to-create-custom-pinterest-pin-it.html'>how to: create custom pinterest &#8220;pin-it&#8221; button on images</a> is a helpful post that comes with third-party script for showing a &#8220;pin it&#8221; button on hover-over of an image, which then launches the bookmarklet</li>
 
-<li>Two posts on brandaiddesignco.com: <a href='http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-pin-it-button-to-your-website/375/' title='Add a custom Pinterest pin it button to your website'>Add a custom Pinterest pin it button to your website</a> and <a href='http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-button-to-your-website-part-2/770/' title='Part 2'>Part 2</a> provide third-party scripts for applying the bookmarklet script to your page.</li>
+<li>Two posts on brandaiddesignco.com: <a title='Add a custom Pinterest pin it button to your website' href='http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-pin-it-button-to-your-website/375/'>Add a custom Pinterest pin it button to your website</a> and <a title='Part 2' href='http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-button-to-your-website-part-2/770/'>Part 2</a> provide third-party scripts for applying the bookmarklet script to your page.</li>
 </ul>
 </li>
 </ol>
 
-<p>A great example of what I wanted can be seen on Etsy.com listings. <a href='http://www.etsy.com/listing/122792616/passionate-woman-original-painting-on?ref=shop_home_active' title='Etsy listing: Original Painting'>In each listing</a>, there is a large main image area with additional small image thumbnails that you can select and view fullsize in the main area. (Amazon.com is another example of this product page style setup). Etsy uses the Pinterest-made &#8220;Pin it&#8221; button to pin only the first image in a listing. However, sometimes the seller has better or more interesting images that they have not set as first, and I would <em>like</em> to pin those instead. Essentially: I want the &#8220;Pin it&#8221; button to pin whichever image I have loaded as the main view - not the default first image.</p>
+<p>A great example of what I wanted can be seen on Etsy.com listings. <a title='Etsy listing: Original Painting' href='http://www.etsy.com/listing/122792616/passionate-woman-original-painting-on?ref=shop_home_active'>In each listing</a>, there is a large main image area with additional small image thumbnails that you can select and view fullsize in the main area. (Amazon.com is another example of this product page style setup). Etsy uses the Pinterest-made &#8220;Pin it&#8221; button to pin only the first image in a listing. However, sometimes the seller has better or more interesting images that they have not set as first, and I would <em>like</em> to pin those instead. Essentially: I want the &#8220;Pin it&#8221; button to pin whichever image I have loaded as the main view - not the default first image.</p>
 
 <h2 id='solution'>Solution</h2>
 
@@ -116,13 +116,13 @@
 <div class='demo row-fluid'>
 	<div class='span3'>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Green Sparrow Drawing' class='sample' src='/assets/post-images/sparrow-green.png' /></div>
+			<div><img alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' class='sample' /></div>
 		</div>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Colored Sparrow Drawing' class='sample' src='/assets/post-images/sparrow-colors.png' /></div>
+			<div><img alt='Colored Sparrow Drawing' src='/assets/post-images/sparrow-colors.png' class='sample' /></div>
 		</div>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Watercolor Sparrow Drawing' class='sample' src='/assets/post-images/sparrow-watercolor.png' /></div>
+			<div><img alt='Watercolor Sparrow Drawing' src='/assets/post-images/sparrow-watercolor.png' class='sample' /></div>
 		</div>
 		<a class='clearfix social pinterest float-right'>Pin it!</a>
 	</div>
@@ -203,7 +203,7 @@
 
 <p>The URL has to have either /bookmarklet/ or /button/ (I tested).</p>
 
-<p>Then you can build your string: <strong>?media=</strong> , <strong>&amp;url=</strong> , <strong>&amp;description=</strong> , etc. I would assume that all of the variables listed in <a href='http://developers.pinterest.com/rich_pins/' title='Pinterest.com Rich Pins'>Rich Pins</a> can be included, although I then also assume they require you to do the validation process. Perhaps as my next project, I&#8217;ll test which variables show up without being &#8220;validated.&#8221;</p>
+<p>Then you can build your string: <strong>?media=</strong> , <strong>&amp;url=</strong> , <strong>&amp;description=</strong> , etc. I would assume that all of the variables listed in <a title='Pinterest.com Rich Pins' href='http://developers.pinterest.com/rich_pins/'>Rich Pins</a> can be included, although I then also assume they require you to do the validation process. Perhaps as my next project, I&#8217;ll test which variables show up without being &#8220;validated.&#8221;</p>
 
 <p>Once you have the string broken down, you can use jQuery to build a URL based on the variables of the main image showing:</p>
 

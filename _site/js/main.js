@@ -16,7 +16,7 @@ $(document).ready(function(){
 	function buildPinterest() {
       var $currentImage = $('img.fullsize');
       var bookmarkletURL = 'http://pinterest.com/pin/create/bookmarklet/',
-        mediaURL = window.location.hostname + $currentImage.attr('src'),
+        mediaURL = "http://jannypie.github.io" + $currentImage.attr('src'),
         mediaURLenc = encodeURIComponent(mediaURL),
         shareURL = window.location,
         shareURLenc = encodeURIComponent(shareURL),
