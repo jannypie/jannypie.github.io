@@ -516,6 +516,7 @@ img.noborder {
   border: 1px solid #FF0051;
 }
   .featuredthumb img, .teaserthumb img, .swatch img {
+    min-height: 100%;
     padding: 0;
     margin: 0;
   }
