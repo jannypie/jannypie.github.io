@@ -14,8 +14,10 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
 
-<!-- Add jQuery library -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- Add jQuery libraries -->
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="/js/jquery-ui/css/pepper-grinder/jquery-ui-1.10.3.custom.min.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
 
 <!-- FancyBox Images -->
 <link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
@@ -28,6 +30,7 @@
 <script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
 <!-- End FancyBox -->
 
+<script type="text/javascript" src="/js/main.js"></script>
 
 		<body>
 					<header>
@@ -77,7 +80,7 @@
 
 <p>However, this top-aligns my image with the div, and the flowers below get cut off. Not so pretty.</p>
 
-<p><img src='/assets/post-images/focal-point-before.png' alt='Basic Flower Thumbnail' /></p>
+<p><img alt='Basic Flower Thumbnail' src='/assets/post-images/focal-point-before.png' /></p>
 
 <p>I had come across some online posts about cropping image thumbnails using CSS, and wanted to go back to those and find a more advanced solution. Thus, I came across Focal Point. I&#8217;ll let you read the details if you wish, but the basic concept is that Focal Point defines classes that apply negative margins to your image based on where you want the focus to be. For each image, simply add one of the Focal Point classes for horizontal offset and another for vertical, and it will not only use negative margins to make that area you define as the focus, but because they are all based on percentages, it&#8217;s also responsive.</p>
 
@@ -154,7 +157,7 @@ orientation: portrait
 
 <p>And here is the side-by-side image again for comparison:</p>
 
-<p><img src='/assets/post-images/focal-point-image.png' alt='Focal Point comparison' /></p>
+<p><img alt='Focal Point comparison' src='/assets/post-images/focal-point-image.png' /></p>
 
 <p>I do again highly recommend the design shack post for further reading, because the author Joshua Johnson does a great job of explaining how the whole grid works for selecting focus areas.</p>
 
@@ -164,6 +167,10 @@ orientation: portrait
 										«&nbsp;<a href="/dummy-post-6/" rel="previous" title="Dummy Post 6">Dummy Post 6</a>
 									</p>
 								 
+								
+									<p class="next">
+										<a href="/pinning-dynamic-target-images-with-custom-pinterest-buttons/" rel="next" title="Pinning Dynamic Target Images With Custom Pinterest Buttons">Pinning Dynamic Target Images With Custom Pinterest Buttons</a>&nbsp;»
+									</p>
 								
 							</div>
 
@@ -217,12 +224,6 @@ orientation: portrait
 	$(document).ready(function() {
 		$(".fancybox").fancybox();
 	});
-</script>
-<!-- jQuery UI menu -->
-<script>
-  $(function() {
-    $( "#menu" ).menu();
-  });
 </script>
 
 				</div> <!-- /page-wrap -->

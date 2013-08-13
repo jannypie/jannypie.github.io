@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Meta meta -->
+<meta charset="utf-8">
+<title>Pinning Dynamic Target Images With Custom Pinterest Buttons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="" />
+<meta name="description" content="" />
+
+<!-- The Links -->
+<link rel="canonical" href="/pinning-dynamic-target-images-with-custom-pinterest-buttons" />
+<link href="/css/main.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Add jQuery libraries -->
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="/js/jquery-ui/css/pepper-grinder/jquery-ui-1.10.3.custom.min.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+<!-- FancyBox Images -->
+<link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/jquery.fancybox.pack.js"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+<!-- End FancyBox -->
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+		<body>
+					<header>
+	<a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison : WebDev"><h1>Jan Dennison :WebDev Blog</h1></a>
+  <nav>
+    <ul id="menu" class="ui-menu">
+          <li class="ui-menu-item"><a href="#">Home</a></li>
+          <li class="ui-menu-item"><a href="#">About</a></li>
+          <li class="ui-menu-item"><a href="#">Contact</a></li>
+          <li class="ui-menu-item"><a href="http://jandennison.com">Web Portfolio</a></li>
+          <li class="ui-menu-item"><a href="">Art Portfolio</a>
+            <ul class="ui-menu">
+              <li class="ui-menu-item"><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+              <li class="ui-menu-item"><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+            </ul>
+          </li>
+        </ul>
+  </nav>
+</header>
+			<div class="grunge-container">
+			<div class="grunge-container-overlay">
+				<div class="content-wrap">
+					<div class="post-wrap">
+						<h1> Pinning Dynamic Target Images With Custom Pinterest Buttons </h1>
+
+							<span class="meta"> August 12, 2013 </span>
+							<span> javascript,pinterest </span>
+
+							<img class="fancybox post-main-img" src="/assets/post-images/pinterest.jpg">
+
+							<div class='toc'>
+	<strong>Used in this post:</strong>
+	<h3>CSS Sprite/Pinterest Icon</h3>
+	<h3>jQuery</h3>
+	<h3>jQuery UI/Tabs</h3>
+	<h3>Written in Markdown</h3>
+	<h3>Twitter Responsive Bootstrap</h3>
+	<h3>Focal Point Responsive Thumbnails</h3>
+</div>
+<h2 id='introduction'>Introduction</h2>
+
+<p>For a current project at work, I needed to build a Pinterest feature that used a custom icon to pin a large image on the page, an image which changed depending on which &#8220;swatch&#8221; type or sample was selected. I wanted a &#8220;Pin It&#8221; button that was:</p>
+
+<ol>
+<li>Custom (not the gray/red buttons provided by Pinterest) to fit in with branding</li>
+
+<li>Would pin a specific image, not bring up all the images on the page</li>
+
+<li>The specific image is dynamic - which is to say: I have an array of image options, such as swatches of fabric for color choices, or other photos, which load into a main view area dynamically based on the option clicked</li>
+
+<li>Would prefer not to use any third-party scripts or pinit.js (which forces the default Pin It button styles, and third-party might not be maintainable or necessary)</li>
+</ol>
+
+<p>There seemed to be Google solutions of two basic varieties available online:</p>
+
+<ol>
+<li>
+<p>Use Pinterest&#8217;s pinit.js code which will pin a specific image - but forces you to use their Pin button, and often forces you to hardcode each and every image you want to pin</p>
+
+<ul>
+<li><a title='Pinterest.com Widget Builder' href='http://business.pinterest.com/widget-builder/#do_pin_it_button'>Widget Builder</a> hardcodes each Pinterest button per image, which is not useful for dynamic images</li>
+
+<li><a title='Pinterest.com Rich Pins' href='http://developers.pinterest.com/rich_pins/'>Rich Pins</a> use oEmbed or Semantic Markup to build pins with extra meta-data, which then requires Pinterest-side validation (which is poorly documented. Why does it require validation? What are they looking for?) of a static URL, which is of course not useful in pre-production/draft development or for many pages/sitewide</li>
+</ul>
+</li>
+
+<li>
+<p>Use the bookmarklet code to pull up all images on a page and have the user select the one they want - allows you to use any button, but doesn&#8217;t pin a specific image</p>
+
+<ul>
+<li><a title='how to: create custom pinterest ' href='http://ryleeblake.blogspot.com/2013/07/how-to-create-custom-pinterest-pin-it.html'>how to: create custom pinterest &#8220;pin-it&#8221; button on images</a> is a helpful post that comes with third-party script for showing a &#8220;pin it&#8221; button on hover-over of an image, which then launches the bookmarklet</li>
+
+<li>Two posts on brandaiddesignco.com: <a title='Add a custom Pinterest pin it button to your website' href='http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-pin-it-button-to-your-website/375/'>Add a custom Pinterest pin it button to your website</a> and <a title='Part 2' href='http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-button-to-your-website-part-2/770/'>Part 2</a> provide third-party scripts for applying the bookmarklet script to your page.</li>
+</ul>
+</li>
+</ol>
+
+<p>A great example of what I wanted can be seen on Etsy.com listings. <a title='Etsy listing: Original Painting' href='http://www.etsy.com/listing/122792616/passionate-woman-original-painting-on?ref=shop_home_active'>In each listing</a>, there is a large main image area with additional small image thumbnails that you can select and view fullsize in the main area. (Amazon.com is another example of this product page style setup). Etsy uses the Pinterest-made &#8220;Pin it&#8221; button to pin only the first image in a listing. However, sometimes the seller has better or more interesting images that they have not set as first, and I would <em>like</em> to pin those instead. Essentially: I want the &#8220;Pin it&#8221; button to pin whichever image I have loaded as the main view - not the default first image.</p>
+
+<h2 id='solution'>Solution</h2>
+
+<p>The solution, seemingly simple after I solved it, was to break down the bookmarklet code structure and combine it with jQuery to set variables, which are then used to build the bookmarlet URL. Here is a sample setup of images that we&#8217;ll be pinning:</p>
+<div class='demo row-fluid'>
+	<div class='span3'>
+		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
+			<div><img class='sample' alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' /></div>
+		</div>
+		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
+			<div><img class='sample' alt='Colored Sparrow Drawing' src='/assets/post-images/sparrow-colors.png' /></div>
+		</div>
+		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
+			<div><img class='sample' alt='Watercolor Sparrow Drawing' src='/assets/post-images/sparrow-watercolor.png' /></div>
+		</div>
+		<a class='clearfix social pinterest float-right'>Pin it!</a>
+	</div>
+	<div class='span8'>
+		<div class='demo-full'>
+			<div><img class='fullsize' alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' /></div>
+		</div>
+	</div>
+</div>
+<p>The large image inside &#8220;demo-full&#8221; is changed dynamically whenever a thumbnail to the left is selected.</p>
+<div id='tabs'>
+  <ul>
+    <li><a href='#fragment-1'><span>JS/jQuery</span></a></li>
+    <li><a href='#fragment-2'><span>HTML</span></a></li>
+  </ul>
+  <div id='fragment-1'>
+    <p>javascript/jquery</p>
+    <pre><code>
+		function swapImage(){
+		    $('.swatch').first().addClass('active');
+		    $('.demo-small').click(function(){
+		        $('.swatch').removeClass('active');
+      	        $(this).addClass('active');
+
+		        var $newImg = $(this).find('img.sample'),
+		            newSrc = $newImg.attr('src'),
+		    	    newAlt = $newImg.attr('alt');
+		    	$('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
+	    });
+	}
+    </code></pre>
+  </div>
+  <div id='fragment-2'>
+    <pre><code>
+&lt;div class=&quot;demo row-fluid&quot;&gt;
+    &lt;div class=&quot;span3&quot;&gt;
+        &lt;div class=&quot;swatch focal-point right-6 demo-small float-right clearfix&quot;&gt;
+            &lt;div&gt;&lt;img alt=&quot;Green Sparrow Drawing&quot; class=&quot;sample&quot; src=&quot;/assets/post-images/sparrow-green.png&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swatch focal-point right-6 demo-small float-right clearfix&quot;&gt;
+            &lt;div&gt;&lt;img alt=&quot;Colored Sparrow Drawing&quot; class=&quot;sample&quot; src=&quot;/assets/post-images/sparrow-colors.png&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;swatch focal-point right-6 demo-small float-right clearfix&quot;&gt;
+            &lt;div&gt;&lt;img alt=&quot;Watercolor Sparrow Drawing&quot; class=&quot;sample&quot; src=&quot;/assets/post-images/sparrow-watercolor.png&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;a class=&quot;clearfix social pinterest float-right&quot;&gt;Pin it!&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;span8&quot;&gt;
+        &lt;div class=&quot;demo-full&quot;&gt;
+            &lt;div&gt;&lt;img src=&quot;/assets/post-images/sparrow-green.png&quot; alt=&quot;Green Sparrow Drawing&quot; class=&quot;fullsize&quot; &gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+  </div>
+</div>
+<p>The next step is to deconstruct the Pinterest pin URL. Let&#8217;s take a look:</p>
+
+<pre><code>http://pinterest.com/pin/create/bookmarklet/?media=localhost%2Fassets%2Fpost-images%2Fsparrow-green.png&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fpinning-dynamic-target-images-with-custom-pinterest-buttons%2F&amp;description=Green%20Sparrow%20Drawing%20by%20Jan%20Dennison%20%40jannypie</code></pre>
+
+<p>And break it down:</p>
+
+<pre><code>http://pinterest.com/pin/create/bookmarklet/
+
+?media=localhost%2Fassets%2Fpost-images%2Fsparrow-green.png
+
+&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fpinning-dynamic-target-images-with-custom-pinterest-buttons%2F
+
+&amp;description=Green%20Sparrow%20Drawing%20by%20Jan%20Dennison%20%40jannypie</code></pre>
+
+<p>The start is</p>
+
+<pre><code>http://pinterest.com/pin/create/bookmarklet/</code></pre>
+
+<p>which can also be</p>
+
+<pre><code>http://pinterest.com/pin/create/button/</code></pre>
+
+<p>The URL has to have either /bookmarklet/ or /button/ (I tested).</p>
+
+<p>Then you can build your string: <strong>?media=</strong> , <strong>&amp;url=</strong> , <strong>&amp;description=</strong> , etc. I would assume that all of the variables listed in <a title='Pinterest.com Rich Pins' href='http://developers.pinterest.com/rich_pins/'>Rich Pins</a> can be included, although I then also assume they require you to do the validation process. Perhaps as my next project, I&#8217;ll test which variables show up without being &#8220;validated.&#8221;</p>
+
+<p>Once you have the string broken down, you can use jQuery to build a URL based on the variables of the main image showing:</p>
+
+<pre><code>function buildPinterest() {
+    var $currentImage = $(&#39;img.fullsize&#39;);
+    var bookmarkletURL = &#39;http://pinterest.com/pin/create/bookmarklet/&#39;,
+        mediaURL = $currentImage.attr(&#39;src&#39;),
+        mediaURLenc = encodeURIComponent(mediaURL),
+        shareURL = window.location,
+        shareURLenc = encodeURIComponent(shareURL),
+        description = $currentImage.attr(&#39;alt&#39;) + &quot; by Jan Dennison @jannypie&quot;,
+        descriptionenc = encodeURIComponent(description),
+        pinterestURL = bookmarkletURL + &#39;?media=&#39; + mediaURLenc + &#39;&amp;url=&#39; + shareURLenc + &#39;&amp;description=&#39; + descriptionenc;
+    $(&#39;a.social.pinterest&#39;).click(function(e){
+        window.open(pinterestURL,&#39;_blank&#39;,&#39;width=750,height=350,toolbar=0,location=0,directories=0,status=0&#39;);
+        e.preventDefault();
+    });
+}</code></pre>
+
+<p>You can see that I&#8217;ve encoded each variable to use in building the URL. I then use the URL to launch a new window when my custom Pinterest icon is clicked.</p>
+
+<p>The final step is to call our new function buildPinterest(); whenever a thumbnail image is clicked:</p>
+
+<pre><code>function swapImage(){
+    $(&#39;.swatch&#39;).first().addClass(&#39;active&#39;);
+    $(&#39;.demo-small&#39;).click(function(){
+        $(&#39;.swatch&#39;).removeClass(&#39;active&#39;);
+        $(this).addClass(&#39;active&#39;);
+
+        var $newImg = $(this).find(&#39;img.sample&#39;),
+            newSrc = $newImg.attr(&#39;src&#39;),
+            newAlt = $newImg.attr(&#39;alt&#39;);
+        $(&#39;img.fullsize&#39;).attr(&#39;src&#39;,newSrc).attr(&#39;alt&#39;,newAlt);
+        buildPinterest();
+    });
+}</code></pre>
+
+<p>And there you have it: the structure to build your own Pinterest button that pins whichever active image you have loaded.</p>
+<script type='text/javascript'>$( "#tabs" ).tabs();</script>
+
+							<div class="prev_next post_nav">
+								
+									<p class="previous">
+										«&nbsp;<a href="/combining-jekyll-with-focal-point-css-adaptive-images-for-smart-thumbnails/" rel="previous" title="Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images">Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images</a>
+									</p>
+								 
+								
+							</div>
+
+							<div id="related-posts">
+							  <h3>You might also like</h3>
+							  <div>
+							  
+							    <div class="related-post">
+							      <div class="image">
+							        <img src="/images/posts/thumbnails/">
+							      </div>
+							      <div class="title">
+							        <a href="/jekyll-introduction/" target="_top">
+							          postie post post
+							        </a>
+							      </div>
+							    </div>
+							  
+							    <div class="related-post">
+							      <div class="image">
+							        <img src="/images/posts/thumbnails/">
+							      </div>
+							      <div class="title">
+							        <a href="/blog-post-1/" target="_top">
+							          Blog Post 1
+							        </a>
+							      </div>
+							    </div>
+							  
+							    <div class="related-post">
+							      <div class="image">
+							        <img src="/images/posts/thumbnails/jekyll.png">
+							      </div>
+							      <div class="title">
+							        <a href="/title/" target="_top">
+							          Title
+							        </a>
+							      </div>
+							    </div>
+							  
+							  </div>
+							</div>
+					</div><!-- /content-wrap -->
+					      <div class="footer">
+        <p>&copy; Jan Dennison</p>
+      </div>
+
+<!-- Site Scripts -->
+<!-- FancyBox -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+
+				</div> <!-- /page-wrap -->
+			</div><!--/content-->
+			</div><!-- /fancy-container -->
+		</body>
+</html>

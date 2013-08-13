@@ -14,8 +14,10 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
 
-<!-- Add jQuery library -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- Add jQuery libraries -->
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="/js/jquery-ui/css/pepper-grinder/jquery-ui-1.10.3.custom.min.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
 
 <!-- FancyBox Images -->
 <link rel="stylesheet" href="/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
@@ -28,6 +30,7 @@
 <script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
 <!-- End FancyBox -->
 
+<script type="text/javascript" src="/js/main.js"></script>
 
 		<body>
 					<header>
@@ -54,18 +57,30 @@
 						<h1> Artistic Portfolio : Verisimilitude Sylva </h1>
 						<div class='portfolio' id='sylva'>
 	<ul class='clearfix'>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/anthemion.jpg'><img src='img/anthemion.jpg' title='Anthemion' class='noborder' alt='Anthemion' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/daedal.jpg'><img src='img/daedal.jpg' title='Daedal' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/feathers.jpg'><img src='img/feathers.jpg' title='Feathers' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/incarnadine.jpg'><img src='img/incarnadine.jpg' title='Incarnadine' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/incondite.jpg'><img src='img/incondite.jpg' title='Incondite' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/irenic.jpg'><img src='img/irenic.jpg' title='Irenic' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/mistigris.jpg'><img src='img/mistigris.jpg' title='Mistigris' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/numen.jpg'><img src='img/numen.jpg' title='Numen' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/oneiric.jpg'><img src='img/oneiric.jpg' title='Oneiric' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/subversive.jpg'><img src='img/subversive.jpg' title='subversive' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/vitiate.jpg'><img src='img/vitiate.jpg' title='Vitiate' class='noborder' /></a></li>
-		<li class='frame'><a class='fancybox' rel='sylva' href='img/volacious.jpg'><img src='img/volacious.jpg' title='Volacious' class='noborder' /></a></li>
+		<li class='frame'>
+			<a class='fancybox' rel='sylva' href='img/anthemion.jpg'><img class='noborder' title='Anthemion' alt='Anthemion' src='img/anthemion.jpg' /></a>
+			<a class='social pinterest' href='' />
+		</li>
+		<li class='frame'>
+			<a class='fancybox' rel='sylva' href='img/daedal.jpg'><img class='noborder' title='Daedal' src='img/daedal.jpg' /></a>
+			<a class='social pinterest' href='' />
+		</li>
+		<li class='frame'>
+			<a class='fancybox' rel='sylva' href='img/feathers.jpg'><img class='noborder' title='Feathers' src='img/feathers.jpg' /></a>
+			<a class='social pinterest' href='' />
+		</li>
+		<li class='frame'>
+			<a class='fancybox' rel='sylva' href='img/incarnadine.jpg'><img class='noborder' title='Incarnadine' src='img/incarnadine.jpg' /></a>
+		<a class='social pinterest' href='' />
+		</li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/incondite.jpg'><img class='noborder' title='Incondite' src='img/incondite.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/irenic.jpg'><img class='noborder' title='Irenic' src='img/irenic.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/mistigris.jpg'><img class='noborder' title='Mistigris' src='img/mistigris.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/numen.jpg'><img class='noborder' title='Numen' src='img/numen.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/oneiric.jpg'><img class='noborder' title='Oneiric' src='img/oneiric.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/subversive.jpg'><img class='noborder' title='subversive' src='img/subversive.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/vitiate.jpg'><img class='noborder' title='Vitiate' src='img/vitiate.jpg' /></a></li>
+		<li class='frame'><a class='fancybox' rel='sylva' href='img/volacious.jpg'><img class='noborder' title='Volacious' src='img/volacious.jpg' /></a></li>
 	</ul>
 </div><script type='text/javascript'>
 $(document).ready(function(){	
@@ -83,12 +98,6 @@ $(document).ready(function(){
 	$(document).ready(function() {
 		$(".fancybox").fancybox();
 	});
-</script>
-<!-- jQuery UI menu -->
-<script>
-  $(function() {
-    $( "#menu" ).menu();
-  });
 </script>
 
 				</div> <!-- /content-wrap -->
