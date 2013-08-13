@@ -25,6 +25,7 @@ $(document).ready(function(){
         pinterestURL = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc + '&is_video=false';
     $('a.social.pinterest').click(function(e){
       e.preventDefault();
+      console.log(pinterestURL);
       window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
       return false;
     });
