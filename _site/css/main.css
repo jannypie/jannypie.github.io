@@ -318,7 +318,6 @@ body,div,ul,li,span,a {box-sizing: border-box;}
     ============================ */
 body {
 	background: url(/images/gears.png) no-repeat top right,
-              url(/images/butterfly.png) no-repeat 110% 45px,
               #494640 url(/images/grunge-sprite.png);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
