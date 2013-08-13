@@ -116,19 +116,19 @@
 <div class='demo row-fluid'>
 	<div class='span3'>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Green Sparrow Drawing' class='sample' src='/assets/post-images/sparrow-green.png' /></div>
+			<div><img alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' class='sample' /></div>
 		</div>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Colored Sparrow Drawing' class='sample' src='/assets/post-images/sparrow-colors.png' /></div>
+			<div><img alt='Colored Sparrow Drawing' src='/assets/post-images/sparrow-colors.png' class='sample' /></div>
 		</div>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Watercolor Sparrow Drawing' class='sample' src='/assets/post-images/sparrow-watercolor.png' /></div>
+			<div><img alt='Watercolor Sparrow Drawing' src='/assets/post-images/sparrow-watercolor.png' class='sample' /></div>
 		</div>
 		<a class='clearfix social pinterest float-right'>Pin it!</a>
 	</div>
 	<div class='span8'>
 		<div class='demo-full'>
-			<div><img alt='Green Sparrow Drawing' class='fullsize' src='/assets/post-images/sparrow-green.png' /></div>
+			<div><img alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' class='fullsize' /></div>
 		</div>
 	</div>
 </div>
@@ -225,24 +225,86 @@
 
 <p>You can see that I&#8217;ve encoded each variable to use in building the URL. I then use the URL to launch a new window when my custom Pinterest icon is clicked.</p>
 
-<p>The final step is to call our new function buildPinterest(); whenever a thumbnail image is clicked:</p>
+<h3 id='expert_help_steps_in'>Expert Help Steps In</h3>
 
-<pre><code>function swapImage(){
-    $(&#39;.swatch&#39;).first().addClass(&#39;active&#39;);
-    $(&#39;.demo-small&#39;).click(function(){
-        $(&#39;.swatch&#39;).removeClass(&#39;active&#39;);
-        $(this).addClass(&#39;active&#39;);
-
-        var $newImg = $(this).find(&#39;img.sample&#39;),
-            newSrc = $newImg.attr(&#39;src&#39;),
-            newAlt = $newImg.attr(&#39;alt&#39;);
-        $(&#39;img.fullsize&#39;).attr(&#39;src&#39;,newSrc).attr(&#39;alt&#39;,newAlt);
-        buildPinterest();
-    });
-}</code></pre>
-
+<p>When you&#8217;re learning javascript, it helps to have uber smart friends who take an interest and look over your code for you. Guru and best practices expert <a href='https://github.com/spicycode' title='@spicycode'>@spicycode</a> (thank you, sir) gave me the following advice: break up my function into smaller, more focused steps, and build the URL when the button is clicked (not when a new thumbnail image is clicked, as I was doing). Here is the setup for that:</p>
+<div id='tabs2'>
+  <ul>
+    <li><a href='#fragment-1'><span>Pinterest Functions</span></a></li>
+    <li><a href='#fragment-2'><span>Entire JS</span></a></li>
+  </ul>
+  <div id='fragment-1'>
+    <pre><code>
+	function buildPinterestURL() {
+	  var $currentImage   = $('img.fullsize');
+	  var bookmarkletURL  = 'http://pinterest.com/pin/create/bookmarklet/',
+	      mediaURL        = "http://jannypie.github.io" + $currentImage.attr('src'),
+	      mediaURLenc     = encodeURIComponent(mediaURL),
+	      shareURL        = window.location,
+	      shareURLenc     = encodeURIComponent(shareURL),
+	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
+	      descriptionenc  = encodeURIComponent(description),
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      
+	  return pinterestURL;
+	}
+	 
+	function handlePinterestClick(e) {
+	  e.preventDefault();
+	  var pinterestURL = buildPinterestURL();
+	  window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
+	  return false;
+	}
+    </code></pre>
+  </div>
+  <div id='fragment-2'>
+    <pre><code>
+	function swapImage(){
+	  $('.swatch').first().addClass('active');
+	  $('.demo-small').click(function(){
+	    $('.swatch').removeClass('active');
+	    $(this).addClass('active');
+	 
+	    var $newImg = $(this).find('img.sample'),
+	         newSrc = $newImg.attr('src'),
+	         newAlt = $newImg.attr('alt');
+	         
+	    $('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
+	  });
+	}
+	 
+	function buildPinterestURL() {
+	  var $currentImage   = $('img.fullsize');
+	  var bookmarkletURL  = 'http://pinterest.com/pin/create/bookmarklet/',
+	      mediaURL        = "http://jannypie.github.io" + $currentImage.attr('src'),
+	      mediaURLenc     = encodeURIComponent(mediaURL),
+	      shareURL        = window.location,
+	      shareURLenc     = encodeURIComponent(shareURL),
+	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
+	      descriptionenc  = encodeURIComponent(description),
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      
+	  return pinterestURL;
+	}
+	 
+	function handlePinterestClick(e) {
+	  e.preventDefault();
+	  var pinterestURL = buildPinterestURL();
+	  window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
+	  return false;
+	}
+	  
+	$(document).ready(function(){
+	  swapImage();
+	  $('a.social.pinterest').click(handlePinterestClick);
+	});
+    </code></pre>
+  </div>
+</div>
 <p>And there you have it: the structure to build your own Pinterest button that pins whichever active image you have loaded.</p>
-<script type='text/javascript'>$( "#tabs" ).tabs();</script>
+
+<p><strong>Note:</strong> You might have to tweak the mediaURL variable to get it pointing to the correct img src. I have this code on two test pages and one of them does not need the domain in front of $currentImage.attr(&#8216;src&#8217;) and one of them does.</p>
+<script type='text/javascript'>$( "#tabs, #tabs2" ).tabs();</script>
 
 							<div class="prev_next post_nav">
 								

@@ -160,23 +160,87 @@ Once you have the string broken down, you can use jQuery to build a URL based on
 
 You can see that I've encoded each variable to use in building the URL. I then use the URL to launch a new window when my custom Pinterest icon is clicked. 
 
-The final step is to call our new function buildPinterest(); whenever a thumbnail image is clicked:
+### Expert Help Steps In
 
-	function swapImage(){
-	    $('.swatch').first().addClass('active');
-	    $('.demo-small').click(function(){
-	        $('.swatch').removeClass('active');
-            $(this).addClass('active');
+When you're learning javascript, it helps to have uber smart friends who take an interest and look over your code for you. Guru and best practices expert [@spicycode][7] (thank you, sir) gave me the following advice: break up my function into smaller, more focused steps, and build the URL when the button is clicked (not when a new thumbnail image is clicked, as I was doing). Here is the setup for that:
 
-	        var $newImg = $(this).find('img.sample'),
-	            newSrc = $newImg.attr('src'),
-	            newAlt = $newImg.attr('alt');
-	        $('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
-	        buildPinterest();
-	    });
+<div id="tabs2">
+  <ul>
+    <li><a href="#fragment-1"><span>Pinterest Functions</span></a></li>
+    <li><a href="#fragment-2"><span>Entire JS</span></a></li>
+  </ul>
+  <div id="fragment-1">
+    <pre><code>
+	function buildPinterestURL() {
+	  var $currentImage   = $('img.fullsize');
+	  var bookmarkletURL  = 'http://pinterest.com/pin/create/bookmarklet/',
+	      mediaURL        = "http://jannypie.github.io" + $currentImage.attr('src'),
+	      mediaURLenc     = encodeURIComponent(mediaURL),
+	      shareURL        = window.location,
+	      shareURLenc     = encodeURIComponent(shareURL),
+	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
+	      descriptionenc  = encodeURIComponent(description),
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      
+	  return pinterestURL;
 	}
+	 
+	function handlePinterestClick(e) {
+	  e.preventDefault();
+	  var pinterestURL = buildPinterestURL();
+	  window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
+	  return false;
+	}
+    </code></pre>
+  </div>
+  <div id="fragment-2">
+    <pre><code>
+	function swapImage(){
+	  $('.swatch').first().addClass('active');
+	  $('.demo-small').click(function(){
+	    $('.swatch').removeClass('active');
+	    $(this).addClass('active');
+	 
+	    var $newImg = $(this).find('img.sample'),
+	         newSrc = $newImg.attr('src'),
+	         newAlt = $newImg.attr('alt');
+	         
+	    $('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
+	  });
+	}
+	 
+	function buildPinterestURL() {
+	  var $currentImage   = $('img.fullsize');
+	  var bookmarkletURL  = 'http://pinterest.com/pin/create/bookmarklet/',
+	      mediaURL        = "http://jannypie.github.io" + $currentImage.attr('src'),
+	      mediaURLenc     = encodeURIComponent(mediaURL),
+	      shareURL        = window.location,
+	      shareURLenc     = encodeURIComponent(shareURL),
+	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
+	      descriptionenc  = encodeURIComponent(description),
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      
+	  return pinterestURL;
+	}
+	 
+	function handlePinterestClick(e) {
+	  e.preventDefault();
+	  var pinterestURL = buildPinterestURL();
+	  window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
+	  return false;
+	}
+	  
+	$(document).ready(function(){
+	  swapImage();
+	  $('a.social.pinterest').click(handlePinterestClick);
+	});
+    </code></pre>
+  </div>
+</div>
 
 And there you have it: the structure to build your own Pinterest button that pins whichever active image you have loaded. 
+
+**Note:** You might have to tweak the mediaURL variable to get it pointing to the correct img src. I have this code on two test pages and one of them does not need the domain in front of $currentImage.attr('src') and one of them does.
 
 [1]: http://business.pinterest.com/widget-builder/#do_pin_it_button "Pinterest.com Widget Builder"
 [2]: http://developers.pinterest.com/rich_pins/ "Pinterest.com Rich Pins"
@@ -184,5 +248,6 @@ And there you have it: the structure to build your own Pinterest button that pin
 [4]: http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-pin-it-button-to-your-website/375/ "Add a custom Pinterest pin it button to your website"
 [5]: http://www.brandaiddesignco.com/blog/add-a-custom-pinterest-button-to-your-website-part-2/770/ "Part 2"
 [6]: http://www.etsy.com/listing/122792616/passionate-woman-original-painting-on?ref=shop_home_active "Etsy listing: Original Painting"
+[7]: https://github.com/spicycode "@spicycode"
 
-<script type="text/javascript">$( "#tabs" ).tabs();</script>
+<script type="text/javascript">$( "#tabs, #tabs2" ).tabs();</script>
