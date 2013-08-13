@@ -1,19 +1,19 @@
 $(document).ready(function(){
-	function swapImage(){
-		$('.swatch').first().addClass('active');
-		$('.demo-small').click(function(){
-			$('.swatch').removeClass('active');
-      		$(this).addClass('active');
+  function swapImage(){
+    $('.swatch').first().addClass('active');
+    $('.demo-small').click(function(){
+      $('.swatch').removeClass('active');
+          $(this).addClass('active');
 
-			var $newImg = $(this).find('img.sample'),
-				newSrc = $newImg.attr('src'),
-				newAlt = $newImg.attr('alt');
-			$('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
-			buildPinterest();
-		});
-	}
+      var $newImg = $(this).find('img.sample'),
+        newSrc = $newImg.attr('src'),
+        newAlt = $newImg.attr('alt');
+      $('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
+      buildPinterest();
+    });
+  }
 
-	function buildPinterest() {
+  function buildPinterest() {
       var $currentImage = $('img.fullsize');
       var bookmarkletURL = 'http://pinterest.com/pin/create/bookmarklet/',
         mediaURL = "http://jannypie.github.io" + $currentImage.attr('src'),
@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
   }
 
-	swapImage();
-	buildPinterest();
+  swapImage();
+  buildPinterest();
 });
 
