@@ -151,7 +151,7 @@ Once you have the string broken down, you can use jQuery to build a URL based on
 	        shareURLenc = encodeURIComponent(shareURL),
 	        description = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	        descriptionenc = encodeURIComponent(description),
-	        pinterestURL = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	        pinterestURL = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
 	    $('a.social.pinterest').click(function(e){
 	        window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
 	        e.preventDefault();
@@ -180,7 +180,7 @@ When you're learning javascript, it helps to have uber smart friends who take an
 	      shareURLenc     = encodeURIComponent(shareURL),
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
-	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
 	      
 	  return pinterestURL;
 	}
@@ -218,7 +218,7 @@ When you're learning javascript, it helps to have uber smart friends who take an
 	      shareURLenc     = encodeURIComponent(shareURL),
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
-	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
 	      
 	  return pinterestURL;
 	}

@@ -116,19 +116,19 @@
 <div class='demo row-fluid'>
 	<div class='span3'>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' class='sample' /></div>
+			<div><img src='/assets/post-images/sparrow-green.png' class='sample' alt='Green Sparrow Drawing' /></div>
 		</div>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Colored Sparrow Drawing' src='/assets/post-images/sparrow-colors.png' class='sample' /></div>
+			<div><img src='/assets/post-images/sparrow-colors.png' class='sample' alt='Colored Sparrow Drawing' /></div>
 		</div>
 		<div class='swatch focal-point right-6 demo-small float-right clearfix'>
-			<div><img alt='Watercolor Sparrow Drawing' src='/assets/post-images/sparrow-watercolor.png' class='sample' /></div>
+			<div><img src='/assets/post-images/sparrow-watercolor.png' class='sample' alt='Watercolor Sparrow Drawing' /></div>
 		</div>
 		<a class='clearfix social pinterest float-right'>Pin it!</a>
 	</div>
 	<div class='span8'>
 		<div class='demo-full'>
-			<div><img alt='Green Sparrow Drawing' src='/assets/post-images/sparrow-green.png' class='fullsize' /></div>
+			<div><img src='/assets/post-images/sparrow-green.png' class='fullsize' alt='Green Sparrow Drawing' /></div>
 		</div>
 	</div>
 </div>
@@ -216,7 +216,7 @@
         shareURLenc = encodeURIComponent(shareURL),
         description = $currentImage.attr(&#39;alt&#39;) + &quot; by Jan Dennison @jannypie&quot;,
         descriptionenc = encodeURIComponent(description),
-        pinterestURL = bookmarkletURL + &#39;?media=&#39; + mediaURLenc + &#39;&amp;url=&#39; + shareURLenc + &#39;&amp;description=&#39; + descriptionenc;
+        pinterestURL = bookmarkletURL + &#39;?media=&#39; + mediaURLenc + &#39;&amp;amp;url=&#39; + shareURLenc + &#39;&amp;amp;description=&#39; + descriptionenc;
     $(&#39;a.social.pinterest&#39;).click(function(e){
         window.open(pinterestURL,&#39;_blank&#39;,&#39;width=750,height=350,toolbar=0,location=0,directories=0,status=0&#39;);
         e.preventDefault();
@@ -244,7 +244,7 @@
 	      shareURLenc     = encodeURIComponent(shareURL),
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
-	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
 	      
 	  return pinterestURL;
 	}
@@ -282,7 +282,7 @@
 	      shareURLenc     = encodeURIComponent(shareURL),
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
-	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&url=' + shareURLenc + '&description=' + descriptionenc;
+	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
 	      
 	  return pinterestURL;
 	}
