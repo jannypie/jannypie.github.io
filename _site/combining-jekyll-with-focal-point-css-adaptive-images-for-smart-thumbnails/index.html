@@ -63,7 +63,7 @@
 
 							<h2 id='introduction'>Introduction</h2>
 
-<p><a title='Focal Point: Intelligent Cropping of Responsive Images' href='http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/'>Focal Point: Intelligent Cropping of Responsive Images</a> is an excellent article on <a title='design shack' href='http://designshack.net'>design shack</a> introducing <a title='Focal Point Documentation' href='http://www.cdnconnect.com/docs/focal-point-css/pure-html-css-responsive-high-resolution-images-solution'>Focal Point CSS</a>, a project on GitHub by <a title='Adam Bradley Focal Point' href='https://github.com/adamdbradley/focal-point#readme'>Adam Bradley</a> that sets up a small collection of CSS classes designed to crop images while keeping a focal area in view. This is a great solution to simple resizing of images to create smaller thumbnails without losing the important part of the picture.</p>
+<p><a href='http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/' title='Focal Point: Intelligent Cropping of Responsive Images'>Focal Point: Intelligent Cropping of Responsive Images</a> is an excellent article on <a href='http://designshack.net' title='design shack'>design shack</a> introducing <a href='http://www.cdnconnect.com/docs/focal-point-css/pure-html-css-responsive-high-resolution-images-solution' title='Focal Point Documentation'>Focal Point CSS</a>, a project on GitHub by <a href='https://github.com/adamdbradley/focal-point#readme' title='Adam Bradley Focal Point'>Adam Bradley</a> that sets up a small collection of CSS classes designed to crop images while keeping a focal area in view. This is a great solution to simple resizing of images to create smaller thumbnails without losing the important part of the picture.</p>
 
 <p>Take for example my doodle here of some flowers. The basic setup for CSSing a thumbnail would be to wrap the image in a div with a fixed size and overflow set to hidden:</p>
 
@@ -84,7 +84,7 @@
 
 <p>I had come across some online posts about cropping image thumbnails using CSS, and wanted to go back to those and find a more advanced solution. Thus, I came across Focal Point. I&#8217;ll let you read the details if you wish, but the basic concept is that Focal Point defines classes that apply negative margins to your image based on where you want the focus to be. For each image, simply add one of the Focal Point classes for horizontal offset and another for vertical, and it will not only use negative margins to make that area you define as the focus, but because they are all based on percentages, it&#8217;s also responsive.</p>
 
-<p>The basic structure for using Focal Point is an image wrapped in two divs. To use the example from <a title='Focal Point: Intelligent Cropping of Responsive Images' href='http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/'>the design shack post</a>:</p>
+<p>The basic structure for using Focal Point is an image wrapped in two divs. To use the example from <a href='http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/' title='Focal Point: Intelligent Cropping of Responsive Images'>the design shack post</a>:</p>
 
 <pre><code>&lt;div class=&quot;focal-point right-3 up-3&quot;&gt;
   &lt;div&gt;&lt;img src=&quot;guy.jpg&quot; alt=&quot;guy&quot;&gt;&lt;/div&gt;
@@ -132,7 +132,7 @@ end loop</code></pre>
 
 <h2 id='the_solution'>The Solution</h2>
 
-<p>The answer to the question was actually very simple - using <a title='Adding More Post Metadata to Jekyll With YAML' href='http://blog.omgmog.net/post/adding-more-post-metadata-to-jekyll-with-yaml/'>custom YAML key:value pairs</a> in the head of each post to define the focal point of the image, and then applying Liquid output structure to pass them to the markup. I defined three custom variables (horizontal, vertical, and orientation) in the YAML front matter of each post:</p>
+<p>The answer to the question was actually very simple - using <a href='http://blog.omgmog.net/post/adding-more-post-metadata-to-jekyll-with-yaml/' title='Adding More Post Metadata to Jekyll With YAML'>custom YAML key:value pairs</a> in the head of each post to define the focal point of the image, and then applying Liquid output structure to pass them to the markup. I defined three custom variables (horizontal, vertical, and orientation) in the YAML front matter of each post:</p>
 
 <pre><code>---
 layout: &quot;post&quot; 
@@ -164,7 +164,7 @@ orientation: portrait
 							<div class="prev_next post_nav">
 								
 									<p class="previous">
-										«&nbsp;<a href="/dummy-post-6/" rel="previous" title="Dummy Post 6">Dummy Post 6</a>
+										«&nbsp;<a href="/beginning-jekyll-and-github-newbie-use-case/" rel="previous" title="GitHub Pages with Jekyll : A Newbie Use Case">GitHub Pages with Jekyll : A Newbie Use Case</a>
 									</p>
 								 
 								
@@ -180,33 +180,22 @@ orientation: portrait
 							  
 							    <div class="related-post">
 							      <div class="image">
-							        <img src="/images/posts/thumbnails/">
+							        <img src="/images/posts/thumbnails//assets/post-images/github-pages-templates.png">
 							      </div>
 							      <div class="title">
-							        <a href="/jekyll-introduction/" target="_top">
-							          postie post post
+							        <a href="/beginning-jekyll-and-github-newbie-use-case/" target="_top">
+							          GitHub Pages with Jekyll : A Newbie Use Case
 							        </a>
 							      </div>
 							    </div>
 							  
 							    <div class="related-post">
 							      <div class="image">
-							        <img src="/images/posts/thumbnails/">
+							        <img src="/images/posts/thumbnails//assets/post-images/pinterest.jpg">
 							      </div>
 							      <div class="title">
-							        <a href="/blog-post-1/" target="_top">
-							          Blog Post 1
-							        </a>
-							      </div>
-							    </div>
-							  
-							    <div class="related-post">
-							      <div class="image">
-							        <img src="/images/posts/thumbnails/jekyll.png">
-							      </div>
-							      <div class="title">
-							        <a href="/title/" target="_top">
-							          Title
+							        <a href="/pinning-dynamic-target-images-with-custom-pinterest-buttons/" target="_top">
+							          Pinning Dynamic Target Images With Custom Pinterest Buttons
 							        </a>
 							      </div>
 							    </div>
