@@ -23,27 +23,29 @@ orientation:
 
 ## Introduction
 
-For a current project at work, I needed to build a Pinterest feature that used a custom icon to pin a large image on the page, an image which changed depending on which "swatch" type or sample was selected.
+For a current project at work, I needed to build a Pinterest feature that used a custom icon to pin a large image on the page, an image which changed depending on a "swatch" type, or thumbnail, was selected.
 I wanted a "Pin It" button that was:
 1. Custom (not the gray/red buttons provided by Pinterest) to fit in with branding
 2. Would pin a specific image, not bring up all the images on the page
-3. The specific image is dynamic - which is to say: I have an array of image options, such as swatches of fabric for color choices, or other photos, which load into a main view area dynamically based on the option clicked
+3. The specific image is dynamic - which is to say: I didn't want to code a button for every image on the page - I wanted a button that would pin the feature image of the page, which the user can change by clicking thumbnails. 
 4. Would prefer not to use any third-party scripts or pinit.js (which forces the default Pin It button styles, and third-party might not be maintainable or necessary)
 
 There seemed to be Google solutions of two basic varieties available online: 
 
 1. Use Pinterest's pinit.js code which will pin a specific image - but forces you to use their Pin button, and often forces you to hardcode each and every image you want to pin
     - [Widget Builder][1] hardcodes each Pinterest button per image, which is not useful for dynamic images
-    - [Rich Pins][2] use oEmbed or Semantic Markup to build pins with extra meta-data, which then requires Pinterest-side validation (which is poorly documented. Why does it require validation? What are they looking for?) of a static URL, which is of course not useful in pre-production/draft development or for many pages/sitewide
+    - [Rich Pins][2] are a new feature - they use oEmbed or Semantic Markup to build pins with extra meta-data, which then requires Pinterest-side validation (which is poorly documented. Why does it require validation? What are they looking for?) of a specific URL, which is of course not useful in pre-published/test development or for a large site with many pages
 2. Use the bookmarklet code to pull up all images on a page and have the user select the one they want - allows you to use any button, but doesn't pin a specific image
     - [how to: create custom pinterest "pin-it" button on images][3] is a helpful post that comes with third-party script for showing a "pin it" button on hover-over of an image, which then launches the bookmarklet
     - Two posts on brandaiddesignco.com: [Add a custom Pinterest pin it button to your website][4] and [Part 2][5] provide third-party scripts for applying the bookmarklet script to your page. 
+
+<img src="/assets/post-images/etsy-thumbnails.jpg" class="float-right teaserthumb"> 
 
 A great example of what I wanted can be seen on Etsy.com listings. [In each listing][6], there is a large main image area with additional small image thumbnails that you can select and view fullsize in the main area. (Amazon.com is another example of this product page style setup). Etsy uses the Pinterest-made "Pin it" button to pin only the first image in a listing. However, sometimes the seller has better or more interesting images that they have not set as first, and I would *like* to pin those instead. Essentially: I want the "Pin it" button to pin whichever image I have loaded as the main view - not the default first image.
  
 ## Solution
 
-The solution, seemingly simple after I solved it, was to break down the bookmarklet code structure and combine it with jQuery to set variables, which are then used to build the bookmarlet URL. Here is a sample setup of images that we'll be pinning:
+The simple solution is to break down the bookmarklet code structure and combine it with jQuery to set variables, which are then used to build the bookmarlet URL. Here is a sample setup of images that we'll be pinning:
 
 <div class="demo row-fluid">
 	<div class="span3">

@@ -332,11 +332,19 @@ body {
 
 .float-right {
   float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
 }
 .float-left {
   float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
-
+.float-center {
+  clear: both;
+  margin: 0 auto;
+  display: block;
+}
 
 /*  Typography 
     ============================ */
@@ -568,7 +576,7 @@ pre {
 }
 
 .toc {
-  display: block;
+  display: inline-block;
   float: right;
   margin-top: 50px;
   padding-bottom: 20px;
