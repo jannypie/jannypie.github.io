@@ -14,7 +14,7 @@ meta-robots: "noodp, noydir"
 	{% assign teasers_take = 3 %} 
 	{% include teasers.html %}
 	<div class="row-fluid" id="view-all-entries">
-		<a href="/sitemap/">View all the entries</a>
-	</div>
+<!-- 		<a href="/sitemap/">View all the entries</a>
+ -->	</div>
 </div>
 

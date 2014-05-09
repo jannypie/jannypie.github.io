@@ -1,0 +1,264 @@
+
+/* ==========================================================================
+   Modern Stylesheet
+   Author: Jan Dennison
+   Created: August 2013
+   ========================================================================== */
+
+/*  Basics 
+    ============================ */
+body {
+	background: #FF0051;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+  color: #222;
+  font-family: 'Numans', sans-serif;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+
+/*  Typography 
+    ============================ */
+a, a:visited {
+  color: #00AAA4;
+  text-decoration: none;
+}
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+h1,h2,h3,h4,h5,h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-family: 'Scada', sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5em 0;
+}
+  h1, h1 a, h1 a:visited {
+    color: #FF0051;
+  }
+    header h1 {
+      color: #ffffff;
+      text-align: center;
+      font-size: 5.0em;
+      margin: 1em 0;
+      opacity: 0.5;
+      position: relative;
+    }
+      .home header h1 {
+        margin: 1em 0;
+      }
+    header a:hover, header a:active {
+      text-decoration: none;
+    }
+  h2, h2 a, h2 a:visited {
+    color: #FF4D00;
+  }
+  h3, h3 a, h3 a:visited {
+    color: #FFBF00;
+  }
+  h4, h5, h6,
+  h4 a, h5 a, h6 a {
+    color: #75AB00;
+  }
+    .post-wrap h3, .post-wrap h3 + p {
+      margin-left: 1em;
+    }
+    .post-wrap h4, .post-wrap h4 + p {
+      margin-left: 2em;
+    }
+.teasers h4 {
+  margin: 0.5em 0 0 0;
+}
+  .teasers p {
+    margin: 0;
+  }
+
+span.meta {
+  font-size: 0.8em;
+  color: gray;
+}
+
+.ui-menu a {
+  color: #494640;
+}
+
+/*  Containers 
+    ============================ */
+.container {
+  background: #ffffff; /* Old browsers */
+  margin: 2em 0;
+  width: 100%;
+}
+
+.container-overlay {
+  background: transparent;
+  -webkit-box-shadow:  0px 0px 0px;
+  -moz-box-shadow:     0px 0px 0px;
+  box-shadow:          0px 0px 0px #ffffff;
+  margin: 0;
+	padding-top: 4em;
+	padding-bottom: 4em;
+  width: 100%;
+  height: 100%;
+}
+
+.content-wrap {
+  margin: 0px auto;
+  max-width: 1000px;
+}
+
+.home-wrap, .page-wrap, .post-wrap, .gallery-wrap {
+  margin: 2em;
+}
+  .gallery {
+    width: auto;
+    margin: 0 auto;
+  }
+
+.sidebar {
+  float: right;
+}
+
+.featured-post {
+  margin-bottom: 2em;
+}
+
+.teaser {
+  margin-bottom: 2em;
+}
+
+/**
+  Images
+**/
+img {
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #c7c2b3;
+}
+img.noborder {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.featuredthumb, .teaserthumb, .swatch {
+  border: 1px solid #c7c2b3;
+  max-height: 200px;
+}
+
+.swatch {
+  max-height: 50px;
+  max-width: 50px;
+  margin: 5px;
+}
+
+.swatch.active {
+  border: 1px solid #FF0051;
+}
+  .featuredthumb img, .teaserthumb img, .swatch img {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+.post-main-img {
+  max-width: 100%;
+  width: 99%;
+}
+
+.teasers {
+  margin-bottom: 1em;
+}
+  .teaser .focal-point {
+
+    overflow: hidden;
+  }
+  .teasers .post-thumb-img {
+      width: 99%;
+    }
+
+pre {
+  background: gray;
+  color: white;
+  padding: 1em;
+  word-wrap:break-word;
+}
+
+/**
+  Social Icons
+**/
+
+.social.pinterest {
+  display: inline-block;
+  background: transparent url('/images/pinterest.png') no-repeat;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px;
+  padding: 0 0 0 35px;
+}
+
+/**
+  Post Styles
+**/
+
+.newbie {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 0.5em 1em;
+}
+
+.toc {
+  display: inline-block;
+  float: right;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  text-align: right;
+  width: 30%;
+}
+  .toc h1, .toc h2, .toc h3, .toc h4, .toc h5, .toc h6 {
+    font-size: 0.8em;
+  }
+
+/**
+  Portfolio
+**/
+
+.portfolio ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.portfolio li.frame {
+  width: 228px;
+  height: 296px;
+  padding: 11px 14px;
+  float: left;
+  margin: 0;
+  display: none;
+}
+  .portfolio li a:after {
+    display: block;
+    content: "";
+    background: url(../portfolio/verisimilitude-sylva/img/frame.png) no-repeat;
+    width: 228px;
+    height: 296px;
+    position: relative;
+    top: -290px;
+    left: -14px;
+  }
+#sylva img {
+  width: 197px;
+  height: 275px;
+} 
+
+#wanderlust .focal-point {
+  height: 200px;
+  width: 200px;
+}
+#wanderlust li {
+  float: left;
+  margin: 10px;
+}
+

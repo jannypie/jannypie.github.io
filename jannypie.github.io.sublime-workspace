@@ -4,16 +4,108 @@
 		"selected_items":
 		[
 			[
+				"pr",
+				"preventDefault"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"new",
+				"newSrc"
+			],
+			[
+				"media",
+				"mediaURL"
+			],
+			[
+				"pint",
+				"pinterestURL"
+			],
+			[
+				"ac",
+				"addClass"
+			],
+			[
+				"demo",
+				"demo-full"
+			],
+			[
+				"sw",
+				"swapImage"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"teaser",
+				"teaserthumb"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"post",
+				"post-thumbnail"
+			],
+			[
+				"gallery",
+				"gallery-wrap"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
 				"font",
-				"font-weight"
+				"font-size"
+			],
+			[
+				"padd",
+				"padding"
 			],
 			[
 				"margin",
 				"margin-left"
-			],
-			[
-				"mar",
-				"margin"
 			],
 			[
 				"backgro",
@@ -30,10 +122,6 @@
 			[
 				"pad",
 				"padding"
-			],
-			[
-				"back",
-				"background-size"
 			],
 			[
 				"rep",
@@ -58,10 +146,6 @@
 			[
 				"jg",
 				"jg-womens"
-			],
-			[
-				"text",
-				"text-decoration"
 			],
 			[
 				"collection",
@@ -94,10 +178,6 @@
 			[
 				"tooltip",
 				"tooltip-trigger"
-			],
-			[
-				"marg",
-				"margin-top"
 			],
 			[
 				"small",
@@ -140,61 +220,42 @@
 	"buffers":
 	[
 		{
-			"file": "_posts/2013-07-15-blog-post-1.html",
+			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 566,
+				"buffer_size": 1762,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_posts/2013-07-19-beginning-jekyll-and-github-newbie-use-case.mdown",
+			"file": "css/main.css",
 			"settings":
 			{
-				"buffer_size": 290,
+				"buffer_size": 16247,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "---\nlayout: \"default\"\ntitle: \"Jan Dennison Web Dev Blog\"\nmeta-description: \"Web development blog by Jan Dennison\"\nmeta-robots: \"noodp, noydir\"\n---\n<div class=\"row\">\n	<div class=\"span12\">\n		  <p>In the year 2004, I graduated college with a degree in biology and spent six years researching biodefense at a worldwide institute.</p>\n\n		  <p>I've spent the time since then moving my career path into web design and development. </p>\n\n		  Here I share my experiences.		\n	</div>\n</div>\n<hr>\n<div class=\"row\">\n	<div class=\"span12\">\n		  <h1> Latest entries </h1>\n			{% include featured-posts.html %}			\n	</div>\n</div>\n<hr>\n<div class=\"row\">\n	<div class=\"span12\">\n			<h3> Entries before the latest entries </h3> \n			{% assign teasers = site.posts %} \n			{% assign teasers_skip = 4 %} \n			{% assign teasers_take = 6 %} \n			{% include teasers.html %}\n	</div>\n</div>\n<div id=\"view-all-entries\">\n  <a href=\"/sitemap/\">View all the entries</a>\n</div>",
-			"file": "index.md",
-			"file_size": 923,
-			"file_write_time": 1374257017000000,
+			"file": "portfolio/verisimilitude-sylva/index.md",
 			"settings":
 			{
-				"buffer_size": 936,
+				"buffer_size": 2345,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_posts/2013-07-18-title.mdown",
+			"file": "_includes/head.html",
 			"settings":
 			{
-				"buffer_size": 674,
+				"buffer_size": 1951,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_includes/featured-posts.html",
+			"file": "_includes/footer.html",
 			"settings":
 			{
-				"buffer_size": 298,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_layouts/default.html",
-			"settings":
-			{
-				"buffer_size": 400,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_layouts/page.html",
-			"settings":
-			{
-				"buffer_size": 461,
+				"buffer_size": 224,
 				"line_ending": "Unix"
 			}
 		},
@@ -202,15 +263,71 @@
 			"file": "_layouts/post.html",
 			"settings":
 			{
-				"buffer_size": 1686,
+				"buffer_size": 1826,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/jandennison/Documents/Web Dev/portfolio/index.html",
+			"file": "index.md",
 			"settings":
 			{
-				"buffer_size": 4449,
+				"buffer_size": 531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/header.html",
+			"settings":
+			{
+				"buffer_size": 128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_site/css/modern.css",
+			"settings":
+			{
+				"buffer_size": 4205,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/grunge.css",
+			"settings":
+			{
+				"buffer_size": 2909,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/nav.html",
+			"settings":
+			{
+				"buffer_size": 835,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/default.html",
+			"settings":
+			{
+				"buffer_size": 464,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/gallery.html",
+			"settings":
+			{
+				"buffer_size": 463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/page.html",
+			"settings":
+			{
+				"buffer_size": 459,
 				"line_ending": "Unix"
 			}
 		}
@@ -243,16 +360,38 @@
 	},
 	"file_history":
 	[
-		"/Users/jandennison/jannypie.github.io/css/main.css",
-		"/Users/jandennison/jannypie.github.io/_includes/head.html",
-		"/Users/jandennison/jannypie.github.io/_includes/header.html",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-08-12-pinning-dynamic-target-images-with-custom-pinterest-buttons.md",
+		"/Users/jandennison/jannypie.github.io/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js",
 		"/Users/jandennison/jannypie.github.io/index.md",
+		"/Users/jandennison/jannypie.github.io/js/jquery-ui-1.10.3.custom/css/pepper-grinder/jquery-ui-1.10.3.custom.css",
+		"/Users/jandennison/jannypie.github.io/_includes/head.html",
+		"/Users/jandennison/jannypie.github.io/portfolio/verisimilitude-sylva/index.md",
+		"/Users/jandennison/jannypie.github.io/portfolio/wanderlust/index.md",
+		"/Users/jandennison/jannypie.github.io/_includes/footer.html",
+		"/Users/jandennison/jannypie.github.io/_includes/header.html",
+		"/Users/jandennison/jannypie.github.io/_layouts/gallery.html",
+		"/Users/jandennison/jannypie.github.io/_layouts/page.html",
+		"/Users/jandennison/jannypie.github.io/_layouts/post.html",
+		"/Users/jandennison/jannypie.github.io/_layouts/default.html",
 		"/Users/jandennison/jannypie.github.io/_includes/teasers.html",
+		"/Users/jandennison/jannypie.github.io/_includes/featured-posts.html",
+		"/Users/jandennison/jannypie.github.io/css/main.css",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-22-dummy-post-1.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-19-beginning-jekyll-and-github-newbie-use-case.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-22-dummy-post-2.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-29-combining-jekyll-with-focal-point-css-adaptive-images-for-smart-thumbnails.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-22-dummy-post-6.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-22-dummy-post-5.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-22-dummy-post-4.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-22-dummy-post-3.md",
+		"/Users/jandennison/jannypie.github.io/_layouts/verisimilitude-sylva/index.md",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-18-title.mdown",
+		"/Users/jandennison/jannypie.github.io/_posts/2013-07-15-blog-post-1.html",
+		"/Users/jandennison/Documents/Web Dev/genesis/style.css",
+		"/Users/jandennison/Documents/Web Dev/portfolio/index.html",
 		"/Users/jandennison/jannypie.github.io/_config.yml",
 		"/Users/jandennison/jannypie.github.io/footer.html",
 		"/Users/jandennison/jannypie.github.io/header.html",
-		"/Users/jandennison/jannypie.github.io/_posts/2013-07-18-title.mdown",
-		"/Users/jandennison/jannypie.github.io/_posts/2013-07-15-blog-post-1.html",
 		"/Users/jandennison/jannypie.github.io/assets/themes/jannypie/css/main.css",
 		"/Users/jandennison/Documents/ecomlocal/jean-guide-sandbox.js",
 		"/Users/jandennison/Documents/ecomlocal/JeansGuide-backup.jsp",
@@ -285,6 +424,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"swatch",
+			"float",
+			"5px",
+			"menu",
+			";\n",
+			"teasers",
+			"column",
+			"content",
 			"h1",
 			"background-colo",
 			".arrow-image",
@@ -404,15 +551,7 @@
 			"compare-area",
 			"compare",
 			"inactive",
-			"default",
-			"view-entire-col",
-			"sprite",
-			"rel",
-			"sprite",
-			"class=\"collection\"",
-			";\n",
-			"displayed",
-			"250px"
+			"default"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -430,41 +569,15 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_posts/2013-07-15-blog-post-1.html",
+					"file": "js/main.js",
 					"settings":
 					{
-						"buffer_size": 566,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								75,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_posts/2013-07-19-beginning-jekyll-and-github-newbie-use-case.mdown",
-					"settings":
-					{
-						"buffer_size": 290,
+						"buffer_size": 1762,
 						"regions":
 						{
 						},
@@ -477,7 +590,10 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -486,19 +602,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "index.md",
+					"buffer": 1,
+					"file": "css/main.css",
 					"settings":
 					{
-						"buffer_size": 936,
+						"buffer_size": 16247,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								434,
-								462
+								10769,
+								10769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7569.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "portfolio/verisimilitude-sylva/index.md",
+					"settings":
+					{
+						"buffer_size": 2345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								634
 							]
 						],
 						"settings":
@@ -514,50 +658,44 @@
 				},
 				{
 					"buffer": 3,
-					"file": "_posts/2013-07-18-title.mdown",
+					"file": "_includes/head.html",
 					"settings":
 					{
-						"buffer_size": 674,
+						"buffer_size": 1951,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								199,
-								5
+								461,
+								476
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 3,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 4,
-					"file": "_includes/featured-posts.html",
+					"file": "_includes/footer.html",
 					"settings":
 					{
-						"buffer_size": 298,
+						"buffer_size": 224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								51,
-								65
+								223,
+								223
 							]
 						],
 						"settings":
@@ -572,23 +710,24 @@
 				},
 				{
 					"buffer": 5,
-					"file": "_layouts/default.html",
+					"file": "_layouts/post.html",
 					"settings":
 					{
-						"buffer_size": 400,
+						"buffer_size": 1826,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								400,
-								0
+								1808,
+								1808
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -598,23 +737,23 @@
 				},
 				{
 					"buffer": 6,
-					"file": "_layouts/page.html",
+					"file": "index.md",
 					"settings":
 					{
-						"buffer_size": 461,
+						"buffer_size": 531,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								453,
-								453
+								531,
+								531
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -624,44 +763,18 @@
 				},
 				{
 					"buffer": 7,
-					"file": "_layouts/post.html",
+					"file": "_includes/header.html",
 					"settings":
 					{
-						"buffer_size": 1686,
+						"buffer_size": 128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/Users/jandennison/Documents/Web Dev/portfolio/index.html",
-					"settings":
-					{
-						"buffer_size": 4449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2651,
-								2655
+								128,
+								128
 							]
 						],
 						"settings":
@@ -671,7 +784,172 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1192.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "_site/css/modern.css",
+					"settings":
+					{
+						"buffer_size": 4205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1996,
+								1996
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1430.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "css/grunge.css",
+					"settings":
+					{
+						"buffer_size": 2909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2908,
+								2908
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "_includes/nav.html",
+					"settings":
+					{
+						"buffer_size": 835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								795,
+								795
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "_layouts/default.html",
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								445,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "_layouts/gallery.html",
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								140,
+								140
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "_layouts/page.html",
+					"settings":
+					{
+						"buffer_size": 459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								442,
+								442
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -685,7 +963,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -696,18 +974,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.476627399314,
 			1.0
 		],
 		"rows":
@@ -742,6 +1013,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 207.0,
+	"side_bar_width": 248.0,
 	"status_bar_visible": true
 }

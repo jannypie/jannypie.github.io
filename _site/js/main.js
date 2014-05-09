@@ -1,3 +1,20 @@
+function swapCSS(e){
+  e.preventDefault();
+  var style = $(this).attr('class');
+  switch(style)
+    {
+    case 'grunge':
+      $("link.style").attr("href",$(this).attr('rel'));
+      break;
+    case 'modern':
+      $("link.style").attr("href",$(this).attr('rel'));
+      break;
+    default:
+      alert('default');
+    }
+  return false;
+}
+
 function swapImage(){
   $('.swatch').first().addClass('active');
   $('.demo-small').click(function(){
@@ -36,4 +53,5 @@ function handlePinterestClick(e) {
 $(document).ready(function(){
   swapImage();
   $('a.social.pinterest').click(handlePinterestClick);
+  $('.select-style a').click(swapCSS);
 });

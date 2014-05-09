@@ -4,16 +4,17 @@
 		<body class="home body-grunge">	
 				
 			{% include header.html %}
-			<div class="grunge-container">
-			<div class="grunge-container-overlay">
+			<div class="container">
+			<div class="container-overlay">
+				{% include nav.html %}
 				<div class="content-wrap">
 					<div class="home-wrap clearfix">
 						{{ content }}
 					</div>
 					{% include footer.html %}
 				</div> <!-- /content-wrap -->
-			</div><!--/content-->
-			</div><!-- /fancy-container -->
+			</div><!--/container-overlay-->
+			</div><!-- /container -->
 
 		</body>
 </html>

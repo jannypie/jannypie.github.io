@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Grunge Stylesheet
+   Author: Jan Dennison
+   Created: July 2013
+   ========================================================================== */
+
+
+/*  Basics 
+    ============================ */
+body {
+  background: url(/images/gears.png) no-repeat top right,
+              #494640 url(/images/grunge-sprite.png);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222;
+  font-family: 'Numans', sans-serif;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+/*  Containers 
+    ============================ */
+/* Dark grunge background */
+.container {
+  background: rgb(246,245,238); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%, rgba(246,245,238,1) 63%, rgba(234,223,194,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(21%,rgba(246,245,238,1)), color-stop(63%,rgba(246,245,238,1)), color-stop(100%,rgba(234,223,194,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%,rgba(246,245,238,1) 63%,rgba(234,223,194,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%,rgba(246,245,238,1) 63%,rgba(234,223,194,1) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(246,245,238,1) 21%,rgba(246,245,238,1) 63%,rgba(234,223,194,1) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(246,245,238,1) 21%,rgba(246,245,238,1) 63%,rgba(234,223,194,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f5ee', endColorstr='#eadfc2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  margin: 2em 0;
+  width: 100%;
+  -webkit-box-shadow: inset 0px 0px 50px rgba(128, 101, 23, 0.95);
+  -moz-box-shadow:    inset 0px 0px 50px rgba(128, 101, 23, 0.95);
+  box-shadow:         inset 0px 0px 50px rgba(128, 101, 23, 0.95);
+}
+/* Light grunge background */
+.container-overlay {
+  background:   url(/images/gears3.png) no-repeat bottom right,
+                url(/images/gears2.png) no-repeat top left,
+                url(/images/postcard.png) no-repeat top left,
+                url(/images/white-grunge.png) repeat;
+  margin: 0;
+	padding-top: 4em;
+	padding-bottom: 4em;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+  Images
+**/
+img {
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #c7c2b3;
+}
+img.noborder {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.featuredthumb, .teaserthumb, .swatch {
+  border: 1px solid #c7c2b3;
+  -webkit-box-shadow:  0px 0px 5px rgba(128, 101, 23, 0.15);
+  -moz-box-shadow:     0px 0px 5px rgba(128, 101, 23, 0.15);
+  box-shadow:          0px 0px 5px rgba(128, 101, 23, 0.15);
+  max-height: 200px;
+}
+
