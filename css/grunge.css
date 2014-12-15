@@ -5,21 +5,14 @@
    ========================================================================== */
 
 
-/*  Basics 
+/*  Basics
     ============================ */
 body {
   background: url(/images/gears.png) no-repeat top right,
               #494640 url(/images/grunge-sprite.png);
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #222;
-  font-family: 'Numans', sans-serif;
-  letter-spacing: -1px;
-  margin: 0;
 }
 
-/*  Containers 
+/*  Containers
     ============================ */
 /* Dark grunge background */
 .container {
