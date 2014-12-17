@@ -363,18 +363,26 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #FF0051;
   }
     header h1 {
-      color: #ebe3cc;
+      color: white;
       text-align: center;
       font-size: 5.0em;
       margin: 1em 0;
       opacity: 0.5;
       position: relative;
     }
+    header h1 a, header h1 a:visited {
+      color: white;
+    }
       .home header h1 {
         margin: 1em 0;
       }
     header a:hover, header a:active {
       text-decoration: none;
+    }
+    header p { /*subtitle*/
+      font-size: 0.4em;
+      margin: 0;
+      padding-bottom: 0.5em;
     }
   h2, h2 a, h2 a:visited {
     color: #FF4D00;
@@ -386,12 +394,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   h4 a, h5 a, h6 a {
     color: #75AB00;
   }
-    .post-wrap h3, .post-wrap h3 + p {
-      margin-left: 1em;
-    }
-    .post-wrap h4, .post-wrap h4 + p {
-      margin-left: 2em;
-    }
 .teasers h4 {
   margin: 0.5em 0 0 0;
 }
@@ -399,7 +401,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     margin: 0;
   }
 
-span.meta {
+.meta {
   font-size: 0.8em;
   color: gray;
 }
@@ -434,7 +436,9 @@ header {
     width: auto;
     margin: 0 auto;
   }
-
+.post-wrap section {
+  margin: 2em 0;
+}
 .sidebar {
   float: right;
 }
