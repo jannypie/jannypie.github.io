@@ -30,6 +30,9 @@ body {
   -moz-box-shadow:    inset 0px 0px 50px rgba(128, 101, 23, 0.95);
   box-shadow:         inset 0px 0px 50px rgba(128, 101, 23, 0.95);
 }
+header {
+  background: transparent;
+}
 /* Light grunge background */
 .container-overlay {
   background:   url(/images/gears3.png) no-repeat bottom right,

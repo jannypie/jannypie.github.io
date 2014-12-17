@@ -419,6 +419,9 @@ span.meta {
   height: 100%;
 }
 
+header {
+  background: #FF0051;
+}
 .content-wrap {
   margin: 0px auto;
   max-width: 1000px;
