@@ -649,7 +649,7 @@ pre {
   margin: 0;
   padding: 0;
 }
-.portfolio li.frame {
+.frame {
   width: 228px;
   height: 296px;
   padding: 11px 14px;
@@ -657,7 +657,7 @@ pre {
   margin: 0;
   display: none;
 }
-  .portfolio li a:after {
+  .frame:after {
     display: block;
     content: "";
     background: url(../portfolio/verisimilitude-sylva/img/frame.png) no-repeat;
