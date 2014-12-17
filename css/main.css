@@ -366,7 +366,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
       color: white;
       text-align: center;
       font-size: 5.0em;
-      margin: 1em 0;
       opacity: 0.5;
       position: relative;
     }
@@ -374,7 +373,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
       color: white;
     }
       .home header h1 {
-        margin: 1em 0;
+        margin: 0.5em 0;
       }
     header a:hover, header a:active {
       text-decoration: none;
@@ -480,7 +479,6 @@ Main Menu
     color: #1abcdc;
     text-decoration: none;
     font-size: 12px;
-    display: inline-block;
     margin-right: 1em;
     position: relative;
     padding: .5em 0em .5em 0;
@@ -511,7 +509,7 @@ Main Menu
     position: absolute;
     width: 100px;
     left: -1em;
-    top: 1.5em;
+    top: 2em;
   }
   .main-menu-nav ul > li ul li {
     float: none;
