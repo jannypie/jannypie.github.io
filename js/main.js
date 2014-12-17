@@ -1,7 +1,8 @@
 function swapCSS(e){
   e.preventDefault();
-  var style = $(this).attr('class');
-  console.log(style);
+  var style = $(this).attr('class'),
+      stylesheet = $('link');
+  console.log(stylesheet);
   switch(style)
     {
     case 'grunge':
