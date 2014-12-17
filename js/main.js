@@ -1,6 +1,7 @@
 function swapCSS(e){
   e.preventDefault();
   var style = $(this).attr('rel');
+  console.log(style);
   switch(style)
     {
     case 'grunge':
