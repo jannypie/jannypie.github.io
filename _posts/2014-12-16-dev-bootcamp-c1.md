@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Dev Bootcamp Localhost | Chef's Kitchen"
-meta-description: "Read 'Git Bloggin', a Dev Bootcamp Localhost blog assignment"
+meta-description: "Read 'Chef's Kitchen', a Dev Bootcamp Localhost blog assignment"
 image: "https://farm8.staticflickr.com/7189/6941145066_e3657ca0b8_b.jpg"
 tags: git,github
 category: devbootcamp
