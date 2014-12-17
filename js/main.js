@@ -1,6 +1,6 @@
 function swapCSS(e){
   e.preventDefault();
-  var style = $(this).attr('rel');
+  var style = $(this).attr('class');
   console.log(style);
   switch(style)
     {
