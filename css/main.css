@@ -467,9 +467,6 @@ Main Menu
       vertical-align: middle;
       float: right;
   }
-    .main-menu-nav ul.select-style {
-      float: left;
-    }
   .main-menu-nav ul > li {
     float: left;
     position: relative;
@@ -547,11 +544,7 @@ Main Menu
   .main-menu-nav ul > li ul li ul li {
     border-left: 1px solid #eee;
   }
-/* Change CSS Style Nav */
-.select-style li {
-  display: block;
-  float: none;
-}
+
 /**
   Images
 **/
