@@ -1,0 +1,10 @@
+main {
+  padding-right: 12em;
+}
+main section {
+  width: 100%;
+  margin: 0;
+}
+section img {
+  width: 20em;
+}
