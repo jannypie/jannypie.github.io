@@ -1,5 +1,5 @@
 {% for post in site.posts limit:4 %}
-<div class="row-fluid featured-post">
+<article class="row-fluid featured-post">
 	<h2> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">{{ post.title }}</a> </h2>
 	<div class="row-fluid"><!-- post content -->
 		<div class="post-info row-fluid span5">
@@ -14,5 +14,5 @@
 			</div>
 		</div>
 	</div><!-- end content -->
-</div><!-- end row -->
-{% endfor %} 
+</article><!-- end row -->
+{% endfor %}
