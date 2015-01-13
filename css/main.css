@@ -377,6 +377,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 header a, header a:visited {
   color: whitesmoke;
 }
+header a:hover, nav a:hover {
+  text-decoration: none;
+}
 .teasers h4 {
   margin: 0.5em 0 0 0;
 }
