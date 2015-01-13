@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-		<body class="home body-grunge">	
-				
+		<body class="home">
 			{% include header.html %}
-			<div class="container">
+			{% include nav.html %}
+			<main class="container">
 			<div class="container-overlay">
-				{% include nav.html %}
+				<h2>Writings on Web Development</h2>
 				<div class="content-wrap">
-					<div class="home-wrap clearfix">
+					<div class="home-wrap">
 						{{ content }}
 					</div>
 					{% include footer.html %}
 				</div> <!-- /content-wrap -->
 			</div><!--/container-overlay-->
-			</div><!-- /container -->
-
+			</main><!-- /container -->
 		</body>
 </html>
