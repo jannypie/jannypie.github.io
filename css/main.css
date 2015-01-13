@@ -400,10 +400,10 @@ header,nav,.container,footer {
           box-sizing: border-box;
   width: 100%;
   padding: 1em 3em;
-  overflow: auto;
 }
 .container,footer {
   padding-left: 12em;
+  overflow: auto;
 }
 .container section, .container aside, footer img, footer aside {
   display: inline-block;
