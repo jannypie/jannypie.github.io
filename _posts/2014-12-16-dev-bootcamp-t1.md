@@ -1,17 +1,10 @@
 ---
-layout: "post"
-title: "Dev Bootcamp Localhost | Git Bloggin"
-meta-description: "Read 'Git Bloggin', a Dev Bootcamp Localhost blog assignment"
-image: "https://farm3.staticflickr.com/2708/4193814990_14b728c91b_b.jpg"
-tags: git,github
-category: devbootcamp
-focal-vert:
-focal-horz:
-orientation:
+layout: "dbc-post"
+title: "Git Bloggin'"
+meta-description: "Why the heck would you use git for version control and what the heck is Github."
+meta-robots: "noodp, noydir"
+categories: "dbc"
 ---
-
-[Read 'Git Bloggin'](http://jannypie.github.io/blog/t1-git-blog.html)
-
-Dev Bootcamp Localhost Assignment: Phase 0 Unit 1 Week 1 | Technical Blog #1
-
-<small>Image credit: <a href="https://www.flickr.com/photos/26546578@N06/4193814990" title="Git Cheat Sheet by Hylke Bons, on Flickr">Git Cheat Sheet by Hylke Bons, on Flickr</a></small>
+<h4>Phase 0 Unit 1 Week 1 | Technical Blog #1</h4>
+<span class="meta">Dec 14, 2014</span>
+  <a href="http://jannypie.github.io/blog/t1-git-blog.html" title="Read more">Read this blog post</a>

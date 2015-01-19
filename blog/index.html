@@ -1,24 +1,18 @@
 ---
 layout: "default"
-title: "Jan Dennison | Front End Developer"
-meta-description: "Web development portfolio blog by Jan Dennison"
+title: "Jan Dennison | Dev Bootcamp : Columbus, OH Localhost Pilot Program"
+meta-description: "Dev Bootcamp : Columbus, OH Localhost Pilot Program blog by Jan Dennison"
 meta-robots: "noodp, noydir"
 ---
-<section>
-  <h1>Dev Bootcamp Localhost : Sea Lion Cohort</h1>
-  <article>
-    <h2><a href="http://jannypie.github.io/blog/t2-css-design.html" title="Separating CSS: IDs and Classes">Separating CSS: IDs and Classes</a></h2>
-    <p class="meta">Dec 21, 2014</p>
-    <p class="excerpt">One core tenent of responsible web development is the separation of content/markup from style/presentation. All of the HTML is stored in one document, and all of the styles are in another. Now that we have separated our markup from the styles, however, we need a way for our stylesheet to know what styles go where.</p>
-  </article>
-  <article>
-    <h2><a href="http://jannypie.github.io/blog/c1-chefs-kitchen.html" title="Chefs Kitchen">Chefs Kitchen</a></h2>
-    <p class="meta">Dec 14, 2014</p>
-    <p class="excerpt">The fireside video Kitchen versus Table is something that I wish I had seen prior to joining Dev Bootcamp, because I feel that it gives a much more accurate perspective of the demands of the program. After watching the video, I have a better understanding of how that came to be, and feel that I am more prepared now for future units.</p>
-  </article>
-  <article>
-    <h2><a href="http://jannypie.github.io/blog/t1-git-blog.html" title="Git Bloggin">Git Bloggin</a></h2>
-    <p class="meta">Dec 14, 2014</p>
-    <p class="excerpt">Git is a version control system that monitors files for changes, records specific changes in those files, and saves a version record of those changes, who committed them, and when. These commits form a log that can be reviewed as well as a snapshot of all the files at that time, which can be reverted to should any conflicts or errors come up in future versions.</p>
-  </article>
+<section class="">
+  <h1>Dev Bootcamp : Columbus, OH Localhost Pilot Program</h1>
+  {% for post in site.posts %}
+    {% if post.categories contains 'dbc' %}
+    <article class="featured-post dbc-blog">
+      <h3>{{ post.title }}</h3>
+      {{ post.excerpt }}
+      {{ post.meta-description }}
+    </article><!-- end row -->
+    {% endif %}
+  {% endfor %}
 </section>

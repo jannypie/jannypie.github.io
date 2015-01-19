@@ -1,17 +1,11 @@
 ---
-layout: "post"
-title: "Dev Bootcamp Localhost | Chef's Kitchen"
-meta-description: "Read 'Chef's Kitchen', a Dev Bootcamp Localhost blog assignment"
-image: "https://farm8.staticflickr.com/7189/6941145066_e3657ca0b8_b.jpg"
-tags: git,github
-category: devbootcamp
-focal-vert:
-focal-horz:
-orientation:
+layout: "dbc-post"
+title: "Chef's Kitchen"
+meta-description: "Dev Bootcamp is like chefs in a kitchen video response and thoughts on beginning the program."
+meta-robots: "noodp, noydir"
+categories: "dbc"
 ---
-
-[Read 'Chef's Kitchen'](http://jannypie.github.io/blog/c1-chefs-kitchen.html)
-
-Dev Bootcamp Localhost Assignment: Phase 0 Unit 1 Week 1 | Technical Blog #1
-
-<small>Image credit: <a href="https://www.flickr.com/photos/casinhadepano/6941145066" title="Chefs by Káthia, on Flickr">Chefs by Káthia, on Flickr</a></small>
+<h4>Phase 0 Unit 1 Week 1 | Cultural Blog #1</h4>
+<span class="meta">Dec 14, 2014</span>
+<a href="http://jannypie.github.io/blog/c1-chefs-kitchen.html" title="Read more">Read this blog post</a>
+<!-- <a href="http://jannypie.github.io/blog/##.html" title="Read more"><h5>READ MORE</h5></a> -->

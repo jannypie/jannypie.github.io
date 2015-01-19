@@ -1,4 +1,12 @@
-{% for post in site.posts limit:6 %}
+---
+layout: "default"
+title: "Jan Dennison | Front End Developer"
+meta-description: "Web development portfolio blog by Jan Dennison"
+meta-robots: "noodp, noydir"
+---
+<section class="">
+  <h1>Writings on Web Development</h1>
+  {% for post in site.posts %}
     {% if post.categories contains 'dbc' %}
     <article class="featured-post dbc-blog">
       <h3>{{ post.title }}</h3>
@@ -12,4 +20,5 @@
       <p> {{ post.meta-description }} </p>
     </article><!-- end row -->
     {% endif %}
-{% endfor %}
+  {% endfor %}
+</section>

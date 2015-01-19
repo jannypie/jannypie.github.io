@@ -1,54 +1,36 @@
-<!DOCTYPE html>
-<head>
-  <title>Jan Dennison | Dev Bootcamp Blog</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
-</head>
-<body>
-  <header>
-    <h1>
-      <a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison">Jan Dennison</a>
-      <p>Dev Bootcamp Localhost | Blog</p>
-    </h1>
-  </header>
-  <main class="content-wrap">
-    <article class="post-wrap">
-      <!-- Post Title -->
-      <!-- ex: Git Bloggin -->
-      <h1>Harrays and Ashes: Keeping Your Ruby Sorted</h1>
-      <!-- subtitle / Assignment # -->
-      <!-- ex: Phase 0 Unit 1 Week 1 | Cultural Blog #1 -->
-      <h4>Phase 0 Unit 1 Week 3 | Technical Blog #3</h4>
-      <!-- Date format Dec 14, 2014 -->
-      <span class="meta">Jan 11, 2015</span>
+---
+layout: "dbc-post"
+title: "Harrays and Ashes: Keeping Your Ruby Sorted"
+meta-description: "I wanna store me some data and then get it back out again later. How we do that?"
+meta-robots: "noodp, noydir"
+---
+<h4>Phase 0 Unit 1 Week 3 | Technical Blog #3</h4>
+<!-- Date format Dec 14, 2014 -->
+<span class="meta">Jan 11, 2015</span>
 
-      <section>
-        <!-- Add paragraphs as blog post -->
-        <h2>Hashes and Arrays in Ruby</h2>
-        As in JavaScript, Ruby provides ways to store information in groups to reference later. These ways include Arrays and Hashes, which are similar in purpose but vary in structure. Let's take a closer look at each.
+<section>
+  <!-- Add paragraphs as blog post -->
+  <h2>Hashes and Arrays in Ruby</h2>
+  As in JavaScript, Ruby provides ways to store information in groups to reference later. These ways include Arrays and Hashes, which are similar in purpose but vary in structure. Let's take a closer look at each.
 
-        <h3>Arrays</h3>
-        Arrays are collections of data that are list-like; that is, each item is numbered and follow the one prior, much like an ordered list&lt;ol> in HTML. Arrays are needed because without them, we only have the ability to assign one item to a variable:
-        <pre>best_icecream = "Rocky Road"</pre>
-        Arrays let us add lots of items though, and keeps them grouped together:
-        <pre>best_icecreams = ["Rocky Road", "Cookie Dough", "Cherry Garcia"]</pre>
-        Square brackets [ ] indicate an array grouping. Items in the array are numbered, or <em>indexed</em> (starting at 0, not 1). Thus, to access individual items in an array, you just refer to the index value:
-        <pre>best_icecreams[0] #returns Rocky Road
+  <h3>Arrays</h3>
+  Arrays are collections of data that are list-like; that is, each item is numbered and follow the one prior, much like an ordered list&lt;ol> in HTML. Arrays are needed because without them, we only have the ability to assign one item to a variable:
+  <pre>best_icecream = "Rocky Road"</pre>
+  Arrays let us add lots of items though, and keeps them grouped together:
+  <pre>best_icecreams = ["Rocky Road", "Cookie Dough", "Cherry Garcia"]</pre>
+  Square brackets [ ] indicate an array grouping. Items in the array are numbered, or <em>indexed</em> (starting at 0, not 1). Thus, to access individual items in an array, you just refer to the index value:
+  <pre>best_icecreams[0] #returns Rocky Road
 best_icecreams[1] #returns Cookie Dough
 best_icecreams[2] #returns Cherry Garcia</pre>
 
-        <h3>Hashes</h3>
-        If arrays are like HTML ordered lists, hashes are the counterpart, unordered lists &lt;ul>. But instead of a number to designate items (or bullet points), you assign your own labels, or <em>keys</em>. The item you assign to the key in the list is called a <em>value</em>. Hashes, therefore, are much like JavaScript <em>objects</em> consisting of key:value pairs.
-        <pre>best_icecreams = {
+  <h3>Hashes</h3>
+  If arrays are like HTML ordered lists, hashes are the counterpart, unordered lists &lt;ul>. But instead of a number to designate items (or bullet points), you assign your own labels, or <em>keys</em>. The item you assign to the key in the list is called a <em>value</em>. Hashes, therefore, are much like JavaScript <em>objects</em> consisting of key:value pairs.
+  <pre>best_icecreams = {
 "chocolate" = "Double Dutch Fudge",
 "cookie" = "Oreo blizzard",
 "fruity" = "Strawberry"
 }</pre>
-        As you can see, being able to label each item rather than just numbering adds in extra information that can be useful. You can identify "Which is the best chocolate icecream?" by just calling:
-        <pre>best_icecreams["chocolate"]</pre>
-        Hashes are indicated by curly brackets { }.
-      </section>
-    </article>
-  </main>
-</body>
-
+  As you can see, being able to label each item rather than just numbering adds in extra information that can be useful. You can identify "Which is the best chocolate icecream?" by just calling:
+  <pre>best_icecreams["chocolate"]</pre>
+  Hashes are indicated by curly brackets { }.
+</section>

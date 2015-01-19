@@ -360,6 +360,7 @@ article.featured-post {
   background: #f4f3f2;
   padding: 0.5em 1em 1em;
   position: relative;
+  margin-bottom: 0.2em;
 }
 
   .teaser .focal-point {
@@ -480,6 +481,13 @@ code {
   top: 60%;
 }
 
+.dbc-blog h3, .dbc-blog h4, .dbc-blog p {
+  margin: 0.5em 0;
+  width: 100%;
+}
+article.dbc-blog p {
+  text-align: center;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */

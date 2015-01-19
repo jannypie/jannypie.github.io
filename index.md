@@ -8,7 +8,7 @@ meta-robots: "noodp, noydir"
   <h2 id="writings">Writings</h2>
   {% include featured-posts.html %}
   <div class="" id="view-all-entries">
-    <a href="/sitemap/">View all the entries</a>
+    <a href="archive.html">View all the entries</a>
   </div>
 </section>
 <aside class="sidebar column-me">
