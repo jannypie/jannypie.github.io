@@ -1,18 +1,8 @@
-<div class="row-fluid teasers">
+<div class="teasers">
 	{% for post in teasers offset:teasers_skip limit:teasers_take %}
-		<div class="row-fluid teaser">
-			<div class="teaserthumb focal-point {{ post.orientation }} {{ post.focal-horz }} {{ post.focal-vert }}">
-				<a href="{{ post.url }}" class="fancybox-thumb" rel="fancybox-thumb" title="{{ post.title }}">
-					<div><img alt="{{ post.title }}" src="{{ post.image }}"></div>
-				</a>
-			</div>
-
-			<h4> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.url }}">{{ post.title }}</a> </h4>
-
-			<span class="clearfix meta"> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
-			
-			<p> {{ post.meta-description }} </p>
-
+		<div class="teaser">
+			<h5><a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.url }}">{{ post.title }}</a></h5>
+			<span class="meta"> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
 		</div><!-- end teaser -->
 	{% endfor %}
 </div><!-- end teasers row -->

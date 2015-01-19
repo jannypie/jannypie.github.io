@@ -1,18 +1,7 @@
 {% for post in site.posts limit:4 %}
-<article class="row-fluid featured-post">
-	<h2> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">{{ post.title }}</a> </h2>
-	<div class="row-fluid"><!-- post content -->
-		<div class="post-info row-fluid span5">
-				<span class="meta"> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
-				<p> {{ post.meta-description }} </p>
-		</div>
-		<div class="row-fluid span6">
-			<div class="featuredthumb focal-point {{ post.orientation }} {{ post.focal-horz }} {{ post.focal-vert }}">
-			<a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">
-				<div><img alt="Image for {{ post.title }}" src="{{ post.image }}"></div>
-			</a>
-			</div>
-		</div>
-	</div><!-- end content -->
+<article class="featured-post">
+	<h3> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">{{ post.title }}</a> </h3>
+	<span class="meta"> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
+	<p> {{ post.meta-description }} </p>
 </article><!-- end row -->
 {% endfor %}

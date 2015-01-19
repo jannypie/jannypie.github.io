@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Meta meta -->
+<meta charset="utf-8">
+<title>map! Wait</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="noodp, noydir" />
+<meta name="description" content="Web development portfolio blog by Jan Dennison" />
+
+<!-- The Links -->
+<link rel="canonical" href="/blog/t4-enumerable-methods.html" />
+<link href="/css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/fontello.css">
+<!-- Link placeholder to change stylesheets -->
+<link class="style" href="" rel="stylesheet">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
+
+    <body class="post">
+      <header>
+    <nav>
+  <ul class="short">
+    <li><a href="http://jannypie.github.io#intro">Introduction</a></li>
+    <li><a href="#writings">Writings</a></li>
+    <li><a href="#works">Works</a></li>
+  </ul>
+  <ul class="expanded">
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="http://jannypie.github.io/blog">DevBootcamp Blog</a></li>
+    <li>Web Portfolio:
+      <ul>
+        <li>To come</li>
+      </ul>
+    </li>
+    <li>Art Portfolio:
+      <ul>
+        <li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+        <li><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <div class="geometric">
+      <div class="shape one"></div>
+      <div class="shape two"></div>
+      <div class="shape three"></div>
+    </div>
+    <h1>
+      <a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison">Jan Dennison</a>
+    </h1>
+    <p>Front End Developer</p>
+</header>
+      <main class="container">
+        <article>
+          <h1> map! Wait </h1>
+          <h4>Phase 0 Unit 2 Week 4 | Technical Blog #4</h4>
+<span class="meta">Jan 18, 2015</span>
+<section>
+  <h2>They don't love you like I love you</h2>
+  <p>During Week 4 of Phase 2, we learned a lot about Ruby and working with methods and classes. One method that I didn't really understand and thus avoided using it in my challenges was <code>map</code>. I've been introduced to the concept in both Ruby and JavaScript. I vaguely understood it to mean that, while I was looping through an <code>array1</code>, I would push the value of the current <code>array1[index]</code> to a new <code>array2[same index]</code>. I didn't really understand, so I found myself asking things like, "What's the difference between map and push? Between map and clone? Between map and dup?" - but that was before I read <a href="http://www.eriktrautman.com/posts/ruby-explained-map-select-and-other-enumerable-methods" title="Ruby Explained Blog entry on map">this blog article</a>, which made <code>map</code>, click!</p>
+
+  <p>In the blog article, Eric Trautman explains clearly and simply not just what methods are but how they relate together. Now, I understand <code>map</code> because I have context as to why I would use and how it relates to similar methods, such as <code>each</code>, <code>select</code>, and <code>collect</code>. At the same time, I understood how they can help me save lines of code as well! Let's take an example of how I would have normally set up a situation:</p>
+  <p><pre>
+    my_array1 = ["Ohio","Florida","California","Washington", "Massachusettes"]
+    def my_method(my_array1)
+      my_array2 = []
+      for i in my_array
+        if i = "California" || i = "Washington" || i = "Massachusettes"
+          my_array2.push(i)
+        end
+      end
+      return my_array
+    end
+  </pre></p>
+  <p>Yep, that's newbie code right there. And it works, which is what we want code to do. I'm saying "Take this list of states I've lived in, and if any entries match my two favorites, push it to a new list of states I want to revisit." But! That's a lot of lines of code for what I really need to do. That's where other methods come in!</p>
+  <p>
+    <code>each</code> is a familiar method that takes an array or hash, and iterates through each item. You can do some things to that item, like <code>print</code> it, but then it goes away unless you save it to a new array by setting up a variable with an empty array to hold it, which is adding lines of code.
+    <pre>
+      def my_method(my_array1)
+        my_array1.each {|state| puts state }
+        # => returns my_array1 unchanged
+      end
+    </pre>
+  </p>
+  <p>
+    <code>select</code> will fit your need if you want to pull out an item from your original array, and it creates a new array to return, so your original can remain the same. But, select will only choose items that pass as true, and sometimes we need to work with the entire set.
+    <pre>
+      def my_method(my_array1)
+        my_array1.select {|state| state == fav_states }
+        # => returns a new array of fav states
+      end
+    </pre>
+  </p>
+  <p>
+    <code>collect</code> is the next logical need, when you need to make a new array from the old and also modify it while doing so! It returns a new array so you don't need to set up an empty variable and push to it. <em>And here's the best part</em> - <code>map</code> is the same thing as <code>collect</code>, so now we know what <code>map</code> does!
+    <pre>
+      def my_method(my_array1)
+        my_array1.map {|state| state = "California!" }
+        # => returns a new array, only now every state I have lived in says "California!"
+      end
+    </pre>
+  </p>
+</section>
+
+
+        </article>
+      </main><!-- /container -->
+      <footer>
+<a class="icon-twitter social" href="http://twitter.com/jannypie"></a> <a class="icon-github social" href="http://github.com/jannypie"></a> <a class="icon-linkedin social" href="http://github.com/jannypie"></a>
+</footer>
+
+<!-- The jQuery and scripts -->
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    </body>
+</html>

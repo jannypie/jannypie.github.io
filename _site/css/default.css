@@ -1,0 +1,60 @@
+/* Mod Stylesheet */
+/*  Base Typography
+============================ */
+
+a, a:visited {
+  color: #00AAA4;
+  text-decoration: none;
+}
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+h1,h2,h3,h4,h5,h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-family: 'Scada', sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5em 0;
+}
+  h1, h1 a, h1 a:visited {
+    color: #FF0051;
+  }
+  h2, h2 a, h2 a:visited {
+    color: #FF4D00;
+  }
+  h3, h3 a, h3 a:visited {
+    color: #FFBF00;
+  }
+  h4, h5, h6,
+  h4 a, h5 a, h6 a {
+    color: #75AB00;
+  }
+
+/* ============================
+Main Menu
+=============================== */
+nav ul, nav li {
+  list-style: none;
+  white-space: nowrap;
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+  top: 3em;
+  left: 0;
+}
+nav ul li:hover ul {
+  display: block;
+}
+nav li {
+  background: white;
+  display: inline-block;
+  padding: 1em;
+  position: relative;
+}
+nav li:hover {
+  background: whitesmoke;
+}
+nav ul li ul li {
+  float: left;
+}

@@ -50,8 +50,26 @@ function handlePinterestClick(e) {
   return false;
 }
 
+function setHeights() {
+  var elem = $('.shape');
+  elem.each(function(){
+    width = $(this).width();
+    $(this).css('height', width);
+  });
+
+  // diamonds
+  var geo2 = $('.shape.two'),
+      geo3 = $('.shape.three'),
+      leg = Math.sqrt((width * width)/2);
+  geo2.css('top', leg).css('right', -leg);
+  geo3.css('top', leg*2);
+  // if header height > width, add another row of diamonds
+}
+
+
 $(document).ready(function(){
   swapImage();
   $('a.social.pinterest').click(handlePinterestClick);
   $('.select-style a').click(swapCSS);
+  setHeights();
 });

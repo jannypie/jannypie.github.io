@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+    <body class="home">
+      {% include header.html %}
+      <aside id="intro">
+        <div class="container column-me">
+          <img class="noborder" src="images/janstache.png" alt="Janstache">
+          <div>
+            <h3>Why, hello there.</h3>
+            <p class="excerpt">Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit. Nizzle sapien velizzle, bling bling volutpat, suscipit , gravida vel, arcu. Check it out hizzle that's the shizzle. We gonna chung erizzle. Fo izzle dolor fo turpis tempizzle tempor. Gangsta boom shackalack mofo et turpizzle. Sizzle izzle tortor. Pellentesque uhuh ... yih!</p>
+          </div>
+        </div>
+      </aside>
+      <main class="container">
+        {{ content }}
+      </main><!-- /container -->
+      {% include footer.html %}
+    </body>
+</html>

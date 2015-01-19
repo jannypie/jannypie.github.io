@@ -1,24 +1,36 @@
 ---
-layout: "default"
+layout: "home"
 title: "Jan Dennison | Front End Developer"
 meta-description: "Web development portfolio blog by Jan Dennison"
 meta-robots: "noodp, noydir"
 ---
-<h2>Writings on Web Development</h2>
-<div class="content-wrap">
-    <section class="row-fluid span8">
-          {% include featured-posts.html %}
-    </section>
-    <aside class="row-fluid span3 sidebar">
-      <h3>Past Posts</h3>
-      {% assign teasers = site.posts %}
-      {% assign teasers_skip = 4 %}
-      {% assign teasers_take = 3 %}
-      {% include teasers.html %}
-      <div class="row-fluid" id="view-all-entries">
-      <!-- <a href="/sitemap/">View all the entries</a> -->
-      </div>
-    </aside>
-</div> <!-- /content-wrap -->
+<section class="column-me">
+  <h2 id="writings">Writings</h2>
+  {% include featured-posts.html %}
+  <div class="" id="view-all-entries">
+    <a href="/sitemap/">View all the entries</a>
+  </div>
+</section>
+<aside class="sidebar column-me">
+  <section>
+    <h4>Past Posts</h4>
+    {% assign teasers = site.posts %}
+    {% assign teasers_skip = 4 %}
+    {% assign teasers_take = 3 %}
+    {% include teasers.html %}
+  </section>
+  <section id="works">
+    <h4>Works</h4>
+    <div>
+      <ul>
+        <li><h5>Web Works</h5></li>
+        <li>To come</li>
+        <li><h5>Art Works</h5></li>
+        <li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+        <li><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+      </ul>
+    </div>
+  </section>
+</aside>
 
 
