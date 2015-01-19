@@ -4,16 +4,11 @@
 		<body>
 					{% include header.html %}
 			<div class="container">
-			<div class="container-overlay">
-				{% include nav.html %}
-				<div class="content-wrap">
-					<div class='gallery-wrap'>	
+					<div class='gallery-wrap'>
 						<h1> {{ page.title }} </h1>
 						{{ content }}
 					</div>
 					{% include footer.html %}
-				</div> <!-- /content-wrap -->
-			</div><!--/container-overlay-->
 			</div><!-- /container -->
 		</body>
 </html>
