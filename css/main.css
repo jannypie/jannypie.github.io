@@ -172,7 +172,7 @@ header,nav,.container,footer {
 }
 header {
   background: #FF0051;
-  background: url(/images/blue-field-1600.jpg);
+  background: url(/images/blue-field-480.jpg);
 /*  background-size: cover;*/
   color: whitesmoke;
   text-align: center;
@@ -524,6 +524,16 @@ article.dbc-blog p {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (min-width: 481px) {
+  header {
+    background: url(/images/blue-field-800.jpg);
+  }
+}
+@media only screen and (min-width: 801px) {
+  header {
+    background: url(/images/blue-field-1600.jpg);
+  }
+}
 /* Large screen */
 @media only screen and (min-width: 960px) {
   header {
@@ -580,7 +590,11 @@ article.dbc-blog p {
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
+@media only screen and (min-width: 1601px) {
+  header {
+    background: url(/images/blue-field.jpg);
+  }
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
