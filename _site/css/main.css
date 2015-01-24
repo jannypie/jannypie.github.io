@@ -529,15 +529,11 @@ article.dbc-blog p {
     background: url(/images/blue-field-800.jpg);
   }
 }
+/* Large screen */
 @media only screen and (min-width: 801px) {
   header {
-    background: url(/images/blue-field-1600.jpg);
-  }
-}
-/* Large screen */
-@media only screen and (min-width: 960px) {
-  header {
     max-height: 100%;
+    background: url(/images/blue-field-1600.jpg);
   }
     header h1 {
         font-size: 5em;
