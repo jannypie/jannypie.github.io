@@ -7,20 +7,24 @@
 <meta name="author" content="Jan Dennison">
 <meta name="robots" content="noodp, noydir" />
 <meta name="description" content="Words from me about CSS and best practices." />
+<link rel="canonical" href="/blog/t2-css-design.html" />
 
 <!-- The Links -->
-<link rel="canonical" href="/blog/t2-css-design.html" />
+<link rel="shortcut icon" href="/favicon.ico">
 <link href="/css/main.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/fontello.css">
+
 <!-- Link placeholder to change stylesheets -->
 <link class="style" href="" rel="stylesheet">
-
-<link rel="shortcut icon" href="/favicon.ico">
+<!-- Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/fontello.css">
+<!-- Highlight Code Syntax -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 
     <body class="post">
       <header>
+    <!-- <div class="geometric"></div> -->
     <nav>
   <ul class="short">
     <li><a href="http://jannypie.github.io#intro">Introduction</a></li>
@@ -43,11 +47,6 @@
     </li>
   </ul>
 </nav>
-<!--     <div class="geometric">
-      <div class="shape one"></div>
-      <div class="shape two"></div>
-      <div class="shape three"></div>
-    </div> -->
     <h1>
       <a href="http://jannypie.github.io" rel="bookmark" title="Jan Dennison">Jan Dennison</a>
     </h1>
@@ -81,29 +80,30 @@
   </figure>
   <p>One core tenent of responsible web development is the separation of content/markup from style/presentation. All of the HTML is stored in one document, and all of the styles are in another. This makes sense for all manner of reasons - accessibility, SEO, maintainability and more - but one benefit of this approach is that, just like on CSS Zen Garden, we can swap out style sheets and have <a href="http://www.csszengarden.com/221/" alt="Zen">totally</a> <a href="http://www.csszengarden.com/215/" alt="Zen">different</a> <a href="http://www.csszengarden.com/156/" alt="Zen">appearances</a> without changing the markup. <em>Toadally</em>.</p>
   <p>Now that we have separated our markup from the styles, however, we need a way for our stylesheet to know what styles go where. The CSS needs to know which elements get which styles. We do this by using CSS selectors. Selectors can be the element tags themselves, or attributes we give individual elements such as "id" and "class."
-    <pre>&lt;img class="image-class" id="image-id" src="image-source.jpg"></pre>
+    <pre><code>&lt;img class="image-class" id="image-id" src="image-source.jpg"></code></pre>
   </p>
   <p>To hook up our CSS, we usually target the tag directly, the class using ".class", or the id using "#id".
-    <pre>img {
-border: 1px solid black;
-}
-.class {
-padding: 20px;
-}
-#id {
-width: 100%;
-}
-  </pre>
+    <pre><code>
+  img {
+    border: 1px solid black;
+    }
+    .class {
+    padding: 20px;
+    }
+    #id {
+    width: 100%;
+  }
+     </code> </pre>
     <p>In the code above "img { }" will add a black border to every image on the page; ".class { }" will add padding to every element on the page that has been given that class in the markup; "#id { }" will give only that specific element a width of 100% (since we only ever use the same ID once on a page).</p>
     <p>And we can narrow down to specific elements by writing
-      <pre>header h1 {
-color: orange;
-font-size: 40px;
-}</pre>
+      <pre><code>header h1 {
+      color: orange;
+      font-size: 40px;
+      }</code></pre>
       which will apply that style only to h1-titles within a header container
-      <pre>&lt;header>
-&lth1>Jan&lt;/h1>
-&lt;/header>
+      <pre><code>&lt;header>
+      &lth1>Jan&lt;/h1>
+      &lt;/header></code>
 </pre>
     </p>
   </p>
@@ -132,7 +132,8 @@ font-size: 40px;
 <!-- The jQuery and scripts -->
 <script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
-
-
+<!-- Highlight Code Syntax -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

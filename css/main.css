@@ -104,7 +104,7 @@ header a:hover, nav a:hover {
 header h1 {
   margin-top: 35%;
   font-size: 3em;
-  mix-blend-mode: screen;
+  /* mix-blend-mode: screen; */
 }
 .post header h1, .page header h1 {
   margin-top: 15%;
@@ -173,7 +173,7 @@ header,nav,.container,footer {
 header {
   background: #FF0051;
   background: url(/images/blue-field-1600.jpg);
-  background-size: cover;
+/*  background-size: cover;*/
   color: whitesmoke;
   text-align: center;
   margin-top: 0;
@@ -250,7 +250,7 @@ nav ul li ul {
   top: 3em;
   left: 0;
 }
-nav ul li:hover ul {
+nav ul li:hover ul, nav ul li:focus ul {
   display: block;
 }
 nav li {
@@ -370,7 +370,12 @@ article.featured-post {
       width: 99%;
     }
 
-pre {
+code {
+  background: #ddd;
+  padding: 0.25em 0.5em;
+  border: 1px solid silver;
+}
+pre code {
   background: #ddd;
   padding: 1em;
   line-height: 1.5em;
@@ -379,11 +384,7 @@ pre {
   display: block;
   text-align: left;
 }
-code {
-  background: #ddd;
-  padding: 0.25em 0.5em;
-  border: 1px solid silver;
-}
+
 
 /**
   Social Icons
@@ -462,25 +463,57 @@ code {
 }
 
 /* Extras */
-.shape {
-  /* Right triangle with legs of 275px */
-  width: 30%;
-  height: 30%;
+.geometric {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0;
-  right: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45098) 0%, rgba(255, 255, 255, 0) 75%);
+}
+.shape {
+  width: 71px;
+  height: 71px;
+  position: absolute;
+  overflow: hidden;
   transform: rotate(45deg);
-  mix-blend-mode: overlay;
+  /*border: 1px solid white;*/
 }
-.shape.two {
-  top: 30%;
-  right: -30%;
+.shape span {
+  background-image: url(/images/blue-field-1600.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: -14px auto auto -15px;
+  transform: rotate(-45deg);
+  opacity: 0.5;
 }
-.shape.three {
-  top: 60%;
-}
+.shape.one {  left: 50px;  top: 500px;}
+.shape.one span { -webkit-filter: blur(1px) invert(0.2);}
+.shape.two {  left: 100px;  top: 550px;}
+.shape.two span { -webkit-filter: blur(2px) brightness(1.2);}
+.shape.three {  left: 150px;  top: 600px;}
+.shape.three span { -webkit-filter: blur(0px); background-color: #8189a0; background-blend-mode: multiply;}
+.shape.four {  left: 200px;  top: 650px;}
+.shape.four span { background-color: #D2D2D2; background-blend-mode: lighten; }
+.shape.five {  left: 400px;  top: 650px;}
+.shape.five span { -webkit-filter: blur(1px) brightness(1.2);}
+.shape.six {  left: 200px;  top: 550px;}
+.shape.six span { -webkit-filter: blur(2px) invert(0.2);}
+.shape.seven {  left: 250px;  top: 600px;}
+.shape.seven span { -webkit-filter: blur(0.5px) contrast(2);}
+.shape.eight {  left: 250px;  top: 500px;}
+.shape.eight span { -webkit-filter: blur(1px) contrast(2);}
+.shape.nine {  left: 300px;  top: 550px;}
+.shape.nine span { -webkit-filter: blur(1px) saturate(1.5);}
+.shape.ten {  left: 350px;  top: 600px;}
+.shape.ten span { -webkit-filter: blur(2px) contrast(2);}
+.shape.eleven {  left: 50px;  top: 600px;}
+.shape.eleven span {-webkit-filter: blur(1px)  saturate(1.5);}
+.shape.twelve {  left: 100px;  top: 650px;}
+.shape.twelve span {-webkit-filter: blur(1px) contrast(1.1);}
 
+
+/* DBC BLOG STYLES
+  ****************/
 .dbc-blog h3, .dbc-blog h4, .dbc-blog p {
   margin: 0.5em 0;
   width: 100%;

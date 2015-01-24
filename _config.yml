@@ -4,5 +4,5 @@ server: false
 lsi: false
 pygments: true
 permalink: /:title
-paginate: 10
+# paginate: 10
 exclude: ["lib", "blog.rb", "Capfile", "config", "log", "Rakefile", "tmp"]

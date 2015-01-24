@@ -50,26 +50,36 @@ function handlePinterestClick(e) {
   return false;
 }
 
-function setHeights() {
-  var elem = $('.shape');
-  elem.each(function(){
-    width = $(this).width();
-    $(this).css('height', width);
-  });
-
-  // diamonds
-  var geo2 = $('.shape.two'),
-      geo3 = $('.shape.three'),
-      leg = Math.sqrt((width * width)/2);
-  geo2.css('top', leg).css('right', -leg);
-  geo3.css('top', leg*2);
-  // if header height > width, add another row of diamonds
+function squares() {
+  // create squares
+  var parent = $('.geometric'),
+    p_h = parent.height(),
+    sq_w = 100,
+    sp_w = Math.sqrt(Math.pow(sq_w / 2, 2) * 2),
+    l = 0,
+    t = 0;
+    // how many?
+    var qty = p_h / (sq_w / 2);
+    console.log(qty);
+    var nums = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen'];
+    var classNum = '';
+  // calculate positioning
+  for (var i = 0; i <= qty + 1; i++) {
+    classNum = nums[i];
+    parent.append('<div class="shape ' + classNum + '"><span></span></div>');
+    var square = $('.shape.'+ classNum),
+      span = $('.shape.'+ classNum + ' span');
+    square.css({'left': l,'top': t});
+    span.css('background-position', -l + 'px ' + -t + 'px');
+    l += 50; t += 50;
+  };
+  // populate in rows horizontally
+  // calculate background positions
 }
-
 
 $(document).ready(function(){
   swapImage();
   $('a.social.pinterest').click(handlePinterestClick);
   $('.select-style a').click(swapCSS);
-  setHeights();
+  // squares();
 });

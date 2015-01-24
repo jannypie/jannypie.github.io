@@ -29,29 +29,30 @@ meta-robots: "noodp, noydir"
   </figure>
   <p>One core tenent of responsible web development is the separation of content/markup from style/presentation. All of the HTML is stored in one document, and all of the styles are in another. This makes sense for all manner of reasons - accessibility, SEO, maintainability and more - but one benefit of this approach is that, just like on CSS Zen Garden, we can swap out style sheets and have <a href="http://www.csszengarden.com/221/" alt="Zen">totally</a> <a href="http://www.csszengarden.com/215/" alt="Zen">different</a> <a href="http://www.csszengarden.com/156/" alt="Zen">appearances</a> without changing the markup. <em>Toadally</em>.</p>
   <p>Now that we have separated our markup from the styles, however, we need a way for our stylesheet to know what styles go where. The CSS needs to know which elements get which styles. We do this by using CSS selectors. Selectors can be the element tags themselves, or attributes we give individual elements such as "id" and "class."
-    <pre>&lt;img class="image-class" id="image-id" src="image-source.jpg"></pre>
+    <pre><code>&lt;img class="image-class" id="image-id" src="image-source.jpg"></code></pre>
   </p>
   <p>To hook up our CSS, we usually target the tag directly, the class using ".class", or the id using "#id".
-    <pre>img {
-border: 1px solid black;
-}
-.class {
-padding: 20px;
-}
-#id {
-width: 100%;
-}
-  </pre>
+    <pre><code>
+  img {
+    border: 1px solid black;
+    }
+    .class {
+    padding: 20px;
+    }
+    #id {
+    width: 100%;
+  }
+     </code> </pre>
     <p>In the code above "img { }" will add a black border to every image on the page; ".class { }" will add padding to every element on the page that has been given that class in the markup; "#id { }" will give only that specific element a width of 100% (since we only ever use the same ID once on a page).</p>
     <p>And we can narrow down to specific elements by writing
-      <pre>header h1 {
-color: orange;
-font-size: 40px;
-}</pre>
+      <pre><code>header h1 {
+      color: orange;
+      font-size: 40px;
+      }</code></pre>
       which will apply that style only to h1-titles within a header container
-      <pre>&lt;header>
-&lth1>Jan&lt;/h1>
-&lt;/header>
+      <pre><code>&lt;header>
+      &lth1>Jan&lt;/h1>
+      &lt;/header></code>
 </pre>
     </p>
   </p>
