@@ -206,11 +206,15 @@ article {
   margin: 0;
   padding: 1em;
 }
-#intro h3 {
+#intro h2 {
   color: whitesmoke;
+  /* display: block; */
+  /* width: 100%; */
 }
 #intro img {
   float: left;
+  display: inline-block;
+  margin: auto 3em;
 }
 footer img {
   width: 20%;
@@ -224,6 +228,11 @@ footer aside {
 
 #view-all-entries {
   margin-top: 3em;
+}
+.accessible {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
 }
 /* ============================
 Main Menu
