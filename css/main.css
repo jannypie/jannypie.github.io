@@ -579,13 +579,6 @@ article.dbc-blog p {
       margin-top: 3em;
     }
 }
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 @media only screen and (min-width: 1601px) {
   header {
     background: url(/images/blue-field.jpg);
@@ -644,10 +637,6 @@ article.dbc-blog p {
 
     img {
         max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
     }
 
     p,
