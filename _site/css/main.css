@@ -43,10 +43,19 @@ p {
 a, a:visited {
   color: #6688CC;
   text-decoration: none;
+  padding: 0.1em 0.3em;
+  -webkit-transition: background-color 500ms ease-out, color 500ms ease-out;
+  -moz-transition: background-color 500ms ease-out, color 500ms ease-out;
+  -o-transition: background-color 500ms ease-out, color 500ms ease-out;
+  transition: background-color 500ms ease-out, color 500ms ease-out;
+  border-bottom: 1px solid;
 }
   a:hover, a:active {
-    text-decoration: underline;
-  }
+    text-decoration: none;
+
+    background-color: #6688CC;
+    color: #fff;
+}
 h1,h2,h3,h4,h5,h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: 'Scada', sans-serif;
@@ -55,7 +64,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
   h1, h1 a, h1 a:visited {
     color: #777799;
-  }
+
+    -webkit-transition: background-color 500ms ease-out, color 500ms ease-out;   -moz-transition: background-color 500ms ease-out, color 500ms ease-out;   -o-transition: background-color 500ms ease-out, color 500ms ease-out;   transition: font-size 500ms ease-out, letter-spacing 500ms ease-out;
+}
   h2 {
     letter-spacing: 3px;
     font-size: 1.5em;
@@ -91,12 +102,17 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-transform: uppercase;
     letter-spacing: 3px;
   }
+ul {
+  text-align: left;
+}
 /* Special Typography */
 header a, header a:visited {
   color: whitesmoke;
+  border-bottom: 0;
 }
 header a:hover, nav a:hover {
   text-decoration: none;
+  background-color: transparent;
 }
 header h1 {
   margin-top: 35%;
@@ -239,6 +255,7 @@ nav {
 nav ul {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 nav ul, nav li {
   list-style: none;
@@ -372,7 +389,10 @@ pre code {
 **/
  footer a.social {
   color: #f4f3f2;
- }
+
+  border: 0;
+  font-size: 2em;
+}
  footer a.social:hover {
   text-decoration: none;
   color: whitesmoke;
