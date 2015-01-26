@@ -73,9 +73,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   h2 a, h2 a:visited {
     color: #818ba4;
   }
-  h2 a:hover {
-    text-decoration: none;
-  }
   h3 {
     text-align: center;
     font-size: 1.5em;
@@ -261,10 +258,14 @@ nav ul li:hover ul, nav ul li:focus ul {
   display: block;
 }
 nav li {
-  background: white;
+  background-color: transparent;
   display: inline-block;
   padding: 1em;
   position: relative;
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
 }
 nav li:hover {
   background: #464f61;
