@@ -134,6 +134,10 @@ header h1 {
   font-size: 1em;
   margin-top: 1em;
 }
+.teasers h5 a {
+  border: 0;
+  line-height: 1.5;
+}
 .teasers .meta {
   font-size: 0.8em;
 }
@@ -200,7 +204,7 @@ header {
 }
 article {
   overflow: auto;
-  margin-top: 3em;
+  margin-bottom: 3em;
   padding: 1em 2em;
 }
 /*.home article {
@@ -312,7 +316,7 @@ nav a {
 #works li {
   padding: 0.5em;
   text-align: left;
-  background: #D6DAE3;
+  /* background: #D6DAE3; */
   margin-bottom: .2em;
 }
 #works h5 {
