@@ -34,7 +34,7 @@ meta-robots: "noodp, noydir"
 </aside>
 <aside>
   <h4>About this site</h4>
-  <p>Designed by Jan Dennison and is <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> ignoring some experimental Chrome attributes, optimized for accessibility, and has minimal <strong>JavaScript</strong> enhancements.</p>
+  <p>Designed by Jan Dennison and is <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> ignoring some experimental Chrome attributes, optimized for <strong>accessibility</strong>, and has minimal <strong>JavaScript</strong> enhancements.</p>
 </aside>
 
 
