@@ -171,7 +171,7 @@ header,nav,.container,footer {
   width: auto;
 }
 header {
-  background: #FF0051;
+  background: #464f61;
   background: url(/images/blue-field-480.jpg);
 /*  background-size: cover;*/
   color: whitesmoke;
@@ -190,14 +190,14 @@ article {
   margin-top: 3em;
   padding: 1em 2em;
 }
-.home article {
+/*.home article {
   background: #f4f3f2;
-}
+}*/
 .page article p, .post article p {
   text-align: left;
 }
 #intro, footer {
-  background: #8189a0;
+  background: #464f61;
   color: whitesmoke;
   margin: 3em 0;
   overflow: auto;
@@ -208,8 +208,6 @@ article {
 }
 #intro h2 {
   color: whitesmoke;
-  /* display: block; */
-  /* width: 100%; */
 }
 #intro img {
   float: left;
@@ -269,7 +267,7 @@ nav li {
   position: relative;
 }
 nav li:hover {
-  background: #818ba4;
+  background: #464f61;
 }
 nav ul li ul li {
   float: left;
@@ -334,39 +332,12 @@ img.noborder {
     margin: 0;
   }
 
-article.featured-post {
-  position: relative;
-}
-.featured-post:before, .featured-post:after,
-.teaser:before, .teaser:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-}
-.featured-post:before, .teaser:before {
-    top: 0;
-    left: 0;
-    border-left: 40px solid white;
-    border-bottom: 40px solid transparent;
-}
-.featured-post:after, .teaser:after {
-  border-right: 40px solid white;
-  border-top: 40px solid transparent;
-  bottom: 0;
-  right: 0;
-}
-.teaser:before, .teaser:after {
-  border-width: 20px;
-}
 
 .post-main-img {
   max-width: 100%;
   width: 99%;
 }
 .teaser {
-  background: #f4f3f2;
   padding: 0.5em 1em 1em;
   position: relative;
   margin-bottom: 0.2em;
