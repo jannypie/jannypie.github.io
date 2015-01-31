@@ -98,10 +98,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   }
   h4 {
     color: #818ba4;
-    margin-top: 3em;
+    margin-top: 0.5em;
     text-transform: uppercase;
     letter-spacing: 3px;
-  }
+
+    clear: both;
+}
 ul {
   text-align: left;
 }
@@ -132,7 +134,6 @@ header h1 {
 }
 .teasers h5 {
   font-size: 1em;
-  margin-top: 1em;
 }
 .teasers h5 a {
   border: 0;
@@ -185,7 +186,7 @@ header,nav,.container,footer {
 }
 .container aside section {
   display: inline-block;
-  width: auto;
+  /* width: auto; */
 }
 header {
   background: #464f61;
@@ -227,7 +228,6 @@ article {
   color: whitesmoke;
 }
 #intro img {
-  float: left;
   display: inline-block;
   margin: auto 3em;
 }
@@ -242,7 +242,7 @@ footer aside {
 
 
 #view-all-entries {
-  margin-top: 3em;
+  margin: 3em auto;
 }
 .accessible {
     position: absolute;
@@ -312,17 +312,27 @@ nav a {
 
 #works ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2em;
 }
 #works li {
   padding: 0.5em;
-  text-align: left;
-  /* background: #D6DAE3; */
+  text-align: center;
   margin-bottom: .2em;
 }
 #works h5 {
   font-size: 1em;
   margin: 0;
 }
+.column-me h2, .column-me h4 {
+  text-align: center;
+  margin-top: 3em;
+}
+.column-me section {
+  width: 100%;
+}
+
 /**
   Images
 **/
@@ -533,6 +543,12 @@ article.dbc-blog p {
   header {
     background: url(/images/blue-field-800.jpg);
   }
+  .container aside section {
+    width: 45%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+  }
 }
 /* Large screen */
 @media only screen and (min-width: 801px) {
@@ -553,7 +569,7 @@ article.dbc-blog p {
         padding: 1em 3em;
     }
     .home article {
-        padding: 3em;
+        padding: 0em 3em;
     }
     .container p, .footer p {
       text-align: left;
@@ -562,26 +578,30 @@ article.dbc-blog p {
       margin: 0;
       padding: 1em;
     }
+    #intro img {
+      float: left;
+    }
     .column-me h2, .column-me h4 {
       float: left;
-    }
-    .column-me div, .column-me article {
-      width: 70%;
-      float: right;
-    }
-    .column-me h2 {
-      margin-top: 2em;
-    }
-    .container aside section {
-      width: 45%;
+      vertical-align: top;
       display: inline-block;
-      float: left;
+      margin-top: 0.5em;
     }
+    .column-me div, .column-me article, .column-me ul {
+      width: 65%;
+      float: right;
+      display: inline-block;
+      vertical-align: top;
+    }
+
     .container aside section:nth-child(2) {
       margin-left: 10%;
     }
     .sidebar {
       margin-top: 3em;
+    }
+    #works li {
+      text-align: left;
     }
 }
 @media only screen and (min-width: 1601px) {

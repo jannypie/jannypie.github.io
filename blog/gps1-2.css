@@ -1,0 +1,22 @@
+p, span {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+}
+h1, footer {
+  text-align: center;
+}
+.names {
+  display: block;
+  text-align: center;
+}
+section {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+h1, h2 {
+  font-family: 'Marvel', sans-serif;
+  font-weight: 400;
+}

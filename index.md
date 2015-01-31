@@ -6,8 +6,8 @@ meta-robots: "noodp, noydir"
 ---
 <aside>
   <h4>About this</h4>
-  <p>Designed by Jan Dennison, this site is <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, and has minimal <strong>JavaScript</strong> enhancements.</p>
-  <p>Jan is a Front-End Developer with strong interests in UX and design. She is also currently a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, Oh.</p>
+  <p>I designed this site to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements.</p>
+  <p>I'm a Front-End Developer with strong interests in UX and design. I'm also currently a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, Oh.</p>
 </aside>
 <section class="column-me">
   <h2 id="writings">Writings</h2>
@@ -25,16 +25,17 @@ meta-robots: "noodp, noydir"
     {% include teasers.html %}
   </section>
   <section id="works">
-    <h4>Works</h4>
-    <div>
+    <h4>Web Works</h4>
       <ul>
-        <li><h5>Web Works</h5></li>
-        <li>To come</li>
-        <li><h5>Art Works</h5></li>
+        <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
+        <li><a href="http://codepen.io/jannypie/pen/lFysn" title="Bridge code sample on codepen">Pure CSS Golden Gate</a></li>
+        <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
+      </ul>
+    <h4>Art Works</h4>
+      <ul>
         <li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
         <li><a href="/portfolio/wanderlust/">Wanderlust</a></li>
       </ul>
-    </div>
   </section>
 </aside>
 
