@@ -1,7 +1,7 @@
 ---
 layout: "dbc-post"
-title: ""
-meta-description: ""
+title: "Stereotype Me"
+meta-description: "How a stereotype threat can affect actual performance"
 meta-robots: "noodp, noydir"
 categories: "dbc"
 ---
