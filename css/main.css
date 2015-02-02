@@ -387,7 +387,7 @@ code {
   padding: 0.25em 0.5em;
   border: 1px solid silver;
 }
-pre code {
+pre code, blockquote {
   background: #ddd;
   padding: 1em;
   line-height: 1.5em;
@@ -395,8 +395,32 @@ pre code {
   border: 1px solid silver;
   display: block;
   text-align: left;
+  margin: 0;
 }
-
+blockquote {
+  padding: 1em 4em;
+  position: relative;
+}
+blockquote:before,blockquote:after {
+  content: '"';
+  display: block;
+  font-size: 5em;
+  font-color: silver;
+  position: absolute;
+}
+blockquote:before {
+  top: 0.3em;
+  left: 0.3em;
+}
+blockquote:after {
+  top: 0.3em;
+  right: 0.3em;
+}
+blockquote .meta, .post blockquote .meta {
+  display: block;
+  text-align: right;
+  margin: 0;
+}
 
 /**
   Social Icons

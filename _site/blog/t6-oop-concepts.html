@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Meta meta -->
+<meta charset="utf-8">
+<title>Object Oriented, Results Oriented</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="noodp, noydir" />
+<meta name="description" content="Returning results with Blocks, Procs, and Lambdas" />
+<link rel="canonical" href="/blog/t6-oop-concepts.html" />
+
+<!-- The Links -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link href="/css/main.css" rel="stylesheet">
+
+<!-- Link placeholder to change stylesheets -->
+<link class="style" href="#" rel="stylesheet">
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/fontello.css">
+<!-- Highlight Code Syntax -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+    <body class="post">
+      <header>
+    <!-- <div class="geometric"></div> -->
+    <nav>
+  <ul class="short">
+    <li><a href="http://jannypie.github.io#intro">Introduction</a></li>
+    <li><a href="http://jannypie.github.io#writings">Writings</a></li>
+    <li><a href="http://jannypie.github.io#works">Works</a></li>
+  </ul>
+  <ul class="expanded">
+    <li><a href="/#intro">Introduction</a></li>
+    <li><a href="http://jannypie.github.io/blog">DevBootcamp Blog</a></li>
+    <li>Web Works:
+      <ul>
+        <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
+        <li><a href="http://codepen.io/jannypie/pen/lFysn" title="Bridge code sample on codepen">Pure CSS Golden Gate</a></li>
+        <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
+      </ul>
+    </li>
+    <li>Art Works:
+      <ul>
+        <li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+        <li><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h1>
+      <a href="http://jannypie.github.io" rel="bookmark" title="Website for Jan Dennison">Jan Dennison</a>
+    </h1>
+    <p>Front End Developer</p>
+</header>
+      <main class="container">
+        <article>
+          <h1> Object Oriented, Results Oriented </h1>
+          <h4>Phase 0 Unit 2 Week 6 | Technical Blog #6</h4>
+<span class="meta">Feb 1, 2015</span>
+<section>
+  <h2>It all begins with a block</h2>
+  <p><code>Methods</code> contain two elements: <code>parameters</code> (or variables) representing objects, and <code>blocks</code>, the action for those objects. This is the core of <strong>object-oriented programming</strong>: you have objects, and you have the action between them. Like nouns and verbs, as they say.</p>
+  <p><strong>Blocks</strong> are the functional portions of methods, the portion contained between <code>def my_method</code> and <code>end</code>.
+    <pre><code class="ruby">
+    def my_method(param)  # I am not a block
+      puts param          # I am the block!
+    end                   # I am not a block
+    </code></pre>
+  </p>
+  <p>
+    Blocks are <strong>not</strong> objects! Ruby's world of Everything Is An Object, blocks are not objects. However, you <em>can</em> wrap them in a <code>Class</code> called <code>Proc</code>, which results in a <code>function</code> object, or <strong>closure</strong>.
+    <pre><code class="ruby">
+    Proc.new {|param| block}  # I am an object containing a block
+    # Which is like writing
+    def proc(param)           # I am an object containing a block
+      block
+    end
+    </code></pre>
+  </p>
+  <h2>Lambdas are things</h2>
+  <p>
+    <pre><code class="ruby">
+    def proc(param)           # I'm named "proc"
+      block
+    end
+    lambda { |param| block}   # Equivalent function, but no name
+    </code></pre>
+  </p>
+  <p>
+    Lambdas are a special type of Proc. They are functions without names, and also <code>return</code> <strong>results</strong> in a different way. (See? Tied in the title there.) Lambdas return the last line of the method as the return value, just like we are used to seeing in methods. This is different from basic Proc behavior, which is to exit the containing method when read in a block, regardless of location in the method. Let's look at some lambda code:
+    <pre><code class="ruby">
+      puts Proc.new {} # => <Proc:0x007fbd8a0205e0@(irb):1>
+      puts lambda {}   # => <Proc:0x007fbd8a023718@(irb):2 (lambda)>
+
+      def return_results
+       Proc.new { return "I'm in the Block" }.call    # Proc called here exits
+       return "I'm in the Method"                     # us from the method
+      end                                             # immediately
+      # return_results => "I'm in the Block"
+
+      def return_results
+       lambda { return "I'm in the Block" }.call    # Returns results back to lambda
+       return "I'm in the Method"                   # Exits us from the method
+      end
+      # return_results => "I'm in the Method"
+    </code></pre>
+  </p>
+  <p>One final note:</p>
+    <pre><code class="ruby">
+    # BTW, writing this:
+    lambda { |param| block }
+    # is the same as writing this:
+    lambda do |param|
+      block
+    end
+    </code></pre>
+  <p>And the very helpful resource <a href="https://rubymonk.com/learning/books/1-ruby-primer/chapters/" title="ruby monk website">rubymonk.com</a> tells us</p>
+  <blockquote>[T]he convention followed in Ruby is to use <code>{}</code> for single line lambdas and <code>do..end</code> for lambdas that are longer than a single line.
+  <span class="meta"><a href="https://rubymonk.com/learning/books/1-ruby-primer/chapters/34-lambdas-and-blocks-in-ruby/lessons/77-lambdas-in-ruby" title="chapter on lambdas in ruby on rubymonk.com">Source</a></span>
+  </blockquote>
+
+
+
+</section>
+        </article>
+      </main><!-- /container -->
+      <footer>
+<a class="icon-twitter social" href="http://twitter.com/jannypie"><span class="accessible">Twitter</span></a> <a class="icon-github social" href="http://github.com/jannypie"><span class="accessible">GitHub</span></a> <a class="icon-linkedin social" href="http://linkedin.com/in/jldennison/"><span class="accessible">LinkedIn</span></a>
+</footer>
+
+<!-- The jQuery and scripts -->
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<!-- Highlight Code Syntax -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
