@@ -108,11 +108,38 @@ function waypointMe(elemTop, elemBottom) {
   return ((elemTop >= topWaypoint) && (elemBottom <= bottomWaypoint))
 }
 
+function changeBackground2() {
+  $('.featured-post').each(function() {
+    var $this = $(this),
+      elemTop = $this.offset().top,
+      elemMid = elemTop + ($this.height())/2;
+    function onScroll() {
+      if (waypointMe(elemMid)) {
+        $this.addClass('inView');
+      }
+      if (!waypointMe(elemMid)) {
+        $this.removeClass('inView');
+      }
+    }
+    if (window.addEventListener) {
+      window.addEventListener('scroll', onScroll, false);
+    }
+  });
+}
+function waypointMe(elemMid) {
+  var docViewTop = $(window).scrollTop(),
+    winHeight = $(window).height(),
+    winMid = winHeight/2,
+    topWaypoint = docViewTop + (winMid - winMid*0.25),
+    bottomWaypoint = docViewTop + (winMid + winMid*0.25);
+  return ((elemMid >= topWaypoint) && (elemMid <= bottomWaypoint))
+}
 
 $(document).ready(function(){
   swapImage();
   $('a.social.pinterest').click(handlePinterestClick);
   $('.select-style a').click(swapCSS);
   // squares();
-  changeBackground();
+  // changeBackground();
+  changeBackground2();
 });

@@ -236,7 +236,6 @@ article {
 }
 #intro img {
   display: inline-block;
-  /* margin: auto 3em; */
 }
 footer img {
   width: 20%;
@@ -576,7 +575,7 @@ blockquote .meta, .post blockquote .meta {
   margin: 0.25em 0;
   width: 100%;
 }
-article.dbc-blog p {
+header p, article.dbc-blog p {
   text-align: center;
 }
 /* ==========================================================================
@@ -623,7 +622,9 @@ article.dbc-blog p {
     }
     #intro img {
       float: left;
-    }
+    
+      margin: auto 3em;
+}
     #intro-cont {
       margin-bottom: 3em;
     }
