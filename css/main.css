@@ -60,7 +60,7 @@ h1,h2,h3,h4,h5,h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-family: 'Scada', sans-serif;
   font-weight: 700;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.25em 0;
 }
   h1, h1 a, h1 a:visited {
     color: #777799;
@@ -429,14 +429,14 @@ blockquote .meta, .post blockquote .meta {
   Social Icons
 **/
  footer a.social {
-  color: #f4f3f2;
-
+  color: #fff;
   border: 0;
   font-size: 2em;
 }
  footer a.social:hover {
   text-decoration: none;
-  color: whitesmoke;
+  color: #6688CC;
+  background: transparent;
  }
 
 /**
@@ -461,6 +461,17 @@ blockquote .meta, .post blockquote .meta {
   .toc h1, .toc h2, .toc h3, .toc h4, .toc h5, .toc h6 {
     font-size: 0.8em;
   }
+
+.featured-post {
+  background: transparent;
+      -webkit-transition: background-color 0.8s ease-in-out;
+    -moz-transition: background-color 0.8s ease-in-out;
+    -o-transition: background-color 0.8s ease-in-out;
+    transition: background-color 0.8s ease-in-out;
+}
+.featured-post.inView {
+  background: #f5f2f0;
+}
 
 /**
   Portfolio
@@ -557,7 +568,7 @@ blockquote .meta, .post blockquote .meta {
 /* DBC BLOG STYLES
   ****************/
 .dbc-blog h3, .dbc-blog h4, .dbc-blog p {
-  margin: 0.5em 0;
+  margin: 0.25em 0;
   width: 100%;
 }
 article.dbc-blog p {
@@ -596,7 +607,7 @@ article.dbc-blog p {
         padding: 1em 3em;
     }
     .home article {
-        padding: 0em 3em;
+        padding: 1em 3em;
     }
     .container p, .footer p {
       text-align: left;
@@ -607,6 +618,9 @@ article.dbc-blog p {
     }
     #intro img {
       float: left;
+    }
+    #intro-cont {
+      margin-bottom: 3em;
     }
     .column-me h2, .column-me h4 {
       float: left;

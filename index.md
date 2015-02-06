@@ -4,10 +4,10 @@ title: "Jan Dennison | Front End Developer"
 meta-description: "Web development portfolio blog by Jan Dennison"
 meta-robots: "noodp, noydir"
 ---
-<aside>
+<aside id="intro-cont">
   <h4>About this</h4>
-  <p>I designed this site to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements.</p>
-  <p>I'm a Front-End Developer with strong interests in UX and design. I'm also currently a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, Oh.</p>
+  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements.</p>
+  <p>Jan is a Front-End Developer with strong interests in UX and design. She is also currently a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, Oh.</p>
 </aside>
 <section class="column-me">
   <h2 id="writings">Writings</h2>

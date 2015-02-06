@@ -77,9 +77,42 @@ function squares() {
   // calculate background positions
 }
 
+/**
+    @description: Determine if an element is fully within the viewport
+  */
+// Animate signature parent to emulate handwriting effect
+function changeBackground() {
+  $('.featured-post').each(function() {
+    var $this = $(this),
+      elemTop = $this.offset().top,
+      elemBottom = elemTop + $this.height();
+
+    function onScroll() {
+      if (waypointMe(elemTop, elemBottom)) {
+        $this.addClass('inView');
+      }
+      if (!waypointMe(elemTop, elemBottom)) {
+        $this.removeClass('inView');
+      }
+    }
+    if (window.addEventListener) {
+      window.addEventListener('scroll', onScroll, false);
+    }
+  });
+}
+function waypointMe(elemTop, elemBottom) {
+  var docViewTop = $(window).scrollTop(),
+    winHeight = $(window).height(),
+    topWaypoint = docViewTop + (winHeight*0.20),
+    bottomWaypoint = docViewTop + (winHeight*0.80);
+  return ((elemTop >= topWaypoint) && (elemBottom <= bottomWaypoint))
+}
+
+
 $(document).ready(function(){
   swapImage();
   $('a.social.pinterest').click(handlePinterestClick);
   $('.select-style a').click(swapCSS);
   // squares();
+  changeBackground();
 });
