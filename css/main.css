@@ -39,6 +39,7 @@ body {
 p {
   font-size: 1.15em;
   line-height: 1.5em;
+  text-align: left;
 }
 a, a:visited {
   color: #6688CC;
@@ -145,6 +146,9 @@ header h1 {
 .teasers .meta {
   font-size: 0.8em;
 }
+.post article {
+  padding: 1em;
+}
 .post article h1 {
   color: #313131;
   text-align: center;
@@ -232,7 +236,7 @@ article {
 }
 #intro img {
   display: inline-block;
-  margin: auto 3em;
+  /* margin: auto 3em; */
 }
 footer img {
   width: 20%;
@@ -341,7 +345,7 @@ nav a {
 **/
 img {
   max-width: 100%;
-  padding: 1em;
+  /* padding: 1em; */
   border: 1px solid #c7c2b3;
 }
 img.noborder {
@@ -401,7 +405,7 @@ pre code, blockquote {
   margin: 0;
 }
 blockquote {
-  padding: 1em 4em;
+  padding: 2.5em 1em;
   position: relative;
 }
 blockquote:before,blockquote:after {
@@ -644,6 +648,10 @@ article.dbc-blog p {
     }
     #works li {
       text-align: left;
+    }
+    blockquote {
+      padding: 1em 4em;
+      position: relative;
     }
 }
 @media only screen and (min-width: 1601px) {
