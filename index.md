@@ -33,8 +33,8 @@ meta-robots: "noodp, noydir"
       </ul>
     <h4>Art Works</h4>
       <ul>
-        <li><a href="/portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
-        <li><a href="/portfolio/wanderlust/">Wanderlust</a></li>
+        <li><a href="/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
+        <li><a href="/art-portfolio/wanderlust/">Wanderlust</a></li>
       </ul>
   </section>
 </aside>
