@@ -6,8 +6,8 @@ meta-robots: "noodp, noydir"
 ---
 <aside id="intro-cont">
   <h4>About this</h4>
-  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements.</p>
-  <p>Jan is a Front-End Developer with strong interests in UX and design. She is also currently a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, Oh.</p>
+  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
+  <p>Jan is a Front-End Developer with strong interests in UX and design. She is also currently a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, Oh. She thinks you rock!</p>
 </aside>
 <section class="column-me">
   <h2 id="writings">Writings</h2>

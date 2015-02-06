@@ -410,6 +410,7 @@ blockquote:before,blockquote:after {
   font-size: 5em;
   font-color: silver;
   position: absolute;
+  color: #aaa;
 }
 blockquote:before {
   top: 0.3em;
