@@ -116,8 +116,16 @@ console.log(dog_string);
 			<h3>JSON.parse()</h3>
 			<p>The parse method deserializes a JavaScript value, returning the object corresponding to the given JSON string. For a detailed explaination of the optional arguments, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" title="parse()">parse()</a></a></p>
 			<p>Let's return to our original example, the my_dog object written in JSON notation. This time, we'll leave it formatted as it might be when passed as a string.</p>
-			<code>var my_dog = '{"name": "Greg","breed": "Westie","nicknames": ["Mr. Greg", "Gregs"],"age": 8,"height": 10,"weight": 23,"photo": "i.imgur.com/j0QxJqy.jpg"}'
-			</code>
+			<code><pre>var my_dog = '{
+  "name": "Greg",
+  "breed": "Westie",
+  "nicknames": ["Mr. Greg", "Gregs"],
+  "age": 8,
+  "height": 10,
+  "weight": 23,
+  "photo": "i.imgur.com/j0QxJqy.jpg"
+}'
+			</pre></code>
 			<p>As you can see, the value of my_dog is stored as a string and all of the keys are strings.</p>
 			<code><pre>dog_parsed = JSON.parse(my_dog);
 
