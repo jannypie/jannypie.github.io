@@ -58,16 +58,13 @@
 			<h3>Arrays</h3>
 			<p>Below is an array written in JSON notation. Again, this should be familiar.</p>
 			<code><pre>var my_dog = [
-    "Greg",
-    "Westie",
-    [
-        "Mr. Greg",
-        "Gregs"
-    ],
-    8,
-    10,
-    23,
-    "i.imgur.com/j0QxJqy.jpg"
+  "Greg",
+  "Westie",
+  ["Mr. Greg","Gregs"],
+  8,
+  10,
+  23,
+  "i.imgur.com/j0QxJqy.jpg"
 ]
 			</pre></code>
 			<p>Accessing Array Elements...</p>
@@ -98,25 +95,18 @@ dog_string = JSON.stringify(my_dog);
 
 console.log(dog_string);
 
-//The above will have the following
-//console output:
-
-{"name":"Greg","breed":"Westie",
-"age":8}
+//The above will have the following console output:
+{"name":"Greg","breed":"Westie","age":8}
 
 			</pre></code>
-<p>For cleaner output, you can pass a number of spaces as the third argument.</p>
-
-<code><pre>dog_string = JSON.stringify(my_dog,
-null, 2);
+      <p>For cleaner output, you can pass a number of spaces as the third argument.</p>
+      <code><pre>dog_string = JSON.stringify(my_dog, null, 2);
 
 console.log(dog_string);
 
-//The above will have the following
-//console output:
+//The above will have the following console output:
 
-{
-  "name": "Greg",
+{ "name": "Greg",
   "breed": "Westie",
   "age": 8
 }</pre></code>
@@ -133,8 +123,7 @@ console.log(dog_string);
 
 console.log(dog_parsed);
 
-//The above will have the following
-//console output:
+//The above will have the following console output:
 
 { name: 'Greg',
   breed: 'Westie',
