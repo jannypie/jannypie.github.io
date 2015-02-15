@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web|Open+Sans:400,300);
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+  line-height: 1.4;
+  font-weight: bold;
+}
+main {
+   /* Prevent vertical gaps */
+   line-height: 0;
+   
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
+   
+}
+.card {
+  display: inline-block;
+  line-height: 1.2;
+  margin: 3%;
+  padding: 4%;
+  background: #f5f2f0;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 3px;
+  width: 95%;
+}
+code {
+  background: #ddd;
+  padding: 0.25em 0.5em;
+  border: 1px solid silver;
+  margin: 0.25em;
+  display: block;
+}
+table {
+  width: 100%;
+}
+tr {
+  border-bottom: 1px solid silver;
+  padding: 0.2em 0;
+  width: 100%;
+}
+tr:nth-child(odd) {
+  background: #ddd;
+}
+ul, li {
+  list-style-type: none;
+  line-height: 1.4;
+}
+
+footer {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+/* Using CSS Seamless Photo Grid via http://css-tricks.com/seamless-responsive-photo-grid/*/
+@media (max-width: 1200px) {
+  main {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 1000px) {
+  main {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  main {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  main {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}

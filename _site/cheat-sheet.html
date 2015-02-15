@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>JSON CHEAT SHEET</title>
+	<meta name="author" content="Jan Dennison and Elizabeth Blackburn">
+    <meta name="description" content="Cheat sheet for JSON">
+    <link href="css/cheat-sheet.css" rel="stylesheet">
+</head>
+
+<body>
+	<main>
+		<header class="card">
+			<h1>JSON Cheat Sheet</h1>
+		</header>
+
+		<section class="card">
+			<h2>What's JSON?</h2>
+			<p>JSON (or JavaScript Object Notation) is an attempt to model reality in a way that can be understood by humans and parsed by many programming languages. In doing so, it brings disparate technologies together such as your database, middleware, and frontend, who can all work with JSON in one form or another.</p>
+		</section>
+		<section class="card">
+			<h3>Quick Links</h3>
+			<ul>
+				<li><a href="http://www.json.org/" title="Introducing JSON">Introducing JSON</a></li>
+				<li><a href="http://jsonlint.com/" title="Validate with jsonlint">Validate with jsonlint.com</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="Validate with jsonlint">Detailed JSON Docs</a></li>
+			</ul>
+		</section>
+
+		<section class="card">
+			<h3>Objects</h3>
+			<p>Below is an object written in JSON notation. If you're familiar with JavaScript, this shouldn't look too unusual. The primary syntactical difference is that the key must be stored as a string using quotes.</p>
+			<code><pre>var my_dog = {
+  "name":"Greg",
+  "breed":"Westie",
+  "nicknames":["Mr. Greg", "Gregs"],
+  "age":8,
+  "height":10,
+  "weight":23,
+  "photo":"i.imgur.com/j0QxJqy.jpg"
+}
+			</pre></code>
+			<p>Accessing Object Properties...</p>
+			<table>
+				<tr>
+					<td>my_dog.name</td><td>returns "Greg"</td>
+				</tr>
+				<tr>
+					<td>my_dog["breed"]</td><td>returns "Westie"</td>
+				</tr>
+				<tr>
+					<td>my_dog[3]</td><td>returns 8</td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="card">
+			<h3>Arrays</h3>
+			<p>Below is an array written in JSON notation. Again, this should be familiar.</p>
+			<code><pre>var my_dog = [
+    "Greg",
+    "Westie",
+    [
+        "Mr. Greg",
+        "Gregs"
+    ],
+    8,
+    10,
+    23,
+    "i.imgur.com/j0QxJqy.jpg"
+]
+			</pre></code>
+			<p>Accessing Array Elements...</p>
+			<table>
+				<tr>
+					<td>my_dog[0]</td><td>returns "Greg"</td>
+				</tr>
+				<tr>
+					<td>my_dog[2][0]</td><td>returns "Mr. Greg"</td>
+				</tr>
+				<tr>
+					<td>my_dog[3]</td><td>returns 8</td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="card">
+			<h3>JSON.stringify()</h3>
+			<p>The stringify method serializes a JavaScript value, converting it to a JSON string. For a detailed explaination of the optional arguments, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" title="stringify()">stringify()</a></a></p>
+			<p>Here's a simple my_dog object written in JavaScript.</p>
+			<code><pre>var my_dog = {
+  name: "Greg",
+	breed: "Westie",
+	age: 8
+}
+
+dog_string = JSON.stringify(my_dog);
+
+console.log(dog_string);
+
+//The above will have the following
+//console output:
+
+{"name":"Greg","breed":"Westie",
+"age":8}
+
+			</pre></code>
+<p>For cleaner output, you can pass a number of spaces as the third argument.</p>
+
+<code><pre>dog_string = JSON.stringify(my_dog,
+null, 2);
+
+console.log(dog_string);
+
+//The above will have the following
+//console output:
+
+{
+  "name": "Greg",
+  "breed": "Westie",
+  "age": 8
+}</pre></code>
+		</section>
+
+		<section class="card">
+			<h3>JSON.parse()</h3>
+			<p>The parse method deserializes a JavaScript value, returning the object corresponding to the given JSON string. For a detailed explaination of the optional arguments, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" title="parse()">parse()</a></a></p>
+			<p>Let's return to our original example, the my_dog object written in JSON notation. This time, we'll leave it formatted as it might be when passed as a string.</p>
+			<code>var my_dog = '{"name": "Greg","breed": "Westie","nicknames": ["Mr. Greg", "Gregs"],"age": 8,"height": 10,"weight": 23,"photo": "i.imgur.com/j0QxJqy.jpg"}'
+			</code>
+			<p>As you can see, the value of my_dog is stored as a string and all of the keys are strings.</p>
+			<code><pre>dog_parsed = JSON.parse(my_dog);
+
+console.log(dog_parsed);
+
+//The above will have the following
+//console output:
+
+{ name: 'Greg',
+  breed: 'Westie',
+  nicknames: ['Mr. Greg', 'Gregs'],
+  age: 8,
+  height: 10,
+  weight: 23,
+  photo: 'i.imgur.com/j0QxJqy.jpg' }
+			</pre></code>
+		</section>
+
+		<footer class="card">
+			<p>by Elizabeth Blackburn and Jan Dennison</p>
+			<p>for Dev Bootcamp Localhost : Sea Lion Cohort, Feb 2015</p>
+		</footer>
+	</main>
+<script>
+</script>
+</body>
+</html>

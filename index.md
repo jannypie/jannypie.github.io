@@ -20,8 +20,8 @@ meta-robots: "noodp, noydir"
   <section>
     <h4>Past Posts</h4>
     {% assign teasers = site.posts %}
-    {% assign teasers_skip = 4 %}
-    {% assign teasers_take = 3 %}
+    {% assign teasers_skip = 6 %}
+    {% assign teasers_take = 4 %}
     {% include teasers.html %}
   </section>
   <section id="works">
@@ -30,6 +30,7 @@ meta-robots: "noodp, noydir"
         <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
         <li><a href="http://codepen.io/jannypie/pen/lFysn" title="Bridge code sample on codepen">Pure CSS Golden Gate</a></li>
         <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
+        <li><a href="http://jannypie.github.io/cheat-sheet.html" title="JSON Cheat Sheet">JSON Cheat Sheet</a></li>
       </ul>
     <h4>Art Works</h4>
       <ul>
