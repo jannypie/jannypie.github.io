@@ -23,14 +23,14 @@ h1,h2,h3,h4,h5,h6 {
 main {
    /* Prevent vertical gaps */
    line-height: 0;
-   
+
    -webkit-column-count: 5;
    -webkit-column-gap:   0px;
    -moz-column-count:    5;
    -moz-column-gap:      0px;
    column-count:         5;
    column-gap:           0px;
-   
+
 }
 .card {
   display: inline-block;
@@ -48,6 +48,9 @@ code {
   border: 1px solid silver;
   margin: 0.25em;
   display: block;
+}
+pre {
+  word-wrap: break-word;
 }
 table {
   width: 100%;
