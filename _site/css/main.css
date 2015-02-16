@@ -196,8 +196,7 @@ header,nav,.container,footer {
   /* width: auto; */
 }
 header {
-  background: #464f61;
-  background: url(/images/blue-field-480.jpg);
+  background: #717B8E url(/images/blue-field-480.jpg);
 /*  background-size: cover;*/
   color: whitesmoke;
   text-align: center;
@@ -583,7 +582,7 @@ header p, article.dbc-blog p {
    ========================================================================== */
 @media only screen and (min-width: 481px) {
   header {
-    background: url(/images/blue-field-800.jpg);
+    background: #717B8E url(/images/blue-field-800.jpg);
   }
   .container aside section {
     width: 45%;
@@ -596,7 +595,7 @@ header p, article.dbc-blog p {
 @media only screen and (min-width: 801px) {
   header {
     max-height: 100%;
-    background: url(/images/blue-field-1600.jpg);
+    background: #717B8E;
   }
     header h1 {
         font-size: 5em;
@@ -622,7 +621,7 @@ header p, article.dbc-blog p {
     }
     #intro img {
       float: left;
-    
+
       margin: auto 3em;
 }
     #intro-cont {
@@ -657,7 +656,7 @@ header p, article.dbc-blog p {
 }
 @media only screen and (min-width: 1601px) {
   header {
-    background: url(/images/blue-field.jpg);
+    background: #717B8E url(/images/blue-field.jpg);
   }
 }
 /* ==========================================================================
