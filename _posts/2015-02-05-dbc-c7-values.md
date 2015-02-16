@@ -1,7 +1,7 @@
 ---
 layout: "dbc-post"
 title: "Fearless Values"
-meta-description: ""
+meta-description: "Thinking about your values can help you defy your fear."
 meta-robots: "noodp, noydir"
 categories: "dbc"
 ---

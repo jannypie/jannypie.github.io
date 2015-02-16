@@ -1,7 +1,7 @@
 ---
 layout: "dbc-post"
 title: "Pairing and Feedback"
-meta-description: ""
+meta-description: "It's a really great way to solve difficult problems, and to learn new approaches and techniques."
 meta-robots: "noodp, noydir"
 categories: "dbc"
 ---

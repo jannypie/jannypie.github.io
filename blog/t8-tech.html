@@ -1,0 +1,56 @@
+---
+layout: "dbc-post"
+title: "JavaScript Prototypes, I Think"
+meta-description: "Less of an explanation, more of an exploration."
+meta-robots: "noodp, noydir"
+---
+<h4>Phase 0 Unit 3 Week 8 | Technical Blog #8</h4>
+<span class="meta">Feb 15, 2015</span>
+<section>
+  <p>I started learning JavaScript over two years ago, and I often ran into mentions of <strong>prototypes</strong>. I read some on them, but never was able to really <em>get</em> what they were or how they were used. So, for this assignment, I chose them to research and write about. The thing is, I'm still not sure that I get them. So, rather than our usual explanatory post, I'm putting my fledgling ideas out there, and exposing what is quite likely much ignorance. But, it's my best attempt at sharing what I've learned.</p>
+  <p>So now that I've gone on about how little I know, I can share some things I did find. One of the key things that helped was an <a href="http://stackoverflow.com/questions/572897/how-does-javascript-prototype-work" title="prototype question asked on stack overflow">answer on stackoverflow</a>, that there are languages that use <code>Classes</code> to manage groups of related data and methods - languages like <strong>Ruby</strong>! I have even writted about <a href="http://jannypie.github.io/blog/t5-ruby-classes.html" title="ruby classes">using classes in Ruby</a> before. Javascript, however, <em>does not</em> uses classes. So, does javascript have any similar approach? Prototypes.</p>
+  <blockquote>In a language implementing classical inheritance like Java, C# or C++ you start by creating a class--a blueprint for your objects--and then you can create new objects from that class or you can extend the class, defining a new class that augments the original class. In JavaScript you first create an object (there is no concept of class), then you can augment your own object or create new objects from it.
+    <small class="meta"><a href="http://stackoverflow.com/a/4778408/2464680" title="stackoverflow answer">Source</a></small>
+  </blockquote>
+  <p>I think this, for me, is the first block in understanding prototypes (although far from the first resource about them I've read). In Ruby, when you find yourself repeating the same type or set of object data, you can create a Class as a template. You can then spin up many objects with the same data structure and related methods.</p>
+  <pre><code class="ruby">
+    class Person(name)
+      def initialize
+        @name = name
+      end
+      def person_method
+        puts "Hello my name is #{name}"
+      end
+    end
+    fred = Person.new("Fred")
+    wilma = Person.new("Wilma")
+  </code></pre>
+  <p>In javascript, we are also familiar with <code>Object literal notation</code>. So how would we do something similar to the class above?</p>
+  <pre><code class="js">
+    function person(name) {
+      this.name = name;
+      this.personMethod = function() {
+        console.log("Hello my name is " + name);
+      };
+    }
+    var fred = new person("Fred");
+    var wilma = new person("Wilma");
+  </code></pre>
+  <p>So, yeah. There's no specific Class in javascript because we just use an object. So, why prototypes? From what I can tell, it's the javascript way of modifying the object template you're using.</p>
+  <pre><code class="ruby">
+    # How would we modify our Ruby class?
+    # We have to call the class again and add to it
+    class Person
+      def second_method
+        puts "No, it's not #{name}, it's #{name}!"
+      end
+    end
+  </code></pre>
+  <pre><code>
+    // In javascript, prototype acts as a shortcut
+    person.prototype.secondMethod = function() {
+      console.log("No, it's not " + name + ", it's " + name + "!");
+    }
+  </code></pre>
+  <p>Now, all <strong>instances</strong> of the person object also have a <code>secondMethod</code>. And that's a basic use of prototypes! I'm certain there are many more things to be understood about them, but I kinda think I've got a start now. I'm still working through <a href="http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/" title="blog post on prototypes">JavaScript Prototype in Plain Language</a>, so I'll leave that here as recommended readings for you, too!</p>
+</section>
