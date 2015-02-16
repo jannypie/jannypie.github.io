@@ -595,7 +595,7 @@ header p, article.dbc-blog p {
 @media only screen and (min-width: 801px) {
   header {
     max-height: 100%;
-    background: #717B8E;
+    background: #717B8E url(/images/blue-field-1600.jpg);
   }
     header h1 {
         font-size: 5em;
