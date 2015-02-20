@@ -54,7 +54,7 @@ ul.hexagonal {
 }
 
 .hexagonal li > div {
-  background: rgba(255, 255, 255,0.4);
+  background: rgba(255, 255, 255,0.3);
   text-align:center;
   color:#fff;
 
@@ -67,35 +67,24 @@ ul.hexagonal {
   transform: skewY(-30deg) rotate(60deg);
   -webkit-backface-visibility:hidden;
 }
-
-.hexagonal li.spacer > div {
-}
-
-.hexagonal li img{
-  left:-100%; right:-100%;
-  width: auto; height:100%;
-  margin:0 auto;
-}
-
-.hexagonal div h4,
-.hexagonal div p,
-.hexagonal div ul {
+.hexagonal .hex-top,
+.hexagonal .hex-bot,
+.hexagonal .hex-full {
   width: 90%;
-  padding: 30% 5%;
-  color: #6E778D;
+  padding: 27% 5%;
+  color: #464F61;
   -webkit-transition: top .2s ease-out, bottom .2s ease-out;
   -ms-transition: top .2s ease-out, bottom .2s ease-out;
   transition: top .2s ease-out, bottom .2s ease-out;
+  display: block;
 }
-.hexagonal li h4{
+.hexagonal .hex-top {
   bottom:0%;
-  /* font-style:italic; */
-  font-weight:normal;
-  font-size: 120%;
   padding-top:50%;
   padding-bottom:50%;
 }
-.hexagonal li h4:after{
+/* White tab */
+.hexagonal .hex-top:after{
   content:'';
   display:block;
   position:absolute;
@@ -105,6 +94,26 @@ ul.hexagonal {
   z-index:1;
   border-bottom:2px solid #fff;
 }
+
+/* HOVER EFFECT  */
+.hexagonal div:hover .hex-top {
+  bottom:95%;
+}
+.hexagonal div:hover .hex-bot{
+  top:0%;
+}
+
+
+
+.hexagonal div h4 {
+  font-weight:normal;
+  font-size: 120%;
+}
+.hexagonal div a {
+  color: #464F61;
+  font-family: 'Scada', sans-serif;
+  position: static;
+}
 .hexagonal li p,
 .hexagonal li ul {
   height: 100%;
@@ -112,21 +121,16 @@ ul.hexagonal {
 }
 .hexagonal ul li {
   position: relative;
-  padding: 0.25em 0;
+  padding: 0.2em 0 0.3em;
+  line-height: 1.4em;
 }
-.hexagonal ul li:hover {
+.hexagonal ul li:hover,
+.hexagonal .hex-full h4:hover {
   background: rgba(255, 255, 255,0.4);
-
 }
 
-/* HOVER EFFECT  */
-
-.hexagonal li div:hover h4 {
-  bottom:95%;
+.hexagonal li img{
+  left:-100%; right:-100%;
+  width: auto; height:100%;
+  margin:0 auto;
 }
-
-.hexagonal li div:hover p,
-.hexagonal li div:hover ul{
-  top:0%;
-}
-

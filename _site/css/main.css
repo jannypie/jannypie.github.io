@@ -111,6 +111,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 ul {
   text-align: left;
 }
+li {
+  margin-bottom: 0.5em;
+}
 /* Special Typography */
 header a, header a:visited {
   color: whitesmoke;
