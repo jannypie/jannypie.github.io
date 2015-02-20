@@ -58,3 +58,51 @@ nav li:hover {
 nav ul li ul li {
   float: left;
 }
+
+.geometric {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.shape {
+  width: 71px;
+  height: 71px;
+  position: absolute;
+  overflow: hidden;
+  transform: rotate(45deg);
+  /*border: 1px solid white;*/
+}
+.shape span {
+  background-image: url(/images/blue-field-1600.jpg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: -14px auto auto -15px;
+  transform: rotate(-45deg);
+  opacity: 0.5;
+}
+.shape.one {  left: 50px;  top: 500px;}
+.shape.one span { -webkit-filter: blur(1px) invert(0.2);}
+.shape.two {  left: 100px;  top: 550px;}
+.shape.two span { -webkit-filter: blur(2px) brightness(1.2);}
+.shape.three {  left: 150px;  top: 600px;}
+.shape.three span { -webkit-filter: blur(0px); background-color: #8189a0; background-blend-mode: multiply;}
+.shape.four {  left: 200px;  top: 650px;}
+.shape.four span { background-color: #D2D2D2; background-blend-mode: lighten; }
+.shape.five {  left: 400px;  top: 650px;}
+.shape.five span { -webkit-filter: blur(1px) brightness(1.2);}
+.shape.six {  left: 200px;  top: 550px;}
+.shape.six span { -webkit-filter: blur(2px) invert(0.2);}
+.shape.seven {  left: 250px;  top: 600px;}
+.shape.seven span { -webkit-filter: blur(0.5px) contrast(2);}
+.shape.eight {  left: 250px;  top: 500px;}
+.shape.eight span { -webkit-filter: blur(1px) contrast(2);}
+.shape.nine {  left: 300px;  top: 550px;}
+.shape.nine span { -webkit-filter: blur(1px) saturate(1.5);}
+.shape.ten {  left: 350px;  top: 600px;}
+.shape.ten span { -webkit-filter: blur(2px) contrast(2);}
+.shape.eleven {  left: 50px;  top: 600px;}
+.shape.eleven span {-webkit-filter: blur(1px)  saturate(1.5);}
+.shape.twelve {  left: 100px;  top: 650px;}
+.shape.twelve span {-webkit-filter: blur(1px) contrast(1.1);}
