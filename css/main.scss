@@ -1,0 +1,154 @@
+---
+---
+/* Includes */
+/* oxygen */
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+/* Variables */
+$spacing: 14px;
+$blue: #3d79f2;
+$teal: #30a7bf;
+$green: #30bf78;
+$yellow: #f4d400;
+$light-yellow: #fff280;
+$tangerine: #e5ac00;
+$orange: #e57339;
+$red: #f23d3d;
+$pink: #e5398f;
+$purple: #973df2;
+$light-gray: #a0a0a0;
+$gray: #414141;
+$near-black: #1a1a1a;
+
+/* Layout Styles */
+html, body, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+body {
+  box-sizing: inherit;
+}
+section {
+  width: 100%;
+  overflow: hidden;
+}
+/* Columns */
+.column--left, .column--right {
+  display: inline-block;
+  float: left;
+  width: (768/2 - $spacing*4);
+}
+.column--right {
+  margin-left: $spacing*8;
+}
+/* Float Blocks */
+.float--right {
+  float: right;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.float--left {
+  float: left;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+.float--center {
+  clear: both;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* Typography Styles */
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-size: $spacing;
+  font-weight: 300;
+  line-height: $spacing*1.5;
+}
+p {
+  margin-bottom: $spacing;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing/2;
+  font-weight: 400;
+  line-height: 1em;
+}
+h1.title {
+  font-size: $spacing*4;
+}
+h1, h2 {
+  font-size: $spacing*1.75;
+  margin-bottom: $spacing*2;
+}
+h3 {
+  font-size: $spacing*1.15;
+}
+h4, h5, h6 {
+  font-size: $spacing;
+}
+.bold {
+  font-weight: 700;
+}
+.light {
+  font-weight: 300;
+}
+
+a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+/* Color Styles */
+body {
+  color: $near-black;
+}
+a {
+  color: $orange;
+  -webkit-transition: color 500ms ease-out;
+  -moz-transition: color 500ms ease-out;
+  -o-transition: color 500ms ease-out;
+  transition: color 500ms ease-out;
+}
+a:visited {
+  color: $tangerine;
+}
+a:hover {
+  color: $yellow;
+}
+[class*="entypo-"]:hover {
+  color: $yellow;
+}
+.entypo-brush {
+  font-size: 0.85em;
+  padding-left: 3px;
+}
+.comment {
+  color: $light-gray;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+/* Header Typography */
+header h1 {
+  display: inline-block;
+  margin-right: $spacing;
+  margin-bottom: $spacing*3;
+}
+
+/* Special Styles */
+.info-list__item {
+  margin-left: $spacing*4;
+  position: relative;
+  margin-bottom: $spacing*2;
+}
+.info-list__item--icon {
+  position: absolute;
+  margin-left: -$spacing*3;
+}
