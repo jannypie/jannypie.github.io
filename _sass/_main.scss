@@ -1,29 +1,6 @@
----
----
-/* Includes */
-/* oxygen */
-@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
-
-/* Variables */
-$spacing: 14px;
-$blue: #3d79f2;
-$teal: #30a7bf;
-$green: #30bf78;
-$yellow: #f4d400;
-$light-yellow: #fff280;
-$tangerine: #e5ac00;
-$orange: #e57339;
-$red: #f23d3d;
-$pink: #e5398f;
-$purple: #973df2;
-$light-gray: #a0a0a0;
-$gray: #414141;
-$near-black: #1a1a1a;
-
 /* Layout Styles */
-html, body, p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+html, body {
+  height: 100%;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -33,9 +10,13 @@ html {
 body {
   box-sizing: inherit;
 }
-section {
+header, footer, section {
   width: 100%;
   overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  max-width: 768px;
 }
 /* Columns */
 .column--left, .column--right {
@@ -121,19 +102,12 @@ a:visited {
 }
 a:hover {
   color: $yellow;
+  text-decoration: underline;
 }
-[class*="entypo-"]:hover {
+[class*="icon-"]:hover {
   color: $yellow;
 }
-.entypo-brush {
-  font-size: 0.85em;
-  padding-left: 3px;
-}
-.comment {
-  color: $light-gray;
-  font-size: 0.8em;
-  font-weight: 300;
-}
+
 
 /* Header Typography */
 header h1 {
@@ -142,13 +116,63 @@ header h1 {
   margin-bottom: $spacing*3;
 }
 
-/* Special Styles */
-.info-list__item {
-  margin-left: $spacing*4;
-  position: relative;
-  margin-bottom: $spacing*2;
+/* Special General Typography Styles */
+.comment {
+  color: $light-gray;
+  font-size: 0.8em;
+  font-weight: 300;
 }
-.info-list__item--icon {
+.meta {
+  font-size: 0.9em;
+  color: #6E7881;
+  display: block;
+  text-align: center;
+}
+.accessible {
   position: absolute;
-  margin-left: -$spacing*3;
+  top: -99999px;
+  left: -99999px;
+}
+
+
+// Blockquotes
+code {
+  background: #ddd;
+  padding: 0.25em 0.5em;
+  border: 1px solid silver;
+}
+pre code, blockquote {
+  background: #ddd;
+  padding: 1em;
+  line-height: 1.5em;
+  word-wrap:break-word;
+  border: 1px solid silver;
+  display: block;
+  text-align: left;
+  margin: 0;
+}
+blockquote {
+  padding: 2.5em 1em;
+  position: relative;
+}
+blockquote:before, blockquote:after {
+  content: '';
+  display: block;
+  font-size: 5em;
+  font-color: silver;
+  position: absolute;
+  color: #aaa;
+}
+blockquote:before {
+  top: 0.3em;
+  left: 0.3em;
+}
+blockquote:after {
+  top: 0.3em;
+  right: 0.3em;
+}
+blockquote .meta, .post blockquote .meta {
+  display: block;
+  text-align: right;
+  margin: 0;
 }

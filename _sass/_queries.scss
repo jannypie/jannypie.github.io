@@ -1,0 +1,155 @@
+/*
+  Media Queries
+ */
+@media only screen and (min-width: 481px) {
+  header {
+    background-image: url(/images/field-bg-800-low.png);
+    background-image: url(/images/field-bg-800.jpg);
+  }
+  header h1 {
+    margin-top: 30%;
+  }
+  .container aside section {
+    width: 45%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+  }
+}
+/* Large screen */
+@media only screen and (min-width: 801px) {
+  header {
+    max-height: 100%;
+    background-image: url(/images/field-bg-1600-low.png);
+    background-image: url(/images/field-bg-1600.jpg);
+  }
+    header h1 {
+        font-size: 5em;
+    }
+    nav .expanded {
+      display: block;
+    }
+    nav .short {
+      display: none;
+    }
+    .container, footer {
+        padding: 1em 3em;
+    }
+    .home article {
+        padding: 1em 3em;
+    }
+    .container p, .footer p {
+      text-align: left;
+    }
+    #intro {
+      margin: 0;
+      padding: 1em;
+    }
+    #intro img {
+      float: left;
+
+      margin: auto 3em;
+}
+    #intro-cont {
+      margin-bottom: 3em;
+    }
+    .column-me h2, .column-me h4 {
+      float: left;
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 0.5em;
+    }
+    .column-me div, .column-me article, .column-me ul {
+      width: 65%;
+      float: right;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .container aside section:nth-child(2) {
+      margin-left: 10%;
+    }
+    .sidebar {
+      margin-top: 3em;
+    }
+    #works li {
+      text-align: left;
+    }
+    blockquote {
+      padding: 1em 4em;
+      position: relative;
+    }
+}
+@media only screen and (min-width: 1601px) {
+  header {
+    background-image: url(/images/field-bg-3200-low.png);
+    background-image: url(/images/field-bg-3200.jpg);
+  }
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
