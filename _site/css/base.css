@@ -185,7 +185,7 @@ blockquote .meta, .post blockquote .meta {
   text-align: right;
   margin: 0; }
 
-#intro, footer {
+#intro {
   background: #737151;
   color: whitesmoke;
   overflow: auto; }
@@ -290,6 +290,12 @@ nav li:hover a, nav li:hover a:visited {
 
 nav ul li ul li {
   float: left; }
+
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 3em;
+  padding: 2em 0;
+  text-align: center; }
 
 .featured-post, .featured-project {
   margin-bottom: 4em; }
