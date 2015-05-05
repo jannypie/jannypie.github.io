@@ -6,6 +6,7 @@
 
 /* Variables */
 $spacing: 14px;
+$body-width: 768px;
 $blue: #3d79f2;
 $teal: #30a7bf;
 $green: #30bf78;
@@ -20,7 +21,7 @@ $light-gray: #a0a0a0;
 $gray: #414141;
 $near-black: #1a1a1a;
 
-
+@import "grid";
 @import "main";
 @import "header";
 @import "nav";

@@ -1,0 +1,30 @@
+.col-half, .col-third, .col-twothird {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+@media only screen and (min-width: 481px) {
+  .col-half, .col-third, .col-twothird {
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+  }
+  .col-half {
+    width: 48%;
+    margin-left: 2%;
+  }
+  .container .col-half:first-of-type {
+    margin-left: 0;
+  }
+  .col-third {
+    width: 32%;
+    margin-left: 1.3%;
+  }
+  .container .col-third:first-of-type {
+    margin-left: 0;
+  }
+  .col-twothird {
+    width: 65%;
+    margin-left: 2.6%;
+  }
+}

@@ -6,25 +6,27 @@ meta-robots: "noodp, noydir"
 ---
 <aside id="intro-cont">
   <h4>About this</h4>
-  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
+  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
   <p>Jan is a Web Developer with strong interests in UX and front-end design. She recently graduated as a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, OH. She does not actually have a mustache.</p>
 </aside>
-<section class="column-me">
+<section class="col-half">
   <h2 id="writings">Writings</h2>
   {% include featured-posts.html %}
   <div class="" id="view-all-entries">
     <a href="archive.html">View all the entries</a>
   </div>
 </section>
-<aside class="sidebar column-me">
-  <section>
+<section id="works" class="col-half"><h2>Workings</h2>
+</section>
+<aside class="container">
+  <section class="col-third">
     <h4>Past Posts</h4>
     {% assign teasers = site.posts %}
     {% assign teasers_skip = 6 %}
     {% assign teasers_take = 4 %}
     {% include teasers.html %}
   </section>
-  <section id="works">
+  <section class="col-third">
     <h4>Web Works</h4>
       <ul>
         <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
@@ -32,6 +34,8 @@ meta-robots: "noodp, noydir"
         <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
         <li><a href="http://jannypie.github.io/cheat-sheet.html" title="JSON Cheat Sheet">JSON Cheat Sheet</a></li>
       </ul>
+  </section>
+  <section class="col-third">
     <h4>Art Works</h4>
       <ul>
         <li><a href="/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>

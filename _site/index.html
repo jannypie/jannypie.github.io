@@ -37,28 +37,10 @@ _________,   ___/ /  ,__________
     <body class="home">
       <header>
     <nav>
-  <ul class="short">
-    <li><a href="http://jannypie.github.io#intro">Introduction</a></li>
-    <li><a href="http://jannypie.github.io#writings">Writings</a></li>
-    <li><a href="http://jannypie.github.io#works">Works</a></li>
-  </ul>
-  <ul class="expanded">
+  <ul>
     <li><a href="http://jannypie.github.io#intro">Hellos</a></li>
-    <li><a href="http://jannypie.github.io/blog">Writings</a></li>
-    <li>Web Works:
-      <ul>
-        <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
-        <li><a href="http://codepen.io/jannypie/pen/lFysn" title="Bridge code sample on codepen">Pure CSS Golden Gate</a></li>
-        <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
-        <li><a href="http://jannypie.github.io/cheat-sheet.html" title="JSON Cheat Sheet">JSON Cheat Sheet</a></li>
-      </ul>
-    </li>
-    <li>Art Works:
-      <ul>
-        <li><a href="http://jannypie.github.io/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
-        <li><a href="http://jannypie.github.io/art-portfolio/wanderlust/">Wanderlust</a></li>
-      </ul>
-    </li>
+    <li><a href="http://jannypie.github.io#writings">Writings</a></li>
+    <li><a href="http://jannypie.github.io#works">Workings</a></li>
   </ul>
 </nav>
     <h1>
@@ -66,22 +48,24 @@ _________,   ___/ /  ,__________
     </h1>
     <h4 class="subtitle">Web Developer</h4>
 </header>
-      <aside id="intro">
+      <section id="intro">
         <div class="container">
-          <img class="hexagon" src="images/janstache.png" alt="Janstache">
-          <div>
+          <div class="col-third">
+            <img class="hexagon column-third--left" src="images/janstache.png" alt="Janstache">
+          </div>
+          <div class="col-twothird">
             <h2>Why, hello there.</h2>
             <p class="excerpt">Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit. Nizzle sapien velizzle, bling bling volutpat, suscipit , gravida vel, arcu. Check it out hizzle that's the shizzle. We gonna chung erizzle. Fo izzle dolor fo turpis tempizzle tempor. Gangsta boom shackalack mofo et turpizzle. Sizzle izzle tortor. Pellentesque uhuh ... yih!</p>
           </div>
         </div>
-      </aside>
+      </section>
       <main class="container">
         <aside id="intro-cont">
   <h4>About this</h4>
-  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
+  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
   <p>Jan is a Web Developer with strong interests in UX and front-end design. She recently graduated as a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, OH. She does not actually have a mustache.</p>
 </aside>
-<section class="column-me">
+<section class="col-half">
   <h2 id="writings">Writings</h2>
   
     
@@ -160,8 +144,10 @@ _________,   ___/ /  ,__________
     <a href="archive.html">View all the entries</a>
   </div>
 </section>
-<aside class="sidebar column-me">
-  <section>
+<section id="works" class="col-half"><h2>Workings</h2>
+</section>
+<aside class="container">
+  <section class="col-third">
     <h4>Past Posts</h4>
     
     
@@ -190,7 +176,7 @@ _________,   ___/ /  ,__________
 	
 </div><!-- end teasers row -->
   </section>
-  <section id="works">
+  <section class="col-third">
     <h4>Web Works</h4>
       <ul>
         <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
@@ -198,6 +184,8 @@ _________,   ___/ /  ,__________
         <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
         <li><a href="http://jannypie.github.io/cheat-sheet.html" title="JSON Cheat Sheet">JSON Cheat Sheet</a></li>
       </ul>
+  </section>
+  <section class="col-third">
     <h4>Art Works</h4>
       <ul>
         <li><a href="/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>

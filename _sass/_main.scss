@@ -16,17 +16,11 @@ header, footer, section {
 }
 .container {
   margin: 0 auto;
-  max-width: 768px;
+  width: 100%;
+  max-width: $body-width;
+  overflow: auto;
 }
-/* Columns */
-.column--left, .column--right {
-  display: inline-block;
-  float: left;
-  width: (768/2 - $spacing*4);
-}
-.column--right {
-  margin-left: $spacing*8;
-}
+
 /* Float Blocks */
 .float--right {
   float: right;
@@ -108,14 +102,6 @@ a:hover {
   color: $yellow;
 }
 
-
-/* Header Typography */
-header h1 {
-  display: inline-block;
-  margin-right: $spacing;
-  margin-bottom: $spacing*3;
-}
-
 /* Special General Typography Styles */
 .comment {
   color: $light-gray;
@@ -134,6 +120,10 @@ header h1 {
   left: -99999px;
 }
 
+// Images
+img {
+  max-width: 100%;
+}
 
 // Blockquotes
 code {
@@ -175,4 +165,10 @@ blockquote .meta, .post blockquote .meta {
   display: block;
   text-align: right;
   margin: 0;
+}
+
+#intro, footer {
+  background: #737151;
+  color: whitesmoke;
+  overflow: auto;
 }
