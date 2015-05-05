@@ -188,9 +188,11 @@ blockquote .meta, .post blockquote .meta {
 #intro {
   background: #737151;
   color: whitesmoke;
+  padding: 2em 0;
   overflow: auto; }
 
 header {
+  background-color: #F2CA4F;
   background-image: url(/images/field-bg-480-low.png);
   background-size: cover;
   color: whitesmoke;
