@@ -2,7 +2,6 @@
 @media only screen and (min-width: 481px) {
   header {
     background-image: url(/images/field-bg-800-low.png);
-    background-image: url(/images/field-bg-800.jpg);
   }
   header h1 {
     margin-top: 30%;
@@ -14,7 +13,6 @@
   header {
     max-height: 100%;
     background-image: url(/images/field-bg-1600-low.png);
-    background-image: url(/images/field-bg-1600.jpg);
   }
     header h1 {
       font-size: 5em;
@@ -23,9 +21,10 @@
 @media only screen and (min-width: 1601px) {
   header {
     background-image: url(/images/field-bg-3200-low.png);
-    background-image: url(/images/field-bg-3200.jpg);
   }
 }
+
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
