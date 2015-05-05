@@ -1,0 +1,45 @@
+header {
+  background-image: url(/images/field-bg-480-low.png);
+  background-size: cover;
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 0;
+  height: 100%;
+  max-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+header {
+  background-image: url(/images/field-bg-480.jpg);
+}
+header h1 {
+  margin-top: 50%;
+  font-size: 3em;
+  text-shadow: 0px 0px 2px rgba(200,200,200,0.8);
+}
+header h1 a, header h1 a:visited {
+  color: whitesmoke;
+  border-bottom: 0;
+}
+header a:hover, nav a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+header .subtitle {
+  display: inline-block;
+  background: rgba(250,250,250,0.8);
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  color: #464f61;
+  font-size: 1.5em;
+}
+
+/* Posts and Pages */
+.page header, .post header {
+  max-height: 50%;
+}
+.post header h1, .page header h1 {
+  margin-top: 15%;
+  font-size: 5em;
+  mix-blend-mode: screen;
+}

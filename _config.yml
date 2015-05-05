@@ -6,3 +6,5 @@ pygments: true
 permalink: /:title
 # paginate: 10
 exclude: ["lib", "blog.rb", "Capfile", "config", "log", "Rakefile", "tmp"]
+sass:
+  sass_dir: _sass

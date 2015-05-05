@@ -19,46 +19,28 @@ _________,   ___/ /  ,__________
 <meta name="robots" content="noodp, noydir" />
 <meta name="description" content="Web development portfolio blog by Jan Dennison" />
 <link rel="canonical" href="/index.html" />
-
-<!-- The Links -->
 <link rel="shortcut icon" href="favicon.ico">
-<link href="/css/main.css" rel="stylesheet">
-<link href="/css/hexagon.css" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/base.css" rel="stylesheet">
 
 <!-- Link placeholder to change stylesheets -->
 <link class="style" href="#" rel="stylesheet">
+
 <!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Numans|Scada:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/css/fontello.css">
+
 <!-- Highlight Code Syntax -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 
     <body class="home">
       <header>
     <nav>
-  <ul class="short">
-    <li><a href="http://jannypie.github.io#intro">Introduction</a></li>
-    <li><a href="http://jannypie.github.io#writings">Writings</a></li>
-    <li><a href="http://jannypie.github.io#works">Works</a></li>
-  </ul>
-  <ul class="expanded">
+  <ul>
     <li><a href="http://jannypie.github.io#intro">Hellos</a></li>
-    <li><a href="http://jannypie.github.io/blog">Writings</a></li>
-    <li>Web Works:
-      <ul>
-        <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
-        <li><a href="http://codepen.io/jannypie/pen/lFysn" title="Bridge code sample on codepen">Pure CSS Golden Gate</a></li>
-        <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
-        <li><a href="http://jannypie.github.io/cheat-sheet.html" title="JSON Cheat Sheet">JSON Cheat Sheet</a></li>
-      </ul>
-    </li>
-    <li>Art Works:
-      <ul>
-        <li><a href="http://jannypie.github.io/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
-        <li><a href="http://jannypie.github.io/art-portfolio/wanderlust/">Wanderlust</a></li>
-      </ul>
-    </li>
+    <li><a href="http://jannypie.github.io#writings">Writings</a></li>
+    <li><a href="http://jannypie.github.io#works">Workings</a></li>
   </ul>
 </nav>
     <h1>
@@ -66,102 +48,105 @@ _________,   ___/ /  ,__________
     </h1>
     <h4 class="subtitle">Web Developer</h4>
 </header>
-      <aside id="intro">
+      <section id="intro">
         <div class="container">
-          <img class="hexagon" src="images/janstache.png" alt="Janstache">
-          <div>
+          <div class="col-third">
+            <img class="hexagon column-third--left" src="images/janstache.png" alt="Janstache">
+          </div>
+          <div class="col-twothird">
             <h2>Why, hello there.</h2>
             <p class="excerpt">Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit. Nizzle sapien velizzle, bling bling volutpat, suscipit , gravida vel, arcu. Check it out hizzle that's the shizzle. We gonna chung erizzle. Fo izzle dolor fo turpis tempizzle tempor. Gangsta boom shackalack mofo et turpizzle. Sizzle izzle tortor. Pellentesque uhuh ... yih!</p>
           </div>
         </div>
-      </aside>
+      </section>
       <main class="container">
         <aside id="intro-cont">
   <h4>About this</h4>
-  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong> (ignoring some experimental Chrome attributes), optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
+  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
   <p>Jan is a Web Developer with strong interests in UX and front-end design. She recently graduated as a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, OH. She does not actually have a mustache.</p>
 </aside>
-<section class="column-me">
+<section class="col-half">
   <h2 id="writings">Writings</h2>
   
-    
-    <article class="featured-post dbc-blog">
-      <h3>Design and Redesign For Blogging</h3>
-      <h4>Phase 0 Unit 3 Week 9 | Technical Blog #9</h4>
-<p><span class="meta">Feb 20, 2015</span>
-<a href="http://jannypie.github.io/blog/t9-blog-update.html" title="Read more">Read this blog post</a></p>
+  <article class="featured-post">
+    <h3 class="bold">Design and Redesign For Blogging</h3>
+    <span class="meta">February 20, 2015</span>
+    <p>Revisiting my blog appearance and functionality.</p>
+    <p><a href="/blog-design" rel="bookmark" title="Link to Design and Redesign For Blogging">Readme</a></p>
+  </article><!-- end row -->
 
+  <article class="featured-post">
+    <h3 class="bold">Help! Here we go!</h3>
+    <span class="meta">February 19, 2015</span>
+    <p>As we prepare to enter Dev Bootcamp, we look into asking good questions.</p>
+    <p><a href="/dbc-c9-questions" rel="bookmark" title="Link to Help! Here we go!">Readme</a></p>
+  </article><!-- end row -->
 
-      Revisiting my blog appearance and functionality.
-    </article><!-- end row -->
-    
+  <article class="featured-post">
+    <h3 class="bold">JavaScript Prototypes, I Think</h3>
+    <span class="meta">February 15, 2015</span>
+    <p>Less of an explanation, more of an exploration.</p>
+    <p><a href="/dbc-t8-tech" rel="bookmark" title="Link to JavaScript Prototypes, I Think">Readme</a></p>
+  </article><!-- end row -->
 
-    
-    <article class="featured-post dbc-blog">
-      <h3>Help! Here we go!</h3>
-      <h4>Phase 0 Unit 3 Week 9 | Cultural Blog #9</h4>
-<p><span class="meta">Feb 19, 2015</span>
-<a href="http://jannypie.github.io/blog/c9-questions.html" title="Read more">Read this blog post</a></p>
+  <article class="featured-post">
+    <h3 class="bold">Breathe Deeply And Think Clearly</h3>
+    <span class="meta">February 15, 2015</span>
+    <p>Resolving conflict by understanding emotions</p>
+    <p><a href="/dbc-c8-conflict" rel="bookmark" title="Link to Breathe Deeply And Think Clearly">Readme</a></p>
+  </article><!-- end row -->
 
+  <article class="featured-post">
+    <h3 class="bold">Fearless Values</h3>
+    <span class="meta">February  5, 2015</span>
+    <p>Thinking about your values can help you defy your fear.</p>
+    <p><a href="/dbc-c7-values" rel="bookmark" title="Link to Fearless Values">Readme</a></p>
+  </article><!-- end row -->
 
-      As we prepare to enter Dev Bootcamp, we look into asking good questions.
-    </article><!-- end row -->
-    
-
-    
-    <article class="featured-post dbc-blog">
-      <h3>JavaScript Prototypes, I Think</h3>
-      <h4>Phase 0 Unit 3 Week 8 | Technical Blog #8</h4>
-<p><span class="meta">Feb 15, 2015</span>
-<a href="http://jannypie.github.io/blog/t8-tech.html" title="Read more">Read this blog post</a></p>
-
-
-      Less of an explanation, more of an exploration.
-    </article><!-- end row -->
-    
-
-    
-    <article class="featured-post dbc-blog">
-      <h3>Breathe Deeply And Think Clearly</h3>
-      <h4>Phase 0 Unit 3 Week 8 | Cultural Blog #8</h4>
-<p><span class="meta">Feb 15, 2015</span>
-<a href="http://jannypie.github.io/blog/c8-conflict.html" title="Read more">Read this blog post</a></p>
-
-
-      Resolving conflict by understanding emotions
-    </article><!-- end row -->
-    
-
-    
-    <article class="featured-post dbc-blog">
-      <h3>Fearless Values</h3>
-      <h4>Phase 0 Unit 2 Week 7 | Cultural Blog #7</h4>
-<p><span class="meta">Feb 5, 2015</span>
-<a href="http://jannypie.github.io/blog/c7-values.html" title="Read more">Read this blog post</a></p>
-
-
-      Thinking about your values can help you defy your fear.
-    </article><!-- end row -->
-    
-
-    
-    <article class="featured-post dbc-blog">
-      <h3>Variations in Variables: JS v Ruby</h3>
-      <h4>Phase 0 Unit 3 Week 7 | Technical Blog #7</h4>
-<p><span class="meta">Feb 4, 2015</span>
-<a href="http://jannypie.github.io/blog/t7-JavaScript.html" title="Read more">Read this blog post</a></p>
-
-
-      It's like algebra. That's where the similarities end though.
-    </article><!-- end row -->
-    
+  <article class="featured-post">
+    <h3 class="bold">Variations in Variables: JS v Ruby</h3>
+    <span class="meta">February  4, 2015</span>
+    <p>It's like algebra. That's where the similarities end though.</p>
+    <p><a href="/dbc-t7-javascript" rel="bookmark" title="Link to Variations in Variables: JS v Ruby">Readme</a></p>
+  </article><!-- end row -->
 
   <div class="" id="view-all-entries">
     <a href="archive.html">View all the entries</a>
   </div>
 </section>
-<aside class="sidebar column-me">
-  <section>
+<section id="works" class="col-half">
+  <h2>Workings</h2>
+  <article class="featured-project">
+  <h3 class="bold">Devolio - Build your dev portfolio</h3>
+  <span class="meta">April 2015, ongoing</span>
+  <p><a href="https://devolio.herokuapp.com" rel="bookmark" title="Link to project">Project Link</a></p>
+  <p><a href="https://devolio.herokuapp.com" rel="bookmark" title="Link to project">Project Link</a></p>
+  <p>DEVOLIO merges traditional resume information with GitHub/Twitter activity to quickly and easily produce an attractive, informative job search profile. The app is responsive to look great on mobile at conferences, printable to look like a traditional resume, and uses D3.js to animate real activity data from GitHub. </p>
+  <p>Built with: Ruby, Rails, Backbone.js, JavaScript / AJAX, MongoDB, d3.js, GitHub API, Twitter API, Bootstrap responsive grid (custom design and CSS otherwise), Sass, CoffeeScript</p>
+  <p>As the Team Lead, I coordinated the project, as well as heading up the UI, visual design and code, and the Backbone.js integration.</p>
+  <p><a href="https://devolio.herokuapp.com/jannypie" title="Jan Dennison's Devolio">Check out my own Devolio page</a></p>
+</article>
+<article class="featured-project">
+  <h3 class="bold">Prototype Responsive Integration for Abercrombie &amp; Fitch</h3>
+  <span class="meta"></span>
+  <p></p>
+</article>
+<article class="featured-project">
+  <h3 class="bold"><a href="" rel="bookmark" title="Link to project">Pokédecks Flash Card Game</a></h3>
+  <span class="meta"></span>
+  <p>I was on a team that built this project over a weekend as practice with complex modeling and associations in a database. We implemented a full Agile workflow with frequent standups and peer-pairing, task tracking and review, and a team retro. I implemented the UI as well as vertical slices for user CRUD and some game play.</p>
+  <p>Built with: Ruby, Rails, CSS</p>
+  <p><a href="https://github.com/MaryCBaylis/TEAM-ROCKET-flash-cards" title="Pokedecks Github repo">See it on GitHub</a></p>
+</article>
+<article class="featured-project">
+  <h3 class="bold"><a href="" rel="bookmark" title="Link to project"></a></h3>
+  <span class="meta"></span>
+  <p></p>
+</article>
+
+</section>
+<aside class="container">
+  <section class="col-third">
     <h4>Past Posts</h4>
     
     
@@ -190,7 +175,7 @@ _________,   ___/ /  ,__________
 	
 </div><!-- end teasers row -->
   </section>
-  <section id="works">
+  <section class="col-third">
     <h4>Web Works</h4>
       <ul>
         <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
@@ -198,6 +183,8 @@ _________,   ___/ /  ,__________
         <li><a href="http://codepen.io/jannypie/pen/DcHdo" title="Quizzie in CSS/JS">Quizzie in CSS/JS</a></li>
         <li><a href="http://jannypie.github.io/cheat-sheet.html" title="JSON Cheat Sheet">JSON Cheat Sheet</a></li>
       </ul>
+  </section>
+  <section class="col-third">
     <h4>Art Works</h4>
       <ul>
         <li><a href="/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>

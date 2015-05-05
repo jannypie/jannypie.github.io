@@ -1,15 +1,8 @@
 {% for post in site.posts limit:6 %}
-    {% if post.categories contains 'dbc' %}
-    <article class="featured-post dbc-blog">
-      <h3>{{ post.title }}</h3>
-      {{ post.excerpt }}
-      {{ post.meta-description }}
-    </article><!-- end row -->
-    {% else %}
-    <article class="featured-post">
-      <h3> <a href="{{ post.url }}" rel="bookmark" title="Permanent link to {{ post.title }}">{{ post.title }}</a> </h3>
-      <span class="meta"> {{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }} </span>
-      <p> {{ post.meta-description }} </p>
-    </article><!-- end row -->
-    {% endif %}
+  <article class="featured-post">
+    <h3 class="bold">{{ post.title }}</h3>
+    <span class="meta">{{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }}</span>
+    <p>{{ post.meta-description }}</p>
+    <p><a href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}">Readme</a></p>
+  </article><!-- end row -->
 {% endfor %}

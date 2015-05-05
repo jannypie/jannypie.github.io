@@ -1,0 +1,173 @@
+/* Layout Styles */
+html, body {
+  height: 100%;
+}
+html {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+body {
+  box-sizing: inherit;
+}
+header, footer, section {
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $body-width;
+  overflow: auto;
+}
+
+/* Float Blocks */
+.float--right {
+  float: right;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.float--left {
+  float: left;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+.float--center {
+  clear: both;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* Typography Styles */
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-size: $spacing;
+  font-weight: 300;
+  line-height: $spacing*1.5;
+}
+p {
+  margin-bottom: $spacing;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing/2;
+  font-weight: 400;
+  line-height: 1em;
+}
+h1.title {
+  font-size: $spacing*4;
+}
+h1, h2 {
+  font-size: $spacing*1.75;
+  margin-bottom: $spacing*2;
+}
+h3 {
+  font-size: $spacing*1.15;
+}
+h4, h5, h6 {
+  font-size: $spacing;
+}
+.bold {
+  font-weight: 700;
+}
+.light {
+  font-weight: 300;
+}
+
+a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+/* Color Styles */
+body {
+  color: $near-black;
+}
+a {
+  color: $orange;
+  -webkit-transition: color 500ms ease-out;
+  -moz-transition: color 500ms ease-out;
+  -o-transition: color 500ms ease-out;
+  transition: color 500ms ease-out;
+}
+a:visited {
+  color: $tangerine;
+}
+a:hover {
+  color: $yellow;
+  text-decoration: underline;
+}
+[class*="icon-"]:hover {
+  color: $yellow;
+}
+
+/* Special General Typography Styles */
+.comment {
+  color: $light-gray;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.meta {
+  font-size: 0.9em;
+  color: #6E7881;
+  display: block;
+}
+.accessible {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+// Images
+img {
+  max-width: 100%;
+}
+
+// Blockquotes
+code {
+  background: #ddd;
+  padding: 0.25em 0.5em;
+  border: 1px solid silver;
+}
+pre code, blockquote {
+  background: #ddd;
+  padding: 1em;
+  line-height: 1.5em;
+  word-wrap:break-word;
+  border: 1px solid silver;
+  display: block;
+  text-align: left;
+  margin: 0;
+}
+blockquote {
+  padding: 2.5em 1em;
+  position: relative;
+}
+blockquote:before, blockquote:after {
+  content: '';
+  display: block;
+  font-size: 5em;
+  font-color: silver;
+  position: absolute;
+  color: #aaa;
+}
+blockquote:before {
+  top: 0.3em;
+  left: 0.3em;
+}
+blockquote:after {
+  top: 0.3em;
+  right: 0.3em;
+}
+blockquote .meta, .post blockquote .meta {
+  display: block;
+  text-align: right;
+  margin: 0;
+}
+
+#intro, footer {
+  background: #737151;
+  color: whitesmoke;
+  overflow: auto;
+}
