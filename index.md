@@ -16,7 +16,9 @@ meta-robots: "noodp, noydir"
     <a href="archive.html">View all the entries</a>
   </div>
 </section>
-<section id="works" class="col-half"><h2>Workings</h2>
+<section id="works" class="col-half">
+  <h2>Workings</h2>
+  {% include featured-projects.html %}
 </section>
 <aside class="container">
   <section class="col-third">
