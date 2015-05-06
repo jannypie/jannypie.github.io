@@ -1,7 +1,15 @@
+#preloader {
+  background-image: url(/images/field-bg-480.jpg);
+  background-position: -9999px -9999px;
+  display: inline;
+  width: 1px;
+  height: 1px;
+}
 header {
   background-color: #F2CA4F;
   background-image: url(/images/field-bg-480-low.png);
   background-size: cover;
+  background-repeat: no-repeat;
   color: whitesmoke;
   text-align: center;
   margin-top: 0;
