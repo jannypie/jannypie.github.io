@@ -192,24 +192,22 @@ blockquote .meta, .post blockquote .meta {
   overflow: auto; }
 
 #preloader {
-  background-image: url(/images/field-bg-480.jpg);
+  background: url(/images/field-bg-480.jpg);
   background-position: -9999px -9999px;
   display: inline;
   width: 1px;
   height: 1px; }
 
 header {
-  background-color: #F2CA4F;
-  background-image: url(/images/field-bg-480-low.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(/images/field-bg-480-low.png) top center/cover no-repeat;
   color: whitesmoke;
   text-align: center;
   margin-top: 0;
   height: 100%;
   max-height: 450px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: background 0.5s ease-in 1s; }
 
 header h1 {
   margin-top: 50%;
@@ -312,29 +310,29 @@ footer {
 
 @media only screen and (min-width: 481px) {
   #preloader {
-    background-image: url(/images/field-bg-800.jpg); }
+    background: url(/images/field-bg-800.jpg); }
 
   header {
-    background-image: url(/images/field-bg-800-low.png); }
+    background: url(/images/field-bg-800-low.png) top center/cover no-repeat; }
 
   header h1 {
     margin-top: 30%; } }
 @media only screen and (min-width: 801px) {
   #preloader {
-    background-image: url(/images/field-bg-1600.jpg); }
+    background: url(/images/field-bg-1600.jpg); }
 
   header {
     max-height: 100%;
-    background-image: url(/images/field-bg-1600-low.png); }
+    background: url(/images/field-bg-1600-low.png) top center/cover no-repeat; }
 
   header h1 {
     font-size: 5em; } }
 @media only screen and (min-width: 1601px) {
   #preloader {
-    background-image: url(/images/field-bg-3200.jpg); }
+    background: url(/images/field-bg-3200.jpg); }
 
   header {
-    background-image: url(/images/field-bg-3200-low.png); } }
+    background: url(/images/field-bg-3200-low.png) top center/cover no-repeat; } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

@@ -1,15 +1,12 @@
 #preloader {
-  background-image: url(/images/field-bg-480.jpg);
+  background: url(/images/field-bg-480.jpg);
   background-position: -9999px -9999px;
   display: inline;
   width: 1px;
   height: 1px;
 }
 header {
-  background-color: #F2CA4F;
-  background-image: url(/images/field-bg-480-low.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(/images/field-bg-480-low.png) top center / cover no-repeat;
   color: whitesmoke;
   text-align: center;
   margin-top: 0;
@@ -17,6 +14,7 @@ header {
   max-height: 450px;
   position: relative;
   overflow: hidden;
+  transition: background 0.5s ease-in 1s;
 }
 
 header h1 {

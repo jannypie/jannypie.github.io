@@ -1,5 +1,12 @@
 function replaceHeaderImg() {
-  $('header').css('background-image',$('#preloader').css('background-image'));
+
+  var bgimage = new Image();
+  bgimage.src = $('#preloader').css('background-image').replace("url(",'').replace(")",'');
+
+  $(bgimage).load(function(){
+    console.log("done!")
+    $('header').css('background',"url(" + $(bgimage).attr('src') + ") top center / cover no-repeat");
+  });
 }
 
 function swapCSS(e){
