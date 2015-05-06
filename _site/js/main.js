@@ -1,21 +1,5 @@
 function replaceHeaderImg() {
-  var headerImg = $('header').css("background-image").split("/images/");
-  switch(headerImg[1]) {
-    case 'field-bg-480-low.png)':
-      $('header').css("background-image",headerImg[0] + "/images/field-bg-480.jpg)");
-      break;
-    case 'field-bg-800-low.png)':
-      $('header').css("background-image",headerImg[0] + "/images/field-bg-800.jpg)");
-      break;
-    case 'field-bg-1600-low.png)':
-      $('header').css("background-image",headerImg[0] + "/images/field-bg-1600.jpg)");
-      break;
-    case 'field-bg-3200-low.png)':
-      $('header').css("background-image",headerImg[0] + "/images/field-bg-3200.jpg)");
-      break;
-    default:
-      console.log("Default");
-  }
+  $('header').css('background-image',$('#preloader').css('background-image'));
 }
 
 function swapCSS(e){
