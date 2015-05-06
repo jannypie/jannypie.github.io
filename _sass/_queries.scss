@@ -1,10 +1,10 @@
 
 @media only screen and (min-width: 481px) {
   #preloader {
-    background-image: url(/images/field-bg-800.jpg);
+    background: url(/images/field-bg-800.jpg);
   }
   header {
-    background-image: url(/images/field-bg-800-low.png);
+    background: url(/images/field-bg-800-low.png) top center / cover no-repeat;
   }
   header h1 {
     margin-top: 30%;
@@ -14,11 +14,11 @@
 
 @media only screen and (min-width: 801px) {
   #preloader {
-    background-image: url(/images/field-bg-1600.jpg);
+    background: url(/images/field-bg-1600.jpg);
   }
   header {
     max-height: 100%;
-    background-image: url(/images/field-bg-1600-low.png);
+    background: url(/images/field-bg-1600-low.png) top center / cover no-repeat;
   }
     header h1 {
       font-size: 5em;
@@ -26,10 +26,10 @@
 }
 @media only screen and (min-width: 1601px) {
   #preloader {
-    background-image: url(/images/field-bg-3200.jpg);
+    background: url(/images/field-bg-3200.jpg);
   }
   header {
-    background-image: url(/images/field-bg-3200-low.png);
+    background: url(/images/field-bg-3200-low.png) top center / cover no-repeat;
   }
 }
 
