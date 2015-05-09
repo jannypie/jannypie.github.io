@@ -1,10 +1,10 @@
 function replaceHeaderImg() {
 
-  var bgimage = new Image();
-  bgimage.src = $('#preloader').css('background-image').replace("url(",'').replace(")",'');
+  var bgLowImage = new Image(),
+      bgFullImage = new Image();
+  bgFullImage.src = $('#preloader').css('background-image').replace("url(",'').replace(")",'');
 
   $(bgimage).load(function(){
-    console.log("done!")
     $('header').css('background',"url(" + $(bgimage).attr('src') + ") top center / cover no-repeat");
   });
 }

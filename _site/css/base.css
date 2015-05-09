@@ -186,20 +186,13 @@ blockquote .meta, .post blockquote .meta {
   margin: 0; }
 
 #intro {
-  background: #737151;
+  background: #30a7bf;
   color: whitesmoke;
   padding: 2em 0;
   overflow: auto; }
 
-#preloader {
-  background: url(/images/field-bg-480.jpg);
-  background-position: -9999px -9999px;
-  display: inline;
-  width: 1px;
-  height: 1px; }
-
 header {
-  background: #CEB984;
+  background: #fff280 url(/images/yellow-field-480.jpg) bottom center/cover;
   color: whitesmoke;
   text-align: center;
   margin-top: 0;
@@ -212,7 +205,7 @@ header {
 header h1 {
   margin-top: 50%;
   font-size: 3em;
-  text-shadow: 0px 0px 2px rgba(200, 200, 200, 0.8); }
+  text-shadow: 0px 0px 2px rgba(200, 150, 100, 0.8); }
 
 header h1 a, header h1 a:visited {
   color: whitesmoke;
@@ -269,7 +262,7 @@ nav ul li:hover ul, nav ul li:focus ul {
   display: block; }
 
 nav li {
-  background: rgba(250, 250, 250, 0.8);
+  background: rgba(250, 250, 250, 0.7);
   color: #464f61;
   font-family: 'Scada', sans-serif;
   display: inline-block;
@@ -284,7 +277,8 @@ nav li {
 nav li a, nav li a:visited, nav ul li a {
   color: #464f61;
   text-decoration: none;
-  border: 0; }
+  border: 0;
+  font-size: 1.1em; }
 
 nav li:hover {
   background: #464f61;
@@ -309,27 +303,21 @@ footer {
   margin-top: 0; }
 
 @media only screen and (min-width: 481px) {
-  #preloader {
-    background: url(/images/field-bg-800.jpg); }
-
   header {
-    background: #CEB984; }
+    background: #fff280 url(/images/yellow-field-800.jpg) bottom center/cover; }
 
   header h1 {
     margin-top: 30%; } }
 @media only screen and (min-width: 801px) {
-  #preloader {
-    background: url(/images/field-bg-1600.jpg); }
-
   header {
     max-height: 100%;
-    background: #CEB984 top center / cover no-repeat; }
+    background: #fff280 url(/images/yellow-field-1600.jpg) bottom center/cover; }
 
   header h1 {
     font-size: 5em; } }
 @media only screen and (min-width: 1601px) {
   #preloader {
-    background: url(/images/field-bg-3200.jpg); }
+    background: #fff280 url(/images/yellow-field-2048.jpg) bottom center/cover; }
 
   header {
     background: #CEB984; } }

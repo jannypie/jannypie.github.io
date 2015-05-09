@@ -1,10 +1,7 @@
 
 @media only screen and (min-width: 481px) {
-  #preloader {
-    background: url(/images/field-bg-800.jpg);
-  }
   header {
-    background: #CEB984;
+    background: $header-bg url(/images/yellow-field-800.jpg) bottom center / cover;
   }
   header h1 {
     margin-top: 30%;
@@ -13,12 +10,9 @@
 }
 
 @media only screen and (min-width: 801px) {
-  #preloader {
-    background: url(/images/field-bg-1600.jpg);
-  }
   header {
     max-height: 100%;
-    background: #CEB984 top center / cover no-repeat;
+    background: $header-bg url(/images/yellow-field-1600.jpg) bottom center / cover;
   }
     header h1 {
       font-size: 5em;
@@ -26,7 +20,7 @@
 }
 @media only screen and (min-width: 1601px) {
   #preloader {
-    background: url(/images/field-bg-3200.jpg);
+    background: $header-bg url(/images/yellow-field-2048.jpg) bottom center / cover;
   }
   header {
     background: #CEB984;
