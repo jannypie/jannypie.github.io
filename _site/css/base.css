@@ -168,7 +168,7 @@ a:hover {
   top: -99999px;
   left: -99999px; }
 
-img {
+img, video {
   max-width: 100%; }
 
 code {
@@ -329,6 +329,9 @@ footer {
 .featured p {
   margin-top: 0; }
 
+.featured img {
+  width: 100%; }
+
 .post-img {
   max-height: 10em;
   display: block;
@@ -343,6 +346,9 @@ footer {
 
 #view-all-entries {
   margin-top: 2em; }
+
+#anf-rwd-vid {
+  height: 9em; }
 
 @media only screen and (min-width: 481px) {
   header {

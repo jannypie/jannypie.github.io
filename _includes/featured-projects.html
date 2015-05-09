@@ -1,29 +1,7 @@
-{% for post in site.posts %}
-  {% if post.categories contains 'project' %}
-  <article class="featured project">
-    <a class="post-img" href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}"><img src="{{ post.image }}" alt="Sample of {{ post.title }}"></a>
-    <h3 class="bold subtitle">{{ post.title }}</h3>
-    <p>{{ post.meta-description }}</p>
-  </article>
-  {% endif %}
+{% for project in site.projects reversed limit:6 %}
+<article class="featured project">
+  <a class="post-img" href="{{ project.url }}" rel="bookmark" title="Link to {{ project.title }}"><img src="{{ project.image }}" alt="Sample of {{ project.title }}"></a>
+  <h3 class="bold subtitle">{{ project.title }}</h3>
+  <p>{{ project.meta-description }}</p>
+</article>
 {% endfor %}
-<article class="featured-project">
-
-</article>
-<article class="featured-project">
-  <h3 class="bold">Prototype Responsive Integration for Abercrombie &amp; Fitch</h3>
-  <span class="meta"></span>
-  <p></p>
-</article>
-<article class="featured-project">
-  <h3 class="bold"><a href="{{ post.url }}" rel="bookmark" title="Link to project">Pokédecks Flash Card Game</a></h3>
-  <span class="meta"></span>
-  <p>I was on a team that built this project over a weekend as practice with complex modeling and associations in a database. We implemented a full Agile workflow with frequent standups and peer-pairing, task tracking and review, and a team retro. I implemented the UI as well as vertical slices for user CRUD and some game play.</p>
-  <p>Built with: Ruby, Rails, CSS</p>
-  <p><a href="https://github.com/MaryCBaylis/TEAM-ROCKET-flash-cards" title="Pokedecks Github repo">See it on GitHub</a></p>
-</article>
-<article class="featured-project">
-  <h3 class="bold"><a href="{{ post.url }}" rel="bookmark" title="Link to project">{{ post.title }}</a></h3>
-  <span class="meta"></span>
-  <p></p>
-</article>

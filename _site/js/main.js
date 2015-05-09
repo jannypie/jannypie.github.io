@@ -1,14 +1,3 @@
-function replaceHeaderImg() {
-
-  var bgLowImage = new Image(),
-      bgFullImage = new Image();
-  bgFullImage.src = $('#preloader').css('background-image').replace("url(",'').replace(")",'');
-
-  $(bgimage).load(function(){
-    $('header').css('background',"url(" + $(bgimage).attr('src') + ") top center / cover no-repeat");
-  });
-}
-
 function swapCSS(e){
   e.preventDefault();
   var style = $(this).attr('class');
@@ -63,7 +52,6 @@ function handlePinterestClick(e) {
 
 
 $(document).ready(function(){
-  replaceHeaderImg();
   swapImage();
   $('a.social.pinterest').click(handlePinterestClick);
   // $('.select-style a').click(swapCSS);

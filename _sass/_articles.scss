@@ -4,6 +4,9 @@
 .featured p {
   margin-top: 0;
 }
+.featured img {
+  width: 100%;
+}
 .post-img {
   max-height: 10em;
   display: block;
@@ -19,4 +22,9 @@
 
 #view-all-entries {
   margin-top: 2em;
+}
+
+// SPECIFIC POSTS
+#anf-rwd-vid {
+  height: 9em;
 }

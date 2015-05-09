@@ -19,7 +19,7 @@ meta-robots: "noodp, noydir"
 </section>
 <aside class="container">
   <section class="col-third">
-    <h4>Past Posts</h4>
+    <h3>Past Posts</h3>
     {% assign teasers = site.posts %}
     {% assign teasers_skip = 6 %}
     {% assign teasers_take = 4 %}
@@ -29,7 +29,7 @@ meta-robots: "noodp, noydir"
     </div>
   </section>
   <section class="col-third">
-    <h4>Web Works</h4>
+    <h3>Web Works</h3>
       <ul>
         <li><a href="http://codepen.io/jannypie/pen/kbdDg" title="Taj Majal code sample on codepen">Pure CSS Taj Mahal</a></li>
         <li><a href="http://codepen.io/jannypie/pen/lFysn" title="Bridge code sample on codepen">Pure CSS Golden Gate</a></li>
@@ -38,7 +38,7 @@ meta-robots: "noodp, noydir"
       </ul>
   </section>
   <section class="col-third">
-    <h4>Art Works</h4>
+    <h3>Art Works</h3>
       <ul>
         <li><a href="/art-portfolio/verisimilitude-sylva/">Verisimilitude Sylva</a></li>
         <li><a href="/art-portfolio/wanderlust/">Wanderlust</a></li>
