@@ -10,6 +10,11 @@
   display: block;
   margin: 0 auto; }
 
+.col-half > h2:first-of-type,
+.col-third > h2:first-of-type,
+.col-twothird > h2:first-of-type {
+  margin-top: 0; }
+
 @media only screen and (min-width: 481px) {
   .col-half, .col-third, .col-twothird {
     display: inline-block;
@@ -342,7 +347,13 @@ footer {
 
 .post-img:hover {
   height: 100%;
-  max-height: 100em; }
+  max-height: 25em; }
+
+.page h1 {
+  margin: 2em auto; }
+
+.page img {
+  margin-bottom: 2em; }
 
 #view-all-entries {
   margin-top: 2em; }

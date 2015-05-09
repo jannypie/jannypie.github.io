@@ -17,14 +17,26 @@
 }
 .post-img:hover {
   height: 100%;
-  max-height: 100em;
+  max-height: 25em;
 }
+
+.page h1 {
+  margin: 2em auto;
+}
+
+.page img {
+  margin-bottom: 2em;
+}
+
 
 #view-all-entries {
   margin-top: 2em;
 }
 
-// SPECIFIC POSTS
+// SPECIFIC ARTICLES
+article h2:first-of-type {
+
+}
 #anf-rwd-vid {
   height: 9em;
 }
