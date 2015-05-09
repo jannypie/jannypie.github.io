@@ -3,6 +3,10 @@
   width: 100%;
   overflow: auto;
 }
+.col-half > img, .col-third > img {
+  display: block;
+  margin: 0 auto;
+}
 @media only screen and (min-width: 481px) {
   .col-half, .col-third, .col-twothird {
     display: inline-block;
@@ -26,5 +30,8 @@
   .col-twothird {
     width: 65%;
     margin-left: 2.6%;
+  }
+  .col-half > img, .col-third > img {
+    display: inline;
   }
 }

@@ -1,8 +1,10 @@
 {% for post in site.posts limit:6 %}
-  <article class="featured-post">
-    <h3 class="bold">{{ post.title }}</h3>
-    <span class="meta">{{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }}</span>
-    <p>{{ post.meta-description }}</p>
-    <p><a href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}">Readme</a></p>
-  </article><!-- end row -->
+  {% if post.categories contains 'project' %} {% else %}
+    <article class="featured post">
+      <h3 class="bold">{{ post.title }}</h3>
+      <span class="meta">{{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }}</span>
+      <p>{{ post.meta-description }}</p>
+      <p><a class="button small" href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}">Readme</a></p>
+    </article><!-- end row -->
+  {% endif %}
 {% endfor %}

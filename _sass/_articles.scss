@@ -1,6 +1,22 @@
-.featured-post, .featured-project {
+.featured {
   margin-bottom: 4em;
 }
-.featured-post p, .featured-project p {
+.featured p {
   margin-top: 0;
+}
+.post-img {
+  max-height: 10em;
+  display: block;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+  overflow: hidden;
+}
+.post-img:hover {
+  height: 100%;
+  max-height: 100em;
+}
+
+#view-all-entries {
+  margin-top: 2em;
 }

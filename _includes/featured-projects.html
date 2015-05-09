@@ -1,12 +1,14 @@
+{% for post in site.posts %}
+  {% if post.categories contains 'project' %}
+  <article class="featured project">
+    <a class="post-img" href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}"><img src="{{ post.image }}" alt="Sample of {{ post.title }}"></a>
+    <h3 class="bold subtitle">{{ post.title }}</h3>
+    <p>{{ post.meta-description }}</p>
+  </article>
+  {% endif %}
+{% endfor %}
 <article class="featured-project">
-  <h3 class="bold">Devolio - Build your dev portfolio</h3>
-  <span class="meta">April 2015, ongoing</span>
-  <p><a href="https://devolio.herokuapp.com" rel="bookmark" title="Link to project">Project Link</a></p>
-  <p><a href="https://devolio.herokuapp.com" rel="bookmark" title="Link to project">Project Link</a></p>
-  <p>DEVOLIO merges traditional resume information with GitHub/Twitter activity to quickly and easily produce an attractive, informative job search profile. The app is responsive to look great on mobile at conferences, printable to look like a traditional resume, and uses D3.js to animate real activity data from GitHub. </p>
-  <p>Built with: Ruby, Rails, Backbone.js, JavaScript / AJAX, MongoDB, d3.js, GitHub API, Twitter API, Bootstrap responsive grid (custom design and CSS otherwise), Sass, CoffeeScript</p>
-  <p>As the Team Lead, I coordinated the project, as well as heading up the UI, visual design and code, and the Backbone.js integration.</p>
-  <p><a href="https://devolio.herokuapp.com/jannypie" title="Jan Dennison's Devolio">Check out my own Devolio page</a></p>
+
 </article>
 <article class="featured-project">
   <h3 class="bold">Prototype Responsive Integration for Abercrombie &amp; Fitch</h3>
