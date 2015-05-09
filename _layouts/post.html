@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-		<body class="post">
-			{% include header.html %}
-			<main class="container">
-				<article>
-					<h1> {{ page.title }} </h1>
-					<span class="meta"> {{ page.date | date: '%B' }} {{ page.date | date: '%e' }}, {{ page.date | date: '%Y' }} </span>
-					{{ page.content | unindent | markdownify }}
-				</article>
-			</main><!-- /container -->
-			{% include footer.html %}
-		</body>
+	<body class="post">
+		{% include header_post.html %}
+		<main class="container-fluid">
+			<article>
+				<h1> {{ page.title }} </h1>
+				<span class="meta"> {{ page.date | date: '%B' }} {{ page.date | date: '%e' }}, {{ page.date | date: '%Y' }} </span>
+				{{ page.content | unindent | markdownify }}
+			</article>
+		</main><!-- /container -->
+		{% include footer.html %}
+	</body>
 </html>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-		<body class="page">
-					{% include header.html %}
-			<main class="container">
-				{% include nav.html %}
-				<div class="content-wrap">
-						<h1> {{ page.title }} </h1>
-						{{ content }}
-					{% include footer.html %}
-				</div> <!-- /content-wrap -->
-			</main><!-- /container -->
-		</body>
+	<body class="page">
+		{% include header.html %}
+		<main class="container-fluid">
+			<h1> {{ page.title }} </h1>
+			{{ content }}
+		</main><!-- /container -->
+		{% include footer.html %}
+	</body>
 </html>

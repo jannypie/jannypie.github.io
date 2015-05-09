@@ -5,9 +5,9 @@ meta-description: "Web development portfolio blog by Jan Dennison"
 meta-robots: "noodp, noydir"
 ---
 <aside id="intro-cont">
-  <h4>About this</h4>
-  <p>This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
-  <p>Jan is a Web Developer with strong interests in UX and front-end design. She recently graduated as a <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> student in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, OH. She does not actually have a mustache.</p>
+  <p>Think of me as a Web Developer with special interests in UX/UI and accessibility. After several years working in web design and front-end, I recently attended <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, OH, to complete my education in back-end programming.</p>
+  <p>As someone who loves both coding and design, I delight in bridging front-end and back-end development. My diverse background reflects curiosity, persistence, and an ability to adapt. I bring together tech skills and personal strengths to meet the challenge of the ever-evolving user experience.</p>
+  <p>I do not actually have a mustache.</p>
 </aside>
 <section class="col-half">
   <h2 id="writings">Writings</h2>
