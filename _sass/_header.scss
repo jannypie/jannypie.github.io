@@ -34,11 +34,10 @@ header .subtitle {
 }
 
 /* Posts and Pages */
-.page header, .post header {
+.page header, .post header, .gallery header {
   max-height: 50%;
 }
-.post header h1, .page header h1 {
+.post header h1, .page header h1, .gallery header {
   margin-top: 15%;
   font-size: 5em;
-  mix-blend-mode: screen;
 }

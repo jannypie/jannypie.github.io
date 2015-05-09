@@ -32,7 +32,6 @@ nav li {
   color: #464f61;
   font-family: 'Scada', sans-serif;
   display: inline-block;
-  padding: 1em;
   position: relative;
     -webkit-transition: background-color 500ms ease-out;
     -moz-transition: background-color 500ms ease-out;
@@ -41,10 +40,12 @@ nav li {
   margin-bottom: 0.1em;
 }
 nav li a, nav li a:visited, nav ul li a {
+  display: block;
   color: #464f61;
   text-decoration: none;
   border: 0;
   font-size: 1.1em;
+  padding: 1em;
 }
 nav li:hover {
   background: #464f61;

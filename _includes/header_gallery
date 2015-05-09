@@ -1,6 +1,0 @@
-<header>
-    <h1>
-      <a href="{{ site.url }}" rel="bookmark" title="Jan Dennison">Jan Dennison</a>
-    </h1>
-    <p>Art &amp; Design</p>
-</header>

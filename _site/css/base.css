@@ -224,13 +224,12 @@ header .subtitle {
   font-size: 1.5em; }
 
 /* Posts and Pages */
-.page header, .post header {
+.page header, .post header, .gallery header {
   max-height: 50%; }
 
-.post header h1, .page header h1 {
+.post header h1, .page header h1, .gallery header {
   margin-top: 15%;
-  font-size: 5em;
-  mix-blend-mode: screen; }
+  font-size: 5em; }
 
 /* ============================
 Main Menu
@@ -266,7 +265,6 @@ nav li {
   color: #464f61;
   font-family: 'Scada', sans-serif;
   display: inline-block;
-  padding: 1em;
   position: relative;
   -webkit-transition: background-color 500ms ease-out;
   -moz-transition: background-color 500ms ease-out;
@@ -275,10 +273,12 @@ nav li {
   margin-bottom: 0.1em; }
 
 nav li a, nav li a:visited, nav ul li a {
+  display: block;
   color: #464f61;
   text-decoration: none;
   border: 0;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  padding: 1em; }
 
 nav li:hover {
   background: #464f61;
@@ -316,11 +316,8 @@ footer {
   header h1 {
     font-size: 5em; } }
 @media only screen and (min-width: 1601px) {
-  #preloader {
-    background: #fff280 url(/images/yellow-field-2048.jpg) bottom center/cover; }
-
   header {
-    background: #CEB984; } }
+    background: #fff280 url(/images/yellow-field-2048.jpg) bottom center/cover; } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

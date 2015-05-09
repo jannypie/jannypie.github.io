@@ -19,11 +19,8 @@
     }
 }
 @media only screen and (min-width: 1601px) {
-  #preloader {
-    background: $header-bg url(/images/yellow-field-2048.jpg) bottom center / cover;
-  }
   header {
-    background: #CEB984;
+    background: $header-bg url(/images/yellow-field-2048.jpg) bottom center / cover;
   }
 }
 
