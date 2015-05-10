@@ -1,14 +1,33 @@
 .featured {
   margin-bottom: 4em;
+  position: relative;
 }
+.page .featured {
+  display: inline-block;
+  max-width: 45%;
+  margin-right: 2%;
+  vertical-align: top;
+}
+
 .featured p {
   margin-top: 0;
 }
 .featured img {
   width: 100%;
 }
+a.featured-text {
+  @extend .button;
+  color: $gray;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.3);
+}
 .post-img {
-  max-height: 10em;
+  max-height: 20em;
   display: block;
   -webkit-transition: max-height 0.8s;
   -moz-transition: max-height 0.8s;
@@ -17,7 +36,7 @@
 }
 .post-img:hover {
   height: 100%;
-  max-height: 25em;
+  max-height: 24em;
 }
 
 .page h1 {

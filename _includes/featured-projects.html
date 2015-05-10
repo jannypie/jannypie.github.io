@@ -1,7 +1,9 @@
 {% for project in site.projects reversed limit:6 %}
 <article class="featured project">
   <a class="post-img" href="{{ project.url }}" rel="bookmark" title="Link to {{ project.title }}"><img src="{{ project.image }}" alt="Sample of {{ project.title }}"></a>
-  <h3 class="bold subtitle">{{ project.title }}</h3>
-  <p>{{ project.meta-description }}</p>
+  <a href="{{ project.url }}" class="featured-text">
+    <h3 class="bold subtitle">{{ project.title }}</h3>
+    <p>{{ project.meta-description }}</p>
+  </a>
 </article>
 {% endfor %}

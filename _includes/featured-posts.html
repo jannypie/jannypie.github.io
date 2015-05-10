@@ -1,8 +1,9 @@
 {% for post in site.posts limit:6 %}
 <article class="featured post">
-  <h3 class="bold">{{ post.title }}</h3>
-  <span class="meta">{{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }}</span>
-  <p>{{ post.meta-description }}</p>
-  <p><a class="button small" href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}">Readme</a></p>
+  <a class="post-img" href="{{ post.url }}" rel="bookmark" title="Link to {{ post.title }}"><img src="{{ post.image }}" alt="Sample of {{ post.title }}"></a>
+  <a href="{{ post.url }}" class="featured-text">
+    <h3 class="bold subtitle">{{ post.title }}</h3>
+    <p>{{ post.meta-description }}</p>
+  </a>
 </article>
 {% endfor %}

@@ -4,6 +4,7 @@ title: "Fearless Values"
 meta-description: "Thinking about your values can help you defy your fear."
 meta-robots: "noodp, noydir"
 categories: "dbc"
+image: "/assets/post-images/2015-02-05-dbc-c7-values.jpg"
 ---
 <h4>Phase 0 Unit 2 Week 7 | Cultural Blog #7</h4>
 <span class="meta">Feb 5, 2015</span>

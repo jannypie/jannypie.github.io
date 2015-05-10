@@ -1,14 +1,8 @@
 ---
-layout: "post" 
-title: "Pinning Dynamic Target Images With Custom Pinterest Buttons" 
-excerpt: "How to use a custom Pinterest bookmarklet to build dynamic pins"
+layout: "post"
+title: "Pinning Dynamic Target Images With Custom Pinterest Buttons"
 meta-description: "How to use a custom Pinterest bookmarklet to build dynamic pins"
 image: "/assets/post-images/pinterest.jpg"
-tags: javascript,pinterest,jquery
-category: 
-focal-vert: 
-focal-horz: 
-orientation: 
 ---
 
 <div class="toc">
@@ -27,22 +21,22 @@ For a current project at work, I needed to build a Pinterest feature that used a
 I wanted a "Pin It" button that was:
 1. Custom (not the gray/red buttons provided by Pinterest) to fit in with branding
 2. Would pin a specific image, not bring up all the images on the page
-3. The specific image is dynamic - which is to say: I didn't want to code a button for every image on the page - I wanted a button that would pin the feature image of the page, which the user can change by clicking thumbnails. 
+3. The specific image is dynamic - which is to say: I didn't want to code a button for every image on the page - I wanted a button that would pin the feature image of the page, which the user can change by clicking thumbnails.
 4. Would prefer not to use any third-party scripts or pinit.js (which forces the default Pin It button styles, and third-party might not be maintainable or necessary)
 
-There seemed to be Google solutions of two basic varieties available online: 
+There seemed to be Google solutions of two basic varieties available online:
 
 1. Use Pinterest's pinit.js code which will pin a specific image - but forces you to use their Pin button, and often forces you to hardcode each and every image you want to pin
     - [Widget Builder][1] hardcodes each Pinterest button per image, which is not useful for dynamic images
     - [Rich Pins][2] are a new feature - they use oEmbed or Semantic Markup to build pins with extra meta-data, which then requires Pinterest-side validation (which is poorly documented. Why does it require validation? What are they looking for?) of a specific URL, which is of course not useful in pre-published/test development or for a large site with many pages
 2. Use the bookmarklet code to pull up all images on a page and have the user select the one they want - allows you to use any button, but doesn't pin a specific image
     - [how to: create custom pinterest "pin-it" button on images][3] is a helpful post that comes with third-party script for showing a "pin it" button on hover-over of an image, which then launches the bookmarklet
-    - Two posts on brandaiddesignco.com: [Add a custom Pinterest pin it button to your website][4] and [Part 2][5] provide third-party scripts for applying the bookmarklet script to your page. 
+    - Two posts on brandaiddesignco.com: [Add a custom Pinterest pin it button to your website][4] and [Part 2][5] provide third-party scripts for applying the bookmarklet script to your page.
 
-<img src="/assets/post-images/etsy-thumbnails.jpg" class="float-right teaserthumb"> 
+<img src="/assets/post-images/etsy-thumbnails.jpg" class="float-right teaserthumb">
 
 A great example of what I wanted can be seen on Etsy.com listings. [In each listing][6], there is a large main image area with additional small image thumbnails that you can select and view fullsize in the main area. (Amazon.com is another example of this product page style setup). Etsy uses the Pinterest-made "Pin it" button to pin only the first image in a listing. However, sometimes the seller has better or more interesting images that they have not set as first, and I would *like* to pin those instead. Essentially: I want the "Pin it" button to pin whichever image I have loaded as the main view - not the default first image.
- 
+
 ## Solution
 
 The simple solution is to break down the bookmarklet code structure and combine it with jQuery to set variables, which are then used to build the bookmarlet URL. Here is a sample setup of images that we'll be pinning:
@@ -67,7 +61,7 @@ The simple solution is to break down the bookmarklet code structure and combine 
 	</div>
 </div>
 
-The large image inside "demo-full" is changed dynamically whenever a thumbnail to the left is selected. 
+The large image inside "demo-full" is changed dynamically whenever a thumbnail to the left is selected.
 
 <div id="tabs">
   <ul>
@@ -120,17 +114,17 @@ The next step is to deconstruct the Pinterest pin URL. Let's take a look:
 
     http://pinterest.com/pin/create/bookmarklet/?media=localhost%2Fassets%2Fpost-images%2Fsparrow-green.png&url=http%3A%2F%2Flocalhost%3A4000%2Fpinning-dynamic-target-images-with-custom-pinterest-buttons%2F&description=Green%20Sparrow%20Drawing%20by%20Jan%20Dennison%20%40jannypie
 
-And break it down: 
+And break it down:
 
     http://pinterest.com/pin/create/bookmarklet/
 
     ?media=localhost%2Fassets%2Fpost-images%2Fsparrow-green.png
 
     &url=http%3A%2F%2Flocalhost%3A4000%2Fpinning-dynamic-target-images-with-custom-pinterest-buttons%2F
-    
+
     &description=Green%20Sparrow%20Drawing%20by%20Jan%20Dennison%20%40jannypie
 
-The start is 
+The start is
 
     http://pinterest.com/pin/create/bookmarklet/
 
@@ -138,11 +132,11 @@ which can also be
 
     http://pinterest.com/pin/create/button/
 
-The URL has to have either /bookmarklet/ or /button/ (I tested). 
+The URL has to have either /bookmarklet/ or /button/ (I tested).
 
 Then you can build your string: **?media=** , **&url=** , **&description=** , etc. I would assume that all of the variables listed in [Rich Pins][2] can be included, although I then also assume they require you to do the validation process. Perhaps as my next project, I'll test which variables show up without being "validated."
 
-Once you have the string broken down, you can use jQuery to build a URL based on the variables of the main image showing: 
+Once you have the string broken down, you can use jQuery to build a URL based on the variables of the main image showing:
 
 	function buildPinterest() {
 	    var $currentImage = $('img.fullsize');
@@ -160,7 +154,7 @@ Once you have the string broken down, you can use jQuery to build a URL based on
 	    });
 	}
 
-You can see that I've encoded each variable to use in building the URL. I then use the URL to launch a new window when my custom Pinterest icon is clicked. 
+You can see that I've encoded each variable to use in building the URL. I then use the URL to launch a new window when my custom Pinterest icon is clicked.
 
 ### Expert Help Steps In
 
@@ -183,10 +177,10 @@ When you're learning javascript, it helps to have uber smart friends who take an
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
 	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
-	      
+
 	  return pinterestURL;
 	}
-	 
+
 	function handlePinterestClick(e) {
 	  e.preventDefault();
 	  var pinterestURL = buildPinterestURL();
@@ -202,15 +196,15 @@ When you're learning javascript, it helps to have uber smart friends who take an
 	  $('.demo-small').click(function(){
 	    $('.swatch').removeClass('active');
 	    $(this).addClass('active');
-	 
+
 	    var $newImg = $(this).find('img.sample'),
 	         newSrc = $newImg.attr('src'),
 	         newAlt = $newImg.attr('alt');
-	         
+
 	    $('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
 	  });
 	}
-	 
+
 	function buildPinterestURL() {
 	  var $currentImage   = $('img.fullsize');
 	  var bookmarkletURL  = 'http://pinterest.com/pin/create/bookmarklet/',
@@ -221,17 +215,17 @@ When you're learning javascript, it helps to have uber smart friends who take an
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
 	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
-	      
+
 	  return pinterestURL;
 	}
-	 
+
 	function handlePinterestClick(e) {
 	  e.preventDefault();
 	  var pinterestURL = buildPinterestURL();
 	  window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
 	  return false;
 	}
-	  
+
 	$(document).ready(function(){
 	  swapImage();
 	  $('a.social.pinterest').click(handlePinterestClick);
@@ -240,7 +234,7 @@ When you're learning javascript, it helps to have uber smart friends who take an
   </div>
 </div>
 
-And there you have it: the structure to build your own Pinterest button that pins whichever active image you have loaded. 
+And there you have it: the structure to build your own Pinterest button that pins whichever active image you have loaded.
 
 **Note:** You might have to tweak the mediaURL variable to get it pointing to the correct img src. I have this code on two test pages and one of them does not need the domain in front of $currentImage.attr('src') and one of them does.
 

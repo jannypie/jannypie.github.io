@@ -105,7 +105,7 @@ _________,   ___/ /  ,__________
             &lt;/div&gt;
         &lt;/div&gt;&lt;!-- end content --&gt;
     &lt;/div&gt;&lt;!-- end row --&gt;
-{% endfor %} 
+{% endfor %}
 </code></pre>
 
 <p>The basic structure of which is:</p>
@@ -129,8 +129,8 @@ end loop
 <p>The answer to the question was actually very simple - using <a href="http://blog.omgmog.net/post/adding-more-post-metadata-to-jekyll-with-yaml/" title="Adding More Post Metadata to Jekyll With YAML">custom YAML key:value pairs</a> in the head of each post to define the focal point of the image, and then applying Liquid output structure to pass them to the markup. I defined three custom variables (horizontal, vertical, and orientation) in the YAML front matter of each post:</p>
 
 <pre><code>---
-layout: "post" 
-title: "Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails" 
+layout: "post"
+title: "Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails"
 image: "/assets/post-images/IMG_0746.jpg"
 focal-vert: down-6
 focal-horz: right-3

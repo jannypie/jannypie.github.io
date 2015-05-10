@@ -67,7 +67,7 @@ _________,   ___/ /  ,__________
 I wanted a “Pin It” button that was:
 1. Custom (not the gray/red buttons provided by Pinterest) to fit in with branding
 2. Would pin a specific image, not bring up all the images on the page
-3. The specific image is dynamic - which is to say: I didn’t want to code a button for every image on the page - I wanted a button that would pin the feature image of the page, which the user can change by clicking thumbnails. 
+3. The specific image is dynamic - which is to say: I didn’t want to code a button for every image on the page - I wanted a button that would pin the feature image of the page, which the user can change by clicking thumbnails.
 4. Would prefer not to use any third-party scripts or pinit.js (which forces the default Pin It button styles, and third-party might not be maintainable or necessary)</p>
 
 <p>There seemed to be Google solutions of two basic varieties available online:</p>
@@ -236,10 +236,10 @@ I wanted a “Pin It” button that was:
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
 	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
-	      
+
 	  return pinterestURL;
 	}
-	 
+
 	function handlePinterestClick(e) {
 	  e.preventDefault();
 	  var pinterestURL = buildPinterestURL();
@@ -255,15 +255,15 @@ I wanted a “Pin It” button that was:
 	  $('.demo-small').click(function(){
 	    $('.swatch').removeClass('active');
 	    $(this).addClass('active');
-	 
+
 	    var $newImg = $(this).find('img.sample'),
 	         newSrc = $newImg.attr('src'),
 	         newAlt = $newImg.attr('alt');
-	         
+
 	    $('img.fullsize').attr('src',newSrc).attr('alt',newAlt);
 	  });
 	}
-	 
+
 	function buildPinterestURL() {
 	  var $currentImage   = $('img.fullsize');
 	  var bookmarkletURL  = 'http://pinterest.com/pin/create/bookmarklet/',
@@ -274,17 +274,17 @@ I wanted a “Pin It” button that was:
 	      description     = $currentImage.attr('alt') + " by Jan Dennison @jannypie",
 	      descriptionenc  = encodeURIComponent(description),
 	      pinterestURL    = bookmarkletURL + '?media=' + mediaURLenc + '&amp;url=' + shareURLenc + '&amp;description=' + descriptionenc;
-	      
+
 	  return pinterestURL;
 	}
-	 
+
 	function handlePinterestClick(e) {
 	  e.preventDefault();
 	  var pinterestURL = buildPinterestURL();
 	  window.open(pinterestURL,'_blank','width=750,height=350,toolbar=0,location=0,directories=0,status=0');
 	  return false;
 	}
-	  
+
 	$(document).ready(function(){
 	  swapImage();
 	  $('a.social.pinterest').click(handlePinterestClick);

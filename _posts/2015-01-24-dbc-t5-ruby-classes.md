@@ -4,6 +4,7 @@ title: "Adventures in Dragon Classes"
 meta-description: "Keep track of your dragon sightings with ruby Classes"
 meta-robots: "noodp, noydir"
 categories: "dbc"
+image: "/assets/post-images/2015-01-24-dbc-t5-ruby-classes.jpg"
 ---
 <h4>Phase 0 Unit 2 Week 5 | Technical Blog #5</h4>
 <span class="meta">Jan 24, 2015</span>

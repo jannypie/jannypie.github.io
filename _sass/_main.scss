@@ -2,14 +2,12 @@
 html, body {
   height: 100%;
 }
-html {
+* {
   -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
-body {
-  box-sizing: inherit;
-}
+
 header, footer, section {
   width: 100%;
   overflow: hidden;
@@ -41,6 +39,7 @@ header, footer, section {
 
 /* Typography Styles */
 body {
+  color: $near-black;
   font-family: 'Oxygen', sans-serif;
   font-size: $spacing;
   font-weight: 300;
@@ -79,21 +78,6 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
-.button {
-  display: inline-block;
-  padding: 1em 2em;
-  border: 1px solid $light-gray;
-  background: rgba(250,250,250,0.8);
-  -webkit-transition: background 0.8s, border-color 0.8s;
-  -moz-transition: background 0.8s, border-color 0.8s;
-  transition: background 0.8s, border-color 0.8s;
-}
-.button:hover {
-  text-decoration: none;
-  background: $yellow;
-  color: white;
-  border-color: $yellow;
-}
 .button.small {
   padding: 0.5em 1em;
 }
@@ -102,15 +86,12 @@ a {
 body {
   color: $near-black;
 }
-a {
-  color: $orange;
-  -webkit-transition: color 500ms ease-out;
-  -moz-transition: color 500ms ease-out;
-  -o-transition: color 500ms ease-out;
-  transition: color 500ms ease-out;
-}
-a:visited {
+a, a:visited {
   color: $tangerine;
+  -webkit-transition: color 0.8s;
+  -moz-transition: color 0.8s;
+  -o-transition: color 0.8s;
+  transition: color 0.8s;
 }
 a:hover {
   color: $yellow;
@@ -118,6 +99,21 @@ a:hover {
 }
 [class*="icon-"]:hover {
   color: $yellow;
+}
+
+.button {
+  background: rgba(250,250,250,0.9);
+  color: $gray;
+  display: block;
+  padding: 1em;
+  -webkit-transition: background 0.8s, color 0.8s;
+  -moz-transition: background 0.8s, color 0.8s;
+  transition: background 0.8s, color 0.8s;
+}
+.button:hover {
+  background: $tangerine;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 /* Special General Typography Styles */
