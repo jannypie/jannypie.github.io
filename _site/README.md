@@ -1,6 +1,10 @@
 # jannypie.github.io
 ==================
 
-This site is designed to be **responsive**, **HTML5 validated**, **CSS validated** (ignoring some experimental Chrome attributes), optimized for **accessibility**, with **minimal JavaScript** enhancements. It's also a github.io site with Jekyll blog integration.
+I am a Web Developer with special interests in UX/UI and accessibility. After several years working in web design and front-end, I recently attended Dev Bootcamp in the Localhost pilot cohort in Columbus, OH, to complete my education in back-end programming.
 
-Jan is a Front-End Developer with strong interests in UX and design. She is also currently a Dev Bootcamp student in the Localhost pilot cohort in Columbus, Oh. She thinks you rock!
+As someone who loves both coding and design, I delight in bridging front-end and back-end development. My diverse background reflects curiosity, persistence, and an ability to adapt. I bring together tech skills and personal strengths to meet the challenge of the ever-evolving user experience.
+
+---
+
+It's my website, I'll push to master if I want! (But I won't on yours, I promise.)
