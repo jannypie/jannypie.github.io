@@ -120,6 +120,9 @@ a {
 .button.small, nav li a.small, a.small.featured-text {
   padding: 0.5em 1em; }
 
+.button.inline, nav li a.inline, a.inline.featured-text {
+  display: inline-block; }
+
 /* Color Styles */
 body {
   color: #1a1a1a; }

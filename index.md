@@ -12,10 +12,16 @@ meta-robots: "noodp, noydir"
 <section class="col-half">
   <h2 id="writings">Writings</h2>
   {% include featured-posts.html %}
+  <div class="" id="view-all-entries">
+    <a class="button inline" href="archive.html" title="blog archive">All Posts</a>
+  </div>
 </section>
 <section id="works" class="col-half">
   <h2>Workings</h2>
   {% include featured-projects.html %}
+  <div class="" id="view-all-entries">
+    <a class="button inline" href="workings.html" title="project archive">All Projects</a>
+  </div>
 </section>
 <aside class="container">
   <section class="col-third">
@@ -24,9 +30,6 @@ meta-robots: "noodp, noydir"
     {% assign teasers_skip = 6 %}
     {% assign teasers_take = 4 %}
     {% include teasers.html %}
-    <div class="" id="view-all-entries">
-      <a class="button" href="archive.html" title="blog archive">Read More Posts</a>
-    </div>
   </section>
   <section class="col-third">
     <h3>Web Works</h3>
@@ -45,6 +48,3 @@ meta-robots: "noodp, noydir"
       </ul>
   </section>
 </aside>
-
-
-
