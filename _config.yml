@@ -11,3 +11,5 @@ sass:
 collections:
   projects:
     output: true
+  artworks:
+    output: true

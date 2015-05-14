@@ -1,0 +1,17 @@
+---
+layout: "page"
+title: "Artworks"
+meta-description: "Art portfolio by Jan Dennison"
+meta-robots: "noodp, noydir"
+---
+<section class="container">
+  {% for artwork in site.artworks reversed %}
+  <article class="featured post">
+    <a class="post-img" href="{{ artwork.url }}" rel="bookmark" title="Link to {{ artwork.title }}"><img src="{{ artwork.image }}" alt="Sample of {{ artwork.title }}"></a>
+    <a href="{{ artwork.url }}" class="featured-text">
+      <h3 class="bold subtitle">{{ artwork.title }}</h3>
+      <p>{{ artwork.meta-description }}</p>
+    </a>
+  </article>
+  {% endfor %}
+</section>
