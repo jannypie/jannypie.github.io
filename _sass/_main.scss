@@ -88,6 +88,10 @@ a {
 .button.inline {
   display: inline-block;
 }
+.button.special {
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /* Color Styles */
 body {

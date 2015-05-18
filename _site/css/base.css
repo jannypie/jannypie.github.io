@@ -126,6 +126,10 @@ a {
 .button.inline, nav li a.inline, a.inline.featured-text {
   display: inline-block; }
 
+.button.special, nav li a.special, a.special.featured-text {
+  text-align: center;
+  text-transform: uppercase; }
+
 /* Color Styles */
 body {
   color: #1a1a1a; }
