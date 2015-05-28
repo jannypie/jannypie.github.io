@@ -32,23 +32,20 @@ a.featured-text {
   max-height: 24em;
 }
 
-.page h1 {
-  margin: 2em auto;
+.page article h1, .post article h1 {
+  margin: 2.5em auto 1.5em;
 }
 
-.page img {
+.page img, .post img {
   margin-bottom: 2em;
 }
 
 
 #view-all-entries {
-  margin-top: 2em;
+  margin: 2em auto;
 }
 
 // SPECIFIC ARTICLES
-article h2:first-of-type {
-
-}
 #anf-rwd-vid {
   height: 9em;
 }
