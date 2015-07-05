@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+                 , ,
+_________,   ___/ /  ,__________
+ )__   /(    `-, )    )\    __(
+    )_/ |\____/ /____/| \__(
+     / \|____    _____|/ \
+        '    )  )     '
+            ( (
+             ))
+            ((  HERE BE DRAGONS
+             ``_,
+ -->
+<meta charset="utf-8">
+<title>Smart Hotel App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="" />
+<meta name="description" content="Design a hotel app that syncs with customer smart home apps." />
+<link rel="canonical" href="/projects/2015-06-16-hotel-app.html" />
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Stylesheets -->
+<link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/base.css" rel="stylesheet">
+
+<!-- Link placeholder to change stylesheets -->
+<link class="style" href="#" rel="stylesheet">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="/css/fontello.css">
+
+<!-- Highlight Code Syntax -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+	<body class="page">
+		<header>
+    <nav>
+  <ul>
+    <li><a href="http://jannypie.github.io#intro">Hellos</a></li>
+    <li><a href="http://jannypie.github.io/archive.html">Writings</a></li>
+    <li><a href="http://jannypie.github.io/workings.html">Workings</a></li>
+    <!-- <li><a href="http://jannypie.github.io/artings.html">Artings</a></li> -->
+  </ul>
+</nav>
+    <h1>
+      <a href="http://jannypie.github.io" rel="bookmark" title="Website for Jan Dennison">Jan Dennison</a>
+    </h1>
+</header>
+		<main class="container">
+			<h1> Smart Hotel App </h1>
+			<div class="col-third">
+  <img src="/assets/project-images/hotel.png" alt="Smart Hotel App">
+  <h3>Initial Wireframes</h3>
+  <p>Index</p>
+  <p><a href="https://camo.githubusercontent.com/1ab8ca743d3360865568757b7c6a3aa1fa8f7b66/687474703a2f2f692e696d6775722e636f6d2f5a70316a46706b6c2e6a7067" target="_blank" rel="noreferrer"><img src="https://camo.githubusercontent.com/1ab8ca743d3360865568757b7c6a3aa1fa8f7b66/687474703a2f2f692e696d6775722e636f6d2f5a70316a46706b6c2e6a7067" alt="Index" data-canonical-src="http://i.imgur.com/Zp1jFpkl.jpg" style="max-width:100%;"></a></p>
+  <p>Logged In wireframe</p>
+  <p><a href="https://camo.githubusercontent.com/fb4a20c81ff90b6dec50538daa4b53e8a1137e65/687474703a2f2f692e696d6775722e636f6d2f706c4e313962466c2e6a7067" target="_blank" rel="noreferrer"><img src="https://camo.githubusercontent.com/fb4a20c81ff90b6dec50538daa4b53e8a1137e65/687474703a2f2f692e696d6775722e636f6d2f706c4e313962466c2e6a7067" alt="Logged in" data-canonical-src="http://i.imgur.com/plN19bFl.jpg" style="max-width:100%;"></a></p>
+  <p>Grid</p>
+  <p><a href="https://camo.githubusercontent.com/b18b87de4afe4e543c622c1ffa29cb31e7a4a30a/687474703a2f2f692e696d6775722e636f6d2f42647a383858396c2e6a7067" target="_blank" rel="noreferrer"><img src="https://camo.githubusercontent.com/b18b87de4afe4e543c622c1ffa29cb31e7a4a30a/687474703a2f2f692e696d6775722e636f6d2f42647a383858396c2e6a7067" alt="Grid" data-canonical-src="http://i.imgur.com/Bdz88X9l.jpg" style="max-width:100%;"></a></p>
+  <h3>Refactored Wireframes</h3>
+  <p><a href="https://camo.githubusercontent.com/30d5d8ff7f2e5874d0e0c29408c7a014ba42f336/687474703a2f2f692e696d6775722e636f6d2f764848345239486c2e6a7067" target="_blank" rel="noreferrer"><img src="https://camo.githubusercontent.com/30d5d8ff7f2e5874d0e0c29408c7a014ba42f336/687474703a2f2f692e696d6775722e636f6d2f764848345239486c2e6a7067" alt="desktop" data-canonical-src="http://i.imgur.com/vHH4R9Hl.jpg" style="max-width:100%;"></a><br>
+  <a href="https://camo.githubusercontent.com/45dbfe20970622d32b05d56a59aea7d03987b83d/687474703a2f2f692e696d6775722e636f6d2f77376a334e6a4d6c2e6a7067" target="_blank" rel="noreferrer"><img src="https://camo.githubusercontent.com/45dbfe20970622d32b05d56a59aea7d03987b83d/687474703a2f2f692e696d6775722e636f6d2f77376a334e6a4d6c2e6a7067" alt="mobile" data-canonical-src="http://i.imgur.com/w7j3NjMl.jpg" style="max-width:100%;"></a></p>
+</div>
+<div class="col-twothird">
+  <h2>June 2015</h2>
+  <p><a href="http://codepen.io/jannypie/pen/aOypEm" class="button inline">See it on Codepen</a></p>
+  <p>UX/Design, HAML, Scss, Bootstrap (Grid), jQuery</p>
+  <hr>
+  <h3>Challenge</h3>
+  <p>A Hotel For You. Many hotel chains have loyalty programs to reward travelers who routinely stay with them. In our digital world of affordable home automation and streaming media, hotel rooms can be transformed into customizable environments which adapt to suit the preferences of their current occupant. Design a digital experience for a guest of such a hotel which will make them feel at home while away from home.</p>
+  <h3>Process</h3>
+  <p>I had a goal of spending only around 6 hours total on this project.</p>
+  <ul>
+    <li>Background research: 45 minutes</li>
+    <li>Codepen - Bootstrap (responsive grid), jQuery</li>
+    <li>Wireframe - Moqups, 45 minutes; grid, 10 minutes</li>
+    <li>Begin prototyping - 1hr</li>
+    <li>Refactor wireframe - 10m</li>
+    <li>Complete prototyping - 4.5hr</li>
+  </ul>
+  <h3>Brainstorming</h3>
+  <p>Room Settings</p>
+  <ul>
+    <li>Lighting</li>
+    <li>Temperature (Day/Night)</li>
+    <li>Bed</li>
+    <li>Accessibility</li>
+  </ul>
+  <p>Room Amenities</p>
+  <ul>
+    <li>Towels</li>
+    <li>Pillows</li>
+    <li>Fridge</li>
+    <li>Drinks/Snacks</li>
+    <li>TV</li>
+    <li>Music</li>
+  </ul>
+  <p>Others</p>
+  <ul>
+    <li>Floor</li>
+    <li>Cleaning Schedule</li>
+    <li>DND/Wakeups</li>
+    <li>Magazines</li>
+    <li>Valet/ Shuttle/ Car Service</li>
+    <li>Dry cleaning</li>
+    <li>Crib/Cot</li>
+    <li>Apple TV</li>
+  </ul>
+  <p>Potential Features</p>
+  <ul>
+    <li>Saved settings</li>
+    <li>Saved Rooms</li>
+    <li>Saved Cities</li>
+  </ul>
+  <h3>Research</h3>
+  <p>Hotel References</p>
+  <ul>
+    <li><a href="http://www.jdvhotels.com/hotels/california/los-angeles-hotels/custom-hotel/" rel="noreferrer">http://www.jdvhotels.com/hotels/california/los-angeles-hotels/custom-hotel/</a></li>
+    <li><a href="https://www.rewards-insiders.marriott.com/blogs/customer-advocacy/2013/03/08/how-to-select-room-preferences" rel="noreferrer">https://www.rewards-insiders.marriott.com/blogs/customer-advocacy/2013/03/08/how-to-select-room-preferences</a></li>
+  </ul>
+  <p>UX References</p>
+  <ul>
+    <li><a href="http://www.smartthings.com/">http://www.smartthings.com/</a></li>
+    <li><a href="https://www.savant.com/products">https://www.savant.com/products</a></li>
+    <li><a href="http://www.evolvecontrols.com/explore/automation-control">http://www.evolvecontrols.com/explore/automation-control</a></li>
+  </ul>
+  <h3>Conclusion</h3>
+  <p>Elements I thought were successful include:</p>
+    <ul>
+      <li>choice of background image for a casual, welcoming, home-like feel</li>
+      <li>iconography and tabbed sections workflow</li>
+      <li>responsive at key breakpoints</li>
+      <li>refactoring the wireframes after prototyping clarified my approach</li>
+    </ul>
+  <p>If time allowed (goal was to spend ~6 hours total), elements I would change or do differently would be:</p>
+  <ul>
+    <li>in small screen/mobile view, have icons and related section visbile together on one screen</li>
+    <li>complete Aria attributes for accessibility</li>
+    <li>style range inputs</li>
+    <li>experiment with alternate capitalization approaches (not all lowercase)</li>
+  </ul>
+</div>
+
+		</main><!-- /container -->
+		<footer>
+  <p class="container">This site is designed to be <strong>responsive</strong>, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's also a github.io site with Jekyll blog integration.</p>
+<a class="icon-twitter social" href="http://twitter.com/jannypie"><span class="accessible">Twitter</span></a> <a class="icon-github social" href="http://github.com/jannypie"><span class="accessible">GitHub</span></a> <a class="icon-linkedin social" href="http://linkedin.com/in/jldennison/"><span class="accessible">LinkedIn</span></a>
+</footer>
+
+<!-- The jQuery and scripts -->
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+	</body>
+</html>
