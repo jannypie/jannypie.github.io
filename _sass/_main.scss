@@ -82,16 +82,7 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
-.button.small {
-  padding: 0.5em 1em;
-}
-.button.inline {
-  display: inline-block;
-}
-.button.special {
-  text-align: center;
-  text-transform: uppercase;
-}
+
 
 /* Color Styles */
 body {
@@ -125,6 +116,26 @@ a:hover {
   background: $tangerine;
   color: whitesmoke;
   text-decoration: none;
+}
+.button.teal {
+  color: whitesmoke;
+  background: $teal;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.button.teal:hover {
+  color: $teal;
+  background: whitesmoke;
+}
+.button.small {
+  padding: 0.5em 1em;
+}
+.button.inline {
+  display: inline-block;
+}
+.button.special {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Special General Typography Styles */

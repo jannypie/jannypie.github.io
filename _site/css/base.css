@@ -123,16 +123,6 @@ a {
   font-weight: 400;
   text-decoration: none; }
 
-.button.small, nav li a.small, a.small.featured-text {
-  padding: 0.5em 1em; }
-
-.button.inline, nav li a.inline, a.inline.featured-text {
-  display: inline-block; }
-
-.button.special, nav li a.special, a.special.featured-text {
-  text-align: center;
-  text-transform: uppercase; }
-
 /* Color Styles */
 body {
   color: #1a1a1a; }
@@ -164,6 +154,26 @@ a:hover {
   background: #e5ac00;
   color: whitesmoke;
   text-decoration: none; }
+
+.button.teal, nav li a.teal, a.teal.featured-text {
+  color: whitesmoke;
+  background: #30a7bf;
+  font-weight: 700;
+  letter-spacing: 1px; }
+
+.button.teal:hover, nav li a.teal:hover, a.teal.featured-text:hover {
+  color: #30a7bf;
+  background: whitesmoke; }
+
+.button.small, nav li a.small, a.small.featured-text {
+  padding: 0.5em 1em; }
+
+.button.inline, nav li a.inline, a.inline.featured-text {
+  display: inline-block; }
+
+.button.special, nav li a.special, a.special.featured-text {
+  text-align: center;
+  text-transform: uppercase; }
 
 /* Special General Typography Styles */
 .comment {
