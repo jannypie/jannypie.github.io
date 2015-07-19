@@ -96,11 +96,10 @@ meta-robots: "noodp, noydir"
   </div>
   <h3>Personal Skills and Strengths</h3>
   <ul class="no-bullets">
-    <li><span class="icon-heart-empty"></span> I am highly empathetic, inclusive, thoughtful</li>
-    <li><span class="icon-heart-empty"></span> I value integrity and honesty</li>
-    <li><span class="icon-heart-empty"></span> I can look at complex information and distill key points</li>
-    <li><span class="icon-heart-empty"></span> I am adaptable, flexible, and persistent</li>
-    <li><span class="icon-heart-empty"></span> I am helpful and jump in where needed</li>
+    <li><span class="icon-heart-empty"></span>Highly empathetic, inclusive, team-oriented</li>
+    <li><span class="icon-heart-empty"></span>Value integrity and honesty over politics</li>
+    <li><span class="icon-heart-empty"></span>Can look at complex information and distill key points</li>
+    <li><span class="icon-heart-empty"></span>Creative, artistic, fun-loving</li>
   </ul>
 </aside>
 <section id="works">
