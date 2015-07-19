@@ -1,7 +1,7 @@
 {% assign projects = site.projects | order: path %}
 {% assign projects = projects | reverse %}
-{% for project in projects limit:6  %}
-  {% if project.categories contains 'featured' %}
+{% for project in projects limit:3  %}
+  {% if project.categories contains 'codepen' %}
   <article class="featured project">
     <a class="post-img" href="{{ project.url }}" rel="bookmark" title="Link to {{ project.title }}"><img src="{{ project.image }}" alt="Sample of {{ project.title }}"></a>
     <a href="{{ project.url }}" class="featured-text">

@@ -5,21 +5,125 @@ meta-description: "Web development portfolio blog by Jan Dennison"
 meta-robots: "noodp, noydir"
 ---
 <aside id="intro-cont">
-  <p>I am a Web Developer with special interests in UX/UI and accessibility. After several years working in web design and front-end, I recently attended <a href="http://devbootcamp.com" title="Dev Bootcamp website">Dev Bootcamp</a> in the <a href="http://local.devbootcamp.com" title="Information about the Localhost pilot">Localhost pilot cohort</a> in Columbus, OH, to complete my education in back-end programming.</p>
-  <p>As someone who loves both coding and design, I delight in bridging front-end and back-end development. My diverse background reflects curiosity, persistence, and an ability to adapt. I bring together tech skills and personal strengths to meet the challenge of the ever-evolving user experience.</p>
+  <p>Web Developer specializing in Front-End and UX/UI, with a professional background in research and design. As someone who loves both coding and design, I delight in bridging the two worlds. CSS and JavaScript are my passions as they are what bring the web to life, and deliver content to users in an infinite variety of ways.</p>
+  <p>My story reflects curiosity, persistence, and an ability to adapt. An urge to always be learning coupled with a sense of compassion and empathy drive me to better myself so that I can better serve others. I believe that our current world of growing web and software applications means that the user experience is ever-evolving, and I bring together technical skills and personal strengths to meet that challenge.</p>
   <p>I do not actually have a mustache.</p>
-</aside>
-<section class="col-half">
-  <h2 id="writings">Writings</h2>
-  {% include featured-posts.html %}
-  <div class="" id="view-all-entries">
-    <a class="button inline" href="archive.html" title="blog archive">All Posts</a>
+  <h3>Technical Skills</h3>
+  <div class="col-full">
+    <div class="col-third">
+      <ul class="accordion">
+        <li><input type="checkbox" id="item0" value=""><label for="item0">UX/Design</label>
+          <ul class="no-bullets">
+            <li>Research</li>
+            <li>Prototyping</li>
+            <li>Branding</li>
+            <li>Graphic Design</li>
+            <li>Typography</li>
+          </ul>
+        </li>
+        <li><input type="checkbox" id="item1" value=""><label for="item1">HTML/HTML5</label>
+          <ul class="no-bullets">
+            <li>Semantic DOM</li>
+            <li>Markdown</li>
+            <li>HAML</li>
+            <li>YAML</li>
+            <li>SEO</li>
+            <li>SVG</li>
+          </ul>
+        </li>
+        <li><input type="checkbox" id="item2" value=""><label for="item2">CSS/CSS3</label>
+          <ul class="no-bullets">
+            <li>Sass/Scss</li>
+            <li>Less</li>
+            <li>BEM</li>
+            <li>OOCSS</li>
+            <li>Animations</li>
+            <li>Transitions</li>
+            <li>Perspective</li>
+          </ul>
+        </li>
+        <li><input type="checkbox" id="item4" value=""><label for="item4">JavaScript</label>
+          <ul class="no-bullets">
+            <li>jQuery</li>
+            <li>AJAX</li>
+            <li>Libraries</li>
+            <li>Animations</li>
+            <li>Parallax</li>
+            <li>AngularJS</li>
+            <li>Backbone.js</li>
+            <li>d3.js</li>
+            <li>Coffeescript</li>
+          </ul>
+        </li>
+        <li><input type="checkbox" id="item5" value=""><label for="item5">Ruby</label>
+          <ul class="no-bullets">
+            <li>Rails</li>
+            <li>Sinatra</li>
+            <li>Rspec</li>
+            <li>Active Record</li>
+          </ul>
+        </li>
+        <li><input type="checkbox" id="item6" value=""><label for="item6">Databases</label>
+          <ul class="no-bullets">
+            <li>SQL/NoSQL</li>
+            <li>SQLite</li>
+            <li>Postgres</li>
+            <li>MongoDB</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-third">
+      <ul class="no-bullets">
+        <li>Agile Workflow</li>
+        <li>OO Programming</li>
+        <li>Version Control</li>
+        <li>Git/SVN</li>
+        <li>API/REST</li>
+        <li>Unit Testing/TDD</li>
+      </ul>
+    </div>
+    <div class="col-third">
+      <ul class="accordion">
+        <li>Web Performance</li>
+        <li>Accessibility</li>
+        <li>Responsiveness</li>
+        <li>Browser Support</li>
+        <li>Web Serving</li>
+        <li>Web Hosting</li>
+      </ul>
+    </div>
   </div>
-</section>
-<section id="works" class="col-half">
+  <h3>Personal Skills and Strengths</h3>
+  <ul class="no-bullets">
+    <li><span class="icon-heart-empty"></span> I am highly empathetic, inclusive, thoughtful</li>
+    <li><span class="icon-heart-empty"></span> I value integrity and honesty</li>
+    <li><span class="icon-heart-empty"></span> I can look at complex information and distill key points</li>
+    <li><span class="icon-heart-empty"></span> I am adaptable, flexible, and persistent</li>
+    <li><span class="icon-heart-empty"></span> I am helpful and jump in where needed</li>
+  </ul>
+</aside>
+<section id="works">
   <h2>Workings</h2>
   {% include featured-projects.html %}
   <div class="" id="view-all-entries">
     <a class="button inline" href="workings.html" title="project archive">All Projects</a>
   </div>
+</section>
+<section>
+  <div class="col-half">
+    <h2 id="writings">Writings</h2>
+    {% include featured-posts.html %}
+    <div class="" id="view-all-entries">
+      <a class="button inline" href="archive.html" title="blog archive">All Posts</a>
+    </div>
+  </div>
+  <div class="col-half">
+    <h2>Codepens</h2>
+    {% include featured-codepens.html %}
+    <div class="" id="view-all-codepens">
+      <a class="button inline" href="http://codepen.io/jannypie/" title="jannypie on codepen">All Codepens</a>
+    </div>
+  </div>
+
 </section>
