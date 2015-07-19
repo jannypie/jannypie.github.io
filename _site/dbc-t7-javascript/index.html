@@ -51,9 +51,72 @@ _________,   ___/ /  ,__________
       <main class="container">
         <article>
           <h1> Variations in Variables: JS v Ruby </h1>
-          <h4>Phase 0 Unit 3 Week 7 | Technical Blog #7</h4>
+          <!-- <h4>Phase 0 Unit 3 Week 7 | Technical Blog #7</h4>
 <span class="meta">Feb 4, 2015</span>
-<a href="http://jannypie.github.io/blog/t7-JavaScript.html" title="Read more">Read this blog post</a>
+<a href="http://jannypie.github.io/blog/t7-JavaScript.html" title="Read more">Read this blog post</a> -->
+<span class="meta">Feb 4, 2015</span>
+<section>
+  <h2>Here, let me hold that for you</h2>
+  <p><strong>Variables</strong> are staples of many programming languages, including JavaScript and Ruby. Just like we learned in high school algebra, a variable is simply a placeholder representing something else. Let's take a look at the similarities and differences in variables between Ruby and JavaScript.</p>
+  <h2>X = X</h2>
+  <p>In both Ruby and JavaScript, unlike algebra, programming variables can be standins for more than just numbers. Variables can hold strings, arrays, booleans, even whole objects and functions. Both can also take multiple variables declared on one line (although with different structure, and this structure isn't used very often as it's not as readable).</p>
+  <pre><code>
+    // JavaScript variables:
+    var x = "Jan rocks";
+    var y = true;
+    var z = 100;
+    // or
+    var x = "Jan rocks", y = true, z = 100;
+  </code></pre>
+  <pre><code class="ruby">
+    # Ruby variables:
+    x = "Jan rocks"
+    y = true
+    z = 100
+    # or
+    x, y, z = "Jan rocks", true, 100
+  </code></pre>
+  <p>Also in both languages, variables can have either <strong>global</strong> or <strong>local scope</strong>, and are accessed simply by calling the variable name.</p>
+  <pre><code class="js">
+    // Javascript
+    var global = "Anyone can access me!"; // this is a global variable
+
+    function foo() {
+        var local = "Only things inside foo() can access me!";
+        // this is a local variable
+        console.log(local);
+    }
+
+    console.log(global);
+  </code></pre>
+  <pre><code class="ruby">
+    # Ruby
+    $global = "Anyone can access me!"  # this is a global variable
+
+    def foo
+      local = "Only things inside .foo can access me!"
+      # this is a local variable
+      puts local
+    end
+
+    puts global
+  </code></pre>
+  <p>Those variable attributes are about the only things the languages have in common. Let's now look at what they do differently.</p>
+  <h2>JS != R</h2>
+  <p>Ruby actually has multiple explicit variable types with differing scopes and a different syntax for each.</p>
+  <pre><code class="ruby">
+    CONSTANT            # accessible by all, doesn't change AT ALL in program
+    $global_variable    # accessible by all
+    @@class_variable    # shared by all instances of a class
+    @instance_variable  # shared within one instance of a class
+    local_variable      # shared only within a method
+  </code></pre>
+  <p>Is a Constant still a variable when it is not variable? /deepthoughts</p>
+  <p>Syntax is also a bit different between the languages. As you can see from the first code example, JavaScript variables are introduced with <code>var</code>, whereas Ruby variables just get right to it.</p>
+  <p>One last difference is actually debatable: Ruby variables can simply be separated with a new line, whereas the JS variables all end with a semicolon. The debatable part is that JS doesn't <em>always</em> require the semicolon, and some versions will let you get away with leaving it off (or forgetting, if you're in the habit of writing Ruby). However, at least today that practice is not encouraged and most JS writers prefer that you go ahead and use the semicolon regardless.</p>
+  <p>So there you have it! Hopefully that was helpful to review variables in JS and Ruby and how they compare.</p>
+</section>
+
         </article>
       </main><!-- /container -->
       <footer>

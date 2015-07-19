@@ -17,7 +17,7 @@ _________,   ___/ /  ,__________
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Jan Dennison">
 <meta name="robots" content="" />
-<meta name="description" content="A few notes on my experience setting up a Jekyll blog on GitHub as a newbie NaP (Not a Programmer), along with some tips on getting started." />
+<meta name="description" content="A few notes on my experience setting up a Jekyll blog on GitHub, along with some tips on getting started." />
 <link rel="canonical" href="/beginning-jekyll-and-github-newbie-use-case" />
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -52,7 +52,9 @@ _________,   ___/ /  ,__________
 			<article>
 				<h1> GitHub Pages with Jekyll : A Newbie Use Case </h1>
 				<span class="meta"> July 19, 2013 </span>
-				<div class="toc">
+				<p><span class="meta alert">Note: This post is outdated, and not all of the installation details are the same. The Jekyll documentation has grown along with the software, so check there first!</span></p>
+
+<div class="toc">
 	<strong>Contents:</strong>
 	<h2>Introduction</h2>
 	<h3>What are GitHub Pages and Jekyll?</h3>
@@ -66,7 +68,7 @@ _________,   ___/ /  ,__________
 
 <h2 id="introduction">Introduction</h2>
 
-<p>As my first genuine post, I thought I’d share my experience setting up this blog site. I decided to start a blog chronicling my experiences moving into web development, so using web development tools to do so seemed apt. At the end of it all, I became comfortable with using the Terminal to preview my <a href="http://jekyllrb.com/" title="Jekyll Static Blogging">Jekyll</a> blog on my local computer and also to build the blog to send online, began learning <a href="http://wiki.shopify.com/Liquid" title="Liquid Templating for Designers">Liquid</a> templating, and started picking up the <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a> and <a href="http://jekyllrb.com/docs/frontmatter/" title="YAML Front End Matter">YAML</a> markup language basics.</p>
+<p>As my first Jekyll post, I thought I’d share my experience setting up this blog site. I decided to start a blog chronicling my experiences moving into web development, so using web development tools to do so seemed apt. At the end of it all, I became comfortable with using the Terminal to preview my <a href="http://jekyllrb.com/" title="Jekyll Static Blogging">Jekyll</a> blog on my local computer and also to build the blog to send online, began learning <a href="http://wiki.shopify.com/Liquid" title="Liquid Templating for Designers">Liquid</a> templating, and started picking up the <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a> and <a href="http://jekyllrb.com/docs/frontmatter/" title="YAML Front End Matter">YAML</a> markup language basics.</p>
 
 <p>Here I must tell you: I am NaP. That is, I am Not a Programmer. I am also Not a Number (NaN), which I am referencing to also identify that I am, indeed, NaP. So much of the resources available online for anything GitHub-related is (understandably so) written by programmers for other programmers. This calls in a whole host of assumptions that authors make when communicating to their audiences, such as familiarity with using the Command Terminal to enter information, commands and shortcuts, and so on. This is <strong>without question</strong> the biggest challenge I have faced in learning web development. Yes, some of these things are hard, and learning something new on your own is hard, but deciphering usable instructions from instructions written for someone else has undeniably been the greatest time commitment and mental challenge.</p>
 
@@ -114,7 +116,7 @@ _________,   ___/ /  ,__________
   <li>
     <p>JB Step 2: Install Jekyll Bootstrap</p>
 
-    <p>I tried entering these in the command line, and nothing was working. This was probably due to my having the wrong repo name, or other such user error. 
+    <p>I tried entering these in the command line, and nothing was working. This was probably due to my having the wrong repo name, or other such user error.
  I tried to go around it and simply navigate to the folders… I don’t really know.</p>
 
     <p>I did clone my repo to my desktop at this point, again using the GitHub app and not the command line.</p>
@@ -156,13 +158,13 @@ _________,   ___/ /  ,__________
     <ul>
       <li>Type up a sample post and save the file in your <em>posts</em> folder. Don’t forget your YAML Front Matter and to declare a template type, and save it as either Markdown or Textile (which I didn’t even try getting into)</li>
       <li>Launch Terminal</li>
-      <li>Navigate to where your repo is. In my case: 
+      <li>Navigate to where your repo is. In my case:
   &gt; $ cd /Users/jannypie/jannypie.github.io</li>
       <li>Tell jekyll to create a local version that you can preview before publishing
   &gt; $ jekyll serve –watch</li>
       <li>The –watch part of that means it will update on it’s own (for a while). If you close out of it the Terminal, you’ll have to type it in again. If you forget the –watch part, you’ll have to type it in again each time you want to check your work.</li>
       <li>Then you can open your browser to localhost:4000 to see it live</li>
-      <li>When you’re ready to push it live, type in 
+      <li>When you’re ready to push it live, type in
  &gt; $ jekyll build –watch</li>
       <li>This will create your site (each time, it builds the whole site over again) in the <em>site</em> folder</li>
       <li>Then go to your GitHub app (or however you do it) and commit those changes and sync them to the server</li>
@@ -175,7 +177,7 @@ _________,   ___/ /  ,__________
 
 <p>I am now at the point where I am able to write a post and have it show up, and have some sort of design to the site as well, by using the Liquid template tags that were laid out on <a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/" title="Migrating from WordPress to Jekyll">vittobotta.com</a>.  I have written this entire post in Markdown in order to learn and practice that language. Technically there is some YAML Front Matter around here, so I think that counts as using it.</p>
 
-<p>There are still things I need to work out: 
+<p>There are still things I need to work out:
 - How to use images
 - Setting up stand-alone pages (about, contact)
 - Robots and sitemap, and the behind-the-scenes part of the site

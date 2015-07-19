@@ -193,6 +193,15 @@ a:hover {
   top: -99999px;
   left: -99999px; }
 
+.success {
+  color: #30bf78; }
+
+.alert {
+  color: #e57339; }
+
+.error {
+  color: #f23d3d; }
+
 img, video {
   max-width: 100%; }
 

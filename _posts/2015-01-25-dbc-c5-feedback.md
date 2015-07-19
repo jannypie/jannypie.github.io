@@ -6,6 +6,15 @@ meta-robots: "noodp, noydir"
 categories: "dbc"
 image: "/assets/post-images/2015-01-25-dbc-c5-feedback.jpg"
 ---
-<h4>Phase 0 Unit 2 Week 5 | Cultural Blog #5</h4>
+<!-- <h4>Phase 0 Unit 2 Week 5 | Cultural Blog #5</h4>
 <span class="meta">Jan 25, 2015</span>
-<a href="http://jannypie.github.io/blog/c5-feedback.html" title="Read more">Read this blog post</a>
+<a href="http://jannypie.github.io/blog/c5-feedback.html" title="Read more">Read this blog post</a> -->
+<span class="meta">Jan 25, 2015</span>
+<section>
+  <h2>Pairing</h2>
+  <p>Paired programming has been one aspect of development that I have wanted to experience for quite a while, and part of the attraction of the Dev Bootcamp program. I knew that pairing was highly stressed in the program and was excited for that aspect. Working in tandem with other programmers or designers, business owners, back-end engineers, and more is one aspect of working in an agile manner, recommended by modern developers. Unfortunately it's something that older companies following waterfall-style workflows usually don't incorporate.</p>
+  <p>Pairing with other students in my cohort and also with previous Bootcamp grads in guided sessions has been as rewarding as I had expected. It's a really great way to solve difficult problems, and to learn new approaches and techniques. It feels rewarding when I am able to provide a solution that the other person hasn't thought of, and when we are able to complete an assignment more quickly than I do on my own. The only difficult part of pairing so far has been overcoming my own anxiety and introversion and engaging with my pair.</p>
+  <h2>Feedback</h2>
+  <p>Part of our pairing requirements is to leave and rate feedback for others, using Dev Bootcamp's ASK guides: Actionable, Specific, and Kind. I enjoy getting feedback from my pair peers. I don't find the required radio button statements to be particularly helpful, but the written statements are. Feedback from my pairs has contained some useful tips, such as using the command line more frequently, which I incorporate into my work.</p>
+  <p>Writing feedback is more difficult to do than the pairing it seems at times. It forces me to think more acutely about the pair, rather than having general "It was good" feels. The feedback that I have left has been rated well for Kindness, but I could do better on Specific and Actionable. Actionable is probably the most difficult for me because I often can't think of anything to suggest for my pair. I have kept those two in mind more when I left recent feedback and will continue to practice.</p>
+</section>

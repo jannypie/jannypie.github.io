@@ -2,7 +2,7 @@
 layout: "post"
 title: "Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images"
 meta-description: "How I used Focal Point with Jekyll to create pure CSS Adaptive Post Thumbnails"
-image: "/assets/post-images/focal-point-image.png"
+image: "/assets/post-images/focal-point-before.png"
 ---
 
 ## Introduction

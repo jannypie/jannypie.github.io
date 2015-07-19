@@ -2,7 +2,7 @@
 layout: "post"
 title: "Pinning Dynamic Target Images With Custom Pinterest Buttons"
 meta-description: "How to use a custom Pinterest bookmarklet to build dynamic pins"
-image: "/assets/post-images/pinterest.jpg"
+image: "/assets/post-images/etsy-thumbnails.jpg"
 ---
 
 <div class="toc">

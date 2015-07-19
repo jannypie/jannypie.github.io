@@ -6,6 +6,28 @@ meta-robots: "noodp, noydir"
 categories: "dbc"
 image: "/assets/post-images/2014-12-16-dev-bootcamp-t1.jpg"
 ---
-<h4>Phase 0 Unit 1 Week 1 | Technical Blog #1</h4>
+<!-- <h4>Phase 0 Unit 1 Week 1 | Technical Blog #1</h4>
 <span class="meta">Dec 14, 2014</span>
-  <a href="http://jannypie.github.io/blog/t1-git-blog.html" title="Read more">Read this blog post</a>
+  <a href="http://jannypie.github.io/blog/t1-git-blog.html" title="Read more">Read this blog post</a> -->
+  <span class="meta">Dec 14, 2014</span>
+
+  <section>
+    <h3>Why Version Control Rocks</h3>
+    <p>Once, in the sixth grade, my social studies teacher was presenting a unit on different types of governments, and broke our class up into groups each with a different assigned government type. Every group then had to create a building of some kind from paper, with the group dynamic determined by which governing style they'd been assigned. My group were the anarchists, and the rules were simple: no one was in charge, we weren't allowed to communicate ahead of time how we would build, and weren't allowed to organize building supplies.</p>
+    <p>Strangely enough, our building process turned out quite serene. Not having been allowed to divide up the labor, we had all brought plenty of paper, tape, and scissors. We seemingly without words all began rolling columns for a beautiful Parthenon. We chatted amiably as our Greek temple came together while around us the Monarchs, Dictators, and Presidents issued forth commands and the Communists were all talking over one another. I'm not entirely sure our group dynamic was the expected result, a suspicion enhanced when our teacher started throwing chalkboard erasers at it to simulate "natural disasters," followed by throwing the entire half-rebuilt Parthenon out the window into the rain, but we actually were going along quite smoothly together.</p>
+    <p>When several people are working on a code project together and committing changes to a single document, conflicting commits are like the flying chalkboard erasers of disaster. No matter how nicely we all are working together, eventually code will be committed to the same file that erased something just entered by someone else, and everyone has to stop what they're doing and figure out what went wrong and how to fix it. If this happens enough times, one of you will eventually threaten to throw the whole thing out the window. It's a scientific fact.</p>
+    <p>Version control, more commonly known as saving your work lots and lots of times, becomes an incredibly helpful way to keep actual anarchy at bay. Saving versions creates copies of the project along the way, including who made what changes and when, and it's incredibly useful for tracking down conflicts, bugs, errors, and more. Versioning lets you always have backup Parthenon's to go back to when the current version is stomped on by your teacher's very sensible footwear. And, well, if someone *does* throw their computer out the window, you can still keep working on the copy safely backed up to the internet.</p>
+  </section>
+  <section>
+    <h3>How Git Prevents Natural Disasters*</h3>
+    <p>Git is a version control system that monitors files for changes, records specific changes in those files, and saves a version record of those changes, who committed them, and when. These commits form a log that can be reviewed as well as a snapshot of all the files at that time, which can be reverted to should any conflicts or errors come up in future versions.</p>
+    <small>*Git does not actually prevent real life natural disasters</small>
+  </section>
+  <section>
+    <h3>What GitHub Can Do To Help</h3>
+    <p>
+      GitHub is an online service that hosts, tracks, and organizes all of your files and version histories, so that you can go back through them all way back to the beginning of time.** It can be set up to work with files on your computer as well, and you can use git commands to sync the files here with the files there so that you can build your code palace online or offline. In addition, GitHub also has features for splitting off copies of your Parthenon, both as a branch within your own directory or as a new fork in someone else's directory, merging changes in with the working copy (pull requests), and a variety of other useful code-tracking tools so that you never lose where you were and you can always go back.
+    </p>
+    <p>Basically, if the Greeks had had GitHub, we'd all be living in beautiful buildings with expertly crafted columns right now.</p>
+    <small>**The Parthenon was built in 438 BC, so at least as far back as then.</small>
+  </section>

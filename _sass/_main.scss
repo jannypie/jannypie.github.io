@@ -154,6 +154,15 @@ a:hover {
   top: -99999px;
   left: -99999px;
 }
+.success {
+  color: $green;
+}
+.alert {
+  color: $orange;
+}
+.error {
+  color: $red;
+}
 
 // Images
 img, video {

@@ -51,10 +51,75 @@ _________,   ___/ /  ,__________
       <main class="container">
         <article>
           <h1> Separating CSS: IDs and Classes </h1>
-          <h4>Phase 0 Unit 1 Week 2 | Technical Blog #2</h4>
+          <!-- <h4>Phase 0 Unit 1 Week 2 | Technical Blog #2</h4> -->
 <!-- Date format Dec 14, 2014 -->
+<!-- <span class="meta">Dec 21, 2014</span>
+<a href="http://jannypie.github.io/blog/t2-css-design.html" title="Read more">Read this blog post</a> -->
 <span class="meta">Dec 21, 2014</span>
-<a href="http://jannypie.github.io/blog/t2-css-design.html" title="Read more">Read this blog post</a>
+<section>
+    <!-- Add paragraphs as blog post -->
+    <h2>Introduction</h2>
+    <p>When it comes to web development, I have a passion for creating good user experiences, I thrill in the challenge of constantly learning and growing, and I value the importance of developing responsibly.</p>
+
+    <p>But I <em>love</em> CSS.</p>
+
+    <p>I'm also an artist, and have spent much of my life pursuing artistic pleasures and learning techniques. And I clearly remember the moment when I fell in love with web development (although I didn't even know that's what it called was at the time). It was about ten years ago when I discovered the <a href="http://www.csszengarden.com" title="CSS Zen Garden">CSS Zen Garden</a>. As soon as I realized that CSS was like painting with code, I was in love. And as I grew to learn about the separation of HTML and CSS, and the responsibility of writing quality code, and the importance of future maintainability, I also came to believe in the needs for following best practices and taking the best care of my tools.</p>
+
+    <p>I'm certainly not an expert. I know that I have very far to go, which is why I am on this Dev Bootcamp path today. But I can share some of what I have learned, particularly in relation to best practices for linking up your HTML and CSS using selectors.</p>
+
+    <!-- copy and paste as many sections as you want to add paragraphs -->
+</section>
+<section>
+  <h2>Separating HTML &amp; CSS</h2>
+  <figure>
+    <img src="/blog/dbc-blog-imgs/zen-html-css.jpg" alt="CSS Zen Garden">
+    <figcaption><a href="http://www.csszengarden.com/220/" title="CSS Zen Garments">CSS Zen Garments</a> - CSS Zen Garden theme. HTML on the left, CSS on the right.</figcaption>
+  </figure>
+  <p>One core tenent of responsible web development is the separation of content/markup from style/presentation. All of the HTML is stored in one document, and all of the styles are in another. This makes sense for all manner of reasons - accessibility, SEO, maintainability and more - but one benefit of this approach is that, just like on CSS Zen Garden, we can swap out style sheets and have <a href="http://www.csszengarden.com/221/" alt="Zen">totally</a> <a href="http://www.csszengarden.com/215/" alt="Zen">different</a> <a href="http://www.csszengarden.com/156/" alt="Zen">appearances</a> without changing the markup. <em>Toadally</em>.</p>
+  <p>Now that we have separated our markup from the styles, however, we need a way for our stylesheet to know what styles go where. The CSS needs to know which elements get which styles. We do this by using CSS selectors. Selectors can be the element tags themselves, or attributes we give individual elements such as "id" and "class."
+    <pre><code>&lt;img class="image-class" id="image-id" src="image-source.jpg"></code></pre>
+  </p>
+  <p>To hook up our CSS, we usually target the tag directly, the class using ".class", or the id using "#id".
+    <pre><code>
+  img {
+    border: 1px solid black;
+    }
+    .class {
+    padding: 20px;
+    }
+    #id {
+    width: 100%;
+  }
+     </code> </pre>
+    <p>In the code above "img { }" will add a black border to every image on the page; ".class { }" will add padding to every element on the page that has been given that class in the markup; "#id { }" will give only that specific element a width of 100% (since we only ever use the same ID once on a page).</p>
+    <p>And we can narrow down to specific elements by writing
+      <pre><code>header h1 {
+      color: orange;
+      font-size: 40px;
+      }</code></pre>
+      which will apply that style only to h1-titles within a header container
+      <pre><code>&lt;header>
+      &lth1>Jan&lt;/h1>
+      &lt;/header></code>
+</pre>
+    </p>
+  </p>
+  <p><a href="http://codeguide.co/" alt="Code Guide">Code Guide</a> has a great reference of easy-to-reference best practices for using CSS selectors. Here are a few basics:
+    <blockquote>
+      <ul>
+        <li>Use classes over generic element tag for optimum rendering performance.</li>
+        <li>Keep selectors short and strive to limit the number of elements in each selector to three.</li>
+        <li>Use meaningful names; use structural or purposeful names over presentational.</li>
+        <li>Keep classes as short and succinct as possible.</li>
+        <li>Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., <code>.btn</code> and <code>.btn-danger</code>).</li>
+        <li>Avoid excessive and arbitrary shorthand notation. <code>.btn</code> is useful for <em>button</em>, but <code>.s</code> doesn't mean anything.</li>
+      </ul>
+    </blockquote>
+    IDs can raise issues with <em>specificity</em> (which needs it's own blog post to be well-understood) and are not recommended to be used with CSS any longer. (You'll still see it all the time, but we're trying to get away from it.)
+  </p>
+  <p><a href="http://philbaker.me/blog/2014/02/css-class-naming-and-bem-contemporary-practice/" alt="BEM">CSS class naming and BEM: Contemporary practice</a> is another helpful resource for learning how to chose class names for your work. I'd <a href="http://memecrunch.com/meme/KON1/toadally/image.jpg" alt="toadally"><em>toadally</em></a> suggest checking it and the Code Guide out for more information!</p>
+</section>
+
         </article>
       </main><!-- /container -->
       <footer>
