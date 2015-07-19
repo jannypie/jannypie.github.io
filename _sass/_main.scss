@@ -224,6 +224,7 @@ blockquote .meta, .post blockquote .meta {
   }
   label {
     color: $pink;
+    cursor: pointer;
     width: 100%;
     height: 100%;
     position: relative;
@@ -236,7 +237,7 @@ blockquote .meta, .post blockquote .meta {
     	font-weight: normal;
     	font-variant: normal;
     	text-transform: none;
-    	line-height: 2;
+    	line-height: 1.5;
       display: block;
       position: absolute;
       left: 0;
