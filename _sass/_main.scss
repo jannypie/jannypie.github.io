@@ -210,6 +210,57 @@ blockquote .meta, .post blockquote .meta {
   margin-bottom: 2em;
 }
 
-ul.no-bullets {
+// Lists
+.no-bullets {
   list-style-type: none;
+  margin: 0;
+}
+
+.accordion {
+  list-style-type: none;
+  margin: 0;
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    color: $pink;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 1.5em;
+    &:before {
+    	content: "\e602";
+      font-family: 'icomoon';
+    	speak: none;
+    	font-style: normal;
+    	font-weight: normal;
+    	font-variant: normal;
+    	text-transform: none;
+    	line-height: 2;
+      display: block;
+      position: absolute;
+      left: 0;
+      transform: rotate(0deg);
+      transition: all 300ms linear;
+    }
+  }
+  input:checked + label:before {
+    transform: rotate(180deg);
+  }
+  ul {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+  }
+  input ~ ul {
+    line-height: 0em;
+    opacity: 0;
+    transition: opacity 300ms ease, line-height 300ms linear;
+    overflow: hidden;
+
+  }
+  input:checked ~ ul {
+    line-height: 1.5em;
+    opacity: 1;
+  }
+
 }

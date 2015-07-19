@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen:400,300,700");
 /* Variables */
 .col-full {
-  clear: both; }
+  clear: both;
+  overflow: auto;
+  width: 100%; }
 
 .col-half, .col-third, .col-twothird {
   display: block;
@@ -241,8 +243,48 @@ blockquote .meta, .post blockquote .meta {
   overflow: auto;
   margin-bottom: 2em; }
 
-ul.no-bullets {
-  list-style-type: none; }
+.no-bullets {
+  list-style-type: none;
+  margin: 0; }
+
+.accordion {
+  list-style-type: none;
+  margin: 0; }
+  .accordion input[type="checkbox"] {
+    display: none; }
+  .accordion label {
+    color: #e5398f;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 1.5em; }
+    .accordion label:before {
+      content: "\e602";
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 2;
+      display: block;
+      position: absolute;
+      left: 0;
+      transform: rotate(0deg);
+      transition: all 300ms linear; }
+  .accordion input:checked + label:before {
+    transform: rotate(180deg); }
+  .accordion ul {
+    margin: 0;
+    padding: 0 0 0 1.5em; }
+  .accordion input ~ ul {
+    line-height: 0em;
+    opacity: 0;
+    transition: opacity 300ms ease, line-height 300ms linear;
+    overflow: hidden; }
+  .accordion input:checked ~ ul {
+    line-height: 1.5em;
+    opacity: 1; }
 
 header {
   background: #fff280 url(/images/yellow-field-480.jpg) bottom center/cover;

@@ -1,5 +1,7 @@
 .col-full {
   clear: both;
+  overflow: auto;
+  width: 100%;
 }
 .col-half, .col-third, .col-twothird {
   display: block;
