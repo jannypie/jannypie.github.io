@@ -1,6 +1,5 @@
-
 header {
-  background: $tangerine;
+  background: $header-bg url(/images/yellow-field-480.jpg) no-repeat right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,12 +11,30 @@ header {
   max-height: 450px;
   position: relative;
   overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(255,242,128,0);
+    animation-duration: 1s;
+    animation-name: fadein;
+  }
 }
-
+@keyframes fadein {
+  from {
+    background-color: rgba(255,242,128,1);
+  }
+  to {
+    background-color: rgba(255,242,128,0);
+  }
+}
 header h1 {
   margin-top: 50%;
   font-size: 3em;
-  text-shadow: 0px 0px 2px rgba(99, 57, 15, 0.8)
+  text-shadow: 0px 0px 2px rgba(99, 57, 15, 0.8);
 }
 header h1 a, header h1 a:visited {
   color: whitesmoke;

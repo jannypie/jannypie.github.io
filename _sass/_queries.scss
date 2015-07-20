@@ -1,7 +1,7 @@
 
 @media only screen and (min-width: 481px) {
   header {
-    background: $header-bg url(/images/yellow-field-800.jpg) no-repeat center bottom fixed;
+    background: $header-bg url(/images/yellow-field-800.jpg) no-repeat center bottom;
   }
   header h1 {
     margin-top: 30%;
@@ -15,7 +15,7 @@
   }
   header {
     max-height: 100%;
-    background: $header-bg url(/images/yellow-field-1600.jpg) no-repeat center bottom fixed;
+    background: $header-bg url(/images/yellow-field-1600.jpg) no-repeat center bottom;
   }
     header h1 {
       font-size: 5em;
@@ -30,7 +30,7 @@
 }
 @media only screen and (min-width: 1601px) {
   header {
-    background: $header-bg url(/images/yellow-field-2048.jpg) no-repeat center bottom fixed;
+    background: $header-bg url(/images/yellow-field-2048.jpg) no-repeat center bottom;
   }
 }
 

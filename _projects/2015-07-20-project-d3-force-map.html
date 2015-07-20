@@ -1,0 +1,108 @@
+---
+layout: "page"
+excerpt: ""
+title: "d3.js Directional Force Map"
+meta-description: "Interactive train map using d3.js Force"
+image: "/assets/project-images/d3-train-map.png"
+categories: "featured"
+---
+<div class="col-third">
+  <img src="/assets/project-images/d3-train-map.png" alt="Interactive train map using d3.js Force">
+</div>
+<div class="col-twothird">
+  <h2>July 2015</h2>
+  <p><a class="button inline" href="https://github.com/jannypie/d3-force-directed-train-map" rel="bookmark" title="Link to repo">GitHub Repo</a>
+    <a class="button inline" href="http://jandennison.com/d3-force-directed-train-map/" title="d3 map demo">Live Demo</a>
+  </p>
+  <p>UX/Design, HTML, Scss, Ruby, Rails, Backbone.js, JavaScript / AJAX, MongoDB, d3.js, GitHub API, Twitter API, Bootstrap responsive grid (all other design and CSS custom), CoffeeScript, Heroku, Travis CI, Agile</p>
+  <hr>
+  <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-remote-island-train-map" class="anchor" href="#remote-island-train-map" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remote Island Train Map</h1>
+
+<h3><a id="user-content-d3-directional-force-map" class="anchor" href="#d3-directional-force-map" aria-hidden="true"><span class="octicon octicon-link"></span></a>d3 Directional-Force Map</h3>
+
+<h2><a id="user-content-challenges" class="anchor" href="#challenges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenges</h2>
+
+<ul>
+<li>I had previously worked with d3 for simple plot graphs, pie charts, bar charts</li>
+<li>Had never worked with more advanced d3 implementations, including force charts</li>
+<li>Had not worked with SVG markers, defs, or hover effects</li>
+</ul>
+
+<h2><a id="user-content-process" class="anchor" href="#process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process</h2>
+
+<ul>
+<li>Was familiar with how d3 uses data to generate coordinates, so basic line-node graph was completed within 2-3 hours</li>
+<li>Refactored provided data into array of cities and a way to populate nodes and reference links for much cleaner and easier to read code</li>
+<li>Spent about 4 hours learning and attempting arrowhead markers on lines, and associating labels with them
+
+<ul>
+<li>Eventually refactored code to first generate svg groups that hold line and marker so that the fill/stroke colors could match</li>
+</ul></li>
+<li>Spent (mumble) hours on attempting shortest path implementation, reading about Dijkstra's algorithm, and experimenting with online d3 dijkstra examples
+
+<ul>
+<li>Was unable to get shortest paths working</li>
+</ul></li>
+</ul>
+
+<h2><a id="user-content-lessons-learned" class="anchor" href="#lessons-learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lessons Learned</h2>
+
+<h3><a id="user-content-d3-force" class="anchor" href="#d3-force" aria-hidden="true"><span class="octicon octicon-link"></span></a>d3 Force</h3>
+
+<ul>
+<li>This was entirely new, so all implementation was an experiment</li>
+<li>Had a lot of fun digging through various source code of online examples</li>
+<li>Sometimes nodes showed and no lines! Sometimes lines showed and no nodes! Figuring out why helped me understand what Force was doing on a deeper level</li>
+<li>Some references used include:
+
+<ul>
+<li><a href="https://github.com/mbostock/d3/wiki/Force-Layout">Mike Bostock's Force documentation</a></li>
+<li><a href="http://bl.ocks.org/mbostock/4062045">Force directed graph example</a></li>
+<li><a href="http://bl.ocks.org/sathomas">sathomas's d3 force blocks</a></li>
+</ul></li>
+</ul>
+
+<h3><a id="user-content-svg" class="anchor" href="#svg" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVG</h3>
+
+<ul>
+<li>SVG markers do not inherit line color. Refactored code generating connection lines as groups holding the line and marker to manipulate highlight color effect.</li>
+<li>Leveraged these groups to add line titles as hover tooltips showing distances</li>
+<li>Some resources used include:
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker">markers</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs">defs</a></li>
+<li><a href="http://bl.ocks.org/d3noob/5141278">Implementation of marker ends</a></li>
+<li><a href="http://logogin.blogspot.com/2013/02/d3js-arrowhead-markers.html">D3.js arrowhead markers</a></li>
+</ul></li>
+</ul>
+
+<h3><a id="user-content-shortest-path" class="anchor" href="#shortest-path" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortest Path</h3>
+
+<ul>
+<li>Spent most of my time down a rabbit hole reading source code and attempting this stretch goal</li>
+<li>Was unable to crack Dijkstra's algorithm or get various examples online working with my implementation</li>
+<li>Some references used:
+
+<ul>
+<li><a href="http://www.carto.net/svg/dijkstra_shortest_path_demo/">Demonstration of Dijkstra's shortest path algorithm</a>
+
+<ul>
+<li>Was the most promising, ran into difficulties with generating an Adjacency Matrix</li>
+</ul></li>
+<li><a href="http://bl.ocks.org/sdjacobs/3900867adc06c7680d48">Dijkstra's algorithm in Javascript/D3</a>
+
+<ul>
+<li>Only changes line color based on distance, doesn't actually return the shortest distance between nodes</li>
+</ul></li>
+<li><a href="http://www.nealbohling.com/2014/05/dijkstra-javascript-d3-js/">Simple Dijkstra Implementation in JavaScript</a>
+
+<ul>
+<li>Was using this example to develop a recursive shortest-path approach of my own when I realized I had used up all of my time!</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>Background image via <a href="https://unsplash.com/">unsplash</a></p>
+</article>
+</div>
