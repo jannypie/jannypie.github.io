@@ -18,4 +18,8 @@ nav li {
 }
 nav li a, nav li a:visited {
   @extend .button;
+  border-top: 0;
+}
+nav li a:hover {
+  border-top: 0;
 }
