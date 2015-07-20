@@ -130,57 +130,51 @@ body {
   color: #1a1a1a; }
 
 a, a:visited {
-  color: #e5ac00;
-  -webkit-transition: color 0.8s;
-  -moz-transition: color 0.8s;
-  -o-transition: color 0.8s;
-  transition: color 0.8s; }
+  color: #037489;
+  -webkit-transition: color 300ms;
+  -moz-transition: color 300ms;
+  -o-transition: color 300ms;
+  transition: color 300ms; }
 
 a:hover {
-  color: #f4d400;
+  color: #30a7bf;
   text-decoration: underline; }
 
 [class*="icon-"]:hover {
-  color: #f4d400; }
+  color: #30a7bf; }
 
-.button, nav li a, nav li a:visited, a.featured-text {
+.button, nav li a, nav li a:visited, .button:visited, nav li a:visited {
   background: rgba(250, 250, 250, 0.9);
+  border: 1px solid #a0a0a0;
   color: #414141;
   display: block;
+  font-weight: 700;
+  letter-spacing: 1px;
   padding: 1em;
-  -webkit-transition: background 0.8s, color 0.8s;
-  -moz-transition: background 0.8s, color 0.8s;
-  transition: background 0.8s, color 0.8s; }
+  -webkit-transition: background 300ms, color 300ms, border 300ms;
+  -moz-transition: background 300ms, color 300ms, border 300ms;
+  transition: background 300ms, color 300ms, border 300ms; }
 
-.button:hover, nav li a:hover, a.featured-text:hover {
-  background: #e5ac00;
-  color: whitesmoke;
+.button:hover, nav li a:hover {
+  background: #30a7bf;
+  border: 1px solid #30a7bf;
+  color: #fff !important;
   text-decoration: none; }
 
-.button.teal, nav li a.teal, a.teal.featured-text {
-  color: whitesmoke;
-  background: #30a7bf;
-  font-weight: 700;
-  letter-spacing: 1px; }
-
-.button.teal:hover, nav li a.teal:hover, a.teal.featured-text:hover {
-  color: #30a7bf;
-  background: whitesmoke; }
-
-.button.small, nav li a.small, a.small.featured-text {
+.button.small, nav li a.small {
   padding: 0.5em 1em; }
 
-.button.inline, nav li a.inline, a.inline.featured-text {
+.button.inline, nav li a.inline {
   display: inline-block; }
 
-.button.special, nav li a.special, a.special.featured-text {
+.button.special, nav li a.special {
   text-align: center;
   text-transform: uppercase; }
 
 /* Special General Typography Styles */
 .comment {
   color: #a0a0a0;
-  font-size: 0.8em;
+  font-size: 300mem;
   font-weight: 300; }
 
 .meta {
@@ -371,21 +365,31 @@ footer {
   width: 100%; }
 
 a.featured-text {
+  background: rgba(250, 250, 250, 0.9);
   color: #414141;
   display: block;
+  padding: 1em;
   position: absolute;
   bottom: 0;
   width: 100%;
   -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: background 300ms, color 300ms;
+  -moz-transition: background 300ms, color 300ms;
+  transition: background 300ms, color 300ms; }
+
+a.featured-text:hover {
+  background: #e5ac00;
+  color: #fff;
+  text-decoration: none; }
 
 .post-img {
   max-height: 20em;
   display: block;
-  -webkit-transition: max-height 0.8s;
-  -moz-transition: max-height 0.8s;
-  transition: max-height 0.8s;
+  -webkit-transition: max-height 300ms;
+  -moz-transition: max-height 300ms;
+  transition: max-height 300ms;
   overflow: hidden; }
 
 .post-img:hover {
