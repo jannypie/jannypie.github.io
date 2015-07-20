@@ -291,7 +291,11 @@ blockquote .meta, .post blockquote .meta {
     opacity: 1; }
 
 header {
-  background: #fff280 url(/images/yellow-field-480.jpg) bottom center/cover;
+  background: #fff280 url(/images/yellow-field-480.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: whitesmoke;
   text-align: center;
   margin-top: 0;
@@ -299,7 +303,7 @@ header {
   max-height: 450px;
   position: relative;
   overflow: hidden;
-  transition: background 1s ease-in 2s; }
+  transition: background 600ms ease-in 2s; }
 
 header h1 {
   margin-top: 50%;
@@ -387,9 +391,9 @@ a.featured-text:hover {
 .post-img {
   max-height: 20em;
   display: block;
-  -webkit-transition: max-height 300ms;
-  -moz-transition: max-height 300ms;
-  transition: max-height 300ms;
+  -webkit-transition: max-height 600ms;
+  -moz-transition: max-height 600ms;
+  transition: max-height 600ms;
   overflow: hidden; }
 
 .post-img:hover {
