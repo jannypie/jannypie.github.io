@@ -1,0 +1,3 @@
+[submodule "gdic-intro-js"]
+	path = gdic-intro-js
+	url = https://github.com/jannypie/gdic-intro-js.git
