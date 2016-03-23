@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+                 , ,
+_________,   ___/ /  ,__________
+ )__   /(    `-, )    )\    __(
+    )_/ |\____/ /____/| \__(
+     / \|____    _____|/ \
+        '    )  )     '
+            ( (
+             ))
+            ((  HERE BE DRAGONS
+             ``_,
+ -->
+<meta charset="utf-8">
+<title>Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="" />
+<meta name="description" content="How I used Focal Point with Jekyll to create pure CSS Adaptive Post Thumbnails" />
+<link rel="canonical" href="/combining-jekyll-with-focal-point-css-adaptive-images-for-smart-thumbnails" />
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Stylesheets -->
+<link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/base.css" rel="stylesheet">
+
+<!-- Link placeholder to change stylesheets -->
+<link class="style" href="#" rel="stylesheet">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="/css/icomoon.css">
+
+<!-- Highlight Code Syntax -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+	<body class="post">
+		<header>
+    <nav>
+  <ul>
+    <li><a href="http://jannypie.github.io#intro">Hellos</a></li>
+    <li><a href="http://jannypie.github.io/archive.html">Writings</a></li>
+    <li><a href="http://jannypie.github.io/workings.html">Workings</a></li>
+    <!-- <li><a href="http://jannypie.github.io/artings.html">Artings</a></li> -->
+  </ul>
+</nav>
+    <h1>
+      <a href="http://jannypie.github.io" rel="bookmark" title="Website for Jan Dennison">Jan Dennison</a>
+    </h1>
+</header>
+		<main class="container">
+			<article>
+				<h1> Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnail Images </h1>
+				<span class="meta"> July 29, 2013 </span>
+				<h2 id="introduction">Introduction</h2>
+
+<p><a href="http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/" title="Focal Point: Intelligent Cropping of Responsive Images">Focal Point: Intelligent Cropping of Responsive Images</a> is an excellent article on <a href="http://designshack.net" title="design shack">design shack</a> introducing <a href="http://www.cdnconnect.com/docs/focal-point-css/pure-html-css-responsive-high-resolution-images-solution" title="Focal Point Documentation">Focal Point CSS</a>, a project on GitHub by <a href="https://github.com/adamdbradley/focal-point#readme" title="Adam Bradley Focal Point">Adam Bradley</a> that sets up a small collection of CSS classes designed to crop images while keeping a focal area in view. This is a great solution to simple resizing of images to create smaller thumbnails without losing the important part of the picture.</p>
+
+<p>Take for example my doodle here of some flowers. The basic setup for CSSing a thumbnail would be to wrap the image in a div with a fixed size and overflow set to hidden:</p>
+
+<pre><code>&lt;div class="post-thumbnail"&gt;&lt;img alt="Image for " src=""&gt;&lt;/div&gt;
+
+.post-thumbnail {
+  height: 12em;
+  overflow: hidden;
+}
+
+.post-thumbnail img {
+  width: 100%;
+}
+</code></pre>
+
+<p>However, this top-aligns my image with the div, and the flowers below get cut off. Not so pretty.</p>
+
+<p><img src="/assets/post-images/focal-point-before.png" alt="Basic Flower Thumbnail" /></p>
+
+<p>I had come across some online posts about cropping image thumbnails using CSS, and wanted to go back to those and find a more advanced solution. Thus, I came across Focal Point. I’ll let you read the details if you wish, but the basic concept is that Focal Point defines classes that apply negative margins to your image based on where you want the focus to be. For each image, simply add one of the Focal Point classes for horizontal offset and another for vertical, and it will not only use negative margins to make that area you define as the focus, but because they are all based on percentages, it’s also responsive.</p>
+
+<p>The basic structure for using Focal Point is an image wrapped in two divs. To use the example from <a href="http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/" title="Focal Point: Intelligent Cropping of Responsive Images">the design shack post</a>:</p>
+
+<pre><code>&lt;div class="focal-point right-3 up-3"&gt;
+  &lt;div&gt;&lt;img src="guy.jpg" alt="guy"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Here you can see that the container div has three important classes: .focal-point center the image, .right-3 (horizontal), and .up-3 (vertical). Super straightforward. These are all you need for landscape oriented images. For portraits, you also need to add a .portrait class to your image.</p>
+
+<h2 id="the-challenge">The Challenge</h2>
+
+<p>My question was: could I still use Focal Point on my Jekyll-based blog, which generates a static page of blog posts using a loop? Because it’s using a loop to generate the post content couched in HTML, I would have to <strong>build</strong> the site after each post, and then go in and add the correct classes by hand to the markup - every time, for every image - and the classes would be different for every image. And nobody got time for that. Here is my loop:</p>
+
+<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+        &lt;h2&gt; &lt;a href="/blog-design" rel="bookmark" title="Permanent link to Iterative Design and Redesign"&gt;Iterative Design and Redesign&lt;/a&gt; &lt;/h2&gt;
+        &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
+            &lt;div class="post-info row-fluid span5"&gt;
+                &lt;span class="meta"&gt; February 20, 2015 &lt;/span&gt;
+                &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 3 Week 9 | Technical Blog #9&lt;/h4&gt; &lt;span class="meta"&gt;Feb 20, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/t9-blog-update.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
+</code></pre>
+<p><span class="meta">Feb 20, 2015</span></p>
+<section>
+   <p>I've consistently update this site, so revisiting it for a redesign is a common activity for me. I already had my blog running Jekyll, and I did have Bootstrap CSS when I was learning how to use it, but I have since removed it in order to use 100% my own code. In addition, I already have a GitHub website tied to a custom domain (jandennison.com, my web dev portfolio repo). So, I feel that it is maturing quite nicely and in tandem with my own education.</p>
+   <p>I do still feel that there is quite a bit of room for growth, as well. It's not where I want it to be quite yet, but I'm working on it a little bit at a time. I'm going for an interesting and attractive, but clean and spacious look and feel for the entire site. I plan to carry over this layout to my web development portfolio as well, so that they have a consistent look.
+   </p>
+   <p>I have received several good pieces of feedback about my blog, such as:</p>
+   <ul>
+     <li>"Nice vibrant colors on your site. It's very eye-catching!"</li>
+     <li>"Love the colors and background pic in the header!"</li>
+     <li>"that is a vulgar amount of mustache!"</li>
+     <li>"I really like your blog layout and scheme."</li>
+     <li>"The layout works well on my phone."</li>
+     <li>"First impression, is oooh pretty. Scroll down, there's content! In Snoop Dogg latin too! Second impression, serious content follows the lorem ipsum."</li>
+     <li>"I love the look of the website! So pretty and clean looking. Inspired."</li>
+   </ul>
+   <p>Some helpful, actionable feedback I've gotten has been:</p>
+   <ul>
+     <li>"The Introduction link brings me down to the bottom of the page, but since the intro paragraph starts midway through the view of the bottom page, I had to look around for a little bit before I actually found it. This might confused others as well."</li>
+    <li>"I noticed that there are many links at the bottom, to pages I probably would have found more interesting, if I had seen them ten minutes ago. Oh look, those links are also at the top! Why did I not notice those links before?"</li>
+    <li>"The way the background image loads is visually jarring, make it smaller or more subtle"</li>
+    <li>General comments regarding text alignment and whitespace, and keeping link styles uniform</li>
+   </ul>
+   <p>I plan to take all of these and use them to better my site. I've already moved the "Introduction" section up higher on the page so that it goes to the top when the anchor link is clicked. I'm also working on a modified nav of links that I'm actually pretty excited about. My typography as well could use some playing around with until it flows just right, and I'm working on finding a balanced approach of image resolution versus compression for the big header image. Typography continues to be one of the more challenging of design for me, but I won't give up!</p>
+</section>
+<p>&lt;/p&gt;
+	            &lt;/div&gt;
+	            &lt;div class="row-fluid span6"&gt;
+	                &lt;div class="post-thumbnail"&gt;
+	                    <a href="/blog-design" rel="bookmark" title="Permanent link to Iterative Design and Redesign">
+	                        <img alt="Image for Iterative Design and Redesign" src="/assets/post-images/2015-02-20-blog-design.jpg" />
+	                    </a>
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/div&gt;<!-- end content -->
+	    &lt;/div&gt;<!-- end row --></p>
+
+<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+        &lt;h2&gt; &lt;a href="/dbc-c9-questions" rel="bookmark" title="Permanent link to Help! Here we go!"&gt;Help! Here we go!&lt;/a&gt; &lt;/h2&gt;
+        &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
+            &lt;div class="post-info row-fluid span5"&gt;
+                &lt;span class="meta"&gt; February 19, 2015 &lt;/span&gt;
+                &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 3 Week 9 | Cultural Blog #9&lt;/h4&gt; &lt;span class="meta"&gt;Feb 19, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/c9-questions.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
+</code></pre>
+<p><span class="meta">Feb 19, 2015</span></p>
+<section>
+  <p>If you're like me, you've been stuck on a coding problem at some point. Maybe more than once (she says, vastly understatingly). And after you stubbornly try to work it out for probably longer than you should, you finally realize: you need to ask someone else. Enter: asking questions on the internet. Yes, that ominous music you just heard is justified. Luckily when you're just asking coding questions, you're not likely to get into the bad internet stuff, but you are quite likely to not get any reply at all, or get the wrong reply if someone misunderstood your question. So how do you write a good question that gets the answer you need?</p>
+  <h3>Good questions:</h3>
+  <ul>
+    <li>Include any background research you've done and approaches you've tried, so that people don't suggest things you already know.</li>
+    <li>Include details on any software you're running that might impact results - Windows or Mac? Chrome, Firefox, IE? Which version?</li>
+    <li>Are asked in places that are more likely to get replies (forums, StackOverflow, etc).</li>
+    <li>Have a summary of your problem as an introduction.</li>
+    <li>Include sample code snippets.</li>
+    <li>Have a title summarizing your problem in one sentence.</li>
+    <li>Explain your issue fully, but precisely. Don't go on and on or your readers will be moving on.</li>
+  </ul>
+  <p>In the past, I've tried asking questions on Twitter and gotten hit-or-miss responses. Sometimes it's a great way to get short, quick answers, but sometimes it gets lost in the shuffle of people's feeds. For more in-depth answers, look on forums or Q/A sites, or look for mentors who can answer in person or through email.</p>
+</section>
+<p>&lt;/p&gt;
+	            &lt;/div&gt;
+	            &lt;div class="row-fluid span6"&gt;
+	                &lt;div class="post-thumbnail"&gt;
+	                    <a href="/dbc-c9-questions" rel="bookmark" title="Permanent link to Help! Here we go!">
+	                        <img alt="Image for Help! Here we go!" src="/assets/post-images/2015-02-19-dbc-c9-questions.jpg" />
+	                    </a>
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/div&gt;<!-- end content -->
+	    &lt;/div&gt;<!-- end row --></p>
+
+<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+        &lt;h2&gt; &lt;a href="/dbc-c8-conflict" rel="bookmark" title="Permanent link to Breathe Deeply And Think Clearly"&gt;Breathe Deeply And Think Clearly&lt;/a&gt; &lt;/h2&gt;
+        &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
+            &lt;div class="post-info row-fluid span5"&gt;
+                &lt;span class="meta"&gt; February 15, 2015 &lt;/span&gt;
+                &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 3 Week 8 | Cultural Blog #8&lt;/h4&gt; &lt;span class="meta"&gt;Feb 15, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/c8-conflict.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
+</code></pre>
+<p><span class="meta">Feb 15, 2015</span></p>
+<section>
+  <h2>Writing about conflict</h2>
+  <p>Conflict is very difficult for me, and something I have worked hard on in the past to grow and develop through. As kids, my siblings and I were never taught good conflict resolution skills, to put it mildly. As a result, there was a learning curve for me for dealing with conflict in constructive and temperate ways.</p>
+  <p>I've been stuck with writer's block thinking of a specific instance for too long for this post, so I'm just going to write about conflict in general. Many sources of conflict for me have come from poor communication, crossed wires, and jumping to be defensive. Almost always, the greatest emotion underlying anger I felt was frustration - whether I felt I wasn't being heard, or, honestly, that things weren't going the way I wanted. Often, I find myself wanting to defend myself, because I felt someone wasn't valuing my input, or taking my feelings into consideration.</p>
+  <p>As a child who thought that normal conflict resolution meant yelling and slamming doors, active resolution took a long time to learn. Once I entered my adult years, and realized my failings, I have worked towards reprogramming my reactions. Now when I recognize a conflict has come up, I stop myself and take deep breaths. I push the pure emotion out of me and look at it for the underlying causes. I evaluate what I am trying to communicate, and what, specifically, is frustrating me about the conflict. Sometimes I do still need to step away, if the conflict is particularly intense, and collect myself in a quiet space. I'm not always successful, but I do continually try.</p>
+  <p>Learning new conflict resolution skills is an ongoing process. I've gotten really great advice from friends that I work to keep in mind and practice. For example, during conflict, give the benefit of the doubt, or, assume that I am the one misunderstanding, and ask for clarification. Being generous and charitable in our dealings with others, rather than jumping to defend ourselves, has been the most effective way for me to resolve conflict not only in a way that diffuses the situation, but builds bridges for even better communication going forward.</p>
+</section>
+<p>&lt;/p&gt;
+	            &lt;/div&gt;
+	            &lt;div class="row-fluid span6"&gt;
+	                &lt;div class="post-thumbnail"&gt;
+	                    <a href="/dbc-c8-conflict" rel="bookmark" title="Permanent link to Breathe Deeply And Think Clearly">
+	                        <img alt="Image for Breathe Deeply And Think Clearly" src="/assets/post-images/2015-02-15-dbc-c8-conflict.jpg" />
+	                    </a>
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/div&gt;<!-- end content -->
+	    &lt;/div&gt;<!-- end row --></p>
+
+<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+        &lt;h2&gt; &lt;a href="/dbc-c7-values" rel="bookmark" title="Permanent link to Fearless Values"&gt;Fearless Values&lt;/a&gt; &lt;/h2&gt;
+        &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
+            &lt;div class="post-info row-fluid span5"&gt;
+                &lt;span class="meta"&gt; February  5, 2015 &lt;/span&gt;
+                &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 2 Week 7 | Cultural Blog #7&lt;/h4&gt; &lt;span class="meta"&gt;Feb 5, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/c7-values.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
+</code></pre>
+<p><span class="meta">Feb 5, 2015</span></p>
+<section>
+  <p>Last week, I learned about <a href="http://www.reducingstereotypethreat.org/definition.html" title="link to website">Stereotype Threats</a>, and I wrote a little bit about <a href="http://jannypie.github.io/dbc-c6-stereotype-threat/" title="stereotype threat blog post">times I have experienced them</a>. In review, researchers have found that times when a person is consciously aware of stereotypes surrounding one or more aspects of their identities as they relate to performance, the person is more likely to fulfill that stereotype than not. A common example is girls who are told they cannot do math often perform poorly on math, whereas girls who are not told that often don't.
+  </p>
+  <img src="/blog/dbc-blog-imgs/girls-are-good-at-math.png" alt="XKCD comic about girls stereotyped as bad at math" /><small><a href="http://xkcd.com/385/" title="source of comic">Source</a></small>
+  <p>This week, we read about how researchers have also found a rather effective method that people can do to reduce the result of stereotype threats - <a href="http://www.reducingstereotypethreat.org/reduce.html#encouragingself" title="link to explanation of self-affirmation">self-affirmation</a>. Researchers found that when people are feeling a stereotype threat about themselves, when they start being afraid that they are going to prove all those comments right about their gender/race/etc., actively redirecting those thoughts into a self-affirming reflection of their core values actually works against the threat.</p>
+  <p>Some of my core values (from the long list provided) include things like:
+    <ul>
+      <li>Personal development
+        <ul>
+          <li>Insight &amp; Introspection</li>
+          <li>Knowledge</li>
+          <li>Growth</li>
+          <li>Challenge</li>
+        </ul>
+      </li>
+      <li>Equality &amp; Fairness
+        <ul>
+          <li>Compassion &amp; Empathy</li>
+          <li>Honesty</li>
+        </ul>
+      </li>
+      <li>Helping Society
+        <ul>
+          <li>Friendships &amp; Community</li>
+        </ul>
+      </li>
+      <li>Creativity</li>
+      <li>Balance</li>
+    </ul>
+  </p>
+  <p>
+    Self-affirmation essentially works by actively reflecting back on one or more of your values, and using that as motivation to break out of the stereotype. For example, if I feared that I wouldn't do well in Dev Bootcamp and might fail out, I could think back about how much I value personal growth and learning, and that would make me comfortable and more likely to perform well.
+  </p>
+  <p>Just today I was listening to NPR's new podcast, <a href="http://www.npr.org/programs/invisibilia/" title="Invisibilia by NPR website">Invisibilia</a>, and as I was writing this was struck by the similarity of what I was writing and what I was hearing.
+  </p>
+  <blockquote>
+    We are always, always, always telling stories to ourselves, about the situation we're in, and about other people. And that story becomes a reality for us. And that's the problem.
+    ... just get out there and get rejected. Sometimes it's gonna get dirty, but that's okay. 'Cause you're gonna feel better afterward. You're gonna feel like, wow, I disobeyed my fear.
+    <small><a href="http://www.npr.org/2015/01/16/377519199/disappearing-fear" title="Invisibilia podcast episode on fear">Jason Comely, Invisibilia</a></small>
+  </blockquote>
+  <p>If I don't face my fears, I won't be able to uphold those values. If I become the stereotype, I won't uphold those values. So now I have one tool in my belt to overcome those fears, and move towards the place I want to be.</p>
+</section>
+<p>&lt;/p&gt;
+	            &lt;/div&gt;
+	            &lt;div class="row-fluid span6"&gt;
+	                &lt;div class="post-thumbnail"&gt;
+	                    <a href="/dbc-c7-values" rel="bookmark" title="Permanent link to Fearless Values">
+	                        <img alt="Image for Fearless Values" src="/assets/post-images/2015-02-05-dbc-c7-values.jpg" />
+	                    </a>
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/div&gt;<!-- end content -->
+	    &lt;/div&gt;<!-- end row --></p>
+
+<p>The basic structure of which is:</p>
+
+<pre><code>loop through the posts, and for each post
+    div
+        title
+        left column
+        	date
+        	excerpt
+        right column
+        	image
+    /div
+end loop
+</code></pre>
+
+<p>I wondered if there was a way to define the necessary classes beforehand in the body of the post and then pass those to the loop to be included in the markup.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>The answer to the question was actually very simple - using <a href="http://blog.omgmog.net/post/adding-more-post-metadata-to-jekyll-with-yaml/" title="Adding More Post Metadata to Jekyll With YAML">custom YAML key:value pairs</a> in the head of each post to define the focal point of the image, and then applying Liquid output structure to pass them to the markup. I defined three custom variables (horizontal, vertical, and orientation) in the YAML front matter of each post:</p>
+
+<pre><code>---
+layout: "post"
+title: "Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails"
+image: "/assets/post-images/IMG_0746.jpg"
+focal-vert: down-6
+focal-horz: right-3
+orientation: portrait
+---
+</code></pre>
+
+<p>Then, using our Liquid templating variables, I set the value of each pair as a class in the loop markup:</p>
+
+<pre><code>&lt;div class="post-thumbnail focal-point   "&gt;
+        &lt;div&gt;&lt;img alt="Image for " src=""&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Which results in markup for this image:</p>
+
+<pre><code>&lt;div class='post-thumbnail focal-point portrait left-1 down-6'&gt;
+    &lt;div&gt;&lt;img alt='Image for Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails' src='/assets/post-images/IMG_0746.jpg' /&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>And here is the side-by-side image again for comparison:</p>
+
+<p><img src="/assets/post-images/focal-point-image.png" alt="Focal Point comparison" /></p>
+
+<p>I do again highly recommend the design shack post for further reading, because the author Joshua Johnson does a great job of explaining how the whole grid works for selecting focus areas.</p>
+
+
+			</article>
+		</main><!-- /container -->
+		<footer>
+  <p class="container">This site is designed and hand-coded by myself, using a custom <strong>responsive</strong> grid, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's powered by github.io with Jekyll blog integration.</p>
+<a class="icon-twitter social" href="http://twitter.com/jannypie"><span class="accessible">Twitter</span></a> <a class="icon-github social" href="http://github.com/jannypie"><span class="accessible">GitHub</span></a> <a class="icon-linkedin social" href="http://linkedin.com/in/jldennison/"><span class="accessible">LinkedIn</span></a>
+</footer>
+
+<!-- The jQuery and scripts -->
+<!-- <script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script> -->
+<!-- <script type="text/javascript" src="/js/main.js"></script> -->
+
+	</body>
+</html>
