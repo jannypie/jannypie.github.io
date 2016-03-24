@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+                 , ,
+_________,   ___/ /  ,__________
+ )__   /(    `-, )    )\    __(
+    )_/ |\____/ /____/| \__(
+     / \|____    _____|/ \
+        '    )  )     '
+            ( (
+             ))
+            ((  HERE BE DRAGONS
+             ``_,
+ -->
+<meta charset="utf-8">
+<title>Variations in Variables: JS v Ruby</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Jan Dennison">
+<meta name="robots" content="noodp, noydir" />
+<meta name="description" content="It's like algebra. That's where the similarities end though." />
+<link rel="canonical" href="/dbc-t7-javascript" />
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Stylesheets -->
+<link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/base.css" rel="stylesheet">
+
+<!-- Link placeholder to change stylesheets -->
+<link class="style" href="#" rel="stylesheet">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="/css/icomoon.css">
+
+<!-- Highlight Code Syntax -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+    <body class="post">
+      <header>
+    <nav>
+  <ul>
+    <li><a href="http://jannypie.github.io#intro">Hellos</a></li>
+    <li><a href="http://jannypie.github.io/archive.html">Writings</a></li>
+    <li><a href="http://jannypie.github.io/workings.html">Workings</a></li>
+    <!-- <li><a href="http://jannypie.github.io/artings.html">Artings</a></li> -->
+  </ul>
+</nav>
+    <h1>
+      <a href="http://jannypie.github.io" rel="bookmark" title="Website for Jan Dennison">Jan Dennison</a>
+    </h1>
+</header>
+      <main class="container">
+        <article>
+          <h1> Variations in Variables: JS v Ruby </h1>
+          <!-- <h4>Phase 0 Unit 3 Week 7 | Technical Blog #7</h4>
+<span class="meta">Feb 4, 2015</span>
+<a href="http://jannypie.github.io/blog/t7-JavaScript.html" title="Read more">Read this blog post</a> -->
+<p><span class="meta">Feb 4, 2015</span></p>
+<section>
+  <h2>Here, let me hold that for you</h2>
+  <p><strong>Variables</strong> are staples of many programming languages, including JavaScript and Ruby. Just like we learned in high school algebra, a variable is simply a placeholder representing something else. Let's take a look at the similarities and differences in variables between Ruby and JavaScript.</p>
+  <h2>X = X</h2>
+  <p>In both Ruby and JavaScript, unlike algebra, programming variables can be standins for more than just numbers. Variables can hold strings, arrays, booleans, even whole objects and functions. Both can also take multiple variables declared on one line (although with different structure, and this structure isn't used very often as it's not as readable).</p>
+  <pre><code>
+    // JavaScript variables:
+    var x = "Jan rocks";
+    var y = true;
+    var z = 100;
+    // or
+    var x = "Jan rocks", y = true, z = 100;
+  </code></pre>
+  <pre><code class="ruby">
+    # Ruby variables:
+    x = "Jan rocks"
+    y = true
+    z = 100
+    # or
+    x, y, z = "Jan rocks", true, 100
+  </code></pre>
+  <p>Also in both languages, variables can have either <strong>global</strong> or <strong>local scope</strong>, and are accessed simply by calling the variable name.</p>
+  <pre><code class="js">
+    // Javascript
+    var global = "Anyone can access me!"; // this is a global variable
+
+    function foo() {
+        var local = "Only things inside foo() can access me!";
+        // this is a local variable
+        console.log(local);
+    }
+
+    console.log(global);
+  </code></pre>
+  <pre><code class="ruby">
+    # Ruby
+    $global = "Anyone can access me!"  # this is a global variable
+
+    def foo
+      local = "Only things inside .foo can access me!"
+      # this is a local variable
+      puts local
+    end
+
+    puts global
+  </code></pre>
+  <p>Those variable attributes are about the only things the languages have in common. Let's now look at what they do differently.</p>
+  <h2>JS != R</h2>
+  <p>Ruby actually has multiple explicit variable types with differing scopes and a different syntax for each.</p>
+  <pre><code class="ruby">
+    CONSTANT            # accessible by all, doesn't change AT ALL in program
+    $global_variable    # accessible by all
+    @@class_variable    # shared by all instances of a class
+    @instance_variable  # shared within one instance of a class
+    local_variable      # shared only within a method
+  </code></pre>
+  <p>Is a Constant still a variable when it is not variable? /deepthoughts</p>
+  <p>Syntax is also a bit different between the languages. As you can see from the first code example, JavaScript variables are introduced with <code>var</code>, whereas Ruby variables just get right to it.</p>
+  <p>One last difference is actually debatable: Ruby variables can simply be separated with a new line, whereas the JS variables all end with a semicolon. The debatable part is that JS doesn't <em>always</em> require the semicolon, and some versions will let you get away with leaving it off (or forgetting, if you're in the habit of writing Ruby). However, at least today that practice is not encouraged and most JS writers prefer that you go ahead and use the semicolon regardless.</p>
+  <p>So there you have it! Hopefully that was helpful to review variables in JS and Ruby and how they compare.</p>
+</section>
+
+        </article>
+      </main><!-- /container -->
+      <footer>
+  <p class="container">This site is designed and hand-coded by myself, using a custom <strong>responsive</strong> grid, <strong>HTML5</strong> validated, <strong>CSS validated</strong>, optimized for <strong>accessibility</strong>, with minimal <strong>JavaScript</strong> enhancements. It's powered by github.io with Jekyll blog integration.</p>
+<a class="icon-twitter social" href="http://twitter.com/jannypie"><span class="accessible">Twitter</span></a> <a class="icon-github social" href="http://github.com/jannypie"><span class="accessible">GitHub</span></a> <a class="icon-linkedin social" href="http://linkedin.com/in/jldennison/"><span class="accessible">LinkedIn</span></a>
+</footer>
+
+<!-- The jQuery and scripts -->
+<!-- <script type="text/javascript" src="/js/jquery-ui/js/jquery-1.9.1.js"></script> -->
+<!-- <script type="text/javascript" src="/js/main.js"></script> -->
+
+    </body>
+</html>
