@@ -3,20 +3,9 @@
   {% include head.html %}
     <body class="home">
       {% include header.html %}
-      <section id="intro">
-        <div class="container">
-          <div class="col-third">
-            <img class="hexagon column-third--left" src="images/janstache.png" title="Fo' shizzle I know I have Snoop Ipsum over thizzle" alt="Picture of Janstache">
-          </div>
-          <div class="col-twothird">
-            <h2>Why, hello there.</h2>
-            <p class="excerpt">I'm Jan. I'm working to make the world a better place.</p>
-            <p class="excerpt">I began my career as a scientist, continued as an artist, then pursued a love of programming. I bring <em>all</em> of my talents, skills, and experience to create worthwhile digital experiences. I care passionately about developing useful, enjoyable tools for users who need to get things done.</p>
-            <p class="excerpt">I do not actually have a mustache.</p>
-            <!-- <p><a href="/imlooking.html" class="button special">I'm available for hire!</a></p> -->
-          </div> 
-        </div>
-      </section>
+
+      {% include intro.html %}
+
       <main class="container">
         {{ content }}
       </main><!-- /container -->

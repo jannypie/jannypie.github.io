@@ -1,7 +1,9 @@
 
 @media only screen and (min-width: 481px) {
   header {
-    background: $header-bg url(/images/spring.jpg) cover no-repeat center bottom;
+    background: $header-bg url(/images/geometric.jpeg) no-repeat center bottom;
+    background-size: cover;
+
   }
   header h1 {
     margin-top: 30%;
@@ -15,7 +17,9 @@
   }
   header {
     max-height: 100%;
-    background: $header-bg url(/images/spring.jpg) cover no-repeat center bottom;
+    background: $header-bg url(/images/geometric.jpeg) no-repeat center bottom;
+    background-size: cover;
+
   }
     header h1 {
       font-size: 5em;
@@ -30,7 +34,9 @@
 }
 @media only screen and (min-width: 1601px) {
   header {
-    background: $header-bg url(/images/spring.jpg) cover no-repeat center bottom;
+    background: $header-bg url(/images/geometric.jpeg) cover no-repeat center bottom;
+    background-size: cover;
+
   }
 }
 

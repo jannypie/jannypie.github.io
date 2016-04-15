@@ -222,6 +222,7 @@ blockquote .meta, .post blockquote .meta {
 .accordion {
   list-style-type: none;
   margin: 0;
+  padding: 0;
   input[type="checkbox"] {
     display: none;
   }
@@ -266,5 +267,37 @@ blockquote .meta, .post blockquote .meta {
     line-height: 1.5em;
     opacity: 1;
   }
+}
 
+.flex-container,
+.skills {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 540px) {
+    flex-direction: row;
+  }
+  * {
+    flex-grow: 1;
+  }
+}
+.skills_list {
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+.skills_title {
+  padding-bottom: 0.5em;
+  border-bottom: 4px solid transparent;
+}
+.skills_list:nth-child(1) .skills_title {
+  border-bottom-color: $teal;
+}
+.skills_list:nth-child(2) .skills_title {
+  border-bottom-color: $green;
+}
+.skills_list:nth-child(3) .skills_title {
+  border-bottom-color: $tangerine;
+}
+.skills_list:nth-child(4) .skills_title {
+  border-bottom-color: $pink;
 }

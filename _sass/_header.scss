@@ -1,5 +1,5 @@
 header {
-  background: $header-bg url(/images/spring.jpg) no-repeat right top;
+  background: $header-bg url(/images/geometric.jpeg) no-repeat right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,10 +33,42 @@ header {
     background-color: rgba(255,242,128,0);
   }
 }
+
+// background-blend animation
+header {
+  -webkit-animation-name: header-color; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 20s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite;
+  animation-name: header-color;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  background-color: $teal;
+  background-blend-mode: screen;
+}
+
+@-webkit-keyframes header-color {
+  0% {background-color: $teal;}
+  20% {background-color: $green;}
+  40% {background-color: $tangerine;}
+  60% {background-color: $blue;}
+  80% {background-color: $pink;}
+  100% {background-color: $teal;}
+}
+
+@keyframes header-color {
+  0% {background-color: $teal;}
+  20% {background-color: $green;}
+  40% {background-color: $tangerine;}
+  60% {background-color: $blue;}
+  80% {background-color: $pink;}
+  100% {background-color: $teal;}
+}
+
 header h1 {
   margin-top: 50%;
   font-size: 3em;
-  text-shadow: 0px 0px 2px rgba(99, 57, 15, 0.8);
+  text-shadow: 0px 1px 2px rgba(0, 0, 15, 0.9);
+
 }
 header h1 a, header h1 a:visited {
   color: whitesmoke;

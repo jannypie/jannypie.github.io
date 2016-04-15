@@ -252,7 +252,8 @@ blockquote .meta, .post blockquote .meta {
 
 .accordion {
   list-style-type: none;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
   .accordion input[type="checkbox"] {
     display: none; }
   .accordion label {
@@ -290,8 +291,39 @@ blockquote .meta, .post blockquote .meta {
     line-height: 1.5em;
     opacity: 1; }
 
+.flex-container,
+.skills {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 540px) {
+    .flex-container,
+    .skills {
+      flex-direction: row; } }
+  .flex-container *,
+  .skills * {
+    flex-grow: 1; }
+
+.skills_list:not(:last-child) {
+  margin-right: 5px; }
+
+.skills_title {
+  padding-bottom: 0.5em;
+  border-bottom: 4px solid transparent; }
+
+.skills_list:nth-child(1) .skills_title {
+  border-bottom-color: #30a7bf; }
+
+.skills_list:nth-child(2) .skills_title {
+  border-bottom-color: #30bf78; }
+
+.skills_list:nth-child(3) .skills_title {
+  border-bottom-color: #e5ac00; }
+
+.skills_list:nth-child(4) .skills_title {
+  border-bottom-color: #e11d7f; }
+
 header {
-  background: #D2D3D5 url(/images/spring.jpg) no-repeat right top;
+  background: #D2D3D5 url(/images/geometric.jpeg) no-repeat right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -322,10 +354,48 @@ header {
   to {
     display: none;
     background-color: rgba(255, 242, 128, 0); } }
+header {
+  -webkit-animation-name: header-color;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 20s;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite;
+  animation-name: header-color;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  background-color: #30a7bf;
+  background-blend-mode: screen; }
+
+@-webkit-keyframes header-color {
+  0% {
+    background-color: #30a7bf; }
+  20% {
+    background-color: #30bf78; }
+  40% {
+    background-color: #e5ac00; }
+  60% {
+    background-color: #3d79f2; }
+  80% {
+    background-color: #e11d7f; }
+  100% {
+    background-color: #30a7bf; } }
+@keyframes header-color {
+  0% {
+    background-color: #30a7bf; }
+  20% {
+    background-color: #30bf78; }
+  40% {
+    background-color: #e5ac00; }
+  60% {
+    background-color: #3d79f2; }
+  80% {
+    background-color: #e11d7f; }
+  100% {
+    background-color: #30a7bf; } }
 header h1 {
   margin-top: 50%;
   font-size: 3em;
-  text-shadow: 0px 0px 2px rgba(99, 57, 15, 0.8); }
+  text-shadow: 0px 1px 2px rgba(0, 0, 15, 0.9); }
 
 header h1 a, header h1 a:visited {
   color: whitesmoke;
@@ -437,7 +507,8 @@ a.featured-text:hover {
 
 @media only screen and (min-width: 481px) {
   header {
-    background: #D2D3D5 url(/images/spring.jpg) cover no-repeat center bottom; }
+    background: #D2D3D5 url(/images/geometric.jpeg) no-repeat center bottom;
+    background-size: cover; }
 
   header h1 {
     margin-top: 30%; } }
@@ -447,7 +518,8 @@ a.featured-text:hover {
 
   header {
     max-height: 100%;
-    background: #D2D3D5 url(/images/spring.jpg) cover no-repeat center bottom; }
+    background: #D2D3D5 url(/images/geometric.jpeg) no-repeat center bottom;
+    background-size: cover; }
 
   header h1 {
     font-size: 5em; }
@@ -459,7 +531,8 @@ a.featured-text:hover {
     vertical-align: top; } }
 @media only screen and (min-width: 1601px) {
   header {
-    background: #D2D3D5 url(/images/spring.jpg) cover no-repeat center bottom; } }
+    background: #D2D3D5 url(/images/geometric.jpeg) cover no-repeat center bottom;
+    background-size: cover; } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
