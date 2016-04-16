@@ -248,7 +248,8 @@ blockquote .meta, .post blockquote .meta {
 
 .no-bullets {
   list-style-type: none;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 .accordion {
   list-style-type: none;
@@ -323,7 +324,7 @@ blockquote .meta, .post blockquote .meta {
   border-bottom-color: #e11d7f; }
 
 header {
-  background: #D2D3D5 url(/images/geometric.jpeg) no-repeat right top;
+  background: #D2D3D5 url(/assets/images/geometric-300.jpg) no-repeat right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -407,7 +408,7 @@ header a:hover, nav a:hover {
 
 header .subtitle {
   display: inline-block;
-  background: rgba(250, 250, 250, 0.8);
+  background: rgba(250, 250, 250, 0.9);
   padding: 0.5em 1em;
   margin: 0 auto;
   color: #464f61;
@@ -507,8 +508,7 @@ a.featured-text:hover {
 
 @media only screen and (min-width: 481px) {
   header {
-    background: #D2D3D5 url(/images/geometric.jpeg) no-repeat center bottom;
-    background-size: cover; }
+    background-image: url(/assets/images/geometric-600.jpg); }
 
   header h1 {
     margin-top: 30%; } }
@@ -518,8 +518,7 @@ a.featured-text:hover {
 
   header {
     max-height: 100%;
-    background: #D2D3D5 url(/images/geometric.jpeg) no-repeat center bottom;
-    background-size: cover; }
+    background-image: url(/assets/images/geometric-1200.jpg); }
 
   header h1 {
     font-size: 5em; }
@@ -531,8 +530,7 @@ a.featured-text:hover {
     vertical-align: top; } }
 @media only screen and (min-width: 1601px) {
   header {
-    background: #D2D3D5 url(/images/geometric.jpeg) cover no-repeat center bottom;
-    background-size: cover; } }
+    background-image: url(/assets/images/geometric-2000.jpg); } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

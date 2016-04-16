@@ -1,9 +1,7 @@
 
 @media only screen and (min-width: 481px) {
   header {
-    background: $header-bg url(/images/geometric.jpeg) no-repeat center bottom;
-    background-size: cover;
-
+    background-image: url(/assets/images/geometric-600.jpg);
   }
   header h1 {
     margin-top: 30%;
@@ -17,9 +15,7 @@
   }
   header {
     max-height: 100%;
-    background: $header-bg url(/images/geometric.jpeg) no-repeat center bottom;
-    background-size: cover;
-
+    background-image:url(/assets/images/geometric-1200.jpg);
   }
     header h1 {
       font-size: 5em;
@@ -34,9 +30,7 @@
 }
 @media only screen and (min-width: 1601px) {
   header {
-    background: $header-bg url(/images/geometric.jpeg) cover no-repeat center bottom;
-    background-size: cover;
-
+    background-image:url(/assets/images/geometric-2000.jpg);
   }
 }
 
