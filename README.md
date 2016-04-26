@@ -7,4 +7,14 @@ As someone who loves both coding and design, I delight in bridging front-end and
 
 ---
 
-It's my website, I'll push to master if I want! (But I won't on yours, I promise.)
+It's my website, I'll push to master if I want!
+
+---
+
+## Jekyll deets
+
+```
+gem install jekyll
+jekyll build
+jekyll serve
+```
