@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* oxygen font */
 @import url("https://fonts.googleapis.com/css?family=Oxygen:400,300,700");
 /* Variables */
@@ -205,7 +206,7 @@ code {
   border: 1px solid silver; }
 
 pre code, blockquote {
-  background: #ddd;
+  background: ghostwhite;
   padding: 1em;
   line-height: 1.5em;
   word-wrap: break-word;
@@ -216,22 +217,24 @@ pre code, blockquote {
 
 blockquote {
   padding: 2.5em 1em;
-  position: relative; }
+  position: relative;
+  margin-bottom: 1em; }
 
 blockquote:before, blockquote:after {
-  content: '';
+  color: #237c8e;
+  font-family: 'Times New Roman',serif;
   display: block;
-  font-size: 5em;
-  font-color: silver;
-  position: absolute;
-  color: #aaa; }
+  font-size: 3em;
+  position: absolute; }
 
 blockquote:before {
+  content: '“';
   top: 0.3em;
   left: 0.3em; }
 
 blockquote:after {
-  top: 0.3em;
+  content: '”';
+  bottom: 0.3em;
   right: 0.3em; }
 
 blockquote .meta, .post blockquote .meta {
