@@ -50,6 +50,16 @@ a.featured-text:hover {
 }
 
 
+.post-body-figure {
+  width: 30%;
+  font-size: 0.9em;
+  line-height: 1.2;
+  img {
+    margin: 0;
+  }
+}
+
+
 #view-all-entries {
   margin: 2em auto;
 }

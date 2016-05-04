@@ -242,6 +242,14 @@ blockquote .meta, .post blockquote .meta {
   text-align: right;
   margin: 0; }
 
+.pullquote {
+  display: inline-block;
+  font-size: 2em;
+  padding: 0.5em 3em; }
+  .pullquote cite {
+    display: block;
+    font-size: 0.5em; }
+
 #intro {
   background: #237c8e;
   color: #fff;
@@ -294,6 +302,10 @@ blockquote .meta, .post blockquote .meta {
   .accordion input:checked ~ ul {
     line-height: 1.5em;
     opacity: 1; }
+
+.accordion + p,
+.accordion + blockquote {
+  margin-top: 1em; }
 
 .flex-container,
 .skills {
@@ -502,6 +514,13 @@ a.featured-text:hover {
 
 .page img, .post img {
   margin-bottom: 2em; }
+
+.post-body-figure {
+  width: 30%;
+  font-size: 0.9em;
+  line-height: 1.2; }
+  .post-body-figure img {
+    margin: 0; }
 
 #view-all-entries {
   margin: 2em auto; }

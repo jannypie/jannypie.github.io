@@ -206,6 +206,15 @@ blockquote .meta, .post blockquote .meta {
   text-align: right;
   margin: 0;
 }
+.pullquote {
+  display: inline-block;
+  font-size: 2em;
+  padding: 0.5em 3em;
+  cite {
+    display: block;
+    font-size: 0.5em;
+  }
+}
 
 #intro {
   background: $dark-teal;
@@ -270,6 +279,10 @@ blockquote .meta, .post blockquote .meta {
     line-height: 1.5em;
     opacity: 1;
   }
+}
+.accordion + p,
+.accordion + blockquote {
+  margin-top: 1em;
 }
 
 .flex-container,

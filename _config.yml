@@ -2,7 +2,7 @@ url: http://jannypie.github.io
 auto: false
 server: false
 lsi: false
-pygments: true
+highlighter: rouge
 permalink: /:title
 # paginate: 10
 exclude: ["lib", "blog.rb", "Capfile", "config", "log", "Rakefile", "tmp"]

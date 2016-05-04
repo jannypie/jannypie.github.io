@@ -58,7 +58,7 @@ _________,   ___/ /  ,__________
 
 <p>Take for example my doodle here of some flowers. The basic setup for CSSing a thumbnail would be to wrap the image in a div with a fixed size and overflow set to hidden:</p>
 
-<pre><code>&lt;div class="post-thumbnail"&gt;&lt;img alt="Image for " src=""&gt;&lt;/div&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="post-thumbnail"&gt;&lt;img alt="Image for " src=""&gt;&lt;/div&gt;
 
 .post-thumbnail {
   height: 12em;
@@ -69,6 +69,7 @@ _________,   ___/ /  ,__________
   width: 100%;
 }
 </code></pre>
+</div>
 
 <p>However, this top-aligns my image with the div, and the flowers below get cut off. Not so pretty.</p>
 
@@ -78,10 +79,11 @@ _________,   ___/ /  ,__________
 
 <p>The basic structure for using Focal Point is an image wrapped in two divs. To use the example from <a href="http://designshack.net/articles/css/focal-point-intelligent-cropping-of-responsive-images/" title="Focal Point: Intelligent Cropping of Responsive Images">the design shack post</a>:</p>
 
-<pre><code>&lt;div class="focal-point right-3 up-3"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="focal-point right-3 up-3"&gt;
   &lt;div&gt;&lt;img src="guy.jpg" alt="guy"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <p>Here you can see that the container div has three important classes: .focal-point center the image, .right-3 (horizontal), and .up-3 (vertical). Super straightforward. These are all you need for landscape oriented images. For portraits, you also need to add a .portrait class to your image.</p>
 
@@ -89,13 +91,37 @@ _________,   ___/ /  ,__________
 
 <p>My question was: could I still use Focal Point on my Jekyll-based blog, which generates a static page of blog posts using a loop? Because it’s using a loop to generate the post content couched in HTML, I would have to <strong>build</strong> the site after each post, and then go in and add the correct classes by hand to the markup - every time, for every image - and the classes would be different for every image. And nobody got time for that. Here is my loop:</p>
 
-<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;div class="row-fluid featured-post"&gt;
+        &lt;h2&gt; &lt;a href="/at-dbc-everything-was-ridiculous" rel="bookmark" title="Permanent link to Everything Was Ridiculous: Reflections A Year Past DBC"&gt;Everything Was Ridiculous: Reflections A Year Past DBC&lt;/a&gt; &lt;/h2&gt;
+        &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
+            &lt;div class="post-info row-fluid span5"&gt;
+                &lt;span class="meta"&gt; May  4, 2016 &lt;/span&gt;
+                &lt;p&gt; &lt;figure class="float--right post-body-figure"&gt;   &lt;img src="assets/post-images/sea-liono-1.jpg" /&gt;
+</code></pre>
+</div>
+<figcaption>DBC names each cohort, regardless of location, after an animal of some sort. We were the Sea Lions.</figcaption>
+<p>&lt;/figure&gt;</p>
+
+<p>&lt;/p&gt;
+	            &lt;/div&gt;
+	            &lt;div class="row-fluid span6"&gt;
+	                &lt;div class="post-thumbnail"&gt;
+	                    <a href="/at-dbc-everything-was-ridiculous" rel="bookmark" title="Permanent link to Everything Was Ridiculous: Reflections A Year Past DBC">
+	                        <img alt="Image for Everything Was Ridiculous: Reflections A Year Past DBC" src="/assets/post-images/2015-05-10-dbc-diversity.jpg" />
+	                    </a>
+	                &lt;/div&gt;
+	            &lt;/div&gt;
+	        &lt;/div&gt;<!-- end content -->
+	    &lt;/div&gt;<!-- end row --></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;div class="row-fluid featured-post"&gt;
         &lt;h2&gt; &lt;a href="/blog-design" rel="bookmark" title="Permanent link to Iterative Design and Redesign"&gt;Iterative Design and Redesign&lt;/a&gt; &lt;/h2&gt;
         &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
             &lt;div class="post-info row-fluid span5"&gt;
                 &lt;span class="meta"&gt; February 20, 2015 &lt;/span&gt;
                 &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 3 Week 9 | Technical Blog #9&lt;/h4&gt; &lt;span class="meta"&gt;Feb 20, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/t9-blog-update.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
 </code></pre>
+</div>
 <p><span class="meta">Feb 20, 2015</span></p>
 <section>
    <p>I've consistently update this site, so revisiting it for a redesign is a common activity for me. I already had my blog running Jekyll, and I did have Bootstrap CSS when I was learning how to use it, but I have since removed it in order to use 100% my own code. In addition, I already have a GitHub website tied to a custom domain (jandennison.com, my web dev portfolio repo). So, I feel that it is maturing quite nicely and in tandem with my own education.</p>
@@ -132,13 +158,14 @@ _________,   ___/ /  ,__________
 	        &lt;/div&gt;<!-- end content -->
 	    &lt;/div&gt;<!-- end row --></p>
 
-<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;div class="row-fluid featured-post"&gt;
         &lt;h2&gt; &lt;a href="/dbc-c9-questions" rel="bookmark" title="Permanent link to Help! Here we go!"&gt;Help! Here we go!&lt;/a&gt; &lt;/h2&gt;
         &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
             &lt;div class="post-info row-fluid span5"&gt;
                 &lt;span class="meta"&gt; February 19, 2015 &lt;/span&gt;
                 &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 3 Week 9 | Cultural Blog #9&lt;/h4&gt; &lt;span class="meta"&gt;Feb 19, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/c9-questions.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
 </code></pre>
+</div>
 <p><span class="meta">Feb 19, 2015</span></p>
 <section>
   <p>If you're like me, you've been stuck on a coding problem at some point. Maybe more than once (she says, vastly understatingly). And after you stubbornly try to work it out for probably longer than you should, you finally realize: you need to ask someone else. Enter: asking questions on the internet. Yes, that ominous music you just heard is justified. Luckily when you're just asking coding questions, you're not likely to get into the bad internet stuff, but you are quite likely to not get any reply at all, or get the wrong reply if someone misunderstood your question. So how do you write a good question that gets the answer you need?</p>
@@ -166,13 +193,14 @@ _________,   ___/ /  ,__________
 	        &lt;/div&gt;<!-- end content -->
 	    &lt;/div&gt;<!-- end row --></p>
 
-<pre><code>    &lt;div class="row-fluid featured-post"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;div class="row-fluid featured-post"&gt;
         &lt;h2&gt; &lt;a href="/dbc-c8-conflict" rel="bookmark" title="Permanent link to Breathe Deeply And Think Clearly"&gt;Breathe Deeply And Think Clearly&lt;/a&gt; &lt;/h2&gt;
         &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
             &lt;div class="post-info row-fluid span5"&gt;
                 &lt;span class="meta"&gt; February 15, 2015 &lt;/span&gt;
                 &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 3 Week 8 | Cultural Blog #8&lt;/h4&gt; &lt;span class="meta"&gt;Feb 15, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/c8-conflict.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
 </code></pre>
+</div>
 <p><span class="meta">Feb 15, 2015</span></p>
 <section>
   <h2>Writing about conflict</h2>
@@ -193,71 +221,9 @@ _________,   ___/ /  ,__________
 	        &lt;/div&gt;<!-- end content -->
 	    &lt;/div&gt;<!-- end row --></p>
 
-<pre><code>    &lt;div class="row-fluid featured-post"&gt;
-        &lt;h2&gt; &lt;a href="/dbc-c7-values" rel="bookmark" title="Permanent link to Fearless Values"&gt;Fearless Values&lt;/a&gt; &lt;/h2&gt;
-        &lt;div class="row-fluid"&gt;&lt;!-- post content --&gt;
-            &lt;div class="post-info row-fluid span5"&gt;
-                &lt;span class="meta"&gt; February  5, 2015 &lt;/span&gt;
-                &lt;p&gt; &lt;!-- &lt;h4&gt;Phase 0 Unit 2 Week 7 | Cultural Blog #7&lt;/h4&gt; &lt;span class="meta"&gt;Feb 5, 2015&lt;/span&gt; &lt;a href="http://jannypie.github.io/blog/c7-values.html" title="Read more"&gt;Read this blog post&lt;/a&gt; --&gt;
-</code></pre>
-<p><span class="meta">Feb 5, 2015</span></p>
-<section>
-  <p>Last week, I learned about <a href="http://www.reducingstereotypethreat.org/definition.html" title="link to website">Stereotype Threats</a>, and I wrote a little bit about <a href="http://jannypie.github.io/dbc-c6-stereotype-threat/" title="stereotype threat blog post">times I have experienced them</a>. In review, researchers have found that times when a person is consciously aware of stereotypes surrounding one or more aspects of their identities as they relate to performance, the person is more likely to fulfill that stereotype than not. A common example is girls who are told they cannot do math often perform poorly on math, whereas girls who are not told that often don't.
-  </p>
-  <img src="/blog/dbc-blog-imgs/girls-are-good-at-math.png" alt="XKCD comic about girls stereotyped as bad at math" /><small><a href="http://xkcd.com/385/" title="source of comic">Source</a></small>
-  <p>This week, we read about how researchers have also found a rather effective method that people can do to reduce the result of stereotype threats - <a href="http://www.reducingstereotypethreat.org/reduce.html#encouragingself" title="link to explanation of self-affirmation">self-affirmation</a>. Researchers found that when people are feeling a stereotype threat about themselves, when they start being afraid that they are going to prove all those comments right about their gender/race/etc., actively redirecting those thoughts into a self-affirming reflection of their core values actually works against the threat.</p>
-  <p>Some of my core values (from the long list provided) include things like:
-    <ul>
-      <li>Personal development
-        <ul>
-          <li>Insight &amp; Introspection</li>
-          <li>Knowledge</li>
-          <li>Growth</li>
-          <li>Challenge</li>
-        </ul>
-      </li>
-      <li>Equality &amp; Fairness
-        <ul>
-          <li>Compassion &amp; Empathy</li>
-          <li>Honesty</li>
-        </ul>
-      </li>
-      <li>Helping Society
-        <ul>
-          <li>Friendships &amp; Community</li>
-        </ul>
-      </li>
-      <li>Creativity</li>
-      <li>Balance</li>
-    </ul>
-  </p>
-  <p>
-    Self-affirmation essentially works by actively reflecting back on one or more of your values, and using that as motivation to break out of the stereotype. For example, if I feared that I wouldn't do well in Dev Bootcamp and might fail out, I could think back about how much I value personal growth and learning, and that would make me comfortable and more likely to perform well.
-  </p>
-  <p>Just today I was listening to NPR's new podcast, <a href="http://www.npr.org/programs/invisibilia/" title="Invisibilia by NPR website">Invisibilia</a>, and as I was writing this was struck by the similarity of what I was writing and what I was hearing.
-  </p>
-  <blockquote>
-    We are always, always, always telling stories to ourselves, about the situation we're in, and about other people. And that story becomes a reality for us. And that's the problem.
-    ... just get out there and get rejected. Sometimes it's gonna get dirty, but that's okay. 'Cause you're gonna feel better afterward. You're gonna feel like, wow, I disobeyed my fear.
-    <small><a href="http://www.npr.org/2015/01/16/377519199/disappearing-fear" title="Invisibilia podcast episode on fear">Jason Comely, Invisibilia</a></small>
-  </blockquote>
-  <p>If I don't face my fears, I won't be able to uphold those values. If I become the stereotype, I won't uphold those values. So now I have one tool in my belt to overcome those fears, and move towards the place I want to be.</p>
-</section>
-<p>&lt;/p&gt;
-	            &lt;/div&gt;
-	            &lt;div class="row-fluid span6"&gt;
-	                &lt;div class="post-thumbnail"&gt;
-	                    <a href="/dbc-c7-values" rel="bookmark" title="Permanent link to Fearless Values">
-	                        <img alt="Image for Fearless Values" src="/assets/post-images/2015-02-05-dbc-c7-values.jpg" />
-	                    </a>
-	                &lt;/div&gt;
-	            &lt;/div&gt;
-	        &lt;/div&gt;<!-- end content -->
-	    &lt;/div&gt;<!-- end row --></p>
-
 <p>The basic structure of which is:</p>
 
-<pre><code>loop through the posts, and for each post
+<div class="highlighter-rouge"><pre class="highlight"><code>loop through the posts, and for each post
     div
         title
         left column
@@ -268,6 +234,7 @@ _________,   ___/ /  ,__________
     /div
 end loop
 </code></pre>
+</div>
 
 <p>I wondered if there was a way to define the necessary classes beforehand in the body of the post and then pass those to the loop to be included in the markup.</p>
 
@@ -275,7 +242,7 @@ end loop
 
 <p>The answer to the question was actually very simple - using <a href="http://blog.omgmog.net/post/adding-more-post-metadata-to-jekyll-with-yaml/" title="Adding More Post Metadata to Jekyll With YAML">custom YAML key:value pairs</a> in the head of each post to define the focal point of the image, and then applying Liquid output structure to pass them to the markup. I defined three custom variables (horizontal, vertical, and orientation) in the YAML front matter of each post:</p>
 
-<pre><code>---
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 layout: "post"
 title: "Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails"
 image: "/assets/post-images/IMG_0746.jpg"
@@ -284,20 +251,23 @@ focal-horz: right-3
 orientation: portrait
 ---
 </code></pre>
+</div>
 
 <p>Then, using our Liquid templating variables, I set the value of each pair as a class in the loop markup:</p>
 
-<pre><code>&lt;div class="post-thumbnail focal-point   "&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="post-thumbnail focal-point   "&gt;
         &lt;div&gt;&lt;img alt="Image for " src=""&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <p>Which results in markup for this image:</p>
 
-<pre><code>&lt;div class='post-thumbnail focal-point portrait left-1 down-6'&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class='post-thumbnail focal-point portrait left-1 down-6'&gt;
     &lt;div&gt;&lt;img alt='Image for Combining Jekyll With Focal Point CSS Adaptive Images For Smart Thumbnails' src='/assets/post-images/IMG_0746.jpg' /&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <p>And here is the side-by-side image again for comparison:</p>
 

@@ -50,6 +50,16 @@ function handlePinterestClick(e) {
   return false;
 }
 
+var isLocalLink = function(link) {
+  return link.src().indexOf('jandennison.com') > -1;
+}
+
+var externalLinks = function() {
+  var links = $('a');
+  console.log(links);
+}
+externalLinks();
+
 
 $(document).ready(function(){
   swapImage();
