@@ -38,14 +38,14 @@ _________,   ___/ /  ,__________
 		<header>
     <nav>
   <ul>
-    <li><a href="http://jannypie.github.io#intro">Hellos</a></li>
-    <li><a href="http://jannypie.github.io/archive.html">Writings</a></li>
-    <li><a href="http://jannypie.github.io/workings.html">Workings</a></li>
-    <!-- <li><a href="http://jannypie.github.io/artings.html">Artings</a></li> -->
+    <li><a href="http://localhost:4000#intro">Hellos</a></li>
+    <li><a href="http://localhost:4000/archive.html">Writings</a></li>
+    <li><a href="http://localhost:4000/workings.html">Workings</a></li>
+    <!-- <li><a href="http://localhost:4000/artings.html">Artings</a></li> -->
   </ul>
 </nav>
     <h1>
-      <a href="http://jannypie.github.io" rel="bookmark" title="Website for Jan Dennison">Jan Dennison</a>
+      <a href="http://localhost:4000" rel="bookmark" title="Website for Jan Dennison">Jan Dennison</a>
     </h1>
 </header>
 		<main class="container">
@@ -106,10 +106,11 @@ _________,   ___/ /  ,__________
 <ol>
   <li>Google searched “jekyll github blog”</li>
   <li>First hit: <a href="http://jekyllbootstrap.com/" title="Jekyll Bootstrap">Jekyll Bootstrap</a> (JB)</li>
-  <li>
-    <p>JB Step 1 says to:
-&gt;Create a New Repository
-&gt;Go to your https://github.com and create a new repository named USERNAME.github.com</p>
+  <li>JB Step 1 says to:
+    <blockquote>
+      <p>Create a New Repository
+Go to your https://github.com and create a new repository named USERNAME.github.com</p>
+    </blockquote>
 
     <p>(This is where things start to go wrong. Only three steps in.) I promptly named my GitHub repo “jannypie” and it took several /headdesks to figure out it had to be “jannypie.github.io” It <em>clearly</em> says to name it “USERNAME.<em>github.com</em>” in the JB instructions. User error.</p>
   </li>
@@ -159,13 +160,22 @@ _________,   ___/ /  ,__________
       <li>Type up a sample post and save the file in your <em>posts</em> folder. Don’t forget your YAML Front Matter and to declare a template type, and save it as either Markdown or Textile (which I didn’t even try getting into)</li>
       <li>Launch Terminal</li>
       <li>Navigate to where your repo is. In my case:
-  &gt; $ cd /Users/jannypie/jannypie.github.io</li>
+        <blockquote>
+          <p>$ cd /Users/jannypie/jannypie.github.io</p>
+        </blockquote>
+      </li>
       <li>Tell jekyll to create a local version that you can preview before publishing
-  &gt; $ jekyll serve –watch</li>
+        <blockquote>
+          <p>$ jekyll serve –watch</p>
+        </blockquote>
+      </li>
       <li>The –watch part of that means it will update on it’s own (for a while). If you close out of it the Terminal, you’ll have to type it in again. If you forget the –watch part, you’ll have to type it in again each time you want to check your work.</li>
       <li>Then you can open your browser to localhost:4000 to see it live</li>
       <li>When you’re ready to push it live, type in
- &gt; $ jekyll build –watch</li>
+        <blockquote>
+          <p>$ jekyll build –watch</p>
+        </blockquote>
+      </li>
       <li>This will create your site (each time, it builds the whole site over again) in the <em>site</em> folder</li>
       <li>Then go to your GitHub app (or however you do it) and commit those changes and sync them to the server</li>
       <li>If you (like I) followed the “quick start” guides at the start of either JBootstrap or official Jekyll sites, and did an instant creation of a blog, your localhost server will be running that and will ignore your attempts at serving your actual blog. You’ll have to close out of that terminal window and start anew.</li>
@@ -177,12 +187,14 @@ _________,   ___/ /  ,__________
 
 <p>I am now at the point where I am able to write a post and have it show up, and have some sort of design to the site as well, by using the Liquid template tags that were laid out on <a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/" title="Migrating from WordPress to Jekyll">vittobotta.com</a>.  I have written this entire post in Markdown in order to learn and practice that language. Technically there is some YAML Front Matter around here, so I think that counts as using it.</p>
 
-<p>There are still things I need to work out:
-- How to use images
-- Setting up stand-alone pages (about, contact)
-- Robots and sitemap, and the behind-the-scenes part of the site
-- Learning more fully the languages and capabilities
-- Work out some of the features that I copied from vittobotta.com, such as the related posts with thumbnails, previous/next post navigation, etc.</p>
+<p>There are still things I need to work out:</p>
+<ul>
+  <li>How to use images</li>
+  <li>Setting up stand-alone pages (about, contact)</li>
+  <li>Robots and sitemap, and the behind-the-scenes part of the site</li>
+  <li>Learning more fully the languages and capabilities</li>
+  <li>Work out some of the features that I copied from vittobotta.com, such as the related posts with thumbnails, previous/next post navigation, etc.</li>
+</ul>
 
 <p>I am surprised to find that I really enjoy using Markdown. I happen to like HTML (it satisfies some part of my brain that craves organization by putting things in neat little tags) and while I do feel somewhat limited with Markdown, I have to admit that it is quicker and easier to get the the actual content part of writing.</p>
 
