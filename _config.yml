@@ -1,6 +1,5 @@
 url: http://jannypie.github.io
 auto: false
-server: false
 lsi: false
 highlighter: rouge
 permalink: /:title
