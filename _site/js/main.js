@@ -95,7 +95,7 @@ let app = {
         parent: {element: sectionEl, position: 'prepend'},
         position: 'absolute',
         lines: [
-          app.defineLines('0','-18px','100%',1,app.vars.colorSecondary,true,500,'easeInOutSine',100,'LeftRight')
+          app.defineLines('0','-4%','100%',1,app.vars.colorSecondary,true,500,'easeInOutSine',100,'LeftRight')
         ]
       }
       app.makeLines(sectionLine);
