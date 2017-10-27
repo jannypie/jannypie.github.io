@@ -1,11 +1,25 @@
 /* Layout Styles */
-html, body {
-  height: 100%;
+html {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 10px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-* {
-  -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.7rem;
+  min-height: 100vh;
+}
+
+p {
+  font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 header, footer, section {
@@ -17,7 +31,7 @@ header, footer, section {
   width: 100%;
   max-width: $body-width;
   overflow: auto;
-  padding: 0 0.5em;
+  padding: $spacing $spacing;
 }
 
 /* Float Blocks */
@@ -41,8 +55,8 @@ header, footer, section {
 /* Typography Styles */
 body {
   color: $near-black;
-  font-family: 'Oxygen', sans-serif;
-  font-size: $spacing;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.7rem;
   font-weight: 300;
   line-height: $spacing*1.5;
 }
@@ -51,12 +65,11 @@ p {
   margin-bottom: $spacing;
 }
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro Bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
   margin-bottom: $spacing/2;
-  font-weight: 400;
   line-height: 1em;
-}
-h1.title {
-  font-size: $spacing*4;
 }
 h1 {
   font-weight: bold;
@@ -214,6 +227,11 @@ blockquote .meta, .post blockquote .meta {
     display: block;
     font-size: 0.5em;
   }
+}
+
+section {
+  padding: 2em;
+  margin-bottom: 2em;
 }
 
 #intro {
