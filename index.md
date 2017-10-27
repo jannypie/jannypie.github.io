@@ -20,6 +20,5 @@ meta-robots: "noodp, noydir"
 <!-- Accessible -->
 {% include_relative _includes/index/index_section3.html %}
 
-
 <!-- More -->
 {% include_relative _includes/index/index_section5.html %}

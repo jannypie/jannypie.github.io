@@ -51,6 +51,45 @@ let app = {
     if (scroll_pos + (app.vars.windowHeight/2) >= section_pos) {
       // let CSS handle the animation/placement
       sectionEl.classList.add('is-active');
+      // append lines
+      app.lineAnimations.sectionLines(sectionEl);
+
+    }
+  },
+  lineAnimations: {
+    defineDefaults: function () {
+      LineMaker.prototype.options = {
+        // parent: Where to insert the lines container.
+        // element: the DOM element or a string to specify the selector, e.g. '#id' or '.classname'.
+        // position: Whether to prepend or append to the parent.element
+        parent: {element: document.body, position: 'prepend'},
+        // position: if fixed the lines container will have fixed position.
+        position: 'absolute',
+        // The lines settings.
+        lines: []
+      };
+    },
+    bodyLines: function() {
+      // header line
+      let lineHeaderHorz = {
+        parent: {element: document.getElementsByTagName('header')[0], position: 'prepend'},
+        lines: [
+          app.defineLines('5em','-3%','100vw',1,app.vars.colorSecondary,true,500,'easeInOutSine',100,'LeftRight')
+        ]
+      }
+      app.makeLines(lineHeaderHorz);
+
+      // body "timeline" vertical lines
+      let lineBodyVert = {
+        parent: {element: document.body, position: 'prepend'},
+        lines: [
+          app.defineLines('0','9.5%',2,app.vars.pageHeight + 150,app.vars.colorPrimary,true,1000,'easeInOutQuad',50,'TopBottom'),
+          app.defineLines('0','10.5%',2,app.vars.pageHeight + 150,app.vars.colorPrimary,true,1000,'easeInOutQuad',50,'TopBottom')
+        ]
+      }
+      app.makeLines(lineBodyVert);
+    },
+    sectionLines: function (sectionEl) {
       // horizontal line across section top
       let sectionLine = {
         parent: {element: sectionEl, position: 'prepend'},
@@ -76,40 +115,13 @@ let app = {
         ]
       }
       app.makeLines(subsectionLines);
+    },
+    init: function() {
+      app.lineAnimations.defineDefaults();
+      app.lineAnimations.bodyLines();
     }
   },
-  lineAnimations: function() {
-    LineMaker.prototype.options = {
-    	// parent: Where to insert the lines container.
-    	// element: the DOM element or a string to specify the selector, e.g. '#id' or '.classname'.
-    	// position: Whether to prepend or append to the parent.element
-    	parent: {element: document.body, position: 'prepend'},
-    	// position: if fixed the lines container will have fixed position.
-    	position: 'absolute',
-    	// The lines settings.
-    	lines: []
-    };
 
-    // header line
-    let lineHeaderHorz = {
-      parent: {element: document.getElementsByTagName('header')[0], position: 'prepend'},
-      lines: [
-        app.defineLines('5em','-3%','100vw',1,app.vars.colorSecondary,true,500,'easeInOutSine',100,'LeftRight')
-      ]
-    }
-    app.makeLines(lineHeaderHorz);
-
-    // body "timeline" vertical lines
-    let lineBodyVert = {
-      parent: {element: document.body, position: 'prepend'},
-      lines: [
-        app.defineLines('0','9.5%',2,app.vars.pageHeight + 150,app.vars.colorPrimary,true,1000,'easeInOutQuad',50,'TopBottom'),
-        app.defineLines('0','10.5%',2,app.vars.pageHeight + 150,app.vars.colorPrimary,true,1000,'easeInOutQuad',50,'TopBottom')
-      ]
-    }
-    app.makeLines(lineBodyVert);
-
-  },
   // helper method to define line params
   defineLines: function(top,left,width,height,color,hidden = true,duration,easing,delay,direction) {
     return {
@@ -153,7 +165,7 @@ let app = {
     // console.log("App init");
     app.hideSectionColumns();
     app.bindScrollHandlers();
-    app.lineAnimations();
+    app.lineAnimations.init();
   }
 }
 
