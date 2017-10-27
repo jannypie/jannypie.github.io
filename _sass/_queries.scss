@@ -1,21 +1,12 @@
 
-@media only screen and (min-width: 481px) {
-  header {
-    background-image: url(/assets/images/geometric-600.jpg);
-  }
-  header h1 {
-    margin-top: 30%;
-  }
-
-}
 
 @media only screen and (min-width: 801px) {
   .container {
     padding: 0;
   }
   header {
-    max-height: 100%;
-    background-image:url(/assets/images/geometric-1200.jpg);
+    // max-height: 100%;
+    // background-image:url(/assets/images/geometric-1200.jpg);
   }
     header h1 {
       font-size: 5em;
@@ -30,7 +21,7 @@
 }
 @media only screen and (min-width: 1601px) {
   header {
-    background-image:url(/assets/images/geometric-2000.jpg);
+    // background-image:url(/assets/images/geometric-2000.jpg);
   }
 }
 

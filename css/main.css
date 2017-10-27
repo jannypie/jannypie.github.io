@@ -126,8 +126,6 @@ ul {
 li {
   margin-bottom: 0.5em;
 }
-/* Special Typography */
-
 
 
 
@@ -149,7 +147,6 @@ header,nav,.container,footer {
   overflow: auto;
 }
 .container {
-  max-width: 1000px;
   margin: 0 auto;
 }
 .container section, .container aside, footer img, footer aside {
@@ -366,6 +363,3 @@ img.noborder {
 header p, article.dbc-blog p {
   text-align: center;
 }
-
-
-

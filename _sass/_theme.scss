@@ -1,0 +1,224 @@
+/* Special Styles */
+.home {
+  padding-left: 13%;
+}
+header {
+  height: 90vh;
+  overflow: visible;
+  padding: 1em 0;
+  text-align: left;
+  @media only screen and ($above_smartphone_size) {
+    padding-left: 0;
+  }
+  @media only screen and ($above_tablet_size) {
+    text-align: center;
+    .me_title {
+      margin: 0 auto;
+    }
+  }
+  top: -100px;
+  margin-top: 100px;
+  .subtitle {
+    margin: 10vh auto 0;
+  }
+  .me_colon {
+    display: none;
+  }
+}
+section {
+  padding: 1em 0;
+}
+footer p {
+  text-align: left;
+}
+
+.title {
+  color: $us-red;
+  font-family: "Source Sans Pro Bold";
+  font-size: 2em;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+.subtitle {
+  color: $us-blue;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.copy {
+  color: $gray;
+  font-size: 1.3rem;
+  padding: 0 1em 0 0;
+
+  @media only screen and ($above_smartphone_size) {
+    font-size: 1em;
+  }
+  @media only screen and ($above_tablet_size) {
+    padding: 0 1em;
+    .header & {
+      max-width: 60%;
+      margin: 4em auto;
+      text-align: left;
+    }
+  }
+}
+
+.light-text {
+  font-family: 'Source Sans Pro Light Italic', Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.sticky {
+    background: rgba(250,250,250,0.98);
+    border-bottom: 1px solid $us-blue;
+    height: 6em;
+    text-align: left;
+    margin-top: 0;
+    padding: 0 0 0 2em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: top 0.5s;
+    // -webkit-animation: slideDown 0.25s ease-in-out forwards;
+    // animation: slideDown 0.25s ease-in-out forwards;
+
+    + main {
+      padding-top: 100vh;
+    }
+
+    .title {
+      font-family: 'Source Sans Pro Regular';
+      font-size: 1.25em;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin-top: 1em;
+      .me_colon {
+        display: inline;
+      }
+    }
+    .decolines, .me_desc {
+      display: none;
+    }
+
+}
+.me_desc {
+  margin-top: 1em;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.5s ease-in-out forwards;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0%, 40% { opacity: 0; }
+	85%, 100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+@keyframes fadeIn {
+	0%, 40% { opacity: 0; }
+	85%, 100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+@-webkit-keyframes slideDown {
+	0%, 40% { top: -100px;}
+	85%, 100% { top: 0;}
+}
+
+@keyframes slideDown {
+	0%, 40% { top: -100px; }
+	85%, 100% { top: 0; }
+}
+.roundcircle {
+  background-color: white;
+  border: 3px solid $dark-teal;
+  border-radius: 50%;
+  display: block;
+  z-index: 1;
+}
+.section--beautiful,
+.section--responsive,
+.section--accessible,
+.section--performant,
+.section--more {
+  margin-bottom: 15vh;
+  overflow: visible;
+  position: relative;
+
+  &:hover:after {
+      -webkit-animation: pulse 0.5s ease-in-out forwards;
+      animation: pulse 0.5s ease-in-out forwards;
+  }
+
+  &:after {
+    @extend .roundcircle;
+    content: '';
+    position: absolute;
+    top: -1em;
+    left: calc(-3% - 1em);
+    width: 2em;
+    height: 2em;
+  }
+
+  .column {
+    margin-right: 1.5%;
+    padding-right: 1.5%;
+    &.copy-column {
+      width: 100%;
+      @media only screen and ($above_tablet_size) {
+        display: inline-block;
+        width: 49%;
+      }
+    }
+    &.list-column {
+      display: inline-block;
+      width: 45%;
+      min-width: 150px;
+      vertical-align: top;
+      @media only screen and ($above_tablet_size) {
+        width: 22%;
+      }
+    }
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  &.is-active .list-column {
+      -webkit-animation: fadeIn 2s ease-in-out;
+      animation: fadeIn 2s ease-in-out;
+  }
+  &.has-hidden-columns .list-column {
+    opacity: 0;
+  }
+
+  .decolines .decoline:nth-child(n+2) {
+    display: none;
+    @media only screen and ($above_tablet_size) {
+      display: block;
+    }
+  }
+
+}
+
+@media only screen and ($above_smartphone_size) {
+  .home .decoline:first-child {
+      margin-left: 0.5%;
+  }
+}
+
+@keyframes pulse {
+  0% {box-shadow: 0 0 0px $light-gray;}
+  50% {box-shadow: 0 0 5px $light-gray;}
+  100% {box-shadow: 0 0 0px $light-gray;}
+}
