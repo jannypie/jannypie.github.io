@@ -74,7 +74,7 @@ let app = {
       let lineHeaderHorz = {
         parent: {element: document.getElementsByTagName('header')[0], position: 'prepend'},
         lines: [
-          app.defineLines('5em','-3%','100vw',1,app.vars.colorSecondary,true,500,'easeInOutSine',100,'LeftRight')
+          app.defineLines('5em','-3%','100%',1,app.vars.colorSecondary,true,500,'easeInOutSine',100,'LeftRight')
         ]
       }
       app.makeLines(lineHeaderHorz);
