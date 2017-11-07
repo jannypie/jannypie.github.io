@@ -1,7 +1,7 @@
 ---
 layout: "home"
-title: "Jan Dennison | Front End Developer"
-meta-description: "Web development portfolio blog by Jan Dennison"
+title: "Jan Humphries | Front End Developer"
+meta-description: "Web development portfolio blog by Jan Dennison Humphries"
 meta-robots: "noodp, noydir"
 ---
 
