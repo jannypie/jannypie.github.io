@@ -616,6 +616,27 @@ section {
 footer p {
   text-align: left; }
 
+a[target="_blank"] {
+  font-family: inherit;
+  line-height: 0em;
+  position: relative; }
+  a[target="_blank"]:before {
+    display: block;
+    font-family: 'icomoon';
+    font-size: 0.75em;
+    position: absolute;
+    top: 0;
+    right: -1em; }
+  a[target="_blank"]:hover:after {
+    content: 'Launch!';
+    background: white;
+    display: block;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 116%;
+    color: #e57339;
+    padding: 3px; }
+
 .title {
   color: #e31c3d;
   font-family: "Source Sans Pro Bold";
@@ -647,6 +668,9 @@ footer p {
         max-width: 60%;
         margin: 4em auto;
         text-align: left; } }
+
+.li--margin-bottom {
+  margin-bottom: 0.5em; }
 
 .light-text {
   font-family: 'Source Sans Pro Light Italic', Helvetica, Arial, sans-serif;

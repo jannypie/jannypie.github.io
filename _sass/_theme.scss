@@ -31,7 +31,29 @@ section {
 footer p {
   text-align: left;
 }
-
+a[target="_blank"] {
+  font-family: inherit;
+  line-height: 0em;
+  position: relative;
+  &:before {
+    display: block;
+    font-family: 'icomoon';
+    font-size: 0.75em;
+    position: absolute;
+    top: 0;
+    right: -1em;
+  }
+  &:hover:after {
+    content: 'Launch!';
+    background: white;
+    display: block;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 116%;
+    color: $orange;
+    padding: 3px;
+  }
+}
 .title {
   color: $us-red;
   font-family: "Source Sans Pro Bold";
@@ -66,6 +88,9 @@ footer p {
       text-align: left;
     }
   }
+}
+.li--margin-bottom {
+  margin-bottom: 0.5em;
 }
 
 .light-text {
