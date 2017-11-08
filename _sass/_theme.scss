@@ -1,4 +1,7 @@
 /* Special Styles */
+// Use this blue for headers to meet contrast needs
+$primary-blue-contrast: #00A0CC;
+
 .home {
   padding-left: 13%;
 }
@@ -62,7 +65,7 @@ a[target="_blank"] {
   text-transform: uppercase;
 }
 .subtitle {
-  color: $us-blue;
+  color: $primary-blue-contrast;
   display: block;
   font-size: 1.5em;
   font-weight: 400;
