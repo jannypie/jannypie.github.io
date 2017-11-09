@@ -8,7 +8,7 @@ html {
    -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
-body {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 section {
